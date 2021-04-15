@@ -1,0 +1,61 @@
+C:\Users\felipe rabelo\Documents\Projetos\04 Projeto_Portaria02.06 - Copia\04 Projeto_Portaria24.11\04 Projeto_Portaria\bin\x86\Release\Bd_portaria.mdf
+C:\Users\felipe rabelo\Documents\Projetos\04 Projeto_Portaria02.06 - Copia\04 Projeto_Portaria24.11\04 Projeto_Portaria\bin\x86\Release\Bd_portaria_log.ldf
+C:\Users\felipe rabelo\Documents\Projetos\04 Projeto_Portaria02.06 - Copia\04 Projeto_Portaria24.11\04 Projeto_Portaria\bin\x86\Release\Projeto_Portaria.exe.config
+C:\Users\felipe rabelo\Documents\Projetos\04 Projeto_Portaria02.06 - Copia\04 Projeto_Portaria24.11\04 Projeto_Portaria\bin\x86\Release\Projeto_Portaria.exe
+C:\Users\felipe rabelo\Documents\Projetos\04 Projeto_Portaria02.06 - Copia\04 Projeto_Portaria24.11\04 Projeto_Portaria\bin\x86\Release\Projeto_Portaria.pdb
+C:\Users\felipe rabelo\Documents\Projetos\04 Projeto_Portaria02.06 - Copia\04 Projeto_Portaria24.11\04 Projeto_Portaria\obj\x86\Release\Projeto_Portaria.Cadastro_de_Moradores.resources
+C:\Users\felipe rabelo\Documents\Projetos\04 Projeto_Portaria02.06 - Copia\04 Projeto_Portaria24.11\04 Projeto_Portaria\obj\x86\Release\Projeto_Portaria.Form_Cadastro_Usuário.resources
+C:\Users\felipe rabelo\Documents\Projetos\04 Projeto_Portaria02.06 - Copia\04 Projeto_Portaria24.11\04 Projeto_Portaria\obj\x86\Release\Projeto_Portaria.Cadastro_de_Visitantes.resources
+C:\Users\felipe rabelo\Documents\Projetos\04 Projeto_Portaria02.06 - Copia\04 Projeto_Portaria24.11\04 Projeto_Portaria\obj\x86\Release\Projeto_Portaria.form_Menu.resources
+C:\Users\felipe rabelo\Documents\Projetos\04 Projeto_Portaria02.06 - Copia\04 Projeto_Portaria24.11\04 Projeto_Portaria\obj\x86\Release\Projeto_Portaria.form_Login.resources
+C:\Users\felipe rabelo\Documents\Projetos\04 Projeto_Portaria02.06 - Copia\04 Projeto_Portaria24.11\04 Projeto_Portaria\obj\x86\Release\Projeto_Portaria.Form_moradores.resources
+C:\Users\felipe rabelo\Documents\Projetos\04 Projeto_Portaria02.06 - Copia\04 Projeto_Portaria24.11\04 Projeto_Portaria\obj\x86\Release\Projeto_Portaria.Form_pessoas_uteis.resources
+C:\Users\felipe rabelo\Documents\Projetos\04 Projeto_Portaria02.06 - Copia\04 Projeto_Portaria24.11\04 Projeto_Portaria\obj\x86\Release\Projeto_Portaria.Form_relatorio_ocorrencias.resources
+C:\Users\felipe rabelo\Documents\Projetos\04 Projeto_Portaria02.06 - Copia\04 Projeto_Portaria24.11\04 Projeto_Portaria\obj\x86\Release\Projeto_Portaria.Form_status.resources
+C:\Users\felipe rabelo\Documents\Projetos\04 Projeto_Portaria02.06 - Copia\04 Projeto_Portaria24.11\04 Projeto_Portaria\obj\x86\Release\Projeto_Portaria.Properties.Resources.resources
+C:\Users\felipe rabelo\Documents\Projetos\04 Projeto_Portaria02.06 - Copia\04 Projeto_Portaria24.11\04 Projeto_Portaria\obj\x86\Release\Projeto_Portaria.relatorio.resources
+C:\Users\felipe rabelo\Documents\Projetos\04 Projeto_Portaria02.06 - Copia\04 Projeto_Portaria24.11\04 Projeto_Portaria\obj\x86\Release\Projeto_Portaria.csproj.GenerateResource.cache
+C:\Users\felipe rabelo\Documents\Projetos\04 Projeto_Portaria02.06 - Copia\04 Projeto_Portaria24.11\04 Projeto_Portaria\obj\x86\Release\Projeto_Portaria.exe
+C:\Users\felipe rabelo\Documents\Projetos\04 Projeto_Portaria02.06 - Copia\04 Projeto_Portaria24.11\04 Projeto_Portaria\obj\x86\Release\Projeto_Portaria.pdb
+C:\Users\felipe rabelo\Documents\Projetos\04 Projeto_Portaria02.06 - Copia\04 Projeto_Portaria24.11\04 Projeto_Portaria\obj\x86\Release\Projeto_Portaria.csprojAssemblyReference.cache
+C:\Users\felipe rabelo\Documents\Projetos\04 Projeto_Portaria02.06-versão atual\04 Projeto_Portaria24.11\04 Projeto_Portaria\bin\x86\Release\Bd_portaria.mdf
+C:\Users\felipe rabelo\Documents\Projetos\04 Projeto_Portaria02.06-versão atual\04 Projeto_Portaria24.11\04 Projeto_Portaria\bin\x86\Release\Bd_portaria_log.ldf
+C:\Users\felipe rabelo\Documents\Projetos\04 Projeto_Portaria02.06-versão atual\04 Projeto_Portaria24.11\04 Projeto_Portaria\bin\x86\Release\Projeto_Portaria.exe.config
+C:\Users\felipe rabelo\Documents\Projetos\04 Projeto_Portaria02.06-versão atual\04 Projeto_Portaria24.11\04 Projeto_Portaria\bin\x86\Release\Projeto_Portaria.exe
+C:\Users\felipe rabelo\Documents\Projetos\04 Projeto_Portaria02.06-versão atual\04 Projeto_Portaria24.11\04 Projeto_Portaria\bin\x86\Release\Projeto_Portaria.pdb
+C:\Users\felipe rabelo\Documents\Projetos\04 Projeto_Portaria02.06-versão atual\04 Projeto_Portaria24.11\04 Projeto_Portaria\obj\x86\Release\Projeto_Portaria.csprojAssemblyReference.cache
+C:\Users\felipe rabelo\Documents\Projetos\04 Projeto_Portaria02.06-versão atual\04 Projeto_Portaria24.11\04 Projeto_Portaria\obj\x86\Release\Projeto_Portaria.Cadastro_de_Moradores.resources
+C:\Users\felipe rabelo\Documents\Projetos\04 Projeto_Portaria02.06-versão atual\04 Projeto_Portaria24.11\04 Projeto_Portaria\obj\x86\Release\Projeto_Portaria.Form_Cadastro_Usuário.resources
+C:\Users\felipe rabelo\Documents\Projetos\04 Projeto_Portaria02.06-versão atual\04 Projeto_Portaria24.11\04 Projeto_Portaria\obj\x86\Release\Projeto_Portaria.Cadastro_de_Visitantes.resources
+C:\Users\felipe rabelo\Documents\Projetos\04 Projeto_Portaria02.06-versão atual\04 Projeto_Portaria24.11\04 Projeto_Portaria\obj\x86\Release\Projeto_Portaria.form_Menu.resources
+C:\Users\felipe rabelo\Documents\Projetos\04 Projeto_Portaria02.06-versão atual\04 Projeto_Portaria24.11\04 Projeto_Portaria\obj\x86\Release\Projeto_Portaria.form_Login.resources
+C:\Users\felipe rabelo\Documents\Projetos\04 Projeto_Portaria02.06-versão atual\04 Projeto_Portaria24.11\04 Projeto_Portaria\obj\x86\Release\Projeto_Portaria.Form_moradores.resources
+C:\Users\felipe rabelo\Documents\Projetos\04 Projeto_Portaria02.06-versão atual\04 Projeto_Portaria24.11\04 Projeto_Portaria\obj\x86\Release\Projeto_Portaria.Form_pessoas_uteis.resources
+C:\Users\felipe rabelo\Documents\Projetos\04 Projeto_Portaria02.06-versão atual\04 Projeto_Portaria24.11\04 Projeto_Portaria\obj\x86\Release\Projeto_Portaria.Form_relatorio_ocorrencias.resources
+C:\Users\felipe rabelo\Documents\Projetos\04 Projeto_Portaria02.06-versão atual\04 Projeto_Portaria24.11\04 Projeto_Portaria\obj\x86\Release\Projeto_Portaria.Form_status.resources
+C:\Users\felipe rabelo\Documents\Projetos\04 Projeto_Portaria02.06-versão atual\04 Projeto_Portaria24.11\04 Projeto_Portaria\obj\x86\Release\Projeto_Portaria.Properties.Resources.resources
+C:\Users\felipe rabelo\Documents\Projetos\04 Projeto_Portaria02.06-versão atual\04 Projeto_Portaria24.11\04 Projeto_Portaria\obj\x86\Release\Projeto_Portaria.relatorio.resources
+C:\Users\felipe rabelo\Documents\Projetos\04 Projeto_Portaria02.06-versão atual\04 Projeto_Portaria24.11\04 Projeto_Portaria\obj\x86\Release\Projeto_Portaria.csproj.GenerateResource.cache
+C:\Users\felipe rabelo\Documents\Projetos\04 Projeto_Portaria02.06-versão atual\04 Projeto_Portaria24.11\04 Projeto_Portaria\obj\x86\Release\Projeto_Portaria.exe
+C:\Users\felipe rabelo\Documents\Projetos\04 Projeto_Portaria02.06-versão atual\04 Projeto_Portaria24.11\04 Projeto_Portaria\obj\x86\Release\Projeto_Portaria.pdb
+C:\Users\felipe rabelo\Documents\Projetos\04 Projeto_Portaria v3 02.06-versão atual\04 Projeto_Portaria24.11\04 Projeto_Portaria\bin\x86\Release\Bd_portaria.mdf
+C:\Users\felipe rabelo\Documents\Projetos\04 Projeto_Portaria v3 02.06-versão atual\04 Projeto_Portaria24.11\04 Projeto_Portaria\bin\x86\Release\Bd_portaria_log.ldf
+C:\Users\felipe rabelo\Documents\Projetos\04 Projeto_Portaria v3 02.06-versão atual\04 Projeto_Portaria24.11\04 Projeto_Portaria\bin\x86\Release\Projeto_Portaria.exe.config
+C:\Users\felipe rabelo\Documents\Projetos\04 Projeto_Portaria v3 02.06-versão atual\04 Projeto_Portaria24.11\04 Projeto_Portaria\bin\x86\Release\Projeto_Portaria.exe
+C:\Users\felipe rabelo\Documents\Projetos\04 Projeto_Portaria v3 02.06-versão atual\04 Projeto_Portaria24.11\04 Projeto_Portaria\bin\x86\Release\Projeto_Portaria.pdb
+C:\Users\felipe rabelo\Documents\Projetos\04 Projeto_Portaria v3 02.06-versão atual\04 Projeto_Portaria24.11\04 Projeto_Portaria\obj\x86\Release\Projeto_Portaria.csprojAssemblyReference.cache
+C:\Users\felipe rabelo\Documents\Projetos\04 Projeto_Portaria v3 02.06-versão atual\04 Projeto_Portaria24.11\04 Projeto_Portaria\obj\x86\Release\Projeto_Portaria.Cadastro_de_Moradores.resources
+C:\Users\felipe rabelo\Documents\Projetos\04 Projeto_Portaria v3 02.06-versão atual\04 Projeto_Portaria24.11\04 Projeto_Portaria\obj\x86\Release\Projeto_Portaria.Form_Cadastro_Usuário.resources
+C:\Users\felipe rabelo\Documents\Projetos\04 Projeto_Portaria v3 02.06-versão atual\04 Projeto_Portaria24.11\04 Projeto_Portaria\obj\x86\Release\Projeto_Portaria.Cadastro_de_Visitantes.resources
+C:\Users\felipe rabelo\Documents\Projetos\04 Projeto_Portaria v3 02.06-versão atual\04 Projeto_Portaria24.11\04 Projeto_Portaria\obj\x86\Release\Projeto_Portaria.form_Menu.resources
+C:\Users\felipe rabelo\Documents\Projetos\04 Projeto_Portaria v3 02.06-versão atual\04 Projeto_Portaria24.11\04 Projeto_Portaria\obj\x86\Release\Projeto_Portaria.form_Login.resources
+C:\Users\felipe rabelo\Documents\Projetos\04 Projeto_Portaria v3 02.06-versão atual\04 Projeto_Portaria24.11\04 Projeto_Portaria\obj\x86\Release\Projeto_Portaria.Form_moradores.resources
+C:\Users\felipe rabelo\Documents\Projetos\04 Projeto_Portaria v3 02.06-versão atual\04 Projeto_Portaria24.11\04 Projeto_Portaria\obj\x86\Release\Projeto_Portaria.Form_pessoas_uteis.resources
+C:\Users\felipe rabelo\Documents\Projetos\04 Projeto_Portaria v3 02.06-versão atual\04 Projeto_Portaria24.11\04 Projeto_Portaria\obj\x86\Release\Projeto_Portaria.Form_relatorio_ocorrencias.resources
+C:\Users\felipe rabelo\Documents\Projetos\04 Projeto_Portaria v3 02.06-versão atual\04 Projeto_Portaria24.11\04 Projeto_Portaria\obj\x86\Release\Projeto_Portaria.Form_status.resources
+C:\Users\felipe rabelo\Documents\Projetos\04 Projeto_Portaria v3 02.06-versão atual\04 Projeto_Portaria24.11\04 Projeto_Portaria\obj\x86\Release\Projeto_Portaria.Properties.Resources.resources
+C:\Users\felipe rabelo\Documents\Projetos\04 Projeto_Portaria v3 02.06-versão atual\04 Projeto_Portaria24.11\04 Projeto_Portaria\obj\x86\Release\Projeto_Portaria.relatorio.resources
+C:\Users\felipe rabelo\Documents\Projetos\04 Projeto_Portaria v3 02.06-versão atual\04 Projeto_Portaria24.11\04 Projeto_Portaria\obj\x86\Release\Projeto_Portaria.csproj.GenerateResource.cache
+C:\Users\felipe rabelo\Documents\Projetos\04 Projeto_Portaria v3 02.06-versão atual\04 Projeto_Portaria24.11\04 Projeto_Portaria\obj\x86\Release\Projeto_Portaria.exe
+C:\Users\felipe rabelo\Documents\Projetos\04 Projeto_Portaria v3 02.06-versão atual\04 Projeto_Portaria24.11\04 Projeto_Portaria\obj\x86\Release\Projeto_Portaria.pdb
+C:\Users\felipe rabelo\Documents\Projetos\04 Projeto_Portaria v3 02.06-versão atual\04 Projeto_Portaria24.11\04 Projeto_Portaria\obj\x86\Release\Projeto_Portaria.FormAnotacoes.resources

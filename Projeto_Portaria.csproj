@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AF998DFA-295F-4792-BAA6-52E3256553F1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Projeto_Portaria</RootNamespace>
+    <AssemblyName>Projeto_Portaria</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>ExtendedDesignGuidelineRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>door-512.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ExtendedDesignGuidelineRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ExtendedDesignGuidelineRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormAnotacoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAnotacoes.Designer.cs">
+      <DependentUpon>FormAnotacoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Cadastro_Visitantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Cadastro_Visitantes.Designer.cs">
+      <DependentUpon>Form_Cadastro_Visitantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Cadastro_Usuário.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Cadastro_Usuário.Designer.cs">
+      <DependentUpon>Form_Cadastro_Usuário.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Menu.Designer.cs">
+      <DependentUpon>Form_Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Login.Designer.cs">
+      <DependentUpon>Form_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_moradores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_moradores.Designer.cs">
+      <DependentUpon>Form_moradores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_pessoas_uteis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_pessoas_uteis.Designer.cs">
+      <DependentUpon>Form_pessoas_uteis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_relatorio_ocorrencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_relatorio_ocorrencias.Designer.cs">
+      <DependentUpon>Form_relatorio_ocorrencias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_status.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_status.Designer.cs">
+      <DependentUpon>Form_status.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="relatorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="relatorio.Designer.cs">
+      <DependentUpon>relatorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_info.cs" />
+    <EmbeddedResource Include="FormAnotacoes.resx">
+      <DependentUpon>FormAnotacoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Cadastro_Usuário.resx">
+      <DependentUpon>Form_Cadastro_Usuário.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Cadastro_Visitantes.resx">
+      <DependentUpon>Form_Cadastro_Visitantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Menu.resx">
+      <DependentUpon>Form_Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Login.resx">
+      <DependentUpon>Form_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_moradores.resx">
+      <DependentUpon>Form_moradores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_pessoas_uteis.resx">
+      <DependentUpon>Form_pessoas_uteis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_relatorio_ocorrencias.resx">
+      <DependentUpon>Form_relatorio_ocorrencias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_status.resx">
+      <DependentUpon>Form_status.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="relatorio.resx">
+      <DependentUpon>relatorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagens\Usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 e x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Bd_portaria.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Bd_portaria_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>Bd_portaria.mdf</DependentUpon>
+    </Content>
+    <Content Include="Book.ico" />
+    <Content Include="door-512.ico" />
+    <Content Include="Logo-Cadeado1.ico" />
+    <None Include="Resources\family_icon_cOg_icon1.ico" />
+    <None Include="Resources\icon__sair__SYE_icon.ico" />
+    <None Include="Resources\icon__visitantes__Qf6_icon.ico" />
+    <None Include="Resources\icon__cadastro_moradores__JlK_icon.ico" />
+    <None Include="Resources\icon__status__oficial_lf9_icon.ico" />
+    <None Include="Resources\icon__usu__rios__Qwf_icon1.ico" />
+    <None Include="Resources\icon__usu__rios__Qwf_icon.ico" />
+    <None Include="Resources\icon__ocorr__ncias__Jh7_icon.ico" />
+    <None Include="Resources\icon__pesquisar__PRB_icon.ico" />
+    <None Include="Resources\icon__logoff__wr0_icon.ico" />
+    <None Include="Resources\icon__contato__oficial_Bq5_icon1.ico" />
+    <None Include="Resources\icon__contato__oficial_Bq5_icon.ico" />
+    <None Include="Resources\family_icon_cOg_icon.ico" />
+    <None Include="Resources\family_icon_Jii_icon.ico" />
+    <None Include="Resources\Family-icon1.png" />
+    <None Include="Resources\Family-icon.png" />
+    <None Include="Resources\door-5121.png" />
+    <None Include="Resources\door-512.png" />
+    <None Include="Resources\new pdf.png" />
+    <None Include="Resources\pdf-icon-9.png" />
+    <None Include="Resources\word.png" />
+    <None Include="Resources\excel new.png" />
+    <None Include="Resources\deletar_icon.png" />
+    <None Include="Resources\Save-icon.png" />
+    <None Include="Resources\alterar_icon.png" />
+    <None Include="Resources\explorer.png" />
+    <None Include="Resources\chaves.png" />
+    <None Include="Resources\images.jpg" />
+    <None Include="Resources\key-1_icon-icons.com_700911.png" />
+    <None Include="Resources\key-1_icon-icons.com_70091.png" />
+    <None Include="Resources\new firefly.png" />
+    <None Include="Resources\Sem título.png" />
+    <None Include="Resources\icone-mais-png-4.png" />
+    <None Include="Resources\new.jpg" />
+    <None Include="Resources\EDITAR - Icon %28Download%29.png" />
+    <None Include="Resources\Icon %28Deletar%29.png" />
+    <None Include="Resources\Icon %28Salvar%29.png" />
+    <None Include="Resources\Icon %28Alterar%29.png" />
+    <None Include="Resources\Icon %28Pesquisar%29.png" />
+    <None Include="Resources\Icon %28Usuários%29.png" />
+    <None Include="Resources\Icon %28Contato%29 Oficial.png" />
+    <None Include="Resources\Icon %28Contato%29.png" />
+    <None Include="Resources\Logo Cadeado1.png" />
+    <None Include="Resources\Icon %28Status%29 Oficial.png" />
+    <None Include="Resources\Icon %28Status%29.png" />
+    <None Include="Resources\Icon %28Ocorrências%29.png" />
+    <None Include="Resources\Icon %28Logoff%29.png" />
+    <None Include="Resources\Barra Menu.png" />
+    <None Include="Resources\Icon %28Visitantes%29.png" />
+    <None Include="Resources\Icon %28Cadastro Moradores%29.png" />
+    <None Include="Resources\Icon %28Moradores%29 Oficial.png" />
+    <None Include="Resources\Icon %28Moradores%29.png" />
+    <None Include="Resources\Icon %28Sair%29.png" />
+    <None Include="Resources\Icon %28Voltar%29.png" />
+    <None Include="Resources\Fundo Oficial.jpg" />
+    <None Include="Resources\Fundo Preto1.png" />
+    <None Include="Resources\Fundo Preto.png" />
+    <None Include="Resources\Logo Cadeado.png" />
+    <None Include="Resources\icone-portaria.png" />
+    <None Include="Resources\cadastrar cliente.jpg" />
+    <None Include="Resources\Smile.ico" />
+    <None Include="Resources\imagem_portaria3.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
