@@ -43,10 +43,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button_excel = new System.Windows.Forms.Button();
-            this.button_pesquisar = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.buttonImprimir = new System.Windows.Forms.Button();
+            this.button_excel = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button_pesquisar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -157,7 +160,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.GridColor = System.Drawing.Color.Gray;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 109);
+            this.dataGridView1.Location = new System.Drawing.Point(6, 95);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -172,60 +175,23 @@
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.Gray;
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(776, 322);
+            this.dataGridView1.Size = new System.Drawing.Size(776, 345);
             this.dataGridView1.TabIndex = 35;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.button_excel);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(675, 19);
+            this.groupBox1.Location = new System.Drawing.Point(695, 19);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(90, 82);
+            this.groupBox1.Size = new System.Drawing.Size(76, 61);
             this.groupBox1.TabIndex = 38;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Exportar ";
             // 
-            // button_excel
-            // 
-            this.button_excel.BackColor = System.Drawing.Color.Transparent;
-            this.button_excel.BackgroundImage = global::Projeto_Portaria.Properties.Resources.excel_new;
-            this.button_excel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button_excel.FlatAppearance.BorderSize = 0;
-            this.button_excel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button_excel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button_excel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_excel.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button_excel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_excel.Location = new System.Drawing.Point(6, 19);
-            this.button_excel.Name = "button_excel";
-            this.button_excel.Size = new System.Drawing.Size(78, 57);
-            this.button_excel.TabIndex = 7;
-            this.button_excel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button_excel.UseVisualStyleBackColor = false;
-            this.button_excel.Click += new System.EventHandler(this.button_excel_Click);
-            // 
-            // button_pesquisar
-            // 
-            this.button_pesquisar.BackColor = System.Drawing.Color.Transparent;
-            this.button_pesquisar.BackgroundImage = global::Projeto_Portaria.Properties.Resources.Icon__Pesquisar_;
-            this.button_pesquisar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button_pesquisar.FlatAppearance.BorderSize = 0;
-            this.button_pesquisar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button_pesquisar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button_pesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_pesquisar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button_pesquisar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_pesquisar.Location = new System.Drawing.Point(507, 38);
-            this.button_pesquisar.Name = "button_pesquisar";
-            this.button_pesquisar.Size = new System.Drawing.Size(43, 42);
-            this.button_pesquisar.TabIndex = 4;
-            this.button_pesquisar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button_pesquisar.UseVisualStyleBackColor = false;
-            this.button_pesquisar.Click += new System.EventHandler(this.button_pesquisar_Click);
-            // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.buttonImprimir);
             this.groupBox2.Controls.Add(this.groupBox1);
             this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Controls.Add(this.button_pesquisar);
@@ -246,6 +212,59 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Pesquisar/Exportar";
             // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Document = this.printDocument1;
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
+            // buttonImprimir
+            // 
+            this.buttonImprimir.BackColor = System.Drawing.Color.Transparent;
+            this.buttonImprimir.BackgroundImage = global::Projeto_Portaria.Properties.Resources.Custom_Icon_Design_Pretty_Office_6_Printer_blue;
+            this.buttonImprimir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonImprimir.FlatAppearance.BorderSize = 0;
+            this.buttonImprimir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.buttonImprimir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.buttonImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonImprimir.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonImprimir.Location = new System.Drawing.Point(618, 26);
+            this.buttonImprimir.Name = "buttonImprimir";
+            this.buttonImprimir.Size = new System.Drawing.Size(71, 63);
+            this.buttonImprimir.TabIndex = 39;
+            this.buttonImprimir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonImprimir.UseVisualStyleBackColor = false;
+            this.buttonImprimir.Click += new System.EventHandler(this.buttonImprimir_Click);
+            // 
+            // button_excel
+            // 
+            this.button_excel.BackColor = System.Drawing.Color.Transparent;
+            this.button_excel.BackgroundImage = global::Projeto_Portaria.Properties.Resources.excel_new;
+            this.button_excel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button_excel.FlatAppearance.BorderSize = 0;
+            this.button_excel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_excel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_excel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_excel.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button_excel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_excel.Location = new System.Drawing.Point(6, 12);
+            this.button_excel.Name = "button_excel";
+            this.button_excel.Size = new System.Drawing.Size(57, 44);
+            this.button_excel.TabIndex = 7;
+            this.button_excel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button_excel.UseVisualStyleBackColor = false;
+            this.button_excel.Click += new System.EventHandler(this.button_excel_Click);
+            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Transparent;
@@ -257,13 +276,32 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(733, 437);
+            this.button2.Location = new System.Drawing.Point(733, 446);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(49, 42);
+            this.button2.Size = new System.Drawing.Size(49, 33);
             this.button2.TabIndex = 8;
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button_pesquisar
+            // 
+            this.button_pesquisar.BackColor = System.Drawing.Color.Transparent;
+            this.button_pesquisar.BackgroundImage = global::Projeto_Portaria.Properties.Resources.Icon__Pesquisar_;
+            this.button_pesquisar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button_pesquisar.FlatAppearance.BorderSize = 0;
+            this.button_pesquisar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_pesquisar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_pesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_pesquisar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button_pesquisar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_pesquisar.Location = new System.Drawing.Point(507, 38);
+            this.button_pesquisar.Name = "button_pesquisar";
+            this.button_pesquisar.Size = new System.Drawing.Size(43, 42);
+            this.button_pesquisar.TabIndex = 4;
+            this.button_pesquisar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button_pesquisar.UseVisualStyleBackColor = false;
+            this.button_pesquisar.Click += new System.EventHandler(this.button_pesquisar_Click);
             // 
             // relatorio
             // 
@@ -300,5 +338,8 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonImprimir;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
     }
 }

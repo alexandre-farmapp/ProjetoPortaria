@@ -103,6 +103,16 @@ namespace Projeto_Portaria.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Custom_Icon_Design_Pretty_Office_6_Printer_blue {
+            get {
+                object obj = ResourceManager.GetObject("Custom-Icon-Design-Pretty-Office-6-Printer-blue", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap deletar_icon {
             get {
                 object obj = ResourceManager.GetObject("deletar_icon", resourceCulture);

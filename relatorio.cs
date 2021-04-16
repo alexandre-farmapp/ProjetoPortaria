@@ -12,8 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Projeto_Portaria
-{
-   
+{   
     public partial class relatorio : Form
     {
         String[] documento = new string[10000];
@@ -73,18 +72,18 @@ namespace Projeto_Portaria
 
             if(textBox_unidade.Text =="" && textBox_ruaBloco.Text == "")
             {
-                comando = "SELECT nome, visitado, entrada, saida FROM relatorio ";
-                comando += "WHERE entrada BETWEEN @dataInicio AND @dataFim ORDER BY entrada";
+                comando = "SELECT nome, visitado, entrada, saida FROM relatorio " +
+                    "WHERE entrada BETWEEN @dataInicio AND @dataFim ORDER BY entrada";
             }
             else if(textBox_unidade.Text == "")
             {
-                comando = "select nome, visitado, entrada, saida from relatorio ";
-                comando += "where entrada between @dataInicio and @dataFim and blocoRua = @blocoRua order by entrada";
+                comando = "SELECT nome, visitado, entrada, saida FROM relatorio " +
+                    "WHERE entrada BETWEEN @dataInicio AND @dataFim AND blocoRua = @blocoRua ORDER BY entrada";
             }
             else if(textBox_ruaBloco.Text == "")
             {
-                comando = "select nome, visitado, entrada, saida from relatorio ";
-                comando += "where entrada between @dataInicio and @dataFim and Unidade = @unidade order by entrada";
+                comando = "SELECT nome, visitado, entrada, saida FROM relatorio " +
+                    "WHERE entrada BETWEEN @dataInicio AND @dataFim AND Unidade = @unidade ORDER BY entrada";
             }
             
             SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);
@@ -129,8 +128,7 @@ namespace Projeto_Portaria
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-               
+        }               
 
         private void button_excel_Click(object sender, EventArgs e)
         {
@@ -159,6 +157,84 @@ namespace Projeto_Portaria
             objarq.Close();
             Process.Start(nomeArq);
 
+        }
+
+        private void buttonImprimir_Click(object sender, EventArgs e)
+        {
+            if (printPreviewDialog1.ShowDialog() == DialogResult.OK)
+            {
+                printDocument1.Print();
+            }
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            string conexao = Projeto_Portaria.Properties.Settings.Default.Bd_portariaConnectionString;
+            SqlConnection sqlConnection = new SqlConnection(conexao);
+            sqlConnection.Open();
+
+            string comando = "";
+
+            if (textBox_unidade.Text == "" && textBox_ruaBloco.Text == "")
+            {
+                comando = "SELECT nome, visitado, entrada, saida FROM relatorio " +
+                    "WHERE entrada BETWEEN @dataInicio AND @dataFim ORDER BY entrada";
+            }
+            else if (textBox_unidade.Text == "")
+            {
+                comando = "SELECT nome, visitado, entrada, saida FROM relatorio " +
+                    "WHERE entrada BETWEEN @dataInicio AND @dataFim AND blocoRua = @blocoRua ORDER BY entrada";
+            }
+            else if (textBox_ruaBloco.Text == "")
+            {
+                comando = "SELECT nome, visitado, entrada, saida FROM relatorio " +
+                    "WHERE entrada BETWEEN @dataInicio AND @dataFim AND Unidade = @unidade ORDER BY entrada";
+            }
+
+            SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);
+            sqlCommand.Parameters.AddWithValue("@dataInicio", dateTimePicker_inicio.Value.ToString());
+            sqlCommand.Parameters.AddWithValue("@dataFim", dateTimePicker_fim.Value.ToString());
+            sqlCommand.Parameters.AddWithValue("@unidade", textBox_unidade.Text);
+            sqlCommand.Parameters.AddWithValue("@blocoRua", textBox_ruaBloco.Text);
+            sqlCommand.ExecuteNonQuery();
+
+            SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+
+            try
+            {
+                //int i = 130;
+                int j = 160;
+
+                e.Graphics.DrawString("Relatorio", new Font("Arial", 36, FontStyle.Bold), Brushes.Black, new PointF(250, 40));
+                e.Graphics.DrawString("Nome", new Font("Arial", 14, FontStyle.Bold), Brushes.Black, new PointF(50, 130));
+                e.Graphics.DrawString("VIsitado", new Font("Arial", 14, FontStyle.Bold), Brushes.Black, new PointF(180, 130));
+                //e.Graphics.DrawString("", new Font("Arial", 14, FontStyle.Bold), Brushes.Black, new PointF(270, 130));
+                e.Graphics.DrawString("Hora entrada", new Font("Arial", 14, FontStyle.Bold), Brushes.Black, new PointF(400, 130));
+                e.Graphics.DrawString("Hora saida", new Font("Arial", 14, FontStyle.Bold), Brushes.Black, new PointF(600, 130));
+
+                while (sqlDataReader.Read())
+                {
+                    string nome = sqlDataReader["Nome"].ToString();
+                    string visitado = sqlDataReader["Visitado"].ToString();
+                    //string placa = sqlDataReader["placa"].ToString();
+                    string entrada = sqlDataReader["entrada"].ToString();
+                    string saida = sqlDataReader["saida"].ToString();
+
+                    e.Graphics.DrawString(nome, new Font("Arial", 12, FontStyle.Bold), Brushes.Gray, new PointF(50, j));
+                    e.Graphics.DrawString(visitado, new Font("Arial", 12, FontStyle.Bold), Brushes.Gray, new PointF(180, j));
+                    //e.Graphics.DrawString(placa, new Font("Centuey Gothic", 12, FontStyle.Bold), Brushes.Gray, new PointF(270, j));
+                    e.Graphics.DrawString(entrada, new Font("Arial", 12, FontStyle.Bold), Brushes.Gray, new PointF(400, j));
+                    e.Graphics.DrawString(saida, new Font("Arial", 12, FontStyle.Bold), Brushes.Gray, new PointF(600, j));
+                    //i += 10;
+                    j += 35;
+                }
+            }
+            catch (Exception msg)
+            {
+                MessageBox.Show(msg.Message);
+            }
+
+            sqlConnection.Close();
         }
     }
 }
