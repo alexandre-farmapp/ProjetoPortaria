@@ -58,3 +58,9 @@ C:\Users\felipe rabelo\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\bin\Re
 C:\Users\felipe rabelo\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\bin\Release\Projeto_Portaria.exe.config
 C:\Users\felipe rabelo\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\bin\Release\Projeto_Portaria.exe
 C:\Users\felipe rabelo\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\bin\Release\Projeto_Portaria.pdb
+C:\Users\felipe rabelo\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\bin\Release\EPPlus.dll
+C:\Users\felipe rabelo\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\bin\Release\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\felipe rabelo\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\bin\Release\System.ComponentModel.Annotations.dll
+C:\Users\felipe rabelo\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\bin\Release\EPPlus.xml
+C:\Users\felipe rabelo\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\bin\Release\Microsoft.IO.RecyclableMemoryStream.xml
+C:\Users\felipe rabelo\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\obj\Release\Projeto_Portaria.csproj.CopyComplete

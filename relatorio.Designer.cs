@@ -43,13 +43,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
-            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
-            this.buttonImprimir = new System.Windows.Forms.Button();
             this.button_excel = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.buttonImprimir = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button_pesquisar = new System.Windows.Forms.Button();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -189,6 +189,25 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Exportar ";
             // 
+            // button_excel
+            // 
+            this.button_excel.BackColor = System.Drawing.Color.Transparent;
+            this.button_excel.BackgroundImage = global::Projeto_Portaria.Properties.Resources.excel_new;
+            this.button_excel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button_excel.FlatAppearance.BorderSize = 0;
+            this.button_excel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_excel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_excel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_excel.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button_excel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_excel.Location = new System.Drawing.Point(6, 12);
+            this.button_excel.Name = "button_excel";
+            this.button_excel.Size = new System.Drawing.Size(57, 44);
+            this.button_excel.TabIndex = 7;
+            this.button_excel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button_excel.UseVisualStyleBackColor = false;
+            this.button_excel.Click += new System.EventHandler(this.button_excel_Click);
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.buttonImprimir);
@@ -212,21 +231,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Pesquisar/Exportar";
             // 
-            // printDocument1
-            // 
-            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
-            // 
-            // printPreviewDialog1
-            // 
-            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
-            this.printPreviewDialog1.Document = this.printDocument1;
-            this.printPreviewDialog1.Enabled = true;
-            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
-            this.printPreviewDialog1.Name = "printPreviewDialog1";
-            this.printPreviewDialog1.Visible = false;
-            // 
             // buttonImprimir
             // 
             this.buttonImprimir.BackColor = System.Drawing.Color.Transparent;
@@ -245,25 +249,6 @@
             this.buttonImprimir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonImprimir.UseVisualStyleBackColor = false;
             this.buttonImprimir.Click += new System.EventHandler(this.buttonImprimir_Click);
-            // 
-            // button_excel
-            // 
-            this.button_excel.BackColor = System.Drawing.Color.Transparent;
-            this.button_excel.BackgroundImage = global::Projeto_Portaria.Properties.Resources.excel_new;
-            this.button_excel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button_excel.FlatAppearance.BorderSize = 0;
-            this.button_excel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button_excel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button_excel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_excel.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button_excel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_excel.Location = new System.Drawing.Point(6, 12);
-            this.button_excel.Name = "button_excel";
-            this.button_excel.Size = new System.Drawing.Size(57, 44);
-            this.button_excel.TabIndex = 7;
-            this.button_excel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button_excel.UseVisualStyleBackColor = false;
-            this.button_excel.Click += new System.EventHandler(this.button_excel_Click);
             // 
             // button2
             // 
@@ -302,6 +287,21 @@
             this.button_pesquisar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button_pesquisar.UseVisualStyleBackColor = false;
             this.button_pesquisar.Click += new System.EventHandler(this.button_pesquisar_Click);
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Document = this.printDocument1;
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
             // 
             // relatorio
             // 
