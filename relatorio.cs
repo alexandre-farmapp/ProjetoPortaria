@@ -166,7 +166,6 @@ namespace Projeto_Portaria
             sqlCommand.Parameters.AddWithValue("@dataFim", dateTimePicker_fim.Value.ToString());
             sqlCommand.Parameters.AddWithValue("@unidade", textBox_unidade.Text);
             sqlCommand.Parameters.AddWithValue("@blocoRua", textBox_ruaBloco.Text);
-            sqlCommand.ExecuteNonQuery();
 
             SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
 
@@ -198,6 +197,68 @@ namespace Projeto_Portaria
                     //i += 10;
                     j += 35;
                 }
+            }
+            catch (Exception msg)
+            {
+                MessageBox.Show(msg.Message);
+            }
+
+            sqlConnection.Close();
+        }
+
+        private void buttonWord_Click(object sender, EventArgs e)
+        {
+            string conexao = Projeto_Portaria.Properties.Settings.Default.Bd_portariaConnectionString;
+            SqlConnection sqlConnection = new SqlConnection(conexao);
+            sqlConnection.Open();
+
+            string comando = "";
+
+            if (textBox_unidade.Text == "" && textBox_ruaBloco.Text == "")
+            {
+                comando = "SELECT nome, visitado, entrada, saida FROM relatorio " +
+                    "WHERE entrada BETWEEN @dataInicio AND @dataFim ORDER BY entrada";
+            }
+            else if (textBox_unidade.Text == "")
+            {
+                comando = "SELECT nome, visitado, entrada, saida FROM relatorio " +
+                    "WHERE entrada BETWEEN @dataInicio AND @dataFim AND blocoRua = @blocoRua ORDER BY entrada";
+            }
+            else if (textBox_ruaBloco.Text == "")
+            {
+                comando = "SELECT nome, visitado, entrada, saida FROM relatorio " +
+                    "WHERE entrada BETWEEN @dataInicio AND @dataFim AND Unidade = @unidade ORDER BY entrada";
+            }
+
+            SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);
+            sqlCommand.Parameters.AddWithValue("@dataInicio", dateTimePicker_inicio.Value.ToString());
+            sqlCommand.Parameters.AddWithValue("@dataFim", dateTimePicker_fim.Value.ToString());
+            sqlCommand.Parameters.AddWithValue("@unidade", textBox_unidade.Text);
+            sqlCommand.Parameters.AddWithValue("@blocoRua", textBox_ruaBloco.Text);
+            sqlCommand.ExecuteNonQuery();
+            SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+
+            try
+            {
+                //StreamWriter para gravar um arquivo
+                StreamWriter objetoarquivo = new StreamWriter("Relatorio " + DateTime.Now.ToString("dd-mm-yy") + ".doc", false);//false gera um novo arq toda vez,true grava todos no mesmo arq
+                objetoarquivo.WriteLine("\t\t\tRelatorio " + DateTime.Now.ToString());
+                objetoarquivo.WriteLine("\tNome\t\tVisitado\t\tHora entrada\t\tHora saida");                
+                                
+                while (sqlDataReader.Read())
+                {
+                    string nome = sqlDataReader["Nome"].ToString();
+                    string visitado = sqlDataReader["visitado"].ToString();
+                    string entrada = sqlDataReader["entrada"].ToString();
+                    string saida = sqlDataReader["saida"].ToString();
+
+                    objetoarquivo.Write(nome + "\t");
+                    objetoarquivo.Write(visitado + "\t");
+                    objetoarquivo.Write(entrada + "\t");
+                    objetoarquivo.Write(saida + "\n");
+                }
+                objetoarquivo.Close();
+                Process.Start("Relatorio " + DateTime.Now.ToString("dd-mm-yy") + ".doc");
             }
             catch (Exception msg)
             {
