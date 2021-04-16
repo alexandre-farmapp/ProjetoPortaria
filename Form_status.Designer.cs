@@ -53,18 +53,12 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.visitado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.celularDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.entradaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.visitadoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.carroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.placaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.foto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.button_sair = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -223,7 +217,6 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Gray;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenHorizontal;
@@ -236,14 +229,6 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nomeDataGridViewTextBoxColumn,
-            this.celularDataGridViewTextBoxColumn,
-            this.entradaDataGridViewTextBoxColumn,
-            this.visitadoDataGridViewTextBoxColumn1,
-            this.carroDataGridViewTextBoxColumn,
-            this.placaDataGridViewTextBoxColumn,
-            this.foto});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -272,60 +257,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(648, 224);
             this.dataGridView1.TabIndex = 20;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
-            // 
-            // nomeDataGridViewTextBoxColumn
-            // 
-            this.nomeDataGridViewTextBoxColumn.DataPropertyName = "nome";
-            this.nomeDataGridViewTextBoxColumn.HeaderText = "Nome";
-            this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
-            this.nomeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nomeDataGridViewTextBoxColumn.Width = 180;
-            // 
-            // celularDataGridViewTextBoxColumn
-            // 
-            this.celularDataGridViewTextBoxColumn.DataPropertyName = "celular";
-            this.celularDataGridViewTextBoxColumn.HeaderText = "Celular";
-            this.celularDataGridViewTextBoxColumn.Name = "celularDataGridViewTextBoxColumn";
-            this.celularDataGridViewTextBoxColumn.ReadOnly = true;
-            this.celularDataGridViewTextBoxColumn.Width = 120;
-            // 
-            // entradaDataGridViewTextBoxColumn
-            // 
-            this.entradaDataGridViewTextBoxColumn.DataPropertyName = "entrada";
-            this.entradaDataGridViewTextBoxColumn.HeaderText = "Entrada";
-            this.entradaDataGridViewTextBoxColumn.Name = "entradaDataGridViewTextBoxColumn";
-            this.entradaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.entradaDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // visitadoDataGridViewTextBoxColumn1
-            // 
-            this.visitadoDataGridViewTextBoxColumn1.DataPropertyName = "visitado";
-            this.visitadoDataGridViewTextBoxColumn1.HeaderText = "Visitado";
-            this.visitadoDataGridViewTextBoxColumn1.Name = "visitadoDataGridViewTextBoxColumn1";
-            this.visitadoDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.visitadoDataGridViewTextBoxColumn1.Width = 200;
-            // 
-            // carroDataGridViewTextBoxColumn
-            // 
-            this.carroDataGridViewTextBoxColumn.DataPropertyName = "carro";
-            this.carroDataGridViewTextBoxColumn.HeaderText = "Carro";
-            this.carroDataGridViewTextBoxColumn.Name = "carroDataGridViewTextBoxColumn";
-            this.carroDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // placaDataGridViewTextBoxColumn
-            // 
-            this.placaDataGridViewTextBoxColumn.DataPropertyName = "placa";
-            this.placaDataGridViewTextBoxColumn.HeaderText = "Placa";
-            this.placaDataGridViewTextBoxColumn.Name = "placaDataGridViewTextBoxColumn";
-            this.placaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.placaDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // foto
-            // 
-            this.foto.DataPropertyName = "foto";
-            this.foto.HeaderText = "foto";
-            this.foto.Name = "foto";
-            this.foto.ReadOnly = true;
             // 
             // pictureBox1
             // 
@@ -388,7 +319,6 @@
             this.groupBox1.TabIndex = 23;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Estatus de Visitantes";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // Form_status
             // 
@@ -407,6 +337,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_status";
             this.Load += new System.EventHandler(this.Form_status_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -415,7 +346,6 @@
         }
 
         #endregion
-        //private System.Windows.Forms.BindingSource visitantesBindingSource;
         private System.Windows.Forms.TextBox textBox_nome;
         private System.Windows.Forms.TextBox textBox_entrada;
         private System.Windows.Forms.TextBox textBox_saida;
@@ -424,41 +354,20 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button_Cadastro_Moradores;
-        /*
-        private System.Windows.Forms.BindingSource bdportariaDataSetBindingSource;
-        private System.Windows.Forms.BindingSource visitantesBindingSource1;
-        private System.Windows.Forms.BindingSource visitantesBindingSource2;
-        private System.Windows.Forms.BindingSource bdportariaDataSetBindingSource1;
-        private System.Windows.Forms.BindingSource visitantesBindingSource3;
-        private System.Windows.Forms.BindingSource visitantesTemporariosBindingSource;
-        */
         private System.Windows.Forms.DataGridViewTextBoxColumn visitadoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn cpf;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        /*
-        private System.Windows.Forms.BindingSource temporariosBindingSource;
-        private System.Windows.Forms.BindingSource temporariosBindingSource1;
-        */
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn carro;
         private System.Windows.Forms.DataGridViewTextBoxColumn placa;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn visitado;
-        //private System.Windows.Forms.BindingSource temporariosBindingSource2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Button button_sair;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox1;
-        //private System.Windows.Forms.BindingSource temporariosBindingSource3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn celularDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn entradaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn visitadoDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn carroDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn placaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn foto;
     }
 }

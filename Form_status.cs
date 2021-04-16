@@ -18,62 +18,73 @@ namespace Projeto_Portaria
             InitializeComponent();
         }
 
+        private void disparaDatagrid()
+        {
+            string conexao = Projeto_Portaria.Properties.Settings.Default.Bd_portariaConnectionString;
+            SqlConnection sqlConnection = new SqlConnection(conexao);
+            sqlConnection.Open();
+
+            string comando = "SELECT * FROM temporarios";
+            SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);
+            sqlCommand.ExecuteNonQuery();
+
+            DataTable dataTable = new DataTable();
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+            sqlDataAdapter.Fill(dataTable);
+            dataGridView1.DataSource = dataTable;
+
+            sqlConnection.Close();
+
+            dataGridView1.Columns[0].Visible = false;
+            dataGridView1.Columns[8].Visible = false;
+        }
+
         private void Form_status_Load(object sender, EventArgs e)
-        {                        
-            dataGridView1.Columns[6].Visible = false;
+        {           
+            disparaDatagrid();
         }
 
         private void Button_Cadastro_Moradores_Click(object sender, EventArgs e)
-        {
-            
+        {            
             try
             {
                 string conexao = Projeto_Portaria.Properties.Settings.Default.Bd_portariaConnectionString;
                 SqlConnection sqlConnection = new SqlConnection(conexao);
                 sqlConnection.Open();
 
-                string comando = "DELETE FROM temporarios WHERE nome = '" + textBox_nome.Text + "'";
+                string comando = "UPDATE relatorio SET saida = @saida WHERE nome = @nome ";
                 SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);
+                sqlCommand.Parameters.AddWithValue("@saida", textBox_saida.Text.ToString());
+                sqlCommand.Parameters.AddWithValue("@nome", textBox_nome.Text);
                 sqlCommand.ExecuteNonQuery();
 
-                MessageBox.Show("Visitante deletado com sucesso!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                comando = "";
-                comando = "UPDATE relatorio SET saida = @saida WHERE nome = @nome ";
+                comando = "DELETE FROM temporarios WHERE nome = '" + textBox_nome.Text + "'";
                 SqlCommand sqlCommand2 = new SqlCommand(comando, sqlConnection);
-                sqlCommand2.Parameters.AddWithValue("@saida", textBox_saida.Text.ToString());
-                sqlCommand2.Parameters.AddWithValue("@nome", textBox_nome.Text);
                 sqlCommand2.ExecuteNonQuery();
 
+                MessageBox.Show("Visitante deletado com sucesso!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
                 sqlConnection.Close();
 
-                
+                disparaDatagrid();
             }
             catch (Exception msg)
             {
                 MessageBox.Show(msg.Message);
             }
-
-
-            this.Close();
         }
 
         private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            textBox_nome.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            textBox_entrada.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            textBox_nome.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            textBox_entrada.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
             textBox_saida.Text = DateTime.Now.ToString();
-            pictureBox1.ImageLocation = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+            pictureBox1.ImageLocation = dataGridView1.CurrentRow.Cells[8].Value.ToString();
         }
 
         private void Button_sair_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
         }
     }
 }

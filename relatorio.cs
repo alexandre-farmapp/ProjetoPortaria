@@ -73,8 +73,8 @@ namespace Projeto_Portaria
 
             if(textBox_unidade.Text =="" && textBox_ruaBloco.Text == "")
             {
-                comando = "select nome, visitado, entrada, saida from relatorio ";
-                comando += "where entrada between @dataInicio and @dataFim order by entrada";
+                comando = "SELECT nome, visitado, entrada, saida FROM relatorio ";
+                comando += "WHERE entrada BETWEEN @dataInicio AND @dataFim ORDER BY entrada";
             }
             else if(textBox_unidade.Text == "")
             {
@@ -84,7 +84,7 @@ namespace Projeto_Portaria
             else if(textBox_ruaBloco.Text == "")
             {
                 comando = "select nome, visitado, entrada, saida from relatorio ";
-                comando += "where entrada between @dataInicio and @dataFim and unidade = @unidade order by entrada";
+                comando += "where entrada between @dataInicio and @dataFim and Unidade = @unidade order by entrada";
             }
             
             SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);
@@ -124,7 +124,6 @@ namespace Projeto_Portaria
             */
 
             sqlConnection.Close();
-
         }
 
         private void button2_Click(object sender, EventArgs e)

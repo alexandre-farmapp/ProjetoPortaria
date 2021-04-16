@@ -69,7 +69,8 @@ namespace Projeto_Portaria
 
                     if(sqlCommand.ExecuteScalar() == null)
                     {
-                        comando = "INSERT INTO visitantes(nome,CPF,telefone_celular,unidade,visitado,modelo,placa,observacoes,foto) values(@nome, @CPF, @telefone_celular, @unidade, @visitado, @modelo, @placa, @observacoes, @foto)";
+                        comando = "INSERT INTO visitantes(nome,CPF,telefone_celular,unidade,visitado,modelo,placa,observacoes,foto) " +
+                            "values(@nome, @CPF, @telefone_celular, @unidade, @visitado, @modelo, @placa, @observacoes, @foto)";
                         sqlCommand = new SqlCommand(comando, sqlConnection);
                         sqlCommand.Parameters.AddWithValue("@nome", textBox_Nome.Text);
                         sqlCommand.Parameters.AddWithValue("@CPF", textBox_cpf.Text);
@@ -82,7 +83,8 @@ namespace Projeto_Portaria
                         sqlCommand.Parameters.AddWithValue("@foto", openFileDialog1.FileName);
                         sqlCommand.ExecuteNonQuery();
 
-                        comando = "INSERT INTO relatorio(nome,CPF,telefone_celular,unidade,blocoRua,visitado,observacoes,entrada,saida,foto) values(@nome,@CPF,@telefone_celular,@unidade,@blocoRua,@visitado,@observacoes,@entrada,@saida,@foto)";
+                        comando = "INSERT INTO relatorio(nome,CPF,telefone_celular,unidade,blocoRua,visitado,observacoes,entrada,saida,foto) " +
+                            "values(@nome,@CPF,@telefone_celular,@unidade,@blocoRua,@visitado,@observacoes,@entrada,@saida,@foto)";
                         sqlCommand = new SqlCommand(comando, sqlConnection);
                         sqlCommand.Parameters.AddWithValue("@nome", textBox_Nome.Text);
                         sqlCommand.Parameters.AddWithValue("@CPF", textBox_cpf.Text);
@@ -96,7 +98,8 @@ namespace Projeto_Portaria
                         sqlCommand.Parameters.AddWithValue("@foto", openFileDialog1.FileName);
                         sqlCommand.ExecuteNonQuery();
 
-                        comando = "INSERT INTO temporarios(nome,CPF,celular,entrada,visitado,carro,placa,foto) values(@nome,@CPF,@celular,@entrada,@visitado,@carro,@placa,@foto)";
+                        comando = "INSERT INTO temporarios(nome,CPF,celular,entrada,visitado,carro,placa,foto) " +
+                            "values(@nome,@CPF,@celular,@entrada,@visitado,@carro,@placa,@foto)";
                         sqlCommand = new SqlCommand(comando, sqlConnection);
                         sqlCommand.Parameters.AddWithValue("@nome", textBox_Nome.Text);
                         sqlCommand.Parameters.AddWithValue("@CPF", textBox_cpf.Text);
@@ -110,8 +113,8 @@ namespace Projeto_Portaria
                     }
                     else
                     {
-                        comando = "UPDATE visitantes SET Nome=@nome, CPF=@CPF, telefone_celular=@telefone_celular, unidade=@unidade, visitado=@visitado, modelo=@modelo, ";
-                        comando += "placa=@placa, observacoes=@observacoes, foto=@foto WHERE CPF= @cpf";
+                        comando = "UPDATE visitantes SET Nome=@nome, CPF=@CPF, telefone_celular=@telefone_celular, unidade=@unidade, visitado=@visitado, modelo=@modelo, " +
+                            "placa=@placa, observacoes=@observacoes, foto=@foto WHERE CPF= @cpf";
                         sqlCommand = new SqlCommand(comando, sqlConnection);
                         sqlCommand.Parameters.AddWithValue("@nome", textBox_Nome.Text);
                         sqlCommand.Parameters.AddWithValue("@CPF", textBox_cpf.Text);
@@ -124,8 +127,8 @@ namespace Projeto_Portaria
                         sqlCommand.Parameters.AddWithValue("@foto", pictureBox_Foto_Visitante.ImageLocation);
                         sqlCommand.ExecuteNonQuery();
 
-                        comando = "INSERT INTO relatorio(Nome,CPF,visitado,unidade,blocoRua,telefone_celular,observacoes,foto,entrada,saida) ";
-                        comando += "values(@Nome,@CPF,@visitado,@unidade,@blocoRua,@telefone_celular,@observacoes,@foto,@entrada,@saida)";
+                        comando = "INSERT INTO relatorio(Nome,CPF,visitado,Unidade,blocoRua,telefone_celular,observacoes,foto,entrada,saida) " +
+                            "values(@Nome,@CPF,@visitado,@unidade,@blocoRua,@telefone_celular,@observacoes,@foto,@entrada,@saida)";
                         sqlCommand = new SqlCommand(comando, sqlConnection);
                         sqlCommand.Parameters.AddWithValue("@Nome", textBox_Nome.Text);
                         sqlCommand.Parameters.AddWithValue("@CPF", textBox_cpf.Text);
@@ -139,8 +142,8 @@ namespace Projeto_Portaria
                         sqlCommand.Parameters.AddWithValue("@foto", pictureBox_Foto_Visitante.ImageLocation);
                         sqlCommand.ExecuteNonQuery();
 
-                        comando = "INSERT INTO temporarios(nome,cpf,celular,entrada,visitado,carro,placa,foto) ";
-                        comando += "values(@nome,@cpf,@celular,@entrada,@visitado,@carro,@placa,@foto)";
+                        comando = "INSERT INTO temporarios(nome,cpf,celular,entrada,visitado,carro,placa,foto) " +
+                            "values(@nome,@cpf,@celular,@entrada,@visitado,@carro,@placa,@foto)";
                         sqlCommand = new SqlCommand(comando, sqlConnection);
                         sqlCommand.Parameters.AddWithValue("@nome", textBox_Nome.Text);
                         sqlCommand.Parameters.AddWithValue("@cpf", textBox_cpf.Text);
@@ -151,12 +154,7 @@ namespace Projeto_Portaria
                         sqlCommand.Parameters.AddWithValue("@placa", maskedTextBox_placa.Text);
                         sqlCommand.Parameters.AddWithValue("@foto", pictureBox_Foto_Visitante.ImageLocation);
                         sqlCommand.ExecuteNonQuery();
-                    }
-
-
-                    
-
-                    
+                    }                    
 
                     MessageBox.Show("Visitante cadastrado com sucesso!", "Mensagem!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     sqlConnection.Close();
