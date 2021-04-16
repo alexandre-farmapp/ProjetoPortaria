@@ -35,7 +35,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_status));
-            this.visitantesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.textBox_nome = new System.Windows.Forms.TextBox();
             this.textBox_entrada = new System.Windows.Forms.TextBox();
             this.textBox_saida = new System.Windows.Forms.TextBox();
@@ -43,25 +42,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.button_Cadastro_Moradores = new System.Windows.Forms.Button();
-            this.bdportariaDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.visitantesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.visitantesBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.temporariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.visitantesTemporariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.visitantesBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.bdportariaDataSetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.visitadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.temporariosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.carro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.placa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.visitado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.temporariosBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.celularDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -70,31 +60,14 @@
             this.carroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.placaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.foto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.temporariosBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.button_sair = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            ((System.ComponentModel.ISupportInitialize)(this.visitantesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdportariaDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.visitantesBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.visitantesBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.temporariosBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.visitantesTemporariosBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.visitantesBindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdportariaDataSetBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.temporariosBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.temporariosBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.temporariosBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // visitantesBindingSource
-            // 
-            this.visitantesBindingSource.DataMember = "visitantes";
             // 
             // textBox_nome
             // 
@@ -179,17 +152,6 @@
             this.toolTip1.SetToolTip(this.button_Cadastro_Moradores, "Gerar Saída");
             this.button_Cadastro_Moradores.UseVisualStyleBackColor = false;
             this.button_Cadastro_Moradores.Click += new System.EventHandler(this.Button_Cadastro_Moradores_Click);
-            this.bdportariaDataSetBindingSource.Position = 0;
-            // 
-            // visitantesBindingSource1
-            // 
-            this.visitantesBindingSource1.DataMember = "visitantes";
-            this.visitantesBindingSource1.DataSource = this.bdportariaDataSetBindingSource;
-            // 
-            // visitantesBindingSource2
-            // 
-            this.visitantesBindingSource2.DataMember = "visitantes";
-            this.visitantesBindingSource2.DataSource = this.bdportariaDataSetBindingSource;
             // 
             // visitadoDataGridViewTextBoxColumn
             // 
@@ -282,7 +244,6 @@
             this.carroDataGridViewTextBoxColumn,
             this.placaDataGridViewTextBoxColumn,
             this.foto});
-            this.dataGridView1.DataSource = this.temporariosBindingSource3;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -446,18 +407,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_status";
             this.Load += new System.EventHandler(this.Form_status_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.visitantesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdportariaDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.visitantesBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.visitantesBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.temporariosBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.visitantesTemporariosBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.visitantesBindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdportariaDataSetBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.temporariosBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.temporariosBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.temporariosBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -466,7 +415,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.BindingSource visitantesBindingSource;
+        //private System.Windows.Forms.BindingSource visitantesBindingSource;
         private System.Windows.Forms.TextBox textBox_nome;
         private System.Windows.Forms.TextBox textBox_entrada;
         private System.Windows.Forms.TextBox textBox_saida;
@@ -475,31 +424,35 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button_Cadastro_Moradores;
+        /*
         private System.Windows.Forms.BindingSource bdportariaDataSetBindingSource;
         private System.Windows.Forms.BindingSource visitantesBindingSource1;
         private System.Windows.Forms.BindingSource visitantesBindingSource2;
         private System.Windows.Forms.BindingSource bdportariaDataSetBindingSource1;
         private System.Windows.Forms.BindingSource visitantesBindingSource3;
         private System.Windows.Forms.BindingSource visitantesTemporariosBindingSource;
+        */
         private System.Windows.Forms.DataGridViewTextBoxColumn visitadoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn cpf;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        /*
         private System.Windows.Forms.BindingSource temporariosBindingSource;
         private System.Windows.Forms.BindingSource temporariosBindingSource1;
+        */
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn carro;
         private System.Windows.Forms.DataGridViewTextBoxColumn placa;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn visitado;
-        private System.Windows.Forms.BindingSource temporariosBindingSource2;
+        //private System.Windows.Forms.BindingSource temporariosBindingSource2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Button button_sair;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.BindingSource temporariosBindingSource3;
+        //private System.Windows.Forms.BindingSource temporariosBindingSource3;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn celularDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn entradaDataGridViewTextBoxColumn;

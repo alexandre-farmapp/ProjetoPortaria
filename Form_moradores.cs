@@ -64,7 +64,7 @@ namespace Projeto_Portaria
 
                 SqlCommand cmd = sqlConnection.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "select cod_morador,nome,CPF,rua,unidade,ramal,fixo,celular,email,observacoes,modelo,cor,placa,foto from moradores where nome LIKE '" + "%" + textBox_nome_morador.Text + "%" + "'";
+                cmd.CommandText = "SELECT cod_morador,nome,CPF,rua,unidade,ramal,fixo,celular,email,observacoes,modelo,cor,placa,foto from moradores where nome LIKE '" + "%" + textBox_nome_morador.Text + "%" + "'";
                 cmd.ExecuteNonQuery();
                 DataTable dt = new DataTable();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);

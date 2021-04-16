@@ -29,11 +29,6 @@ namespace Projeto_Portaria
             fx.Start();*/
         }
 
-        private void formMoradores()
-        {
-            //Application.Run(new Cadastro_de_Moradores());
-        }
-
         private void Button_Cadastro_Visitantes_Click(object sender, EventArgs e)
         {
             Cadastro_de_Visitantes cadastro_De_Visitantes = new Cadastro_de_Visitantes();
@@ -67,10 +62,10 @@ namespace Projeto_Portaria
 
         }
 
-    private void formUsuário()
-    {
-        //Application.Run(new Form_Cadastro_Usuário());
-    }
+        private void formUsuário()
+        {
+            //Application.Run(new Form_Cadastro_Usuário());
+        }
 
         private void Button_sair_Click(object sender, EventArgs e)
         {
@@ -82,10 +77,7 @@ namespace Projeto_Portaria
                 fx = new Thread(formLogin);
                 fx.SetApartmentState(ApartmentState.STA);
                 fx.Start();
-            }
-
-            
-            
+            }           
         }
 
         private void formLogin()
@@ -108,31 +100,12 @@ namespace Projeto_Portaria
                 button_Cadastrar_Novo_Usuario.Visible = true;
             }
 
-
             //textBox_usuario_logado.Text = "Usuario : " + User_info.usuario_logado + " " + DateTime.Now.ToLongTimeString();
-
-        }
-
-        private void TextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TextBox_usuario_logado_TextChanged(object sender, EventArgs e)
-        {
-            
         }
 
         private void Button_Cadastrar_Novo_Usuario_VisibleChanged(object sender, EventArgs e)
         {
 
-        }
-
-        
-
-        private void Label1_Click(object sender, EventArgs e)
-        {
-            
         }
 
         private void Button_Relatório_Click(object sender, EventArgs e)
@@ -167,11 +140,11 @@ namespace Projeto_Portaria
             fx.SetApartmentState(ApartmentState.STA);
             fx.Start();
         }
+
         private void form_moradores()
         {
             //Application.Run(new Form_moradores());
         }
-
         
         private void Button_pessoas_Click(object sender, EventArgs e)
         {
@@ -182,14 +155,14 @@ namespace Projeto_Portaria
             fx.SetApartmentState(ApartmentState.STA);
             fx.Start();
         }
+
         private void formpessoas()
         {
             //Application.Run(new Form_pessoas_uteis());
         }
 
         private void Button1_logoff_Click(object sender, EventArgs e)
-        {
-            
+        {            
             var result = MessageBox.Show("Deseja Encerrar o Sistema?", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
             if (result == DialogResult.Yes)
@@ -205,8 +178,7 @@ namespace Projeto_Portaria
             if (result == DialogResult.Yes)
             {
                 Application.Exit(); //Não usar esse botão, recuperar o botão perdido 
-            }
-            
+            }            
         }
 
         private void button_relatorio_Click(object sender, EventArgs e)
@@ -217,26 +189,17 @@ namespace Projeto_Portaria
             fx = new Thread(form_relatorio);
             fx.SetApartmentState(ApartmentState.STA);
             fx.Start();
-
-
-
         }
 
         private void form_relatorio()
         {
             
         }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void buttonAnotacoes_Click(object sender, EventArgs e)
         {
             FormAnotacoes formAnotacoes = new FormAnotacoes();
             formAnotacoes.ShowDialog();
-        }
-                
+        }                
     }
-    }
+}

@@ -48,17 +48,7 @@
             this.button_alterar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomesindicoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefonesindicoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomesupervisorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefone_supervisor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomezeladorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefonezeladorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pessoasuteisBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
-            this.pessoasuteisBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.pessoasUteisBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.pessoasUteisBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pessoasUteisBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.button_salvar = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.button_sair = new System.Windows.Forms.Button();
@@ -68,11 +58,6 @@
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pessoasuteisBindingSource4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pessoasuteisBindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pessoasUteisBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pessoasUteisBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pessoasUteisBindingSource1)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -250,23 +235,15 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
-            this.nomesindicoDataGridViewTextBoxColumn,
-            this.telefonesindicoDataGridViewTextBoxColumn,
-            this.nomesupervisorDataGridViewTextBoxColumn,
-            this.telefone_supervisor,
-            this.nomezeladorDataGridViewTextBoxColumn,
-            this.telefonezeladorDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.pessoasuteisBindingSource4;
+            this.telefone_supervisor});
             this.dataGridView1.Location = new System.Drawing.Point(477, 21);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(42, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(238, 150);
             this.dataGridView1.TabIndex = 8;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
             // 
             // Id
             // 
@@ -275,47 +252,12 @@
             this.Id.Name = "Id";
             this.Id.ReadOnly = true;
             // 
-            // nomesindicoDataGridViewTextBoxColumn
-            // 
-            this.nomesindicoDataGridViewTextBoxColumn.DataPropertyName = "nome_sindico";
-            this.nomesindicoDataGridViewTextBoxColumn.HeaderText = "nome_sindico";
-            this.nomesindicoDataGridViewTextBoxColumn.Name = "nomesindicoDataGridViewTextBoxColumn";
-            this.nomesindicoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // telefonesindicoDataGridViewTextBoxColumn
-            // 
-            this.telefonesindicoDataGridViewTextBoxColumn.DataPropertyName = "telefone_sindico";
-            this.telefonesindicoDataGridViewTextBoxColumn.HeaderText = "telefone_sindico";
-            this.telefonesindicoDataGridViewTextBoxColumn.Name = "telefonesindicoDataGridViewTextBoxColumn";
-            this.telefonesindicoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nomesupervisorDataGridViewTextBoxColumn
-            // 
-            this.nomesupervisorDataGridViewTextBoxColumn.DataPropertyName = "nome_supervisor";
-            this.nomesupervisorDataGridViewTextBoxColumn.HeaderText = "nome_supervisor";
-            this.nomesupervisorDataGridViewTextBoxColumn.Name = "nomesupervisorDataGridViewTextBoxColumn";
-            this.nomesupervisorDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // telefone_supervisor
             // 
             this.telefone_supervisor.DataPropertyName = "telefone_supervisor";
             this.telefone_supervisor.HeaderText = "telefone_supervisor";
             this.telefone_supervisor.Name = "telefone_supervisor";
             this.telefone_supervisor.ReadOnly = true;
-            // 
-            // nomezeladorDataGridViewTextBoxColumn
-            // 
-            this.nomezeladorDataGridViewTextBoxColumn.DataPropertyName = "nome_zelador";
-            this.nomezeladorDataGridViewTextBoxColumn.HeaderText = "nome_zelador";
-            this.nomezeladorDataGridViewTextBoxColumn.Name = "nomezeladorDataGridViewTextBoxColumn";
-            this.nomezeladorDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // telefonezeladorDataGridViewTextBoxColumn
-            // 
-            this.telefonezeladorDataGridViewTextBoxColumn.DataPropertyName = "telefone_zelador";
-            this.telefonezeladorDataGridViewTextBoxColumn.HeaderText = "telefone_zelador";
-            this.telefonezeladorDataGridViewTextBoxColumn.Name = "telefonezeladorDataGridViewTextBoxColumn";
-            this.telefonezeladorDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // button_salvar
             // 
@@ -386,7 +328,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(438, 408);
+            this.ClientSize = new System.Drawing.Size(440, 406);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -402,11 +344,6 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pessoasuteisBindingSource4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pessoasuteisBindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pessoasUteisBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pessoasUteisBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pessoasUteisBindingSource1)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
@@ -432,14 +369,9 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button button_alterar;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.BindingSource pessoasUteisBindingSource;
-        private System.Windows.Forms.BindingSource pessoasUteisBindingSource1;
         private System.Windows.Forms.Button button_salvar;
-        private System.Windows.Forms.BindingSource pessoasUteisBindingSource2;
-        private System.Windows.Forms.BindingSource pessoasuteisBindingSource3;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Button button_sair;
-        private System.Windows.Forms.BindingSource pessoasuteisBindingSource4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomesindicoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefonesindicoDataGridViewTextBoxColumn;

@@ -38,16 +38,21 @@ namespace Projeto_Portaria
 
         private void Form_pessoas_uteis_Load(object sender, EventArgs e)
         {
-            // TODO: esta linha de código carrega dados na tabela 'bd_portariaDataSet_pessoas_uteis.pessoasuteis'. Você pode movê-la ou removê-la conforme necessário.
-            this.pessoasuteisTableAdapter1.Fill(this.bd_portariaDataSet_pessoas_uteis.pessoasuteis);
-            // TODO: esta linha de código carrega dados na tabela 'bd_portariaDataSet11.pessoasuteis'. Você pode movê-la ou removê-la conforme necessário.
-            //this.pessoasuteisTableAdapter.Fill(this.bd_portariaDataSet11.pessoasuteis);
-            // TODO: esta linha de código carrega dados na tabela 'bd_portariaDataSet10.pessoas_uteis'. Você pode movê-la ou removê-la conforme necessário.
-            //this.pessoas_uteisTableAdapter2.Fill(this.bd_portariaDataSet10.pessoas_uteis);
-            // TODO: esta linha de código carrega dados na tabela 'bd_portariaDataSet9.pessoas_uteis'. Você pode movê-la ou removê-la conforme necessário.
-            //this.pessoas_uteisTableAdapter1.Fill(this.bd_portariaDataSet9.pessoas_uteis);
-            // TODO: esta linha de código carrega dados na tabela 'bd_portariaDataSet8.pessoas_uteis'. Você pode movê-la ou removê-la conforme necessário.
-            //this.pessoas_uteisTableAdapter.Fill(this.bd_portariaDataSet8.pessoas_uteis);
+            string conexao = Projeto_Portaria.Properties.Settings.Default.Bd_portariaConnectionString;
+            SqlConnection sqlConnection = new SqlConnection(conexao);
+            sqlConnection.Open();
+
+            string comando = "SELECT * FROM pessoasuteis";
+            SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);
+            sqlCommand.ExecuteNonQuery();
+
+            DataTable dataTable = new DataTable();
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+            sqlDataAdapter.Fill(dataTable);
+            dataGridView1.DataSource = dataTable;
+
+            sqlConnection.Close();
+
             textBox_id.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             textBox_nome_sindico.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
             maskedTextBox_telefone_sindico.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
@@ -58,8 +63,7 @@ namespace Projeto_Portaria
 
             if(User_info.usuario_logado == "admin")
             {
-                button_alterar.Visible = true;
-                
+                button_alterar.Visible = true;                
             }
             else
             {
@@ -67,11 +71,6 @@ namespace Projeto_Portaria
                 button_salvar.Visible = false;
             }
 
-        }
-
-        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
         }
 
         private void Button_salvar_Click(object sender, EventArgs e)
@@ -83,7 +82,9 @@ namespace Projeto_Portaria
                 sqlConnection.Open();
 
                 //string comando = "UPDATE moradores SET ramal = '" + textBox_Ramal.Text + "' WHERE nome = '"+textBox_Nome.Text+"'";
-                string comando = "UPDATE pessoasuteis SET nome_sindico = @nome_sindico, telefone_sindico = @telefone_sindico, nome_supervisor = @nome_supervisor, telefone_supervisor = @telefone_supervisor, nome_zelador = @nome_zelador, telefone_zelador = @telefone_zelador WHERE id = '" + textBox_id.Text + "'";
+                string comando = "UPDATE pessoasuteis SET nome_sindico = @nome_sindico, telefone_sindico = @telefone_sindico, nome_supervisor = @nome_supervisor, ";
+                comando += "telefone_supervisor = @telefone_supervisor, nome_zelador = @nome_zelador, telefone_zelador = @telefone_zelador ";
+                comando += "WHERE id = '" + textBox_id.Text + "'";
                 SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);
                 sqlCommand.Parameters.AddWithValue("@nome_sindico", textBox_nome_sindico.Text);
                 sqlCommand.Parameters.AddWithValue("@telefone_sindico", maskedTextBox_telefone_sindico.Text);
@@ -109,14 +110,11 @@ namespace Projeto_Portaria
 
                 MessageBox.Show(msg.Message);
             }
-
         }
 
         private void Button_sair_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        
+        }        
     }
 }

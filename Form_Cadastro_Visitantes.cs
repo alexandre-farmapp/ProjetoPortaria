@@ -33,14 +33,8 @@ namespace Projeto_Portaria
 
         private void Cadastro_de_Visitantes_Load(object sender, EventArgs e)
         {
-            // TODO: esta linha de código carrega dados na tabela 'bd_portariaDataSet_lista_morador1.moradores'. Você pode movê-la ou removê-la conforme necessário.
-            this.moradoresTableAdapter.Fill(this.bd_portariaDataSet_lista_morador1.moradores);
-            // TODO: esta linha de código carrega dados na tabela 'bd_portariaDataSet_lista_morador.moradores'. Você pode movê-la ou removê-la conforme necessário.
-            this.moradoresTableAdapter.Fill(this.bd_portariaDataSet_lista_morador.moradores);
-
             textBox_entrada.Text = DateTime.Now.ToString();
-            dataGridView1.Visible = false;
-            
+            dataGridView1.Visible = false;            
         }        
 
         private void PictureBox_Foto_Visitante_Click(object sender, EventArgs e)

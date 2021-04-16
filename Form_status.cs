@@ -19,13 +19,8 @@ namespace Projeto_Portaria
         }
 
         private void Form_status_Load(object sender, EventArgs e)
-        {
-            // TODO: esta linha de código carrega dados na tabela 'bd_portariaDataSet12_status.temporarios'. Você pode movê-la ou removê-la conforme necessário.
-            this.temporariosTableAdapter3.Fill(this.bd_portariaDataSet12_status.temporarios);
-            
+        {                        
             dataGridView1.Columns[6].Visible = false;
-
-
         }
 
         private void Button_Cadastro_Moradores_Click(object sender, EventArgs e)
@@ -37,7 +32,7 @@ namespace Projeto_Portaria
                 SqlConnection sqlConnection = new SqlConnection(conexao);
                 sqlConnection.Open();
 
-                string comando = "delete from temporarios where nome = '" + textBox_nome.Text + "'";
+                string comando = "DELETE FROM temporarios WHERE nome = '" + textBox_nome.Text + "'";
                 SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);
                 sqlCommand.ExecuteNonQuery();
 

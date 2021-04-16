@@ -53,11 +53,11 @@
             this.label_Apartamento = new System.Windows.Forms.Label();
             this.button_pesquisar_morador = new System.Windows.Forms.Button();
             this.button_datagrid_visible = new System.Windows.Forms.Button();
-            this.dataGridView_pesquisa_morador = new System.Windows.Forms.DataGridView();
+            this.dataGridView_pesquisa_morador = new System.Windows.Forms.DataGridView();/*
             this.moradoresBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.bdportariaDataSetlistamorador1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.moradoresBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.moradoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.moradoresBindingSource = new System.Windows.Forms.BindingSource(this.components);*/
             this.groupBox_Dados_Veiculo = new System.Windows.Forms.GroupBox();
             this.maskedTextBox_placa = new System.Windows.Forms.MaskedTextBox();
             this.textBox_Modelo = new System.Windows.Forms.TextBox();
@@ -82,11 +82,11 @@
             this.textBoxBlocoRua = new System.Windows.Forms.TextBox();
             this.labelBlocoRua = new System.Windows.Forms.Label();
             this.groupBox_Dados_Pessoais.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_pesquisa_morador)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_pesquisa_morador)).BeginInit();/*
             ((System.ComponentModel.ISupportInitialize)(this.moradoresBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdportariaDataSetlistamorador1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.moradoresBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.moradoresBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.moradoresBindingSource)).BeginInit();*/
             this.groupBox_Dados_Veiculo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Foto_Visitante)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -355,14 +355,14 @@
             this.dataGridView_pesquisa_morador.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView_pesquisa_morador_CellContentClick);
             // 
             // moradoresBindingSource2
-            // 
+            /*
             this.moradoresBindingSource2.DataMember = "moradores";
             this.moradoresBindingSource2.DataSource = this.bdportariaDataSetlistamorador1BindingSource;
             // 
             // moradoresBindingSource1
             // 
             this.moradoresBindingSource1.DataMember = "moradores";
-            this.moradoresBindingSource1.DataSource = this.bdportariaDataSetlistamorador1BindingSource;
+            this.moradoresBindingSource1.DataSource = this.bdportariaDataSetlistamorador1BindingSource;*/
             // 
             // groupBox_Dados_Veiculo
             // 
@@ -662,12 +662,12 @@
             this.Text = "Cadastro de Visitantes";
             this.Load += new System.EventHandler(this.Cadastro_de_Visitantes_Load);
             this.groupBox_Dados_Pessoais.ResumeLayout(false);
-            this.groupBox_Dados_Pessoais.PerformLayout();
+            this.groupBox_Dados_Pessoais.PerformLayout();/*
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_pesquisa_morador)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.moradoresBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdportariaDataSetlistamorador1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.moradoresBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.moradoresBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.moradoresBindingSource)).EndInit();*/
             this.groupBox_Dados_Veiculo.ResumeLayout(false);
             this.groupBox_Dados_Veiculo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Foto_Visitante)).EndInit();
@@ -706,11 +706,11 @@
         private System.Windows.Forms.TextBox textBox_nome_visitante;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button_pesquisar;
+        private System.Windows.Forms.Button button_pesquisar;/*
         private System.Windows.Forms.BindingSource moradoresBindingSource;
         private System.Windows.Forms.BindingSource bdportariaDataSetlistamorador1BindingSource;
         private System.Windows.Forms.BindingSource moradoresBindingSource1;
-        private System.Windows.Forms.BindingSource moradoresBindingSource2;
+        private System.Windows.Forms.BindingSource moradoresBindingSource2;*/
         private System.Windows.Forms.MaskedTextBox maskedTextBox_celular;
         private System.Windows.Forms.MaskedTextBox maskedTextBox_placa;
         private System.Windows.Forms.ToolTip toolTip1;

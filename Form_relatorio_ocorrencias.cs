@@ -40,8 +40,6 @@ namespace Projeto_Portaria
 
         private void Form_relatorio_ocorrencias_Load(object sender, EventArgs e)
         {
-            // TODO: esta linha de código carrega dados na tabela 'bd_portariaDataSet7.ocorrencias'. Você pode movê-la ou removê-la conforme necessário.
-            this.ocorrenciasTableAdapter.Fill(this.bd_portariaDataSet7.ocorrencias);
             //textBox_hora.Text = DateTime.Now.ToString("HH:mm");
         }
         private void atualizardatagrid2()
@@ -52,7 +50,7 @@ namespace Projeto_Portaria
 
             SqlCommand cmd = sqlConnection.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select * from ocorrencias";
+            cmd.CommandText = "SELECT * FROM ocorrencias";
             cmd.ExecuteNonQuery();
 
             DataTable dt = new DataTable();
