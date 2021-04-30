@@ -53,10 +53,10 @@ namespace Projeto_Portaria
                 SqlConnection sqlConnection = new SqlConnection(conexao);
                 sqlConnection.Open();
 
-                string comando = "UPDATE relatorio SET saida = @saida WHERE nome = @nome ";
+                string comando = "UPDATE relatorio SET saida = @saida WHERE entrada = @entrada ";
                 SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);
                 sqlCommand.Parameters.AddWithValue("@saida", textBox_saida.Text.ToString());
-                sqlCommand.Parameters.AddWithValue("@nome", textBox_nome.Text);
+                sqlCommand.Parameters.AddWithValue("@entrada", textBox_entrada.Text);
                 sqlCommand.ExecuteNonQuery();
 
                 comando = "DELETE FROM temporarios WHERE nome = '" + textBox_nome.Text + "'";

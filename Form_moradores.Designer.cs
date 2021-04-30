@@ -131,7 +131,6 @@
             this.maskedTextBox_placa.BackColor = System.Drawing.SystemColors.ControlLight;
             this.maskedTextBox_placa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.maskedTextBox_placa.Location = new System.Drawing.Point(196, 17);
-            this.maskedTextBox_placa.Mask = "aaa-0000";
             this.maskedTextBox_placa.Name = "maskedTextBox_placa";
             this.maskedTextBox_placa.Size = new System.Drawing.Size(89, 26);
             this.maskedTextBox_placa.TabIndex = 17;

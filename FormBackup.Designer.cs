@@ -48,14 +48,20 @@
             this.textBoxCaminhoCriar = new System.Windows.Forms.TextBox();
             this.groupBoxCriarBackup = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.buttonSair = new System.Windows.Forms.Button();
             this.groupBoxRestaurar.SuspendLayout();
             this.groupBoxCriarBackup.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonConectar
             // 
-            this.buttonConectar.Location = new System.Drawing.Point(148, 135);
+            this.buttonConectar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonConectar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.buttonConectar.Location = new System.Drawing.Point(230, 140);
             this.buttonConectar.Name = "buttonConectar";
             this.buttonConectar.Size = new System.Drawing.Size(95, 37);
             this.buttonConectar.TabIndex = 0;
@@ -65,30 +71,43 @@
             // 
             // textBoxServidor
             // 
+            this.textBoxServidor.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.textBoxServidor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxServidor.ForeColor = System.Drawing.SystemColors.ControlText;
             this.textBoxServidor.Location = new System.Drawing.Point(116, 27);
             this.textBoxServidor.Name = "textBoxServidor";
-            this.textBoxServidor.Size = new System.Drawing.Size(165, 20);
+            this.textBoxServidor.Size = new System.Drawing.Size(209, 22);
             this.textBoxServidor.TabIndex = 1;
             // 
             // textBoxBanco
             // 
-            this.textBoxBanco.Location = new System.Drawing.Point(116, 55);
+            this.textBoxBanco.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.textBoxBanco.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxBanco.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.textBoxBanco.Location = new System.Drawing.Point(116, 56);
             this.textBoxBanco.Name = "textBoxBanco";
-            this.textBoxBanco.Size = new System.Drawing.Size(165, 20);
+            this.textBoxBanco.Size = new System.Drawing.Size(209, 22);
             this.textBoxBanco.TabIndex = 2;
             // 
             // textBoxUsuario
             // 
-            this.textBoxUsuario.Location = new System.Drawing.Point(116, 82);
+            this.textBoxUsuario.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.textBoxUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxUsuario.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.textBoxUsuario.Location = new System.Drawing.Point(116, 84);
             this.textBoxUsuario.Name = "textBoxUsuario";
-            this.textBoxUsuario.Size = new System.Drawing.Size(165, 20);
+            this.textBoxUsuario.Size = new System.Drawing.Size(209, 22);
             this.textBoxUsuario.TabIndex = 3;
             // 
             // textBoxSenha
             // 
-            this.textBoxSenha.Location = new System.Drawing.Point(116, 109);
+            this.textBoxSenha.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.textBoxSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxSenha.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.textBoxSenha.Location = new System.Drawing.Point(116, 112);
             this.textBoxSenha.Name = "textBoxSenha";
-            this.textBoxSenha.Size = new System.Drawing.Size(165, 20);
+            this.textBoxSenha.PasswordChar = '*';
+            this.textBoxSenha.Size = new System.Drawing.Size(209, 22);
             this.textBoxSenha.TabIndex = 4;
             // 
             // label1
@@ -103,7 +122,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(10, 58);
+            this.label2.Location = new System.Drawing.Point(10, 59);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(101, 13);
             this.label2.TabIndex = 6;
@@ -112,7 +131,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(60, 87);
+            this.label3.Location = new System.Drawing.Point(60, 89);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(50, 13);
             this.label3.TabIndex = 7;
@@ -121,7 +140,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(67, 112);
+            this.label4.Location = new System.Drawing.Point(67, 115);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(43, 13);
             this.label4.TabIndex = 8;
@@ -134,7 +153,8 @@
             this.groupBoxRestaurar.Controls.Add(this.buttonImportar);
             this.groupBoxRestaurar.Controls.Add(this.textBoxImportar);
             this.groupBoxRestaurar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxRestaurar.Location = new System.Drawing.Point(12, 165);
+            this.groupBoxRestaurar.ForeColor = System.Drawing.SystemColors.Control;
+            this.groupBoxRestaurar.Location = new System.Drawing.Point(19, 171);
             this.groupBoxRestaurar.Name = "groupBoxRestaurar";
             this.groupBoxRestaurar.Size = new System.Drawing.Size(599, 136);
             this.groupBoxRestaurar.TabIndex = 23;
@@ -154,38 +174,45 @@
             // buttonProcurarArq
             // 
             this.buttonProcurarArq.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonProcurarArq.ForeColor = System.Drawing.SystemColors.ControlText;
             this.buttonProcurarArq.Location = new System.Drawing.Point(487, 40);
             this.buttonProcurarArq.Name = "buttonProcurarArq";
             this.buttonProcurarArq.Size = new System.Drawing.Size(95, 37);
             this.buttonProcurarArq.TabIndex = 15;
             this.buttonProcurarArq.Text = "Procurar";
             this.buttonProcurarArq.UseVisualStyleBackColor = true;
+            this.buttonProcurarArq.Click += new System.EventHandler(this.buttonProcurarArq_Click);
             // 
             // buttonImportar
             // 
             this.buttonImportar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonImportar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.buttonImportar.Location = new System.Drawing.Point(487, 83);
             this.buttonImportar.Name = "buttonImportar";
             this.buttonImportar.Size = new System.Drawing.Size(95, 37);
             this.buttonImportar.TabIndex = 3;
             this.buttonImportar.Text = "Restaurar";
             this.buttonImportar.UseVisualStyleBackColor = true;
+            this.buttonImportar.Click += new System.EventHandler(this.buttonImportar_Click);
             // 
             // textBoxImportar
             // 
             this.textBoxImportar.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.textBoxImportar.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.textBoxImportar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxImportar.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.textBoxImportar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxImportar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.textBoxImportar.Location = new System.Drawing.Point(23, 40);
             this.textBoxImportar.Name = "textBoxImportar";
-            this.textBoxImportar.Size = new System.Drawing.Size(458, 20);
+            this.textBoxImportar.Size = new System.Drawing.Size(458, 22);
             this.textBoxImportar.TabIndex = 12;
             // 
             // labelCaminho
             // 
             this.labelCaminho.AutoSize = true;
             this.labelCaminho.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCaminho.Location = new System.Drawing.Point(32, 36);
+            this.labelCaminho.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelCaminho.Location = new System.Drawing.Point(40, 51);
             this.labelCaminho.Name = "labelCaminho";
             this.labelCaminho.Size = new System.Drawing.Size(55, 13);
             this.labelCaminho.TabIndex = 21;
@@ -194,31 +221,37 @@
             // buttonProcurar
             // 
             this.buttonProcurar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonProcurar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.buttonProcurar.Location = new System.Drawing.Point(487, 40);
             this.buttonProcurar.Name = "buttonProcurar";
             this.buttonProcurar.Size = new System.Drawing.Size(95, 37);
             this.buttonProcurar.TabIndex = 15;
             this.buttonProcurar.Text = "Procurar";
             this.buttonProcurar.UseVisualStyleBackColor = true;
+            this.buttonProcurar.Click += new System.EventHandler(this.buttonProcurar_Click);
             // 
             // buttonSalvar
             // 
             this.buttonSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSalvar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.buttonSalvar.Location = new System.Drawing.Point(487, 83);
             this.buttonSalvar.Name = "buttonSalvar";
             this.buttonSalvar.Size = new System.Drawing.Size(95, 37);
             this.buttonSalvar.TabIndex = 3;
             this.buttonSalvar.Text = "Salvar";
             this.buttonSalvar.UseVisualStyleBackColor = true;
+            this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
             // 
             // textBoxCaminhoCriar
             // 
             this.textBoxCaminhoCriar.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.textBoxCaminhoCriar.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.textBoxCaminhoCriar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxCaminhoCriar.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.textBoxCaminhoCriar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxCaminhoCriar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.textBoxCaminhoCriar.Location = new System.Drawing.Point(23, 40);
             this.textBoxCaminhoCriar.Name = "textBoxCaminhoCriar";
-            this.textBoxCaminhoCriar.Size = new System.Drawing.Size(458, 20);
+            this.textBoxCaminhoCriar.Size = new System.Drawing.Size(458, 22);
             this.textBoxCaminhoCriar.TabIndex = 12;
             // 
             // groupBoxCriarBackup
@@ -227,7 +260,8 @@
             this.groupBoxCriarBackup.Controls.Add(this.buttonSalvar);
             this.groupBoxCriarBackup.Controls.Add(this.textBoxCaminhoCriar);
             this.groupBoxCriarBackup.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxCriarBackup.Location = new System.Drawing.Point(12, 12);
+            this.groupBoxCriarBackup.ForeColor = System.Drawing.SystemColors.Control;
+            this.groupBoxCriarBackup.Location = new System.Drawing.Point(19, 26);
             this.groupBoxCriarBackup.Name = "groupBoxCriarBackup";
             this.groupBoxCriarBackup.Size = new System.Drawing.Size(599, 136);
             this.groupBoxCriarBackup.TabIndex = 22;
@@ -246,31 +280,66 @@
             this.groupBox1.Controls.Add(this.textBoxSenha);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(151, 321);
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.Control;
+            this.groupBox1.Location = new System.Drawing.Point(158, 316);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(309, 186);
+            this.groupBox1.Size = new System.Drawing.Size(342, 189);
             this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Conectar-se";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.buttonSair);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.ForeColor = System.Drawing.SystemColors.Control;
+            this.groupBox2.Location = new System.Drawing.Point(6, 6);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(626, 514);
+            this.groupBox2.TabIndex = 24;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Backup/Restaurar";
+            // 
+            // buttonSair
+            // 
+            this.buttonSair.BackgroundImage = global::Projeto_Portaria.Properties.Resources.Icon__Voltar_;
+            this.buttonSair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonSair.FlatAppearance.BorderSize = 0;
+            this.buttonSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSair.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.buttonSair.Location = new System.Drawing.Point(561, 468);
+            this.buttonSair.Name = "buttonSair";
+            this.buttonSair.Size = new System.Drawing.Size(59, 37);
+            this.buttonSair.TabIndex = 20;
+            this.buttonSair.UseVisualStyleBackColor = true;
+            this.buttonSair.Click += new System.EventHandler(this.buttonSair_Click);
             // 
             // FormBackup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(623, 519);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ClientSize = new System.Drawing.Size(641, 530);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBoxRestaurar);
             this.Controls.Add(this.labelCaminho);
             this.Controls.Add(this.groupBoxCriarBackup);
+            this.Controls.Add(this.groupBox2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormBackup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Backup/Restaurar";
+            this.Load += new System.EventHandler(this.FormBackup_Load);
             this.groupBoxRestaurar.ResumeLayout(false);
             this.groupBoxRestaurar.PerformLayout();
             this.groupBoxCriarBackup.ResumeLayout(false);
             this.groupBoxCriarBackup.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -298,5 +367,8 @@
         private System.Windows.Forms.TextBox textBoxCaminhoCriar;
         private System.Windows.Forms.GroupBox groupBoxCriarBackup;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button buttonSair;
     }
 }

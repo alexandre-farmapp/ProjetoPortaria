@@ -39,6 +39,8 @@
             this.label_Bloco = new System.Windows.Forms.Label();
             this.label_Celular = new System.Windows.Forms.Label();
             this.groupBox_Dados_Pessoais = new System.Windows.Forms.GroupBox();
+            this.labelBlocoRua = new System.Windows.Forms.Label();
+            this.textBoxBlocoRua = new System.Windows.Forms.TextBox();
             this.textBox_cpf = new System.Windows.Forms.TextBox();
             this.textBox_visitado = new System.Windows.Forms.TextBox();
             this.maskedTextBox_celular = new System.Windows.Forms.MaskedTextBox();
@@ -53,11 +55,7 @@
             this.label_Apartamento = new System.Windows.Forms.Label();
             this.button_pesquisar_morador = new System.Windows.Forms.Button();
             this.button_datagrid_visible = new System.Windows.Forms.Button();
-            this.dataGridView_pesquisa_morador = new System.Windows.Forms.DataGridView();/*
-            this.moradoresBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.bdportariaDataSetlistamorador1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.moradoresBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.moradoresBindingSource = new System.Windows.Forms.BindingSource(this.components);*/
+            this.dataGridView_pesquisa_morador = new System.Windows.Forms.DataGridView();
             this.groupBox_Dados_Veiculo = new System.Windows.Forms.GroupBox();
             this.maskedTextBox_placa = new System.Windows.Forms.MaskedTextBox();
             this.textBox_Modelo = new System.Windows.Forms.TextBox();
@@ -79,14 +77,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.textBoxBlocoRua = new System.Windows.Forms.TextBox();
-            this.labelBlocoRua = new System.Windows.Forms.Label();
             this.groupBox_Dados_Pessoais.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_pesquisa_morador)).BeginInit();/*
-            ((System.ComponentModel.ISupportInitialize)(this.moradoresBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdportariaDataSetlistamorador1BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.moradoresBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.moradoresBindingSource)).BeginInit();*/
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_pesquisa_morador)).BeginInit();
             this.groupBox_Dados_Veiculo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Foto_Visitante)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -166,6 +158,25 @@
             this.groupBox_Dados_Pessoais.TabIndex = 1;
             this.groupBox_Dados_Pessoais.TabStop = false;
             this.groupBox_Dados_Pessoais.Text = "Dados Pessoais";
+            // 
+            // labelBlocoRua
+            // 
+            this.labelBlocoRua.AutoSize = true;
+            this.labelBlocoRua.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBlocoRua.Location = new System.Drawing.Point(161, 105);
+            this.labelBlocoRua.Name = "labelBlocoRua";
+            this.labelBlocoRua.Size = new System.Drawing.Size(59, 13);
+            this.labelBlocoRua.TabIndex = 69;
+            this.labelBlocoRua.Text = "Bloco/Rua";
+            // 
+            // textBoxBlocoRua
+            // 
+            this.textBoxBlocoRua.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.textBoxBlocoRua.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxBlocoRua.Location = new System.Drawing.Point(229, 96);
+            this.textBoxBlocoRua.Name = "textBoxBlocoRua";
+            this.textBoxBlocoRua.Size = new System.Drawing.Size(69, 24);
+            this.textBoxBlocoRua.TabIndex = 68;
             // 
             // textBox_cpf
             // 
@@ -354,16 +365,6 @@
             this.dataGridView_pesquisa_morador.Visible = false;
             this.dataGridView_pesquisa_morador.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView_pesquisa_morador_CellContentClick);
             // 
-            // moradoresBindingSource2
-            /*
-            this.moradoresBindingSource2.DataMember = "moradores";
-            this.moradoresBindingSource2.DataSource = this.bdportariaDataSetlistamorador1BindingSource;
-            // 
-            // moradoresBindingSource1
-            // 
-            this.moradoresBindingSource1.DataMember = "moradores";
-            this.moradoresBindingSource1.DataSource = this.bdportariaDataSetlistamorador1BindingSource;*/
-            // 
             // groupBox_Dados_Veiculo
             // 
             this.groupBox_Dados_Veiculo.BackColor = System.Drawing.Color.Transparent;
@@ -385,7 +386,6 @@
             this.maskedTextBox_placa.BackColor = System.Drawing.SystemColors.ControlLight;
             this.maskedTextBox_placa.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.maskedTextBox_placa.Location = new System.Drawing.Point(237, 19);
-            this.maskedTextBox_placa.Mask = "aaa-0000";
             this.maskedTextBox_placa.Name = "maskedTextBox_placa";
             this.maskedTextBox_placa.Size = new System.Drawing.Size(74, 24);
             this.maskedTextBox_placa.TabIndex = 9;
@@ -618,25 +618,6 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // textBoxBlocoRua
-            // 
-            this.textBoxBlocoRua.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.textBoxBlocoRua.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxBlocoRua.Location = new System.Drawing.Point(229, 96);
-            this.textBoxBlocoRua.Name = "textBoxBlocoRua";
-            this.textBoxBlocoRua.Size = new System.Drawing.Size(69, 24);
-            this.textBoxBlocoRua.TabIndex = 68;
-            // 
-            // labelBlocoRua
-            // 
-            this.labelBlocoRua.AutoSize = true;
-            this.labelBlocoRua.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBlocoRua.Location = new System.Drawing.Point(161, 105);
-            this.labelBlocoRua.Name = "labelBlocoRua";
-            this.labelBlocoRua.Size = new System.Drawing.Size(59, 13);
-            this.labelBlocoRua.TabIndex = 69;
-            this.labelBlocoRua.Text = "Bloco/Rua";
-            // 
             // Cadastro_de_Visitantes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -662,12 +643,8 @@
             this.Text = "Cadastro de Visitantes";
             this.Load += new System.EventHandler(this.Cadastro_de_Visitantes_Load);
             this.groupBox_Dados_Pessoais.ResumeLayout(false);
-            this.groupBox_Dados_Pessoais.PerformLayout();/*
+            this.groupBox_Dados_Pessoais.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_pesquisa_morador)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.moradoresBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdportariaDataSetlistamorador1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.moradoresBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.moradoresBindingSource)).EndInit();*/
             this.groupBox_Dados_Veiculo.ResumeLayout(false);
             this.groupBox_Dados_Veiculo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Foto_Visitante)).EndInit();

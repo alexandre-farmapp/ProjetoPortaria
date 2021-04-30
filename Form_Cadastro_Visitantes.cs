@@ -69,8 +69,8 @@ namespace Projeto_Portaria
 
                     if(sqlCommand.ExecuteScalar() == null)
                     {
-                        comando = "INSERT INTO visitantes(nome,CPF,telefone_celular,unidade,visitado,modelo,placa,observacoes,foto) " +
-                            "values(@nome, @CPF, @telefone_celular, @unidade, @visitado, @modelo, @placa, @observacoes, @foto)";
+                        comando = "INSERT INTO visitantes(nome,CPF,telefone_celular,unidade,visitado,modelo,placa,observacoes,foto,ruaBloco) " +
+                            "values(@nome, @CPF, @telefone_celular, @unidade, @visitado, @modelo, @placa, @observacoes, @foto, @ruaBloco)";
                         sqlCommand = new SqlCommand(comando, sqlConnection);
                         sqlCommand.Parameters.AddWithValue("@nome", textBox_Nome.Text);
                         sqlCommand.Parameters.AddWithValue("@CPF", textBox_cpf.Text);
@@ -81,6 +81,7 @@ namespace Projeto_Portaria
                         sqlCommand.Parameters.AddWithValue("@placa", maskedTextBox_placa.Text);
                         sqlCommand.Parameters.AddWithValue("@observacoes", textBox_observacoes.Text);
                         sqlCommand.Parameters.AddWithValue("@foto", openFileDialog1.FileName);
+                        sqlCommand.Parameters.AddWithValue("@ruaBloco", textBoxBlocoRua.Text);
                         sqlCommand.ExecuteNonQuery();
 
                         comando = "INSERT INTO relatorio(nome,CPF,telefone_celular,unidade,blocoRua,visitado,observacoes,entrada,saida,foto) " +
@@ -98,8 +99,8 @@ namespace Projeto_Portaria
                         sqlCommand.Parameters.AddWithValue("@foto", openFileDialog1.FileName);
                         sqlCommand.ExecuteNonQuery();
 
-                        comando = "INSERT INTO temporarios(nome,CPF,celular,entrada,visitado,carro,placa,foto) " +
-                            "values(@nome,@CPF,@celular,@entrada,@visitado,@carro,@placa,@foto)";
+                        comando = "INSERT INTO temporarios(nome,CPF,celular,entrada,visitado,carro,placa,foto, ruaBloco) " +
+                            "values(@nome,@CPF,@celular,@entrada,@visitado,@carro,@placa,@foto, @ruaBloco)";
                         sqlCommand = new SqlCommand(comando, sqlConnection);
                         sqlCommand.Parameters.AddWithValue("@nome", textBox_Nome.Text);
                         sqlCommand.Parameters.AddWithValue("@CPF", textBox_cpf.Text);
@@ -109,12 +110,13 @@ namespace Projeto_Portaria
                         sqlCommand.Parameters.AddWithValue("@carro", textBox_Modelo.Text);
                         sqlCommand.Parameters.AddWithValue("@placa", maskedTextBox_placa.Text);
                         sqlCommand.Parameters.AddWithValue("@foto", openFileDialog1.FileName);
+                        sqlCommand.Parameters.AddWithValue("@ruaBloco", textBoxBlocoRua.Text);
                         sqlCommand.ExecuteNonQuery();
                     }
                     else
                     {
                         comando = "UPDATE visitantes SET Nome=@nome, CPF=@CPF, telefone_celular=@telefone_celular, unidade=@unidade, visitado=@visitado, modelo=@modelo, " +
-                            "placa=@placa, observacoes=@observacoes, foto=@foto WHERE CPF= @cpf";
+                            "placa=@placa, observacoes=@observacoes, foto=@foto ruaBloco=@ruaBloco WHERE CPF= @cpf";
                         sqlCommand = new SqlCommand(comando, sqlConnection);
                         sqlCommand.Parameters.AddWithValue("@nome", textBox_Nome.Text);
                         sqlCommand.Parameters.AddWithValue("@CPF", textBox_cpf.Text);
@@ -125,6 +127,7 @@ namespace Projeto_Portaria
                         sqlCommand.Parameters.AddWithValue("@placa", maskedTextBox_placa.Text);
                         sqlCommand.Parameters.AddWithValue("@observacoes", textBox_observacoes.Text);
                         sqlCommand.Parameters.AddWithValue("@foto", pictureBox_Foto_Visitante.ImageLocation);
+                        sqlCommand.Parameters.AddWithValue("@ruaBloco", textBoxBlocoRua.Text);
                         sqlCommand.ExecuteNonQuery();
 
                         comando = "INSERT INTO relatorio(Nome,CPF,visitado,Unidade,blocoRua,telefone_celular,observacoes,foto,entrada,saida) " +
@@ -142,8 +145,8 @@ namespace Projeto_Portaria
                         sqlCommand.Parameters.AddWithValue("@foto", pictureBox_Foto_Visitante.ImageLocation);
                         sqlCommand.ExecuteNonQuery();
 
-                        comando = "INSERT INTO temporarios(nome,cpf,celular,entrada,visitado,carro,placa,foto) " +
-                            "values(@nome,@cpf,@celular,@entrada,@visitado,@carro,@placa,@foto)";
+                        comando = "INSERT INTO temporarios(nome,cpf,celular,entrada,visitado,carro,placa,foto, ruaBloco) " +
+                            "values(@nome,@cpf,@celular,@entrada,@visitado,@carro,@placa,@foto, @ruaBloco)";
                         sqlCommand = new SqlCommand(comando, sqlConnection);
                         sqlCommand.Parameters.AddWithValue("@nome", textBox_Nome.Text);
                         sqlCommand.Parameters.AddWithValue("@cpf", textBox_cpf.Text);
@@ -153,6 +156,7 @@ namespace Projeto_Portaria
                         sqlCommand.Parameters.AddWithValue("@carro", textBox_Modelo.Text);
                         sqlCommand.Parameters.AddWithValue("@placa", maskedTextBox_placa.Text);
                         sqlCommand.Parameters.AddWithValue("@foto", pictureBox_Foto_Visitante.ImageLocation);
+                        sqlCommand.Parameters.AddWithValue("@ruaBloco", textBoxBlocoRua.Text);
                         sqlCommand.ExecuteNonQuery();
                     }                    
 
@@ -194,13 +198,14 @@ namespace Projeto_Portaria
 
                 SqlCommand cmd = sqlConnection.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "select nome,CPF,visitado,unidade,telefone_celular,observacoes,modelo,placa,foto from visitantes where nome LIKE '" + "%" + textBox_nome_visitante.Text + "%" + "'";
+                cmd.CommandText = "select nome,CPF,visitado,unidade,telefone_celular,observacoes,modelo,placa,foto,ruaBloco FROM visitantes " +
+                    "where nome LIKE '" + "%" + textBox_nome_visitante.Text + "%" + "'";
                 cmd.ExecuteNonQuery();
                 DataTable dt = new DataTable();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 da.Fill(dt);
                 dataGridView1.DataSource = dt;
-                //dataGridView1.Columns[8].Visible = false;
+                dataGridView1.Columns[8].Visible = false;
                 dataGridView1.AutoResizeColumns();
 
                 sqlConnection.Close();
@@ -218,6 +223,7 @@ namespace Projeto_Portaria
             textBox_Nome.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             textBox_cpf.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
             textBox_visitado.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            textBoxBlocoRua.Text = dataGridView1.CurrentRow.Cells[9].Value.ToString();
             textBox_unidade.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
             maskedTextBox_celular.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
             textBox_Modelo.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();

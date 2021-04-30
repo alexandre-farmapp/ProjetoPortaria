@@ -412,6 +412,8 @@ namespace Projeto_Portaria
                         sqlCommand2.ExecuteNonQuery();
 
                         sqlConnection.Close();
+                        atualizardatagrid();
+
                         MessageBox.Show("Morador cadastrado com sucesso!", "Mensagem!", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         textBox_Nome.Text = "";
