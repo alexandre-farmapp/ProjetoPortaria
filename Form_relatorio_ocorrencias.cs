@@ -28,20 +28,11 @@ namespace Projeto_Portaria
 
         }
 
-        private void TabPage1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void TextBox_hora_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
         private void Form_relatorio_ocorrencias_Load(object sender, EventArgs e)
         {
-            //textBox_hora.Text = DateTime.Now.ToString("HH:mm");
+            atualizardatagrid2();
         }
+
         private void atualizardatagrid2()
         {
             string conexao = Projeto_Portaria.Properties.Settings.Default.Bd_portariaConnectionString;
@@ -58,7 +49,6 @@ namespace Projeto_Portaria
             da.Fill(dt);
             dataGridView2.DataSource = dt;
             sqlConnection.Close();
-
         }
 
         private void Button_salvar_Click(object sender, EventArgs e)
@@ -80,28 +70,33 @@ namespace Projeto_Portaria
                     MessageBox.Show("Digite a ocorrência!");
                     textBox_ocorrencia.Focus();
                 }
-                string conexao = Projeto_Portaria.Properties.Settings.Default.Bd_portariaConnectionString;
-                SqlConnection sqlConnection = new SqlConnection(conexao);
-                sqlConnection.Open();
+                else
+                {
+                    string conexao = Projeto_Portaria.Properties.Settings.Default.Bd_portariaConnectionString;
+                    SqlConnection sqlConnection = new SqlConnection(conexao);
+                    sqlConnection.Open();
 
-                SqlCommand cmd = sqlConnection.CreateCommand();
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "insert into ocorrencias(unidade, rua, data, hora, min, ocorrencia) values ('" + textBox_unidade.Text + "','" + textBox_rua.Text + "','" + dateTimePicker1.Text + "','" + comboBox_hora.Text + "','" + comboBox_min.Text +"','"+ textBox_ocorrencia.Text + "')";
-                cmd.ExecuteNonQuery();
-                                                
-                sqlConnection.Close();
-                
-                atualizardatagrid2();
+                    SqlCommand cmd = sqlConnection.CreateCommand();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = "INSERT INTO ocorrencias(unidade, rua, data, hora, min, ocorrencia) VALUES ('" + textBox_unidade.Text + "'," +
+                        "'" + textBox_rua.Text + "','" + dateTimePicker1.Text + "','" + comboBox_hora.Text + "','" + comboBox_min.Text + "'," +
+                        "'" + textBox_ocorrencia.Text + "')";
+                    cmd.ExecuteNonQuery();
 
-                textBox_unidade.Text = "";
-                textBox_rua.Text = "";
-                textBox_ocorrencia.Text = "";
-                comboBox_hora.SelectedItem = -1;
-                comboBox_min.SelectedItem = -1;
-                dateTimePicker1.Value = DateTime.Now;
+                    sqlConnection.Close();
 
-                textBox_ocorrencia.Enabled = false;
-                button_salvar.Visible = false;
+                    atualizardatagrid2();
+
+                    textBox_unidade.Text = "";
+                    textBox_rua.Text = "";
+                    textBox_ocorrencia.Text = "";
+                    comboBox_hora.SelectedItem = -1;
+                    comboBox_min.SelectedItem = -1;
+                    dateTimePicker1.Value = DateTime.Now;
+
+                    textBox_ocorrencia.Enabled = false;
+                    button_salvar.Visible = false;
+                }
 
             }
             catch (Exception msg)

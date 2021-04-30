@@ -32,6 +32,7 @@ namespace Projeto_Portaria
             SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
             sqlDataAdapter.Fill(dataTable);
             dataGridView1.DataSource = dataTable;
+            dataGridView1.AutoResizeColumns();
 
             sqlConnection.Close();
 
@@ -62,11 +63,16 @@ namespace Projeto_Portaria
                 SqlCommand sqlCommand2 = new SqlCommand(comando, sqlConnection);
                 sqlCommand2.ExecuteNonQuery();
 
-                MessageBox.Show("Visitante deletado com sucesso!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Saida gerada com sucesso!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 
                 sqlConnection.Close();
 
                 disparaDatagrid();
+
+                textBox_nome.Text = "";
+                textBox_entrada.Text = "";
+                textBox_saida.Text = "";
+                pictureBox1.ImageLocation = "";
             }
             catch (Exception msg)
             {

@@ -18,17 +18,7 @@ namespace Projeto_Portaria
         {
             InitializeComponent();
         }
-
-        private void Button_Cadastro_Moradores_Click(object sender, EventArgs e)
-        {/*
-            Cadastro_de_Moradores cadastro_De_Moradores = new Cadastro_de_Moradores();
-            cadastro_De_Moradores.ShowDialog();
-
-            fx = new Thread(formMoradores);
-            fx.SetApartmentState(ApartmentState.STA);
-            fx.Start();*/
-        }
-
+        
         private void Button_Cadastro_Visitantes_Click(object sender, EventArgs e)
         {
             Cadastro_de_Visitantes cadastro_De_Visitantes = new Cadastro_de_Visitantes();
@@ -200,6 +190,12 @@ namespace Projeto_Portaria
         {
             FormAnotacoes formAnotacoes = new FormAnotacoes();
             formAnotacoes.ShowDialog();
-        }                
+        }
+
+        private void buttonBackup_Click(object sender, EventArgs e)
+        {
+            FormBackup formBackup = new FormBackup();
+            formBackup.ShowDialog();
+        }
     }
 }

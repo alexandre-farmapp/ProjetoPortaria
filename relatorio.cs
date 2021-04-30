@@ -44,6 +44,11 @@ namespace Projeto_Portaria
                 comando = "SELECT nome, visitado, entrada, saida FROM relatorio " +
                     "WHERE entrada BETWEEN @dataInicio AND @dataFim AND Unidade = @unidade ORDER BY entrada";
             }
+            else
+            {
+                comando = "SELECT nome, visitado, entrada, saida FROM relatorio " +
+                    "WHERE entrada BETWEEN @dataInicio AND @dataFim AND Unidade = @unidade AND blocoRua = @blocoRua ORDER BY entrada";
+            }
             
             SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);
             sqlCommand.Parameters.AddWithValue("@dataInicio", dateTimePicker_inicio.Value.ToString());
@@ -94,6 +99,12 @@ namespace Projeto_Portaria
                         comando = "SELECT nome, visitado, entrada, saida FROM relatorio " +
                             "WHERE entrada BETWEEN @dataInicio AND @dataFim AND Unidade = @unidade ORDER BY entrada";
                     }
+                    else
+                    {
+                        comando = "SELECT nome, visitado, entrada, saida FROM relatorio " +
+                            "WHERE entrada BETWEEN @dataInicio AND @dataFim AND Unidade = @unidade AND blocoRua = @blocoRua ORDER BY entrada";
+                    }
+
                     SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);
                     sqlCommand.Parameters.AddWithValue("@dataInicio", dateTimePicker_inicio.Value.ToString());
                     sqlCommand.Parameters.AddWithValue("@dataFim", dateTimePicker_fim.Value.ToString());
@@ -159,6 +170,11 @@ namespace Projeto_Portaria
             {
                 comando = "SELECT nome, visitado, entrada, saida FROM relatorio " +
                     "WHERE entrada BETWEEN @dataInicio AND @dataFim AND Unidade = @unidade ORDER BY entrada";
+            }
+            else
+            {
+                comando = "SELECT nome, visitado, entrada, saida FROM relatorio " +
+                    "WHERE entrada BETWEEN @dataInicio AND @dataFim AND Unidade = @unidade AND blocoRua = @blocoRua ORDER BY entrada";
             }
 
             SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);
@@ -228,6 +244,11 @@ namespace Projeto_Portaria
             {
                 comando = "SELECT nome, visitado, entrada, saida FROM relatorio " +
                     "WHERE entrada BETWEEN @dataInicio AND @dataFim AND Unidade = @unidade ORDER BY entrada";
+            }
+            else
+            {
+                comando = "SELECT nome, visitado, entrada, saida FROM relatorio " +
+                    "WHERE entrada BETWEEN @dataInicio AND @dataFim AND Unidade = @unidade AND blocoRua = @blocoRua ORDER BY entrada";
             }
 
             SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);

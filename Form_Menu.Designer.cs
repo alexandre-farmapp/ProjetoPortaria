@@ -325,11 +325,11 @@
             this.buttonBackup.Name = "buttonBackup";
             this.buttonBackup.Size = new System.Drawing.Size(180, 40);
             this.buttonBackup.TabIndex = 1;
-            this.buttonBackup.Text = "Backup";
+            this.buttonBackup.Text = "Backup/Rest";
             this.buttonBackup.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.toolTip1.SetToolTip(this.buttonBackup, "Cadastro de Moradores");
             this.buttonBackup.UseVisualStyleBackColor = false;
-            this.buttonBackup.Click += new System.EventHandler(this.Button_Cadastro_Moradores_Click);
+            this.buttonBackup.Click += new System.EventHandler(this.buttonBackup_Click);
             // 
             // buttonAnotacoes
             // 
