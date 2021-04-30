@@ -36,8 +36,7 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.button3 = new System.Windows.Forms.Button();
             this.button_relatorio = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button_sair = new System.Windows.Forms.Button();
+            this.buttonSair = new System.Windows.Forms.Button();
             this.button_moradores = new System.Windows.Forms.Button();
             this.button_pessoas = new System.Windows.Forms.Button();
             this.button_logoff = new System.Windows.Forms.Button();
@@ -78,7 +77,6 @@
             // 
             // button3
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button3.BackColor = System.Drawing.Color.Transparent;
             this.button3.BackgroundImage = global::Projeto_Portaria.Properties.Resources.door_512;
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -91,7 +89,7 @@
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Location = new System.Drawing.Point(3, 28);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(179, 110);
+            this.button3.Size = new System.Drawing.Size(187, 110);
             this.button3.TabIndex = 28;
             this.button3.Text = "DooR-Acess control";
             this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -122,47 +120,28 @@
             this.button_relatorio.UseVisualStyleBackColor = false;
             this.button_relatorio.Click += new System.EventHandler(this.button_relatorio_Click);
             // 
-            // button1
+            // buttonSair
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = global::Projeto_Portaria.Properties.Resources.icon__sair__SYE_icon;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(12, 550);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(180, 41);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Sair";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.toolTip1.SetToolTip(this.button1, "Encerrar");
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.Button1_Click_1);
-            // 
-            // button_sair
-            // 
-            this.button_sair.BackColor = System.Drawing.Color.Transparent;
-            this.button_sair.BackgroundImage = global::Projeto_Portaria.Properties.Resources.Icon__Sair_;
-            this.button_sair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button_sair.FlatAppearance.BorderSize = 0;
-            this.button_sair.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button_sair.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button_sair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_sair.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_sair.ForeColor = System.Drawing.Color.Transparent;
-            this.button_sair.Location = new System.Drawing.Point(1419, 12);
-            this.button_sair.Name = "button_sair";
-            this.button_sair.Size = new System.Drawing.Size(162, 88);
-            this.button_sair.TabIndex = 10;
-            this.toolTip1.SetToolTip(this.button_sair, "Encerrar Sistema");
-            this.button_sair.UseVisualStyleBackColor = false;
-            this.button_sair.Click += new System.EventHandler(this.Button1_logoff_Click);
+            this.buttonSair.BackColor = System.Drawing.Color.Transparent;
+            this.buttonSair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonSair.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.buttonSair.FlatAppearance.BorderSize = 0;
+            this.buttonSair.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.buttonSair.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.buttonSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSair.ForeColor = System.Drawing.Color.White;
+            this.buttonSair.Image = global::Projeto_Portaria.Properties.Resources.icon__sair__SYE_icon;
+            this.buttonSair.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonSair.Location = new System.Drawing.Point(12, 550);
+            this.buttonSair.Name = "buttonSair";
+            this.buttonSair.Size = new System.Drawing.Size(180, 41);
+            this.buttonSair.TabIndex = 12;
+            this.buttonSair.Text = "Sair";
+            this.buttonSair.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.buttonSair, "Encerrar");
+            this.buttonSair.UseVisualStyleBackColor = false;
+            this.buttonSair.Click += new System.EventHandler(this.Button1_Click_1);
             // 
             // button_moradores
             // 
@@ -386,7 +365,7 @@
             this.panelMenu.Controls.Add(this.buttonBackup);
             this.panelMenu.Controls.Add(this.button_relatorio);
             this.panelMenu.Controls.Add(this.button_Cadastro_Visitantes);
-            this.panelMenu.Controls.Add(this.button1);
+            this.panelMenu.Controls.Add(this.buttonSair);
             this.panelMenu.Controls.Add(this.button_status);
             this.panelMenu.Controls.Add(this.button_Cadastrar_Novo_Usuario);
             this.panelMenu.Controls.Add(this.button_pessoas);
@@ -404,7 +383,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1370, 740);
-            this.Controls.Add(this.button_sair);
             this.Controls.Add(this.textBox_usuario_logado);
             this.Controls.Add(this.panelMenu);
             this.DoubleBuffered = true;
@@ -435,9 +413,8 @@
         private System.Windows.Forms.TextBox textBox_usuario_logado;
         public System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button button_pessoas;
-        private System.Windows.Forms.Button button_sair;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonSair;
         private System.Windows.Forms.Button button_moradores;
         private System.Windows.Forms.Button button_relatorio;
         private System.Windows.Forms.Button button3;

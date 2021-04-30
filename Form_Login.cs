@@ -19,32 +19,26 @@ namespace Projeto_Portaria
         {
             InitializeComponent();
         }
-
-        private void PictureBox_Usuario_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void TextBox_Senha_TextChanged(object sender, EventArgs e)
         {
 
         }
 
         private void Button_Fazer_Login_Click(object sender, EventArgs e)
-        {
-            
+        {            
             try
             {
                 User_info.usuario_logado = textBox_Usuario.Text;
 
-                string conexao = Projeto_Portaria.Properties.Settings.Default.Bd_portariaConnectionString;                              
+                string conexao = Projeto_Portaria.Properties.Settings.Default.Bd_portariaConnectionString;
                 SqlConnection sqlConnection = new SqlConnection(conexao);
                 sqlConnection.Open();
 
-                string comando = "select senha from usuarios where usuario = '" + textBox_Usuario.Text + "'";
+                string comando = "SELECT senha FROM usuarios WHERE usuario = '" + textBox_Usuario.Text + "'";
                 SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);
                 string senha = sqlCommand.ExecuteScalar().ToString();
-
+                
                 if (textBox_Senha.Text == senha)
                 {
                     this.Close();
@@ -73,13 +67,7 @@ namespace Projeto_Portaria
         {
             Application.Run(new form_Menu());
         }
-
-        private void Button_Limpar_Click(object sender, EventArgs e)
-        {
-            textBox_Usuario.Text = "";
-            textBox_Senha.Text = "";
-        }
-
+        
         private void TextBox_Usuário_TextChanged(object sender, EventArgs e)
         {
             User_info.usuario_logado = textBox_Usuario.Text;
@@ -107,10 +95,10 @@ namespace Projeto_Portaria
                     SqlConnection sqlConnection = new SqlConnection(conexao);
                     sqlConnection.Open();
 
-                    string comando = "select senha from usuarios where usuario = '" + textBox_Usuario.Text + "'";
+                    string comando = "SELECT senha FROM usuarios WHERE usuario = '" + textBox_Usuario.Text + "'";
                     SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);
                     string senha = sqlCommand.ExecuteScalar().ToString();
-
+                    
                     if (textBox_Senha.Text == senha)
                     {
                         this.Close();
@@ -134,6 +122,12 @@ namespace Projeto_Portaria
                     textBox_Usuario.Focus();
                 }
             }
+        }
+
+        private void buttonConectar_Click(object sender, EventArgs e)
+        {
+            FormBackup formBackup = new FormBackup();
+            formBackup.ShowDialog();
         }
     }
 }

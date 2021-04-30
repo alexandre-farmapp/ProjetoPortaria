@@ -64,3 +64,4 @@ C:\Users\felipe rabelo\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\bin\Re
 C:\Users\felipe rabelo\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\bin\Release\EPPlus.xml
 C:\Users\felipe rabelo\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\bin\Release\Microsoft.IO.RecyclableMemoryStream.xml
 C:\Users\felipe rabelo\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\obj\Release\Projeto_Portaria.csproj.CopyComplete
+C:\Users\felipe rabelo\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\obj\Release\Projeto_Portaria.FormBackup.resources

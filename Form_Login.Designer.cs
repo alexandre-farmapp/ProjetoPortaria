@@ -39,6 +39,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.buttonConectar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
@@ -155,6 +156,27 @@
             this.label2.TabIndex = 14;
             this.label2.Text = "Access Control";
             // 
+            // buttonConectar
+            // 
+            this.buttonConectar.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonConectar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonConectar.BackgroundImage")));
+            this.buttonConectar.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.buttonConectar.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.buttonConectar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonConectar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.buttonConectar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonConectar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
+            this.buttonConectar.ForeColor = System.Drawing.Color.Black;
+            this.buttonConectar.Location = new System.Drawing.Point(230, 255);
+            this.buttonConectar.Name = "buttonConectar";
+            this.buttonConectar.Size = new System.Drawing.Size(126, 27);
+            this.buttonConectar.TabIndex = 15;
+            this.buttonConectar.Text = "Conectar-se";
+            this.buttonConectar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.toolTip1.SetToolTip(this.buttonConectar, "Fechar Aplicação");
+            this.buttonConectar.UseVisualStyleBackColor = false;
+            this.buttonConectar.Click += new System.EventHandler(this.buttonConectar_Click);
+            // 
             // form_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -164,6 +186,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(587, 359);
             this.ControlBox = false;
+            this.Controls.Add(this.buttonConectar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox3);
@@ -196,6 +219,7 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button buttonConectar;
     }
 }
 

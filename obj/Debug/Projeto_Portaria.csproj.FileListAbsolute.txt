@@ -201,3 +201,29 @@ C:\Users\felipe rabelo\Desktop\04 Projeto_Portaria24.11\04 Projeto_Portaria\obj\
 C:\Users\felipe rabelo\Desktop\04 Projeto_Portaria24.11\04 Projeto_Portaria\Projeto_Portaria.exe
 C:\Users\felipe rabelo\Desktop\04 Projeto_Portaria24.11\04 Projeto_Portaria\Projeto_Portaria.pdb
 C:\Users\felipe rabelo\Desktop\04 Projeto_Portaria24.11\04 Projeto_Portaria\obj\Debug\Projeto_Portaria.relatorio.resources
+C:\Users\felipe rabelo\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\obj\Debug\Projeto_Portaria.csprojAssemblyReference.cache
+C:\Users\felipe rabelo\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\obj\Debug\Projeto_Portaria.FormAnotacoes.resources
+C:\Users\felipe rabelo\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\obj\Debug\Projeto_Portaria.Form_Cadastro_Usuário.resources
+C:\Users\felipe rabelo\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\obj\Debug\Projeto_Portaria.Cadastro_de_Visitantes.resources
+C:\Users\felipe rabelo\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\obj\Debug\Projeto_Portaria.form_Menu.resources
+C:\Users\felipe rabelo\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\obj\Debug\Projeto_Portaria.form_Login.resources
+C:\Users\felipe rabelo\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\obj\Debug\Projeto_Portaria.Form_moradores.resources
+C:\Users\felipe rabelo\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\obj\Debug\Projeto_Portaria.Form_pessoas_uteis.resources
+C:\Users\felipe rabelo\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\obj\Debug\Projeto_Portaria.Form_relatorio_ocorrencias.resources
+C:\Users\felipe rabelo\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\obj\Debug\Projeto_Portaria.Form_status.resources
+C:\Users\felipe rabelo\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\obj\Debug\Projeto_Portaria.Properties.Resources.resources
+C:\Users\felipe rabelo\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\obj\Debug\Projeto_Portaria.relatorio.resources
+C:\Users\felipe rabelo\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\obj\Debug\Projeto_Portaria.csproj.GenerateResource.cache
+C:\Users\felipe rabelo\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\obj\Debug\Projeto_Portaria.csproj.CopyComplete
+C:\Users\felipe rabelo\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\Bd_portaria.mdf
+C:\Users\felipe rabelo\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\Bd_portaria_log.ldf
+C:\Users\felipe rabelo\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\Projeto_Portaria.exe.config
+C:\Users\felipe rabelo\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\obj\Debug\Projeto_Portaria.exe
+C:\Users\felipe rabelo\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\obj\Debug\Projeto_Portaria.pdb
+C:\Users\felipe rabelo\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\Projeto_Portaria.exe
+C:\Users\felipe rabelo\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\Projeto_Portaria.pdb
+C:\Users\felipe rabelo\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\EPPlus.dll
+C:\Users\felipe rabelo\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\felipe rabelo\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\System.ComponentModel.Annotations.dll
+C:\Users\felipe rabelo\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\EPPlus.xml
+C:\Users\felipe rabelo\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\Microsoft.IO.RecyclableMemoryStream.xml
