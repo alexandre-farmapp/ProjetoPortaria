@@ -28,12 +28,22 @@ namespace Projeto_Portaria
 
                 if (sqlConnection.State == ConnectionState.Open)
                 {
-                    sqlConnection.Close();
+                    string comando = "UPDATE Servidor SET nomeServidor = @servidor, bancoDados = @banco, usuario = @usuario, senha = @senha WHERE id = 1";
+                    SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);
+                    sqlCommand.Parameters.AddWithValue("@servidor", textBoxServidor.Text);
+                    sqlCommand.Parameters.AddWithValue("@banco", textBoxBanco.Text);
+                    sqlCommand.Parameters.AddWithValue("@usuario", textBoxUsuario.Text);
+                    sqlCommand.Parameters.AddWithValue("@senha", textBoxSenha.Text);
+                    sqlCommand.ExecuteNonQuery();                    
 
                     Properties.Settings.Default.Bd_portariaConnectionString = conexao;
                     Properties.Settings.Default.Save();
                     Properties.Settings.Default.Reload();
+
                     MessageBox.Show("Conectado!!!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    buttonConectar.Text = "Conectado";
+                    buttonDesconectar.Visible = true;
+                    sqlConnection.Close();
                     this.Close();
                 }
                 else
@@ -73,7 +83,6 @@ namespace Projeto_Portaria
             }
             else
             {
-
                 string comando = "BACKUP DATABASE [" + dataBase + "] TO DISK = '" + textBoxCaminhoCriar.Text + "\\backup-" + DateTime.Today.ToString("dd-mm-yyyy") + ".bak'";
                 SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);
                 sqlCommand.ExecuteNonQuery();
@@ -151,8 +160,12 @@ namespace Projeto_Portaria
                 textBoxServidor.Text = sqlDataReader["nomeServidor"].ToString();
                 textBoxBanco.Text = sqlDataReader["bancoDados"].ToString();
                 textBoxUsuario.Text = sqlDataReader["usuario"].ToString();
-                textBoxSenha.Text = sqlDataReader["senha"].ToString();
+                textBoxSenha.Text = sqlDataReader["senha"].ToString();                               
+            }
+            if(textBoxServidor.Text != "")
+            {
                 buttonConectar.Text = "Conectado";
+                buttonDesconectar.Visible = true;
             }
 
             sqlConnection.Close();
@@ -161,6 +174,46 @@ namespace Projeto_Portaria
         private void buttonSair_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void buttonDesconectar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string conexao = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = 'C:\Users\felipe rabelo\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\Bd_portaria.mdf'; Integrated Security = True";
+                SqlConnection sqlConnection = new SqlConnection(conexao);
+                sqlConnection.Open();
+
+                if (sqlConnection.State == ConnectionState.Open)
+                {
+                    string comando = "UPDATE Servidor SET nomeServidor = @servidor, bancoDados = @banco, usuario = @usuario, senha = @senha WHERE id = 1";
+                    SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);
+                    sqlCommand.Parameters.AddWithValue("@servidor", "");
+                    sqlCommand.Parameters.AddWithValue("@banco", "");
+                    sqlCommand.Parameters.AddWithValue("@usuario", "");
+                    sqlCommand.Parameters.AddWithValue("@senha", "");
+                    sqlCommand.ExecuteNonQuery();
+
+                    Properties.Settings.Default.Bd_portariaConnectionString = conexao;
+                    Properties.Settings.Default.Save();
+                    Properties.Settings.Default.Reload();
+
+                    MessageBox.Show("Conectado!!!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    buttonConectar.Text = "Conectar";
+                    buttonDesconectar.Visible = false;
+                    sqlConnection.Close();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("A conexão falhou!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+            }
+            catch (Exception msg)
+            {
+                MessageBox.Show(msg.Message);
+            }
         }
     }
 }

@@ -51,6 +51,7 @@
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.buttonSair = new System.Windows.Forms.Button();
+            this.buttonDesconectar = new System.Windows.Forms.Button();
             this.groupBoxRestaurar.SuspendLayout();
             this.groupBoxCriarBackup.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -270,6 +271,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.buttonDesconectar);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.buttonConectar);
             this.groupBox1.Controls.Add(this.textBoxServidor);
@@ -314,6 +316,19 @@
             this.buttonSair.TabIndex = 20;
             this.buttonSair.UseVisualStyleBackColor = true;
             this.buttonSair.Click += new System.EventHandler(this.buttonSair_Click);
+            // 
+            // buttonDesconectar
+            // 
+            this.buttonDesconectar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDesconectar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.buttonDesconectar.Location = new System.Drawing.Point(116, 140);
+            this.buttonDesconectar.Name = "buttonDesconectar";
+            this.buttonDesconectar.Size = new System.Drawing.Size(95, 37);
+            this.buttonDesconectar.TabIndex = 9;
+            this.buttonDesconectar.Text = "Desconectar";
+            this.buttonDesconectar.UseVisualStyleBackColor = true;
+            this.buttonDesconectar.Visible = false;
+            this.buttonDesconectar.Click += new System.EventHandler(this.buttonDesconectar_Click);
             // 
             // FormBackup
             // 
@@ -370,5 +385,6 @@
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button buttonSair;
+        private System.Windows.Forms.Button buttonDesconectar;
     }
 }
