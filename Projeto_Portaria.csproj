@@ -277,6 +277,7 @@
     <Content Include="Book.ico" />
     <Content Include="door-512.ico" />
     <Content Include="Logo-Cadeado1.ico" />
+    <None Include="Resources\cancelar.ico" />
     <None Include="Resources\database.ico" />
     <None Include="Resources\Custom-Icon-Design-Pretty-Office-6-Printer-blue.ico" />
     <None Include="Resources\family_icon_cOg_icon1.ico" />

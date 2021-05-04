@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using System.Data.SqlClient;
 
 namespace Projeto_Portaria
 {
@@ -17,6 +18,7 @@ namespace Projeto_Portaria
         public form_Menu()
         {
             InitializeComponent();
+            atualizardatagrid();
         }
         
         private void Button_Cadastro_Visitantes_Click(object sender, EventArgs e)
@@ -27,6 +29,37 @@ namespace Projeto_Portaria
             fx = new Thread(formVisitantes);
             fx.SetApartmentState(ApartmentState.STA);
             fx.Start();
+        }
+
+        private void atualizardatagrid()
+        {
+            try
+            {
+                string conexao = Projeto_Portaria.Properties.Settings.Default.Bd_portariaConnectionString;
+                SqlConnection sqlConnection = new SqlConnection(conexao);
+                sqlConnection.Open();
+
+                string comando = "SELECT nome FROM Condominios";
+                SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);
+                sqlCommand.ExecuteNonQuery();
+                
+                DataTable dataTable = new DataTable();
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+                sqlDataAdapter.Fill(dataTable);
+                dataGridView1.DataSource = dataTable;
+
+
+                if (dataGridView1.Rows.Count > 0)
+                {
+                    Condominio.condSelecionado = true;
+                }
+                sqlConnection.Close();
+
+            }
+            catch (Exception msg)
+            {
+                MessageBox.Show(msg.Message);
+            }
         }
 
         private void formVisitantes()
@@ -76,11 +109,7 @@ namespace Projeto_Portaria
         }
 
         private void Form_Menu_Load(object sender, EventArgs e)
-        {
-            // TODO: esta linha de código carrega dados na tabela 'bd_portariaDataSet.visitantes'. Você pode movê-la ou removê-la conforme necessário.
-            //this.visitantesTableAdapter.Fill(this.bd_portariaDataSet.visitantes);
-            
-           
+        {           
             if(User_info.usuario_logado == "admin")
             {
                 button_Cadastrar_Novo_Usuario.Visible = true;             
@@ -117,7 +146,20 @@ namespace Projeto_Portaria
 
         private void Timer1_Tick(object sender, EventArgs e)
         {
-            textBox_usuario_logado.Text = " " +DateTime.Now.ToLongDateString() + "  " +DateTime.Now.ToLongTimeString() + " | Usuario : " + User_info.usuario_logado;
+            if(Condominio.conectado == true)
+            {
+                atualizardatagrid();
+            }
+            if(Condominio.condSelecionado == true)
+            {
+                textBox_usuario_logado.Text = " " + DateTime.Now.ToLongDateString() + "  " + DateTime.Now.ToLongTimeString() + " | Usuario : " + User_info.usuario_logado
+                + " | Condominio : " + dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            }
+            else
+            {
+                textBox_usuario_logado.Text = " " + DateTime.Now.ToLongDateString() + "  " + DateTime.Now.ToLongTimeString() + " | Usuario : " + User_info.usuario_logado
+                + " | Condominio : ";
+            }
             
         }
 
@@ -196,6 +238,11 @@ namespace Projeto_Portaria
         {
             FormBackup formBackup = new FormBackup();
             formBackup.ShowDialog();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
         }
     }
 }

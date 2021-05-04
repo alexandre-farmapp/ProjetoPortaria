@@ -42,6 +42,7 @@ namespace Projeto_Portaria
 
                     MessageBox.Show("Conectado!!!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     buttonConectar.Text = "Conectado";
+                    Condominio.conectado = true;
                     buttonDesconectar.Visible = true;
                     sqlConnection.Close();
                     this.Close();
@@ -147,33 +148,42 @@ namespace Projeto_Portaria
 
         private void FormBackup_Load(object sender, EventArgs e)
         {
-            string conexao = Projeto_Portaria.Properties.Settings.Default.Bd_portariaConnectionString;
-            SqlConnection sqlConnection = new SqlConnection(conexao);
-            sqlConnection.Open();
-
-            string comando = "SELECT * FROM Servidor WHERE id = 1";
-            SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);
-            SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
-
-            while (sqlDataReader.Read())
+            try
             {
-                textBoxServidor.Text = sqlDataReader["nomeServidor"].ToString();
-                textBoxBanco.Text = sqlDataReader["bancoDados"].ToString();
-                textBoxUsuario.Text = sqlDataReader["usuario"].ToString();
-                textBoxSenha.Text = sqlDataReader["senha"].ToString();                               
-            }
-            if(textBoxServidor.Text != "")
-            {
-                buttonConectar.Text = "Conectado";
-                buttonDesconectar.Visible = true;
-            }
+                string conexao = Projeto_Portaria.Properties.Settings.Default.Bd_portariaConnectionString;
+                SqlConnection sqlConnection = new SqlConnection(conexao);
+                sqlConnection.Open();
 
-            sqlConnection.Close();
+                string comando = "SELECT * FROM Servidor WHERE id = 1";
+                SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);
+                SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+
+                while (sqlDataReader.Read())
+                {
+                    textBoxServidor.Text = sqlDataReader["nomeServidor"].ToString();
+                    textBoxBanco.Text = sqlDataReader["bancoDados"].ToString();
+                    textBoxUsuario.Text = sqlDataReader["usuario"].ToString();
+                    textBoxSenha.Text = sqlDataReader["senha"].ToString();
+                }
+                if (textBoxServidor.Text != "")
+                {
+                    buttonConectar.Text = "Conectado";
+                    buttonDesconectar.Visible = true;
+                }
+
+                sqlConnection.Close();
+            }
+            catch (Exception msg)
+            {
+
+                MessageBox.Show(msg.Message);
+            }            
         }
 
         private void buttonSair_Click(object sender, EventArgs e)
         {
             this.Close();
+
         }
 
         private void buttonDesconectar_Click(object sender, EventArgs e)
@@ -198,9 +208,10 @@ namespace Projeto_Portaria
                     Properties.Settings.Default.Save();
                     Properties.Settings.Default.Reload();
 
-                    MessageBox.Show("Conectado!!!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Desconectado!!!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     buttonConectar.Text = "Conectar";
                     buttonDesconectar.Visible = false;
+                    Condominio.conectado = false;
                     sqlConnection.Close();
                     this.Close();
                 }

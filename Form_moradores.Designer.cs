@@ -66,25 +66,25 @@
             this.textBox_nome_morador = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.textBox_unidade_morador = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.button_pesquisar = new System.Windows.Forms.Button();
+            this.buttonAdicionar = new System.Windows.Forms.Button();
             this.buttonDeletar = new System.Windows.Forms.Button();
             this.buttonAddFoto = new System.Windows.Forms.Button();
             this.pictureBox_Foto_Morador = new System.Windows.Forms.PictureBox();
             this.button_voltar_menu = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.buttonAlterar = new System.Windows.Forms.Button();
-            this.buttonAdicionar = new System.Windows.Forms.Button();
-            this.textBox_unidade_morador = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.groupBox1.SuspendLayout();
             this.groupBox_Dados_Veiculo.SuspendLayout();
             this.groupBox_Dados_Pessoais.SuspendLayout();
             this.groupBox_Contato.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Foto_Morador)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Foto_Morador)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -443,6 +443,55 @@
             this.label2.TabIndex = 30;
             this.label2.Text = "Nome";
             // 
+            // textBox_unidade_morador
+            // 
+            this.textBox_unidade_morador.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.textBox_unidade_morador.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_unidade_morador.Location = new System.Drawing.Point(75, 19);
+            this.textBox_unidade_morador.Name = "textBox_unidade_morador";
+            this.textBox_unidade_morador.Size = new System.Drawing.Size(59, 26);
+            this.textBox_unidade_morador.TabIndex = 0;
+            this.textBox_unidade_morador.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_unidade_morador_KeyPress);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(28, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(47, 13);
+            this.label1.TabIndex = 34;
+            this.label1.Text = "Unidade";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.buttonAdicionar);
+            this.groupBox2.Controls.Add(this.buttonDeletar);
+            this.groupBox2.Controls.Add(this.buttonAddFoto);
+            this.groupBox2.Controls.Add(this.pictureBox_Foto_Morador);
+            this.groupBox2.Controls.Add(this.groupBox_Dados_Pessoais);
+            this.groupBox2.Controls.Add(this.groupBox_Contato);
+            this.groupBox2.Controls.Add(this.button_voltar_menu);
+            this.groupBox2.Controls.Add(this.textBox_nome_morador);
+            this.groupBox2.Controls.Add(this.buttonCancelar);
+            this.groupBox2.Controls.Add(this.buttonAlterar);
+            this.groupBox2.Controls.Add(this.groupBox_Dados_Veiculo);
+            this.groupBox2.Controls.Add(this.groupBox1);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.ForeColor = System.Drawing.Color.White;
+            this.groupBox2.Location = new System.Drawing.Point(8, 0);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(714, 555);
+            this.groupBox2.TabIndex = 35;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Moradores";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // button_pesquisar
             // 
             this.button_pesquisar.BackColor = System.Drawing.Color.Transparent;
@@ -462,6 +511,24 @@
             this.button_pesquisar.UseVisualStyleBackColor = false;
             this.button_pesquisar.Click += new System.EventHandler(this.Button_pesquisar_Click);
             // 
+            // buttonAdicionar
+            // 
+            this.buttonAdicionar.BackColor = System.Drawing.Color.Transparent;
+            this.buttonAdicionar.BackgroundImage = global::Projeto_Portaria.Properties.Resources.Save_icon;
+            this.buttonAdicionar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonAdicionar.FlatAppearance.BorderSize = 0;
+            this.buttonAdicionar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.buttonAdicionar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.buttonAdicionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAdicionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAdicionar.Location = new System.Drawing.Point(644, 438);
+            this.buttonAdicionar.Name = "buttonAdicionar";
+            this.buttonAdicionar.Size = new System.Drawing.Size(58, 45);
+            this.buttonAdicionar.TabIndex = 25;
+            this.toolTip1.SetToolTip(this.buttonAdicionar, "Adicionar");
+            this.buttonAdicionar.UseVisualStyleBackColor = false;
+            this.buttonAdicionar.Click += new System.EventHandler(this.buttonAdicionar_Click);
+            // 
             // buttonDeletar
             // 
             this.buttonDeletar.BackColor = System.Drawing.Color.Transparent;
@@ -472,7 +539,7 @@
             this.buttonDeletar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.buttonDeletar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDeletar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDeletar.Location = new System.Drawing.Point(644, 241);
+            this.buttonDeletar.Location = new System.Drawing.Point(649, 270);
             this.buttonDeletar.Name = "buttonDeletar";
             this.buttonDeletar.Size = new System.Drawing.Size(46, 46);
             this.buttonDeletar.TabIndex = 4;
@@ -535,17 +602,17 @@
             // buttonCancelar
             // 
             this.buttonCancelar.BackColor = System.Drawing.Color.Transparent;
+            this.buttonCancelar.BackgroundImage = global::Projeto_Portaria.Properties.Resources.cancelar;
             this.buttonCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonCancelar.FlatAppearance.BorderSize = 0;
             this.buttonCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.buttonCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.buttonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancelar.Location = new System.Drawing.Point(644, 309);
+            this.buttonCancelar.Location = new System.Drawing.Point(644, 324);
             this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(66, 45);
+            this.buttonCancelar.Size = new System.Drawing.Size(58, 45);
             this.buttonCancelar.TabIndex = 3;
-            this.buttonCancelar.Text = "Cancelar";
             this.toolTip1.SetToolTip(this.buttonCancelar, "Cancelar");
             this.buttonCancelar.UseVisualStyleBackColor = false;
             this.buttonCancelar.Visible = false;
@@ -569,73 +636,6 @@
             this.buttonAlterar.UseVisualStyleBackColor = false;
             this.buttonAlterar.Visible = false;
             this.buttonAlterar.Click += new System.EventHandler(this.Button_salvar_Click);
-            // 
-            // buttonAdicionar
-            // 
-            this.buttonAdicionar.BackColor = System.Drawing.Color.Transparent;
-            this.buttonAdicionar.BackgroundImage = global::Projeto_Portaria.Properties.Resources.Save_icon;
-            this.buttonAdicionar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.buttonAdicionar.FlatAppearance.BorderSize = 0;
-            this.buttonAdicionar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.buttonAdicionar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.buttonAdicionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAdicionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAdicionar.Location = new System.Drawing.Point(644, 438);
-            this.buttonAdicionar.Name = "buttonAdicionar";
-            this.buttonAdicionar.Size = new System.Drawing.Size(58, 45);
-            this.buttonAdicionar.TabIndex = 25;
-            this.toolTip1.SetToolTip(this.buttonAdicionar, "Adicionar");
-            this.buttonAdicionar.UseVisualStyleBackColor = false;
-            this.buttonAdicionar.Click += new System.EventHandler(this.buttonAdicionar_Click);
-            // 
-            // textBox_unidade_morador
-            // 
-            this.textBox_unidade_morador.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.textBox_unidade_morador.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_unidade_morador.Location = new System.Drawing.Point(75, 19);
-            this.textBox_unidade_morador.Name = "textBox_unidade_morador";
-            this.textBox_unidade_morador.Size = new System.Drawing.Size(59, 26);
-            this.textBox_unidade_morador.TabIndex = 0;
-            this.textBox_unidade_morador.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_unidade_morador_KeyPress);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(28, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 13);
-            this.label1.TabIndex = 34;
-            this.label1.Text = "Unidade";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.buttonAdicionar);
-            this.groupBox2.Controls.Add(this.buttonDeletar);
-            this.groupBox2.Controls.Add(this.buttonAddFoto);
-            this.groupBox2.Controls.Add(this.pictureBox_Foto_Morador);
-            this.groupBox2.Controls.Add(this.groupBox_Dados_Pessoais);
-            this.groupBox2.Controls.Add(this.groupBox_Contato);
-            this.groupBox2.Controls.Add(this.button_voltar_menu);
-            this.groupBox2.Controls.Add(this.textBox_nome_morador);
-            this.groupBox2.Controls.Add(this.buttonCancelar);
-            this.groupBox2.Controls.Add(this.buttonAlterar);
-            this.groupBox2.Controls.Add(this.groupBox_Dados_Veiculo);
-            this.groupBox2.Controls.Add(this.groupBox1);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(8, 0);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(714, 555);
-            this.groupBox2.TabIndex = 35;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Moradores";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // Form_moradores
             // 
@@ -667,9 +667,9 @@
             this.groupBox_Contato.ResumeLayout(false);
             this.groupBox_Contato.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Foto_Morador)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Foto_Morador)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

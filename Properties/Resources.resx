@@ -139,23 +139,26 @@
   <data name="Icon (Moradores) Oficial" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon (Moradores) Oficial.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="key-1_icon-icons1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\key-1_icon-icons.com_700911.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="deletar_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\deletar_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Icon (Salvar)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon (Salvar).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon__cadastro_moradores__JlK_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon__cadastro_moradores__JlK_icon.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="new pdf" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new pdf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Family-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Family-icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="key-1_icon-icons.com_70091" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\key-1_icon-icons.com_70091.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Logo Cadeado" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Logo Cadeado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Logo Cadeado1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Logo Cadeado1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="database" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\database.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Icon (Contato) Oficial" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon (Contato) Oficial.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,26 +172,23 @@
   <data name="icon__sair__SYE_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon__sair__SYE_icon.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Smile" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Smile.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Family-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Family-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon__ocorr__ncias__Jh7_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon__ocorr__ncias__Jh7_icon.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Sem título" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Sem título.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Barra Menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Barra Menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Icon (Status)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon (Status).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icone-mais-png-4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icone-mais-png-4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Custom-Icon-Design-Pretty-Office-6-Printer-blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Custom-Icon-Design-Pretty-Office-6-Printer-blue.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon__usu__rios__Qwf_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon__usu__rios__Qwf_icon.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Icon (Pesquisar)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon (Pesquisar).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -205,20 +205,20 @@
   <data name="icon__visitantes__Qf6_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon__visitantes__Qf6_icon.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Fundo Preto1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Fundo Preto1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="icon__usu__rios__Qwf_icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon__usu__rios__Qwf_icon1.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Icon (Deletar)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icon (Deletar).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icone-mais-png-4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icone-mais-png-4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="family_icon_cOg_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\family_icon_cOg_icon1.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icone-portaria" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icone-portaria.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="door-5121" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\door-5121.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Smile" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Smile.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="excel new" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\excel new.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -226,11 +226,11 @@
   <data name="new" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="door-512" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\door-512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Fundo Preto" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fundo Preto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="key-1_icon-icons1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\key-1_icon-icons.com_700911.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Family-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Family-icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="images" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -238,8 +238,8 @@
   <data name="icon__status__oficial_lf9_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon__status__oficial_lf9_icon.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="key-1_icon-icons.com_70091" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\key-1_icon-icons.com_70091.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Sem título" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sem título.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Icon (Cadastro Moradores)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon (Cadastro Moradores).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -256,11 +256,11 @@
   <data name="Save-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Save-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Barra Menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Barra Menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Logo Cadeado1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logo Cadeado1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon__usu__rios__Qwf_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon__usu__rios__Qwf_icon.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Fundo Preto1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fundo Preto1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="explorer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\explorer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -274,6 +274,9 @@
   <data name="word" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\word.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Icon (Status) Oficial" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon (Status) Oficial.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Icon (Visitantes)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon (Visitantes).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -286,8 +289,8 @@
   <data name="family_icon_Jii_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\family_icon_Jii_icon.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Icon (Status) Oficial" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icon (Status) Oficial.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon__cadastro_moradores__JlK_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon__cadastro_moradores__JlK_icon.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="new firefly" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new firefly.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -295,19 +298,19 @@
   <data name="EDITAR - Icon (Download)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\EDITAR - Icon (Download).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="new pdf" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\new pdf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Icon (Deletar)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon (Deletar).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Fundo Preto" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Fundo Preto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="door-5121" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\door-5121.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="chaves" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\chaves.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="family_icon_cOg_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\family_icon_cOg_icon1.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="door-512" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\door-512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="database" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\database.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cancelar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cancelar.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
