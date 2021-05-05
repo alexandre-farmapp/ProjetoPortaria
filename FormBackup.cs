@@ -28,13 +28,21 @@ namespace Projeto_Portaria
 
                 if (sqlConnection.State == ConnectionState.Open)
                 {
-                    string comando = "UPDATE Servidor SET nomeServidor = @servidor, bancoDados = @banco, usuario = @usuario, senha = @senha WHERE id = 1";
+                    string comando = "INSERT INTO Servidor(nomeServidor, bancoDados, usuario, senha) VALUES (@servidor, @banco, @usuario, @senha)";
                     SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);
                     sqlCommand.Parameters.AddWithValue("@servidor", textBoxServidor.Text);
                     sqlCommand.Parameters.AddWithValue("@banco", textBoxBanco.Text);
                     sqlCommand.Parameters.AddWithValue("@usuario", textBoxUsuario.Text);
                     sqlCommand.Parameters.AddWithValue("@senha", textBoxSenha.Text);
-                    sqlCommand.ExecuteNonQuery();                    
+                    sqlCommand.ExecuteNonQuery();
+
+                    string comando2 = "UPDATE Servidor SET nomeServidor = @servidor, bancoDados = @banco, usuario = @usuario, senha = @senha WHERE id = 1";
+                    SqlCommand sqlCommand2 = new SqlCommand(comando2, sqlConnection);
+                    sqlCommand2.Parameters.AddWithValue("@servidor", textBoxServidor.Text);
+                    sqlCommand2.Parameters.AddWithValue("@banco", textBoxBanco.Text);
+                    sqlCommand2.Parameters.AddWithValue("@usuario", textBoxUsuario.Text);
+                    sqlCommand2.Parameters.AddWithValue("@senha", textBoxSenha.Text);
+                    sqlCommand2.ExecuteNonQuery();                    
 
                     Properties.Settings.Default.Bd_portariaConnectionString = conexao;
                     Properties.Settings.Default.Save();
