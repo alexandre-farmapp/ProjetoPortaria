@@ -28,8 +28,9 @@ namespace Projeto_Portaria
 
                 if (sqlConnection.State == ConnectionState.Open)
                 {
-                    string comando = "INSERT INTO Servidor(nomeServidor, bancoDados, usuario, senha) VALUES (@servidor, @banco, @usuario, @senha)";
+                    string comando = "INSERT INTO Servidor(id, nomeServidor, bancoDados, usuario, senha) VALUES (@id, @servidor, @banco, @usuario, @senha)";
                     SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);
+                    sqlCommand.Parameters.AddWithValue("@id", 1);
                     sqlCommand.Parameters.AddWithValue("@servidor", textBoxServidor.Text);
                     sqlCommand.Parameters.AddWithValue("@banco", textBoxBanco.Text);
                     sqlCommand.Parameters.AddWithValue("@usuario", textBoxUsuario.Text);

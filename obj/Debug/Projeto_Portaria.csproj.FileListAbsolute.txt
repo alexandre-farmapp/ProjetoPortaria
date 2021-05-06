@@ -227,3 +227,4 @@ C:\Users\felipe rabelo\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\Micros
 C:\Users\felipe rabelo\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\System.ComponentModel.Annotations.dll
 C:\Users\felipe rabelo\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\EPPlus.xml
 C:\Users\felipe rabelo\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\Microsoft.IO.RecyclableMemoryStream.xml
+C:\Users\felipe rabelo\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\obj\Debug\Projeto_Portaria.FormBackup.resources
