@@ -17,6 +17,8 @@ namespace Projeto_Portaria
         public static Boolean condSelecionado;
         public static string condTipo;
         public static Boolean conectado;
+        public static string condominio;
+        public static string comando;
     
     }
 

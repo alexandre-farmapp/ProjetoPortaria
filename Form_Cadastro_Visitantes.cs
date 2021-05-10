@@ -55,7 +55,7 @@ namespace Projeto_Portaria
 
         private void Button_Registrar_Click(object sender, EventArgs e)
         {
-            //try
+            try
             {
                 if (textBox_Nome.Text != "" && textBox_cpf.Text != "" && textBox_visitado.Text != "")
                 {
@@ -99,11 +99,11 @@ namespace Projeto_Portaria
                         sqlCommand.Parameters.AddWithValue("@foto", openFileDialog1.FileName);
                         sqlCommand.ExecuteNonQuery();
 
-                        comando = "INSERT INTO temporarios(nome,CPF,celular,entrada,visitado,carro,placa,foto, ruaBloco) " +
-                            "values(@nome,@CPF,@celular,@entrada,@visitado,@carro,@placa,@foto, @ruaBloco)";
+                        comando = "INSERT INTO temporarios(nome,cpf,celular,entrada,visitado,carro,placa,foto,ruaBloco) " +
+                            "VALUES(@nome,@cpf,@celular,@entrada,@visitado,@carro,@placa,@foto, @ruaBloco)";
                         sqlCommand = new SqlCommand(comando, sqlConnection);
                         sqlCommand.Parameters.AddWithValue("@nome", textBox_Nome.Text);
-                        sqlCommand.Parameters.AddWithValue("@CPF", textBox_cpf.Text);
+                        sqlCommand.Parameters.AddWithValue("@cpf", textBox_cpf.Text);
                         sqlCommand.Parameters.AddWithValue("@celular", maskedTextBox_celular.Text);
                         sqlCommand.Parameters.AddWithValue("@entrada", textBox_entrada.Text.ToString());
                         sqlCommand.Parameters.AddWithValue("@visitado", textBox_visitado.Text);
@@ -116,7 +116,7 @@ namespace Projeto_Portaria
                     else
                     {
                         comando = "UPDATE visitantes SET Nome=@nome, CPF=@CPF, telefone_celular=@telefone_celular, unidade=@unidade, visitado=@visitado, modelo=@modelo, " +
-                            "placa=@placa, observacoes=@observacoes, foto=@foto ruaBloco=@ruaBloco WHERE CPF= @cpf";
+                            "placa=@placa, observacoes=@observacoes, foto=@foto, ruaBloco=@ruaBloco WHERE CPF= @cpf";
                         sqlCommand = new SqlCommand(comando, sqlConnection);
                         sqlCommand.Parameters.AddWithValue("@nome", textBox_Nome.Text);
                         sqlCommand.Parameters.AddWithValue("@CPF", textBox_cpf.Text);
@@ -168,18 +168,12 @@ namespace Projeto_Portaria
                 {
                     MessageBox.Show("Dados incompletos", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
             }
-            //catch (Exception msg)
+            catch (Exception msg)
             {
-
-               // MessageBox.Show(msg.Message);
+               MessageBox.Show(msg.Message);
             }
-            
-
-
         }
-
 
         private void TextBox1_TextChanged(object sender, EventArgs e)
         {

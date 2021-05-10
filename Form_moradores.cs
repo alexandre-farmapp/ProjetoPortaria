@@ -64,7 +64,8 @@ namespace Projeto_Portaria
 
                 SqlCommand cmd = sqlConnection.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "SELECT cod_morador,nome,CPF,rua,unidade,ramal,fixo,celular,email,observacoes,modelo,cor,placa,foto from moradores where nome LIKE '" + "%" + textBox_nome_morador.Text + "%" + "'";
+                cmd.CommandText = "SELECT cod_morador,nome,CPF,rua,unidade,ramal,fixo,celular,email,observacoes,modelo,cor,placa,foto from moradores " +
+                    "where nome LIKE '" + "%" + textBox_nome_morador.Text + "%" + "' AND condominio = '" + Condominio.condominio + "'";
                 cmd.ExecuteNonQuery();
                 DataTable dt = new DataTable();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -92,7 +93,8 @@ namespace Projeto_Portaria
 
                 SqlCommand cmd = sqlConnection.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "select cod_morador,nome,CPF,rua,unidade,ramal,fixo,celular,email,observacoes,modelo,cor,placa,foto from moradores where unidade = '" + textBox_unidade_morador.Text + "'";
+                cmd.CommandText = "select cod_morador,nome,CPF,rua,unidade,ramal,fixo,celular,email,observacoes,modelo,cor,placa,foto from moradores " +
+                    "where unidade = '" + textBox_unidade_morador.Text + "' AND condominio = '" + Condominio.condominio + "'";
                 cmd.ExecuteNonQuery();
                 DataTable dt = new DataTable();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -147,7 +149,8 @@ namespace Projeto_Portaria
 
             SqlCommand cmd = sqlConnection.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select cod_morador,nome,CPF,rua,unidade,ramal,fixo,celular,email,observacoes,modelo,cor,placa,foto from moradores where nome LIKE '" + "%" + textBox_nome_morador.Text + "%" + "'";
+            cmd.CommandText = "select cod_morador,nome,CPF,rua,unidade,ramal,fixo,celular,email,observacoes,modelo,cor,placa,foto from moradores " +
+                "where nome LIKE '" + "%" + textBox_nome_morador.Text + "%" + "' AND condominio = '"+Condominio.condominio+"'";
             cmd.ExecuteNonQuery();
 
             DataTable dt = new DataTable();
@@ -325,7 +328,8 @@ namespace Projeto_Portaria
 
                 SqlCommand cmd = sqlConnection.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "select cod_morador,nome,CPF,rua,unidade,ramal,fixo,celular,email,observacoes,modelo,cor,placa,foto from moradores where nome LIKE '" + "%" + textBox_nome_morador.Text + "%" + "'";
+                cmd.CommandText = "select cod_morador,nome,CPF,rua,unidade,ramal,fixo,celular,email,observacoes,modelo,cor,placa,foto from moradores " +
+                    "where nome LIKE '" + "%" + textBox_nome_morador.Text + "%" + "' AND condominio = '"+Condominio.condominio+"'";
                 cmd.ExecuteNonQuery();
                 DataTable dt = new DataTable();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -357,7 +361,8 @@ namespace Projeto_Portaria
 
                 SqlCommand cmd = sqlConnection.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "select cod_morador,nome,CPF,rua,unidade,ramal,fixo,celular,email,observacoes,modelo,cor,placa,foto from moradores where unidade = '" + textBox_unidade_morador.Text + "'";
+                cmd.CommandText = "select cod_morador,nome,CPF,rua,unidade,ramal,fixo,celular,email,observacoes,modelo,cor,placa,foto from moradores " +
+                    "where unidade = '" + textBox_unidade_morador.Text + "' AND condominio = '"+Condominio.condominio+"'";
                 cmd.ExecuteNonQuery();
                 DataTable dt = new DataTable();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -392,8 +397,8 @@ namespace Projeto_Portaria
                 {
                     try
                     {
-                        comando = "INSERT INTO moradores(Nome,Cpf,Rua,Unidade,Ramal,Fixo,Celular,Email,Observacoes,Foto,Modelo,Cor,Placa) ";
-                        comando += "VALUES(@nome,@CPF,@rua,@unidade,@ramal,@fixo,@celular,@email,@observacoes,@foto,@modelo,@cor,@placa)";
+                        comando = "INSERT INTO moradores(Nome,Cpf,Rua,Unidade,Ramal,Fixo,Celular,Email,Observacoes,Foto,Modelo,Cor,Placa,condominio) ";
+                        comando += "VALUES(@nome,@CPF,@rua,@unidade,@ramal,@fixo,@celular,@email,@observacoes,@foto,@modelo,@cor,@placa,@condominio)";
                         SqlCommand sqlCommand2 = new SqlCommand(comando, sqlConnection);
                         sqlCommand2.Parameters.AddWithValue("@nome", textBox_Nome.Text);
                         sqlCommand2.Parameters.AddWithValue("@CPF", textBox_cpf.Text);
@@ -408,6 +413,7 @@ namespace Projeto_Portaria
                         sqlCommand2.Parameters.AddWithValue("@modelo", textBox_Modelo.Text);
                         sqlCommand2.Parameters.AddWithValue("@cor", textBox_Cor.Text);
                         sqlCommand2.Parameters.AddWithValue("@placa", maskedTextBox_placa.Text);
+                        sqlCommand2.Parameters.AddWithValue("@condominio", Condominio.condominio);
 
                         sqlCommand2.ExecuteNonQuery();
 

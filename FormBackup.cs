@@ -235,5 +235,34 @@ namespace Projeto_Portaria
                 MessageBox.Show(msg.Message);
             }
         }
+
+        private void buttonlocalBD_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog fileDialog = new OpenFileDialog();
+            fileDialog.Filter = "SQL SERVER database backups files|*.bak";
+            fileDialog.Title = "Importar Banco de Dados";
+
+            if (fileDialog.ShowDialog() == DialogResult.OK)
+            {
+                textBoxCaminhoLocalBD.Text = fileDialog.FileName;
+            }
+        }
+
+        private void buttonConectarLocalBD_Click(object sender, EventArgs e)
+        {
+            Projeto_Portaria.Properties.Settings.Default.Bd_portariaConnectionString = textBoxCaminhoLocalBD.Text;
+            string conexao = Projeto_Portaria.Properties.Settings.Default.Bd_portariaConnectionString;
+            SqlConnection sqlConnection = new SqlConnection(conexao);
+            sqlConnection.Open();
+
+            if(sqlConnection.State == ConnectionState.Open)
+            {
+                MessageBox.Show("Conectado!");
+            }
+            else
+            {
+                MessageBox.Show("Impossivel conectar!");
+            }
+        }
     }
 }

@@ -228,3 +228,4 @@ C:\Users\felipe rabelo\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\System
 C:\Users\felipe rabelo\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\EPPlus.xml
 C:\Users\felipe rabelo\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\Microsoft.IO.RecyclableMemoryStream.xml
 C:\Users\felipe rabelo\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\obj\Debug\Projeto_Portaria.FormBackup.resources
+C:\Users\felipe rabelo\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\obj\Debug\Projeto_Portaria.NovoCond.resources
