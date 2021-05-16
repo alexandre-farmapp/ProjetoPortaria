@@ -51,12 +51,12 @@
             this.buttonDesconectar = new System.Windows.Forms.Button();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.buttonSair = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.buttonConectarLocalBD = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.buttonlocalBD = new System.Windows.Forms.Button();
             this.textBoxCaminhoLocalBD = new System.Windows.Forms.TextBox();
-            this.buttonConectarLocalBD = new System.Windows.Forms.Button();
+            this.buttonSair = new System.Windows.Forms.Button();
             this.groupBoxRestaurar.SuspendLayout();
             this.groupBoxCriarBackup.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -323,21 +323,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Backup/Restaurar";
             // 
-            // buttonSair
-            // 
-            this.buttonSair.BackgroundImage = global::Projeto_Portaria.Properties.Resources.Icon__Voltar_;
-            this.buttonSair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.buttonSair.FlatAppearance.BorderSize = 0;
-            this.buttonSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSair.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.buttonSair.Location = new System.Drawing.Point(649, 507);
-            this.buttonSair.Name = "buttonSair";
-            this.buttonSair.Size = new System.Drawing.Size(59, 37);
-            this.buttonSair.TabIndex = 20;
-            this.buttonSair.UseVisualStyleBackColor = true;
-            this.buttonSair.Click += new System.EventHandler(this.buttonSair_Click);
-            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.buttonConectarLocalBD);
@@ -352,6 +337,18 @@
             this.groupBox3.TabIndex = 25;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Banco local";
+            // 
+            // buttonConectarLocalBD
+            // 
+            this.buttonConectarLocalBD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonConectarLocalBD.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.buttonConectarLocalBD.Location = new System.Drawing.Point(120, 84);
+            this.buttonConectarLocalBD.Name = "buttonConectarLocalBD";
+            this.buttonConectarLocalBD.Size = new System.Drawing.Size(95, 37);
+            this.buttonConectarLocalBD.TabIndex = 9;
+            this.buttonConectarLocalBD.Text = "Conectar";
+            this.buttonConectarLocalBD.UseVisualStyleBackColor = true;
+            this.buttonConectarLocalBD.Click += new System.EventHandler(this.buttonConectarLocalBD_Click);
             // 
             // label6
             // 
@@ -384,18 +381,20 @@
             this.textBoxCaminhoLocalBD.Size = new System.Drawing.Size(302, 22);
             this.textBoxCaminhoLocalBD.TabIndex = 1;
             // 
-            // buttonConectarLocalBD
+            // buttonSair
             // 
-            this.buttonConectarLocalBD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonConectarLocalBD.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.buttonConectarLocalBD.Location = new System.Drawing.Point(120, 84);
-            this.buttonConectarLocalBD.Name = "buttonConectarLocalBD";
-            this.buttonConectarLocalBD.Size = new System.Drawing.Size(95, 37);
-            this.buttonConectarLocalBD.TabIndex = 9;
-            this.buttonConectarLocalBD.Text = "Conectar";
-            this.buttonConectarLocalBD.UseVisualStyleBackColor = true;
-            this.buttonConectarLocalBD.Visible = false;
-            this.buttonConectarLocalBD.Click += new System.EventHandler(this.buttonConectarLocalBD_Click);
+            this.buttonSair.BackgroundImage = global::Projeto_Portaria.Properties.Resources.Icon__Voltar_;
+            this.buttonSair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonSair.FlatAppearance.BorderSize = 0;
+            this.buttonSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSair.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.buttonSair.Location = new System.Drawing.Point(649, 507);
+            this.buttonSair.Name = "buttonSair";
+            this.buttonSair.Size = new System.Drawing.Size(59, 37);
+            this.buttonSair.TabIndex = 20;
+            this.buttonSair.UseVisualStyleBackColor = true;
+            this.buttonSair.Click += new System.EventHandler(this.buttonSair_Click);
             // 
             // FormBackup
             // 

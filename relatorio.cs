@@ -31,23 +31,24 @@ namespace Projeto_Portaria
 
             if(textBox_unidade.Text =="" && textBox_ruaBloco.Text == "")
             {
-                comando = "SELECT nome, visitado, entrada, saida FROM relatorio " +
-                    "WHERE entrada BETWEEN @dataInicio AND @dataFim ORDER BY entrada";
+                comando = "SELECT nome, visitado, entrada, saida, condominio FROM relatorio " +
+                    "WHERE condominio = @condominio AND entrada BETWEEN @dataInicio AND @dataFim ORDER BY entrada";
             }
             else if(textBox_unidade.Text == "")
             {
-                comando = "SELECT nome, visitado, entrada, saida FROM relatorio " +
-                    "WHERE entrada BETWEEN @dataInicio AND @dataFim AND blocoRua = @blocoRua ORDER BY entrada";
+                comando = "SELECT nome, visitado, entrada, saida, condominio FROM relatorio " +
+                    "WHERE condominio = @condominio AND entrada BETWEEN @dataInicio AND @dataFim AND blocoRua = @blocoRua ORDER BY entrada";
             }
             else if(textBox_ruaBloco.Text == "")
             {
-                comando = "SELECT nome, visitado, entrada, saida FROM relatorio " +
-                    "WHERE entrada BETWEEN @dataInicio AND @dataFim AND Unidade = @unidade ORDER BY entrada";
+                comando = "SELECT nome, visitado, entrada, saida, condominio FROM relatorio " +
+                    "WHERE condominio = @condominio AND entrada BETWEEN @dataInicio AND @dataFim AND Unidade = @unidade ORDER BY entrada";
             }
             else
             {
-                comando = "SELECT nome, visitado, entrada, saida FROM relatorio " +
-                    "WHERE entrada BETWEEN @dataInicio AND @dataFim AND Unidade = @unidade AND blocoRua = @blocoRua ORDER BY entrada";
+                comando = "SELECT nome, visitado, entrada, saida, condominio FROM relatorio " +
+                    "WHERE condominio = @condominio AND entrada BETWEEN @dataInicio AND @dataFim AND Unidade = @unidade " +
+                    "AND blocoRua = @blocoRua ORDER BY entrada";
             }
             
             SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);
@@ -55,6 +56,7 @@ namespace Projeto_Portaria
             sqlCommand.Parameters.AddWithValue("@dataFim", dateTimePicker_fim.Value.ToString());
             sqlCommand.Parameters.AddWithValue("@unidade", textBox_unidade.Text);
             sqlCommand.Parameters.AddWithValue("@blocoRua", textBox_ruaBloco.Text);
+            sqlCommand.Parameters.AddWithValue("@condominio", Condominio.condominio);
             sqlCommand.ExecuteNonQuery();
 
             DataTable dataTable = new DataTable();
@@ -86,23 +88,24 @@ namespace Projeto_Portaria
 
                     if (textBox_unidade.Text == "" && textBox_ruaBloco.Text == "")
                     {
-                        comando = "SELECT nome, visitado, entrada, saida FROM relatorio " +
-                            "WHERE entrada BETWEEN @dataInicio AND @dataFim ORDER BY entrada";
+                        comando = "SELECT nome, visitado, entrada, saida, condominio FROM relatorio " +
+                            "WHERE condominio = @condominio AND entrada BETWEEN @dataInicio AND @dataFim ORDER BY entrada";
                     }
                     else if (textBox_unidade.Text == "")
                     {
-                        comando = "SELECT nome, visitado, entrada, saida FROM relatorio " +
-                            "WHERE entrada BETWEEN @dataInicio AND @dataFim AND blocoRua = @blocoRua ORDER BY entrada";
+                        comando = "SELECT nome, visitado, entrada, saida, condominio FROM relatorio " +
+                            "WHERE condominio = @condominio AND entrada BETWEEN @dataInicio AND @dataFim AND blocoRua = @blocoRua ORDER BY entrada";
                     }
                     else if (textBox_ruaBloco.Text == "")
                     {
-                        comando = "SELECT nome, visitado, entrada, saida FROM relatorio " +
-                            "WHERE entrada BETWEEN @dataInicio AND @dataFim AND Unidade = @unidade ORDER BY entrada";
+                        comando = "SELECT nome, visitado, entrada, saida, condominio FROM relatorio " +
+                            "WHERE condominio = @condominio AND entrada BETWEEN @dataInicio AND @dataFim AND Unidade = @unidade ORDER BY entrada";
                     }
                     else
                     {
-                        comando = "SELECT nome, visitado, entrada, saida FROM relatorio " +
-                            "WHERE entrada BETWEEN @dataInicio AND @dataFim AND Unidade = @unidade AND blocoRua = @blocoRua ORDER BY entrada";
+                        comando = "SELECT nome, visitado, entrada, saida, condominio FROM relatorio " +
+                            "WHERE condominio = @condominio AND entrada BETWEEN @dataInicio AND @dataFim AND Unidade = @unidade " +
+                            "AND blocoRua = @blocoRua ORDER BY entrada";
                     }
 
                     SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);
@@ -110,6 +113,7 @@ namespace Projeto_Portaria
                     sqlCommand.Parameters.AddWithValue("@dataFim", dateTimePicker_fim.Value.ToString());
                     sqlCommand.Parameters.AddWithValue("@unidade", textBox_unidade.Text);
                     sqlCommand.Parameters.AddWithValue("@blocoRua", textBox_ruaBloco.Text);
+                    sqlCommand.Parameters.AddWithValue("@condominio", Condominio.condominio);
                     SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
                     sqlDataAdapter.Fill(dataTable);
                 }
@@ -130,6 +134,7 @@ namespace Projeto_Portaria
                     FileInfo arqexcel = new FileInfo(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\Relatorio " + DateTime.Now.ToString().Replace("/", "-").Replace(":", "-").Replace(" ", "-") + ".xlsx");
 
                     excel.SaveAs(arqexcel);
+                    Process.Start(arqexcel.ToString());
                 }
             }
             catch (Exception msg)
@@ -137,7 +142,6 @@ namespace Projeto_Portaria
                 MessageBox.Show(msg.Message);
 
             }
-
         }
 
         private void buttonImprimir_Click(object sender, EventArgs e)
@@ -158,23 +162,24 @@ namespace Projeto_Portaria
 
             if (textBox_unidade.Text == "" && textBox_ruaBloco.Text == "")
             {
-                comando = "SELECT nome, visitado, entrada, saida FROM relatorio " +
-                    "WHERE entrada BETWEEN @dataInicio AND @dataFim ORDER BY entrada";
+                comando = "SELECT nome, visitado, entrada, saida, condominio FROM relatorio " +
+                    "WHERE condominio = @condominio AND entrada BETWEEN @dataInicio AND @dataFim ORDER BY entrada";
             }
             else if (textBox_unidade.Text == "")
             {
-                comando = "SELECT nome, visitado, entrada, saida FROM relatorio " +
-                    "WHERE entrada BETWEEN @dataInicio AND @dataFim AND blocoRua = @blocoRua ORDER BY entrada";
+                comando = "SELECT nome, visitado, entrada, saida, condominio FROM relatorio " +
+                    "WHERE condominio = @condominio AND entrada BETWEEN @dataInicio AND @dataFim AND blocoRua = @blocoRua ORDER BY entrada";
             }
             else if (textBox_ruaBloco.Text == "")
             {
-                comando = "SELECT nome, visitado, entrada, saida FROM relatorio " +
-                    "WHERE entrada BETWEEN @dataInicio AND @dataFim AND Unidade = @unidade ORDER BY entrada";
+                comando = "SELECT nome, visitado, entrada, saida, condominio FROM relatorio " +
+                    "WHERE condominio = @condominio AND entrada BETWEEN @dataInicio AND @dataFim AND Unidade = @unidade ORDER BY entrada";
             }
             else
             {
-                comando = "SELECT nome, visitado, entrada, saida FROM relatorio " +
-                    "WHERE entrada BETWEEN @dataInicio AND @dataFim AND Unidade = @unidade AND blocoRua = @blocoRua ORDER BY entrada";
+                comando = "SELECT nome, visitado, entrada, saida, condominio FROM relatorio " +
+                    "WHERE condominio = @condominio AND entrada BETWEEN @dataInicio AND @dataFim AND Unidade = @unidade " +
+                    "AND blocoRua = @blocoRua ORDER BY entrada";
             }
 
             SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);
@@ -182,6 +187,7 @@ namespace Projeto_Portaria
             sqlCommand.Parameters.AddWithValue("@dataFim", dateTimePicker_fim.Value.ToString());
             sqlCommand.Parameters.AddWithValue("@unidade", textBox_unidade.Text);
             sqlCommand.Parameters.AddWithValue("@blocoRua", textBox_ruaBloco.Text);
+            sqlCommand.Parameters.AddWithValue("@condominio", Condominio.condominio);
 
             SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
 
@@ -232,23 +238,24 @@ namespace Projeto_Portaria
 
             if (textBox_unidade.Text == "" && textBox_ruaBloco.Text == "")
             {
-                comando = "SELECT nome, visitado, entrada, saida FROM relatorio " +
-                    "WHERE entrada BETWEEN @dataInicio AND @dataFim ORDER BY entrada";
+                comando = "SELECT nome, visitado, entrada, saida, condominio FROM relatorio " +
+                    "WHERE condominio = @condominio AND entrada BETWEEN @dataInicio AND @dataFim ORDER BY entrada";
             }
             else if (textBox_unidade.Text == "")
             {
-                comando = "SELECT nome, visitado, entrada, saida FROM relatorio " +
-                    "WHERE entrada BETWEEN @dataInicio AND @dataFim AND blocoRua = @blocoRua ORDER BY entrada";
+                comando = "SELECT nome, visitado, entrada, saida, condominio FROM relatorio " +
+                    "WHERE condominio = @condominio AND entrada BETWEEN @dataInicio AND @dataFim AND blocoRua = @blocoRua ORDER BY entrada";
             }
             else if (textBox_ruaBloco.Text == "")
             {
-                comando = "SELECT nome, visitado, entrada, saida FROM relatorio " +
-                    "WHERE entrada BETWEEN @dataInicio AND @dataFim AND Unidade = @unidade ORDER BY entrada";
+                comando = "SELECT nome, visitado, entrada, saida, condominio FROM relatorio " +
+                    "WHERE condominio = @condominio AND entrada BETWEEN @dataInicio AND @dataFim AND Unidade = @unidade ORDER BY entrada";
             }
             else
             {
-                comando = "SELECT nome, visitado, entrada, saida FROM relatorio " +
-                    "WHERE entrada BETWEEN @dataInicio AND @dataFim AND Unidade = @unidade AND blocoRua = @blocoRua ORDER BY entrada";
+                comando = "SELECT nome, visitado, entrada, saida, condominio FROM relatorio " +
+                    "WHERE condominio = @condominio AND entrada BETWEEN @dataInicio AND @dataFim AND Unidade = @unidade " +
+                    "AND blocoRua = @blocoRua ORDER BY entrada";
             }
 
             SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);
@@ -256,6 +263,7 @@ namespace Projeto_Portaria
             sqlCommand.Parameters.AddWithValue("@dataFim", dateTimePicker_fim.Value.ToString());
             sqlCommand.Parameters.AddWithValue("@unidade", textBox_unidade.Text);
             sqlCommand.Parameters.AddWithValue("@blocoRua", textBox_ruaBloco.Text);
+            sqlCommand.Parameters.AddWithValue("@condominio", Condominio.condominio);
             sqlCommand.ExecuteNonQuery();
             SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
 

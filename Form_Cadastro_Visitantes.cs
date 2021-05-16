@@ -84,8 +84,8 @@ namespace Projeto_Portaria
                         sqlCommand.Parameters.AddWithValue("@ruaBloco", textBoxBlocoRua.Text);
                         sqlCommand.ExecuteNonQuery();
 
-                        comando = "INSERT INTO relatorio(nome,CPF,telefone_celular,unidade,blocoRua,visitado,observacoes,entrada,saida,foto) " +
-                            "values(@nome,@CPF,@telefone_celular,@unidade,@blocoRua,@visitado,@observacoes,@entrada,@saida,@foto)";
+                        comando = "INSERT INTO relatorio(nome,CPF,telefone_celular,unidade,blocoRua,visitado,observacoes,entrada,saida,foto,condominio) " +
+                            "values(@nome,@CPF,@telefone_celular,@unidade,@blocoRua,@visitado,@observacoes,@entrada,@saida,@foto,@condominio)";
                         sqlCommand = new SqlCommand(comando, sqlConnection);
                         sqlCommand.Parameters.AddWithValue("@nome", textBox_Nome.Text);
                         sqlCommand.Parameters.AddWithValue("@CPF", textBox_cpf.Text);
@@ -97,6 +97,7 @@ namespace Projeto_Portaria
                         sqlCommand.Parameters.AddWithValue("@entrada", textBox_entrada.Text.ToString());
                         sqlCommand.Parameters.AddWithValue("@saida", textBox_entrada.Text.ToString());
                         sqlCommand.Parameters.AddWithValue("@foto", openFileDialog1.FileName);
+                        sqlCommand.Parameters.AddWithValue("@condominio", Condominio.condominio);
                         sqlCommand.ExecuteNonQuery();
 
                         comando = "INSERT INTO temporarios(nome,cpf,celular,entrada,visitado,carro,placa,foto,ruaBloco) " +
@@ -130,8 +131,8 @@ namespace Projeto_Portaria
                         sqlCommand.Parameters.AddWithValue("@ruaBloco", textBoxBlocoRua.Text);
                         sqlCommand.ExecuteNonQuery();
 
-                        comando = "INSERT INTO relatorio(Nome,CPF,visitado,Unidade,blocoRua,telefone_celular,observacoes,foto,entrada,saida) " +
-                            "values(@Nome,@CPF,@visitado,@unidade,@blocoRua,@telefone_celular,@observacoes,@foto,@entrada,@saida)";
+                        comando = "INSERT INTO relatorio(Nome,CPF,visitado,Unidade,blocoRua,telefone_celular,observacoes,foto,entrada,saida,condominio) " +
+                            "values(@Nome,@CPF,@visitado,@unidade,@blocoRua,@telefone_celular,@observacoes,@foto,@entrada,@saida,@condominio)";
                         sqlCommand = new SqlCommand(comando, sqlConnection);
                         sqlCommand.Parameters.AddWithValue("@Nome", textBox_Nome.Text);
                         sqlCommand.Parameters.AddWithValue("@CPF", textBox_cpf.Text);
@@ -143,6 +144,7 @@ namespace Projeto_Portaria
                         sqlCommand.Parameters.AddWithValue("@entrada", textBox_entrada.Text.ToString());
                         sqlCommand.Parameters.AddWithValue("@saida", textBox_entrada.Text.ToString());
                         sqlCommand.Parameters.AddWithValue("@foto", pictureBox_Foto_Visitante.ImageLocation);
+                        sqlCommand.Parameters.AddWithValue("@condominio", Condominio.condominio);
                         sqlCommand.ExecuteNonQuery();
 
                         comando = "INSERT INTO temporarios(nome,cpf,celular,entrada,visitado,carro,placa,foto, ruaBloco) " +
@@ -277,7 +279,7 @@ namespace Projeto_Portaria
 
                 SqlCommand cmd = sqlConnection.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "select nome,rua,unidade,ramal,fixo,celular from moradores where nome LIKE '" + "%" + textBox_nome_visitado.Text + "%" + "'";
+                cmd.CommandText = "SELECT nome,rua,unidade,ramal,fixo,celular FROM moradores WHERE nome LIKE '" + "%" + textBox_nome_visitado.Text + "%" + "'";
                 cmd.ExecuteNonQuery();
                 DataTable dt = new DataTable();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -296,7 +298,7 @@ namespace Projeto_Portaria
 
                 SqlCommand cmd = sqlConnection.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "select nome,rua,unidade,ramal,fixo,celular from moradores where unidade = '" + textBox_unidade_visitado.Text + "'";
+                cmd.CommandText = "SELECT nome,rua,unidade,ramal,fixo,celular FROM moradores WHERE unidade = '" + textBox_unidade_visitado.Text + "'";
                 cmd.ExecuteNonQuery();
                 DataTable dt = new DataTable();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);

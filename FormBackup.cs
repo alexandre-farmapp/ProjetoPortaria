@@ -65,8 +65,7 @@ namespace Projeto_Portaria
             catch (Exception msg)
             {
                 MessageBox.Show(msg.Message);
-            }
-            
+            }            
         }
 
         private void buttonProcurar_Click(object sender, EventArgs e)
@@ -167,13 +166,17 @@ namespace Projeto_Portaria
                 SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);
                 SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
 
-                while (sqlDataReader.Read())
+                if(sqlDataReader.Read()==true)
                 {
-                    textBoxServidor.Text = sqlDataReader["nomeServidor"].ToString();
-                    textBoxBanco.Text = sqlDataReader["bancoDados"].ToString();
-                    textBoxUsuario.Text = sqlDataReader["usuario"].ToString();
-                    textBoxSenha.Text = sqlDataReader["senha"].ToString();
+                    while (sqlDataReader.Read())
+                    {
+                        textBoxServidor.Text = sqlDataReader["nomeServidor"].ToString();
+                        textBoxBanco.Text = sqlDataReader["bancoDados"].ToString();
+                        textBoxUsuario.Text = sqlDataReader["usuario"].ToString();
+                        textBoxSenha.Text = sqlDataReader["senha"].ToString();
+                    }
                 }
+                
                 if (textBoxServidor.Text != "")
                 {
                     buttonConectar.Text = "Conectado";
@@ -192,7 +195,6 @@ namespace Projeto_Portaria
         private void buttonSair_Click(object sender, EventArgs e)
         {
             this.Close();
-
         }
 
         private void buttonDesconectar_Click(object sender, EventArgs e)
@@ -239,7 +241,7 @@ namespace Projeto_Portaria
         private void buttonlocalBD_Click(object sender, EventArgs e)
         {
             OpenFileDialog fileDialog = new OpenFileDialog();
-            fileDialog.Filter = "SQL SERVER database backups files|*.bak";
+            fileDialog.Filter = "SQL SERVER database files|*.mdf";
             fileDialog.Title = "Importar Banco de Dados";
 
             if (fileDialog.ShowDialog() == DialogResult.OK)
@@ -250,14 +252,18 @@ namespace Projeto_Portaria
 
         private void buttonConectarLocalBD_Click(object sender, EventArgs e)
         {
-            Projeto_Portaria.Properties.Settings.Default.Bd_portariaConnectionString = textBoxCaminhoLocalBD.Text;
+            
+            Projeto_Portaria.Properties.Settings.Default.Bd_portariaConnectionString = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = " + textBoxCaminhoLocalBD.Text + "; Integrated Security = True";
             string conexao = Projeto_Portaria.Properties.Settings.Default.Bd_portariaConnectionString;
             SqlConnection sqlConnection = new SqlConnection(conexao);
             sqlConnection.Open();
 
             if(sqlConnection.State == ConnectionState.Open)
             {
+                Properties.Settings.Default.Save();
+                Properties.Settings.Default.Reload();
                 MessageBox.Show("Conectado!");
+                sqlConnection.Close();
             }
             else
             {

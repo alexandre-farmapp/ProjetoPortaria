@@ -62,5 +62,21 @@ namespace Projeto_Portaria
             Condominio.condSelecionado = false;
             this.Close();
         }
+
+        private void NovoCond_Load(object sender, EventArgs e)
+        {
+            if (Condominio.comando == "INSERT")
+            {
+                this.Text = "Adicionar Condominio";
+            }
+            else if (Condominio.comando == "UPDATE")
+            {
+                this.Text = "Alterar Condominio";
+            }
+            else if (Condominio.comando == "DELETE")
+            {
+                this.Text = "Deletar Condominio";
+            }
+        }
     }
 }
