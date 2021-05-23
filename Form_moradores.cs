@@ -390,8 +390,9 @@ namespace Projeto_Portaria
                 SqlConnection sqlConnection = new SqlConnection(conexao);
                 sqlConnection.Open();
 
-                string comando = "SELECT CPF FROM moradores WHERE CPF = " + textBox_cpf.Text + "";
+                string comando = "SELECT CPF FROM moradores WHERE CPF = @cpf";
                 SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);
+                sqlCommand.Parameters.AddWithValue("@cpf", textBox_cpf.Text);
 
                 if (sqlCommand.ExecuteScalar() == null)
                 {
@@ -441,17 +442,17 @@ namespace Projeto_Portaria
                         MessageBox.Show(msg.Message);
                     }
                 }
-                else
+                else if (sqlCommand.ExecuteScalar().ToString() == textBox_cpf.Text)
                 {
-                    MessageBox.Show("Já existe um morador com este CPF");
+                    MessageBox.Show("Já existe um morador com este CPF!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    textBox_cpf.Focus();
                     sqlConnection.Close();
                 }
-
             }
             else
-            {
+            {                
                 MessageBox.Show("Dados Invalidos!!");
-                textBox_Nome.Focus();
+                textBox_cpf.Focus();
             }
 
         }

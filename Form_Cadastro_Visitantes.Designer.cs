@@ -77,6 +77,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.comboBoxTipoPesq = new System.Windows.Forms.ComboBox();
             this.groupBox_Dados_Pessoais.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_pesquisa_morador)).BeginInit();
             this.groupBox_Dados_Veiculo.SuspendLayout();
@@ -567,6 +568,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.comboBoxTipoPesq);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label1);
@@ -617,6 +619,20 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // comboBoxTipoPesq
+            // 
+            this.comboBoxTipoPesq.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxTipoPesq.FormattingEnabled = true;
+            this.comboBoxTipoPesq.Items.AddRange(new object[] {
+            "Nome",
+            "RG",
+            "CPF"});
+            this.comboBoxTipoPesq.Location = new System.Drawing.Point(418, 16);
+            this.comboBoxTipoPesq.Name = "comboBoxTipoPesq";
+            this.comboBoxTipoPesq.Size = new System.Drawing.Size(121, 28);
+            this.comboBoxTipoPesq.TabIndex = 71;
+            this.comboBoxTipoPesq.Text = "Nome";
             // 
             // Cadastro_de_Visitantes
             // 
@@ -707,5 +723,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelBlocoRua;
         private System.Windows.Forms.TextBox textBoxBlocoRua;
+        private System.Windows.Forms.ComboBox comboBoxTipoPesq;
     }
 }

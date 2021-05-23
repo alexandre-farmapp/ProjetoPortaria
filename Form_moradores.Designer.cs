@@ -66,10 +66,6 @@
             this.textBox_nome_morador = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.textBox_unidade_morador = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.button_pesquisar = new System.Windows.Forms.Button();
             this.buttonAdicionar = new System.Windows.Forms.Button();
             this.buttonDeletar = new System.Windows.Forms.Button();
@@ -78,13 +74,17 @@
             this.button_voltar_menu = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.buttonAlterar = new System.Windows.Forms.Button();
+            this.textBox_unidade_morador = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.groupBox1.SuspendLayout();
             this.groupBox_Dados_Veiculo.SuspendLayout();
             this.groupBox_Dados_Pessoais.SuspendLayout();
             this.groupBox_Contato.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Foto_Morador)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -270,38 +270,38 @@
             // label_Nome
             // 
             this.label_Nome.AutoSize = true;
-            this.label_Nome.Location = new System.Drawing.Point(3, 20);
+            this.label_Nome.Location = new System.Drawing.Point(-3, 25);
             this.label_Nome.Name = "label_Nome";
-            this.label_Nome.Size = new System.Drawing.Size(43, 13);
+            this.label_Nome.Size = new System.Drawing.Size(48, 13);
             this.label_Nome.TabIndex = 0;
-            this.label_Nome.Text = "Nome:";
+            this.label_Nome.Text = "Nome:*";
             // 
             // label_CPF
             // 
             this.label_CPF.AutoSize = true;
             this.label_CPF.Location = new System.Drawing.Point(5, 56);
             this.label_CPF.Name = "label_CPF";
-            this.label_CPF.Size = new System.Drawing.Size(34, 13);
+            this.label_CPF.Size = new System.Drawing.Size(39, 13);
             this.label_CPF.TabIndex = 1;
-            this.label_CPF.Text = "CPF:";
+            this.label_CPF.Text = "CPF:*";
             // 
             // label_Apartamento
             // 
             this.label_Apartamento.AutoSize = true;
             this.label_Apartamento.Location = new System.Drawing.Point(5, 94);
             this.label_Apartamento.Name = "label_Apartamento";
-            this.label_Apartamento.Size = new System.Drawing.Size(47, 13);
+            this.label_Apartamento.Size = new System.Drawing.Size(52, 13);
             this.label_Apartamento.TabIndex = 3;
-            this.label_Apartamento.Text = "Uni/Ap";
+            this.label_Apartamento.Text = "Uni/Ap*";
             // 
             // label_Bloco
             // 
             this.label_Bloco.AutoSize = true;
-            this.label_Bloco.Location = new System.Drawing.Point(190, 56);
+            this.label_Bloco.Location = new System.Drawing.Point(185, 56);
             this.label_Bloco.Name = "label_Bloco";
-            this.label_Bloco.Size = new System.Drawing.Size(68, 13);
+            this.label_Bloco.Size = new System.Drawing.Size(73, 13);
             this.label_Bloco.TabIndex = 2;
-            this.label_Bloco.Text = "Rua/Bloco";
+            this.label_Bloco.Text = "Rua/Bloco*";
             // 
             // groupBox_Contato
             // 
@@ -362,11 +362,11 @@
             // label_Celular
             // 
             this.label_Celular.AutoSize = true;
-            this.label_Celular.Location = new System.Drawing.Point(223, 26);
+            this.label_Celular.Location = new System.Drawing.Point(219, 26);
             this.label_Celular.Name = "label_Celular";
-            this.label_Celular.Size = new System.Drawing.Size(50, 13);
+            this.label_Celular.Size = new System.Drawing.Size(55, 13);
             this.label_Celular.TabIndex = 7;
-            this.label_Celular.Text = "Celular:";
+            this.label_Celular.Text = "Celular:*";
             // 
             // label_Fixo
             // 
@@ -442,55 +442,6 @@
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 30;
             this.label2.Text = "Nome";
-            // 
-            // textBox_unidade_morador
-            // 
-            this.textBox_unidade_morador.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.textBox_unidade_morador.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_unidade_morador.Location = new System.Drawing.Point(75, 19);
-            this.textBox_unidade_morador.Name = "textBox_unidade_morador";
-            this.textBox_unidade_morador.Size = new System.Drawing.Size(59, 26);
-            this.textBox_unidade_morador.TabIndex = 0;
-            this.textBox_unidade_morador.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_unidade_morador_KeyPress);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(28, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 13);
-            this.label1.TabIndex = 34;
-            this.label1.Text = "Unidade";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.buttonAdicionar);
-            this.groupBox2.Controls.Add(this.buttonDeletar);
-            this.groupBox2.Controls.Add(this.buttonAddFoto);
-            this.groupBox2.Controls.Add(this.pictureBox_Foto_Morador);
-            this.groupBox2.Controls.Add(this.groupBox_Dados_Pessoais);
-            this.groupBox2.Controls.Add(this.groupBox_Contato);
-            this.groupBox2.Controls.Add(this.button_voltar_menu);
-            this.groupBox2.Controls.Add(this.textBox_nome_morador);
-            this.groupBox2.Controls.Add(this.buttonCancelar);
-            this.groupBox2.Controls.Add(this.buttonAlterar);
-            this.groupBox2.Controls.Add(this.groupBox_Dados_Veiculo);
-            this.groupBox2.Controls.Add(this.groupBox1);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(8, 0);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(714, 555);
-            this.groupBox2.TabIndex = 35;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Moradores";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // button_pesquisar
             // 
@@ -637,6 +588,55 @@
             this.buttonAlterar.Visible = false;
             this.buttonAlterar.Click += new System.EventHandler(this.Button_salvar_Click);
             // 
+            // textBox_unidade_morador
+            // 
+            this.textBox_unidade_morador.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.textBox_unidade_morador.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_unidade_morador.Location = new System.Drawing.Point(75, 19);
+            this.textBox_unidade_morador.Name = "textBox_unidade_morador";
+            this.textBox_unidade_morador.Size = new System.Drawing.Size(59, 26);
+            this.textBox_unidade_morador.TabIndex = 0;
+            this.textBox_unidade_morador.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_unidade_morador_KeyPress);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(28, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(47, 13);
+            this.label1.TabIndex = 34;
+            this.label1.Text = "Unidade";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.buttonAdicionar);
+            this.groupBox2.Controls.Add(this.buttonDeletar);
+            this.groupBox2.Controls.Add(this.buttonAddFoto);
+            this.groupBox2.Controls.Add(this.pictureBox_Foto_Morador);
+            this.groupBox2.Controls.Add(this.groupBox_Dados_Pessoais);
+            this.groupBox2.Controls.Add(this.groupBox_Contato);
+            this.groupBox2.Controls.Add(this.button_voltar_menu);
+            this.groupBox2.Controls.Add(this.textBox_nome_morador);
+            this.groupBox2.Controls.Add(this.buttonCancelar);
+            this.groupBox2.Controls.Add(this.buttonAlterar);
+            this.groupBox2.Controls.Add(this.groupBox_Dados_Veiculo);
+            this.groupBox2.Controls.Add(this.groupBox1);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.ForeColor = System.Drawing.Color.White;
+            this.groupBox2.Location = new System.Drawing.Point(8, 0);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(714, 555);
+            this.groupBox2.TabIndex = 35;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Moradores";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // Form_moradores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -667,9 +667,9 @@
             this.groupBox_Contato.ResumeLayout(false);
             this.groupBox_Contato.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Foto_Morador)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Foto_Morador)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

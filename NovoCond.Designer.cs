@@ -41,6 +41,7 @@
             this.textBoxNomeCond.Name = "textBoxNomeCond";
             this.textBoxNomeCond.Size = new System.Drawing.Size(427, 22);
             this.textBoxNomeCond.TabIndex = 0;
+            this.textBoxNomeCond.Text = "Nome";
             // 
             // comboBoxTipo
             // 
@@ -56,6 +57,7 @@
             this.comboBoxTipo.Name = "comboBoxTipo";
             this.comboBoxTipo.Size = new System.Drawing.Size(259, 24);
             this.comboBoxTipo.TabIndex = 1;
+            this.comboBoxTipo.Text = "Tipo";
             // 
             // buttonAdd
             // 

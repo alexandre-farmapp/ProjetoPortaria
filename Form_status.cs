@@ -46,7 +46,8 @@ namespace Projeto_Portaria
         }
 
         private void Button_Cadastro_Moradores_Click(object sender, EventArgs e)
-        {            
+        {      
+            
             try
             {
                 string conexao = Projeto_Portaria.Properties.Settings.Default.Bd_portariaConnectionString;
@@ -55,8 +56,8 @@ namespace Projeto_Portaria
 
                 string comando = "UPDATE relatorio SET saida = @saida WHERE entrada = @entrada ";
                 SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);
-                sqlCommand.Parameters.AddWithValue("@saida", textBox_saida.Text.ToString());
-                sqlCommand.Parameters.AddWithValue("@entrada", textBox_entrada.Text);
+                sqlCommand.Parameters.AddWithValue("@saida", Convert.ToDateTime(textBox_saida.Text));
+                sqlCommand.Parameters.AddWithValue("@entrada", Convert.ToDateTime(textBox_entrada.Text));
                 sqlCommand.ExecuteNonQuery();
 
                 comando = "DELETE FROM temporarios WHERE nome = '" + textBox_nome.Text + "'";

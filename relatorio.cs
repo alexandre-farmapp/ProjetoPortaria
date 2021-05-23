@@ -52,8 +52,8 @@ namespace Projeto_Portaria
             }
             
             SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);
-            sqlCommand.Parameters.AddWithValue("@dataInicio", dateTimePicker_inicio.Value.ToString());
-            sqlCommand.Parameters.AddWithValue("@dataFim", dateTimePicker_fim.Value.ToString());
+            sqlCommand.Parameters.AddWithValue("@dataInicio", dateTimePicker_inicio.Value);
+            sqlCommand.Parameters.AddWithValue("@dataFim", dateTimePicker_fim.Value);
             sqlCommand.Parameters.AddWithValue("@unidade", textBox_unidade.Text);
             sqlCommand.Parameters.AddWithValue("@blocoRua", textBox_ruaBloco.Text);
             sqlCommand.Parameters.AddWithValue("@condominio", Condominio.condominio);
@@ -109,8 +109,8 @@ namespace Projeto_Portaria
                     }
 
                     SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);
-                    sqlCommand.Parameters.AddWithValue("@dataInicio", dateTimePicker_inicio.Value.ToString());
-                    sqlCommand.Parameters.AddWithValue("@dataFim", dateTimePicker_fim.Value.ToString());
+                    sqlCommand.Parameters.AddWithValue("@dataInicio", dateTimePicker_inicio.Value);
+                    sqlCommand.Parameters.AddWithValue("@dataFim", dateTimePicker_fim.Value);
                     sqlCommand.Parameters.AddWithValue("@unidade", textBox_unidade.Text);
                     sqlCommand.Parameters.AddWithValue("@blocoRua", textBox_ruaBloco.Text);
                     sqlCommand.Parameters.AddWithValue("@condominio", Condominio.condominio);
@@ -162,29 +162,29 @@ namespace Projeto_Portaria
 
             if (textBox_unidade.Text == "" && textBox_ruaBloco.Text == "")
             {
-                comando = "SELECT nome, visitado, entrada, saida, condominio FROM relatorio " +
+                comando = "SELECT nome, Unidade, entrada, saida, condominio FROM relatorio " +
                     "WHERE condominio = @condominio AND entrada BETWEEN @dataInicio AND @dataFim ORDER BY entrada";
             }
             else if (textBox_unidade.Text == "")
             {
-                comando = "SELECT nome, visitado, entrada, saida, condominio FROM relatorio " +
+                comando = "SELECT nome, Unidade, entrada, saida, condominio FROM relatorio " +
                     "WHERE condominio = @condominio AND entrada BETWEEN @dataInicio AND @dataFim AND blocoRua = @blocoRua ORDER BY entrada";
             }
             else if (textBox_ruaBloco.Text == "")
             {
-                comando = "SELECT nome, visitado, entrada, saida, condominio FROM relatorio " +
+                comando = "SELECT nome, Unidade, entrada, saida, condominio FROM relatorio " +
                     "WHERE condominio = @condominio AND entrada BETWEEN @dataInicio AND @dataFim AND Unidade = @unidade ORDER BY entrada";
             }
             else
             {
-                comando = "SELECT nome, visitado, entrada, saida, condominio FROM relatorio " +
+                comando = "SELECT nome, Unidade, entrada, saida, condominio FROM relatorio " +
                     "WHERE condominio = @condominio AND entrada BETWEEN @dataInicio AND @dataFim AND Unidade = @unidade " +
                     "AND blocoRua = @blocoRua ORDER BY entrada";
             }
 
             SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);
-            sqlCommand.Parameters.AddWithValue("@dataInicio", dateTimePicker_inicio.Value.ToString());
-            sqlCommand.Parameters.AddWithValue("@dataFim", dateTimePicker_fim.Value.ToString());
+            sqlCommand.Parameters.AddWithValue("@dataInicio", dateTimePicker_inicio.Value);
+            sqlCommand.Parameters.AddWithValue("@dataFim", dateTimePicker_fim.Value);
             sqlCommand.Parameters.AddWithValue("@unidade", textBox_unidade.Text);
             sqlCommand.Parameters.AddWithValue("@blocoRua", textBox_ruaBloco.Text);
             sqlCommand.Parameters.AddWithValue("@condominio", Condominio.condominio);
@@ -198,7 +198,7 @@ namespace Projeto_Portaria
 
                 e.Graphics.DrawString("Relatorio", new Font("Arial", 36, FontStyle.Bold), Brushes.Black, new PointF(250, 40));
                 e.Graphics.DrawString("Nome", new Font("Arial", 14, FontStyle.Bold), Brushes.Black, new PointF(50, 130));
-                e.Graphics.DrawString("VIsitado", new Font("Arial", 14, FontStyle.Bold), Brushes.Black, new PointF(180, 130));
+                e.Graphics.DrawString("Unidade Visitada", new Font("Arial", 14, FontStyle.Bold), Brushes.Black, new PointF(250, 130));
                 //e.Graphics.DrawString("", new Font("Arial", 14, FontStyle.Bold), Brushes.Black, new PointF(270, 130));
                 e.Graphics.DrawString("Hora entrada", new Font("Arial", 14, FontStyle.Bold), Brushes.Black, new PointF(400, 130));
                 e.Graphics.DrawString("Hora saida", new Font("Arial", 14, FontStyle.Bold), Brushes.Black, new PointF(600, 130));
@@ -206,13 +206,13 @@ namespace Projeto_Portaria
                 while (sqlDataReader.Read())
                 {
                     string nome = sqlDataReader["Nome"].ToString();
-                    string visitado = sqlDataReader["Visitado"].ToString();
+                    string unidade = sqlDataReader["Unidade"].ToString();
                     //string placa = sqlDataReader["placa"].ToString();
                     string entrada = sqlDataReader["entrada"].ToString();
                     string saida = sqlDataReader["saida"].ToString();
 
                     e.Graphics.DrawString(nome, new Font("Arial", 12, FontStyle.Bold), Brushes.Gray, new PointF(50, j));
-                    e.Graphics.DrawString(visitado, new Font("Arial", 12, FontStyle.Bold), Brushes.Gray, new PointF(180, j));
+                    e.Graphics.DrawString(unidade, new Font("Arial", 12, FontStyle.Bold), Brushes.Gray, new PointF(250, j));
                     //e.Graphics.DrawString(placa, new Font("Centuey Gothic", 12, FontStyle.Bold), Brushes.Gray, new PointF(270, j));
                     e.Graphics.DrawString(entrada, new Font("Arial", 12, FontStyle.Bold), Brushes.Gray, new PointF(400, j));
                     e.Graphics.DrawString(saida, new Font("Arial", 12, FontStyle.Bold), Brushes.Gray, new PointF(600, j));
@@ -238,17 +238,17 @@ namespace Projeto_Portaria
 
             if (textBox_unidade.Text == "" && textBox_ruaBloco.Text == "")
             {
-                comando = "SELECT nome, visitado, entrada, saida, condominio FROM relatorio " +
+                comando = "SELECT nome, Unidade, entrada, saida, condominio FROM relatorio " +
                     "WHERE condominio = @condominio AND entrada BETWEEN @dataInicio AND @dataFim ORDER BY entrada";
             }
             else if (textBox_unidade.Text == "")
             {
-                comando = "SELECT nome, visitado, entrada, saida, condominio FROM relatorio " +
+                comando = "SELECT nome, Unidade, entrada, saida, condominio FROM relatorio " +
                     "WHERE condominio = @condominio AND entrada BETWEEN @dataInicio AND @dataFim AND blocoRua = @blocoRua ORDER BY entrada";
             }
             else if (textBox_ruaBloco.Text == "")
             {
-                comando = "SELECT nome, visitado, entrada, saida, condominio FROM relatorio " +
+                comando = "SELECT nome, Unidade, entrada, saida, condominio FROM relatorio " +
                     "WHERE condominio = @condominio AND entrada BETWEEN @dataInicio AND @dataFim AND Unidade = @unidade ORDER BY entrada";
             }
             else
@@ -259,8 +259,8 @@ namespace Projeto_Portaria
             }
 
             SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);
-            sqlCommand.Parameters.AddWithValue("@dataInicio", dateTimePicker_inicio.Value.ToString());
-            sqlCommand.Parameters.AddWithValue("@dataFim", dateTimePicker_fim.Value.ToString());
+            sqlCommand.Parameters.AddWithValue("@dataInicio", dateTimePicker_inicio.Value);
+            sqlCommand.Parameters.AddWithValue("@dataFim", dateTimePicker_fim.Value);
             sqlCommand.Parameters.AddWithValue("@unidade", textBox_unidade.Text);
             sqlCommand.Parameters.AddWithValue("@blocoRua", textBox_ruaBloco.Text);
             sqlCommand.Parameters.AddWithValue("@condominio", Condominio.condominio);
@@ -272,12 +272,12 @@ namespace Projeto_Portaria
                 //StreamWriter para gravar um arquivo
                 StreamWriter objetoarquivo = new StreamWriter("Relatorio " + DateTime.Now.ToString("dd-mm-yy") + ".doc", false);//false gera um novo arq toda vez,true grava todos no mesmo arq
                 objetoarquivo.WriteLine("\t\t\tRelatorio " + DateTime.Now.ToString());
-                objetoarquivo.WriteLine("\tNome\t\tVisitado\t\tHora entrada\t\tHora saida");                
+                objetoarquivo.WriteLine("\tNome\t\tUnidade\t\tHora entrada\t\tHora saida");                
                                 
                 while (sqlDataReader.Read())
                 {
                     string nome = sqlDataReader["Nome"].ToString();
-                    string visitado = sqlDataReader["visitado"].ToString();
+                    string visitado = sqlDataReader["Unidade"].ToString();
                     string entrada = sqlDataReader["entrada"].ToString();
                     string saida = sqlDataReader["saida"].ToString();
 
