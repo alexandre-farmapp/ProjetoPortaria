@@ -181,15 +181,16 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.buttonImprimir);
             this.groupBox1.Controls.Add(this.button_excel);
             this.groupBox1.Controls.Add(this.buttonWord);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(664, 19);
+            this.groupBox1.Location = new System.Drawing.Point(607, 19);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(107, 61);
+            this.groupBox1.Size = new System.Drawing.Size(153, 61);
             this.groupBox1.TabIndex = 38;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Exportar ";
+            this.groupBox1.Text = "Exportar/Imprimir";
             // 
             // button_excel
             // 
@@ -202,7 +203,7 @@
             this.button_excel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_excel.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button_excel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_excel.Location = new System.Drawing.Point(6, 14);
+            this.button_excel.Location = new System.Drawing.Point(54, 13);
             this.button_excel.Name = "button_excel";
             this.button_excel.Size = new System.Drawing.Size(41, 39);
             this.button_excel.TabIndex = 7;
@@ -220,7 +221,7 @@
             this.buttonWord.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.buttonWord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonWord.ForeColor = System.Drawing.SystemColors.Control;
-            this.buttonWord.Location = new System.Drawing.Point(55, 12);
+            this.buttonWord.Location = new System.Drawing.Point(101, 11);
             this.buttonWord.Name = "buttonWord";
             this.buttonWord.Size = new System.Drawing.Size(42, 43);
             this.buttonWord.TabIndex = 40;
@@ -230,7 +231,6 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.buttonImprimir);
             this.groupBox2.Controls.Add(this.groupBox1);
             this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Controls.Add(this.button_pesquisar);
@@ -255,16 +255,16 @@
             // 
             this.buttonImprimir.BackColor = System.Drawing.Color.Transparent;
             this.buttonImprimir.BackgroundImage = global::Projeto_Portaria.Properties.Resources.Custom_Icon_Design_Pretty_Office_6_Printer_blue;
-            this.buttonImprimir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonImprimir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonImprimir.FlatAppearance.BorderSize = 0;
             this.buttonImprimir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.buttonImprimir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.buttonImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonImprimir.ForeColor = System.Drawing.SystemColors.Control;
             this.buttonImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonImprimir.Location = new System.Drawing.Point(587, 38);
+            this.buttonImprimir.Location = new System.Drawing.Point(6, 17);
             this.buttonImprimir.Name = "buttonImprimir";
-            this.buttonImprimir.Size = new System.Drawing.Size(71, 42);
+            this.buttonImprimir.Size = new System.Drawing.Size(42, 37);
             this.buttonImprimir.TabIndex = 39;
             this.buttonImprimir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonImprimir.UseVisualStyleBackColor = false;

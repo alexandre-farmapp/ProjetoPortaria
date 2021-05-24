@@ -150,7 +150,7 @@ namespace Projeto_Portaria
         {
             if(Condominio.conectado == true)
             {
-                atualizardatagrid();
+                //atualizardatagrid();
             }
             if(Condominio.condSelecionado == true)
             {

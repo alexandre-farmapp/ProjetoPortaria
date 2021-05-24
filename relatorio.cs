@@ -74,7 +74,7 @@ namespace Projeto_Portaria
         }               
 
         private void button_excel_Click(object sender, EventArgs e)
-        {
+        {/*
             try
             {
                 string conexao = Projeto_Portaria.Properties.Settings.Default.Bd_portariaConnectionString;
@@ -141,7 +141,74 @@ namespace Projeto_Portaria
             {
                 MessageBox.Show(msg.Message);
 
+            }*/
+
+            string conexao = Projeto_Portaria.Properties.Settings.Default.Bd_portariaConnectionString;
+            SqlConnection sqlConnection = new SqlConnection(conexao);
+            sqlConnection.Open();
+
+            string comando = "";
+
+            if (textBox_unidade.Text == "" && textBox_ruaBloco.Text == "")
+            {
+                comando = "SELECT nome, Unidade, entrada, saida, condominio FROM relatorio " +
+                    "WHERE condominio = @condominio AND entrada BETWEEN @dataInicio AND @dataFim ORDER BY entrada";
             }
+            else if (textBox_unidade.Text == "")
+            {
+                comando = "SELECT nome, Unidade, entrada, saida, condominio FROM relatorio " +
+                    "WHERE condominio = @condominio AND entrada BETWEEN @dataInicio AND @dataFim AND blocoRua = @blocoRua ORDER BY entrada";
+            }
+            else if (textBox_ruaBloco.Text == "")
+            {
+                comando = "SELECT nome, Unidade, entrada, saida, condominio FROM relatorio " +
+                    "WHERE condominio = @condominio AND entrada BETWEEN @dataInicio AND @dataFim AND Unidade = @unidade ORDER BY entrada";
+            }
+            else
+            {
+                comando = "SELECT nome, visitado, entrada, saida, condominio FROM relatorio " +
+                    "WHERE condominio = @condominio AND entrada BETWEEN @dataInicio AND @dataFim AND Unidade = @unidade " +
+                    "AND blocoRua = @blocoRua ORDER BY entrada";
+            }
+
+            SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);
+            sqlCommand.Parameters.AddWithValue("@dataInicio", dateTimePicker_inicio.Value);
+            sqlCommand.Parameters.AddWithValue("@dataFim", dateTimePicker_fim.Value);
+            sqlCommand.Parameters.AddWithValue("@unidade", textBox_unidade.Text);
+            sqlCommand.Parameters.AddWithValue("@blocoRua", textBox_ruaBloco.Text);
+            sqlCommand.Parameters.AddWithValue("@condominio", Condominio.condominio);
+            sqlCommand.ExecuteNonQuery();
+            SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+
+            try
+            {
+                //StreamWriter para gravar um arquivo
+                StreamWriter objetoarquivo = new StreamWriter("Relatorio " + DateTime.Now.ToString("dd-mm-yy") + ".xls", false);//false gera um novo arq toda vez,true grava todos no mesmo arq
+                //objetoarquivo.WriteLine("\t\t\tRelatorio " + DateTime.Now.ToString());
+                objetoarquivo.WriteLine("Nome\tUnidadeVisitada\tHora entrada\tHora saida");
+
+                while (sqlDataReader.Read())
+                {
+                    string nome = sqlDataReader["Nome"].ToString();
+                    string unidade = sqlDataReader["Unidade"].ToString();
+                    string entrada = sqlDataReader["entrada"].ToString();
+                    string saida = sqlDataReader["saida"].ToString();
+
+                    objetoarquivo.WriteLine(nome + "\t" + unidade + "\t"+ entrada + "\t"+ saida);
+                    //objetoarquivo.Write(unidade + "\t");
+                    //objetoarquivo.Write(entrada + "\t");
+                    //objetoarquivo.Write(saida + "\n");
+                }
+                objetoarquivo.Close();
+                Process.Start("Relatorio " + DateTime.Now.ToString("dd-mm-yy") + ".xls");
+            }
+            catch (Exception msg)
+            {
+                MessageBox.Show(msg.Message);
+            }
+
+            sqlConnection.Close();
+
         }
 
         private void buttonImprimir_Click(object sender, EventArgs e)

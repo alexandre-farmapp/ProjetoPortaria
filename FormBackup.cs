@@ -28,22 +28,31 @@ namespace Projeto_Portaria
 
                 if (sqlConnection.State == ConnectionState.Open)
                 {
-                    string comando = "INSERT INTO Servidor(id, nomeServidor, bancoDados, usuario, senha) VALUES (@id, @servidor, @banco, @usuario, @senha)";
+                    string comando = "SELECT Id FROM Servidor";
                     SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);
-                    sqlCommand.Parameters.AddWithValue("@id", 1);
-                    sqlCommand.Parameters.AddWithValue("@servidor", textBoxServidor.Text);
-                    sqlCommand.Parameters.AddWithValue("@banco", textBoxBanco.Text);
-                    sqlCommand.Parameters.AddWithValue("@usuario", textBoxUsuario.Text);
-                    sqlCommand.Parameters.AddWithValue("@senha", textBoxSenha.Text);
-                    sqlCommand.ExecuteNonQuery();
 
-                    string comando2 = "UPDATE Servidor SET nomeServidor = @servidor, bancoDados = @banco, usuario = @usuario, senha = @senha WHERE id = 1";
-                    SqlCommand sqlCommand2 = new SqlCommand(comando2, sqlConnection);
-                    sqlCommand2.Parameters.AddWithValue("@servidor", textBoxServidor.Text);
-                    sqlCommand2.Parameters.AddWithValue("@banco", textBoxBanco.Text);
-                    sqlCommand2.Parameters.AddWithValue("@usuario", textBoxUsuario.Text);
-                    sqlCommand2.Parameters.AddWithValue("@senha", textBoxSenha.Text);
-                    sqlCommand2.ExecuteNonQuery();                    
+                    if(sqlCommand.ExecuteScalar() == null)
+                    {
+                        comando = "INSERT INTO Servidor(nomeServidor, bancoDados, usuario, senha) VALUES (@servidor, @banco, @usuario, @senha)";
+                        SqlCommand sqlCommand2 = new SqlCommand(comando, sqlConnection);
+                        sqlCommand2.Parameters.AddWithValue("@servidor", textBoxServidor.Text);
+                        sqlCommand2.Parameters.AddWithValue("@banco", textBoxBanco.Text);
+                        sqlCommand2.Parameters.AddWithValue("@usuario", textBoxUsuario.Text);
+                        sqlCommand2.Parameters.AddWithValue("@senha", textBoxSenha.Text);
+                        sqlCommand2.ExecuteNonQuery();
+                    }
+                    else if(sqlCommand.ExecuteScalar() != null)
+                    {
+                        string id = sqlCommand.ExecuteScalar().ToString();
+                        comando = "UPDATE Servidor SET nomeServidor = @servidor, bancoDados = @banco, usuario = @usuario, senha = @senha WHERE id = @id";
+                        SqlCommand sqlCommand3 = new SqlCommand(comando, sqlConnection);
+                        sqlCommand3.Parameters.AddWithValue("@servidor", textBoxServidor.Text);
+                        sqlCommand3.Parameters.AddWithValue("@banco", textBoxBanco.Text);
+                        sqlCommand3.Parameters.AddWithValue("@usuario", textBoxUsuario.Text);
+                        sqlCommand3.Parameters.AddWithValue("@senha", textBoxSenha.Text);
+                        sqlCommand3.Parameters.AddWithValue("@id", id);
+                        sqlCommand3.ExecuteNonQuery();
+                    }                                       
 
                     Properties.Settings.Default.Bd_portariaConnectionString = conexao;
                     Properties.Settings.Default.Save();
@@ -162,25 +171,39 @@ namespace Projeto_Portaria
                 SqlConnection sqlConnection = new SqlConnection(conexao);
                 sqlConnection.Open();
 
-                string comando = "SELECT * FROM Servidor WHERE id = 1";
-                SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);
-                SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
-
-                if(sqlDataReader.Read()==true)
+                if (sqlConnection.State == ConnectionState.Open)
                 {
-                    while (sqlDataReader.Read())
+                    string comando = "SELECT id FROM Servidor";
+                    SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);
+                    
+                    if (sqlCommand.ExecuteScalar() == null)
                     {
-                        textBoxServidor.Text = sqlDataReader["nomeServidor"].ToString();
-                        textBoxBanco.Text = sqlDataReader["bancoDados"].ToString();
-                        textBoxUsuario.Text = sqlDataReader["usuario"].ToString();
-                        textBoxSenha.Text = sqlDataReader["senha"].ToString();
+                        
                     }
-                }
-                
-                if (textBoxServidor.Text != "")
-                {
-                    buttonConectar.Text = "Conectado";
-                    buttonDesconectar.Visible = true;
+                    else//(sqlCommand.ExecuteScalar() != null)
+                    {
+                        string id = sqlCommand.ExecuteScalar().ToString();
+                        comando = "SELECT * FROM Servidor WHERE id = @id";
+                        SqlCommand sqlCommand2 = new SqlCommand(comando, sqlConnection);
+                        sqlCommand2.Parameters.AddWithValue("@id", Convert.ToInt32(id));
+                        SqlDataReader sqlDataReader = sqlCommand2.ExecuteReader();
+                        
+
+                        if (sqlDataReader.Read() == true)
+                        {
+                            textBoxServidor.Text = sqlDataReader["nomeServidor"].ToString();
+                            textBoxBanco.Text = sqlDataReader["bancoDados"].ToString();
+                            textBoxUsuario.Text = sqlDataReader["usuario"].ToString();
+                            textBoxSenha.Text = sqlDataReader["senha"].ToString();
+                            
+                        }
+
+                        if (textBoxServidor.Text != "")
+                        {
+                            buttonConectar.Text = "Conectado";
+                            buttonDesconectar.Visible = true;
+                        }
+                    }
                 }
 
                 sqlConnection.Close();
@@ -207,20 +230,16 @@ namespace Projeto_Portaria
 
                 if (sqlConnection.State == ConnectionState.Open)
                 {
-                    string comando = "UPDATE Servidor SET nomeServidor = @servidor, bancoDados = @banco, usuario = @usuario, senha = @senha WHERE id = 1";
-                    SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);
-                    sqlCommand.Parameters.AddWithValue("@servidor", "");
-                    sqlCommand.Parameters.AddWithValue("@banco", "");
-                    sqlCommand.Parameters.AddWithValue("@usuario", "");
-                    sqlCommand.Parameters.AddWithValue("@senha", "");
-                    sqlCommand.ExecuteNonQuery();
-
                     Properties.Settings.Default.Bd_portariaConnectionString = conexao;
                     Properties.Settings.Default.Save();
                     Properties.Settings.Default.Reload();
 
                     MessageBox.Show("Desconectado!!!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     buttonConectar.Text = "Conectar";
+                    textBoxServidor.Text = "";
+                    textBoxBanco.Text = "";
+                    textBoxUsuario.Text = "";
+                    textBoxSenha.Text = "";
                     buttonDesconectar.Visible = false;
                     Condominio.conectado = false;
                     sqlConnection.Close();
