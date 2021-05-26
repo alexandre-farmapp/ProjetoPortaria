@@ -289,7 +289,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.Control;
-            this.groupBox1.Location = new System.Drawing.Point(366, 310);
+            this.groupBox1.Location = new System.Drawing.Point(403, 310);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(342, 189);
             this.groupBox1.TabIndex = 24;
@@ -318,7 +318,7 @@
             this.groupBox2.ForeColor = System.Drawing.SystemColors.Control;
             this.groupBox2.Location = new System.Drawing.Point(6, 6);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(720, 550);
+            this.groupBox2.Size = new System.Drawing.Size(751, 550);
             this.groupBox2.TabIndex = 24;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Backup/Restaurar";
@@ -333,7 +333,7 @@
             this.groupBox3.ForeColor = System.Drawing.SystemColors.Control;
             this.groupBox3.Location = new System.Drawing.Point(13, 310);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(342, 189);
+            this.groupBox3.Size = new System.Drawing.Size(384, 189);
             this.groupBox3.TabIndex = 25;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Banco local";
@@ -342,7 +342,7 @@
             // 
             this.buttonConectarLocalBD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonConectarLocalBD.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.buttonConectarLocalBD.Location = new System.Drawing.Point(120, 84);
+            this.buttonConectarLocalBD.Location = new System.Drawing.Point(182, 84);
             this.buttonConectarLocalBD.Name = "buttonConectarLocalBD";
             this.buttonConectarLocalBD.Size = new System.Drawing.Size(95, 37);
             this.buttonConectarLocalBD.TabIndex = 9;
@@ -363,7 +363,7 @@
             // 
             this.buttonlocalBD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonlocalBD.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.buttonlocalBD.Location = new System.Drawing.Point(230, 84);
+            this.buttonlocalBD.Location = new System.Drawing.Point(283, 84);
             this.buttonlocalBD.Name = "buttonlocalBD";
             this.buttonlocalBD.Size = new System.Drawing.Size(95, 37);
             this.buttonlocalBD.TabIndex = 0;
@@ -378,7 +378,7 @@
             this.textBoxCaminhoLocalBD.ForeColor = System.Drawing.SystemColors.ControlText;
             this.textBoxCaminhoLocalBD.Location = new System.Drawing.Point(23, 56);
             this.textBoxCaminhoLocalBD.Name = "textBoxCaminhoLocalBD";
-            this.textBoxCaminhoLocalBD.Size = new System.Drawing.Size(302, 22);
+            this.textBoxCaminhoLocalBD.Size = new System.Drawing.Size(355, 22);
             this.textBoxCaminhoLocalBD.TabIndex = 1;
             // 
             // buttonSair
@@ -389,7 +389,7 @@
             this.buttonSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSair.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.buttonSair.Location = new System.Drawing.Point(649, 507);
+            this.buttonSair.Location = new System.Drawing.Point(686, 507);
             this.buttonSair.Name = "buttonSair";
             this.buttonSair.Size = new System.Drawing.Size(59, 37);
             this.buttonSair.TabIndex = 20;
@@ -401,7 +401,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(740, 568);
+            this.ClientSize = new System.Drawing.Size(769, 568);
             this.Controls.Add(this.groupBoxRestaurar);
             this.Controls.Add(this.labelCaminho);
             this.Controls.Add(this.groupBoxCriarBackup);

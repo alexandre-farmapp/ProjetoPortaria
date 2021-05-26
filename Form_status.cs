@@ -47,38 +47,41 @@ namespace Projeto_Portaria
 
         private void Button_Cadastro_Moradores_Click(object sender, EventArgs e)
         {      
+            if(textBox_nome.Text != "")
+            {
+                try
+                {
+                    string conexao = Projeto_Portaria.Properties.Settings.Default.Bd_portariaConnectionString;
+                    SqlConnection sqlConnection = new SqlConnection(conexao);
+                    sqlConnection.Open();
+
+                    string comando = "UPDATE relatorio SET saida = @saida WHERE entrada = @entrada ";
+                    SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);
+                    sqlCommand.Parameters.AddWithValue("@saida", Convert.ToDateTime(textBox_saida.Text));
+                    sqlCommand.Parameters.AddWithValue("@entrada", Convert.ToDateTime(textBox_entrada.Text));
+                    sqlCommand.ExecuteNonQuery();
+
+                    comando = "DELETE FROM temporarios WHERE nome = '" + textBox_nome.Text + "'";
+                    SqlCommand sqlCommand2 = new SqlCommand(comando, sqlConnection);
+                    sqlCommand2.ExecuteNonQuery();
+
+                    MessageBox.Show("Saida gerada com sucesso!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    sqlConnection.Close();
+
+                    disparaDatagrid();
+
+                    textBox_nome.Text = "";
+                    textBox_entrada.Text = "";
+                    textBox_saida.Text = "";
+                    pictureBox1.ImageLocation = "";
+                }
+                catch (Exception msg)
+                {
+                    MessageBox.Show(msg.Message);
+                }
+            }
             
-            try
-            {
-                string conexao = Projeto_Portaria.Properties.Settings.Default.Bd_portariaConnectionString;
-                SqlConnection sqlConnection = new SqlConnection(conexao);
-                sqlConnection.Open();
-
-                string comando = "UPDATE relatorio SET saida = @saida WHERE entrada = @entrada ";
-                SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);
-                sqlCommand.Parameters.AddWithValue("@saida", Convert.ToDateTime(textBox_saida.Text));
-                sqlCommand.Parameters.AddWithValue("@entrada", Convert.ToDateTime(textBox_entrada.Text));
-                sqlCommand.ExecuteNonQuery();
-
-                comando = "DELETE FROM temporarios WHERE nome = '" + textBox_nome.Text + "'";
-                SqlCommand sqlCommand2 = new SqlCommand(comando, sqlConnection);
-                sqlCommand2.ExecuteNonQuery();
-
-                MessageBox.Show("Saida gerada com sucesso!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                
-                sqlConnection.Close();
-
-                disparaDatagrid();
-
-                textBox_nome.Text = "";
-                textBox_entrada.Text = "";
-                textBox_saida.Text = "";
-                pictureBox1.ImageLocation = "";
-            }
-            catch (Exception msg)
-            {
-                MessageBox.Show(msg.Message);
-            }
         }
 
         private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -92,6 +95,31 @@ namespace Projeto_Portaria
         private void Button_sair_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_nome_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_entrada_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_saida_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

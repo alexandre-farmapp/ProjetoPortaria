@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 using System.Data.SqlClient;
+using System.IO;
 
 namespace Projeto_Portaria
 {
@@ -62,6 +63,32 @@ namespace Projeto_Portaria
             {
                 MessageBox.Show(msg.Message);
             }
+
+            Condominio.attGrid = false;
+        }
+
+        public void atualizardatagridTemp()
+        {
+            string conexao = Projeto_Portaria.Properties.Settings.Default.Bd_portariaConnectionString;
+            SqlConnection sqlConnection = new SqlConnection(conexao);
+            sqlConnection.Open();
+
+            string comando = "SELECT temp.nome, celular, temp.entrada, carro, placa, temp.foto, temp.visitado, condominio FROM " +
+                "temporarios temp inner join relatorio rel on temp.entrada = rel.entrada";
+            SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);
+            sqlCommand.ExecuteNonQuery();
+
+            DataTable dataTable = new DataTable();
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+            sqlDataAdapter.Fill(dataTable);
+            dataGridTemp.DataSource = dataTable;
+            dataGridTemp.AutoResizeColumns();
+
+            sqlConnection.Close();
+
+            //dataGridTemp.Columns[0].Visible = false;
+            dataGridTemp.Columns[5].Visible = false;
+            Grid.attGrid = false;
         }
 
         private void formVisitantes()
@@ -114,14 +141,23 @@ namespace Projeto_Portaria
         {           
             if(User_info.usuario_logado == "admin")
             {
-                button_Cadastrar_Novo_Usuario.Visible = true;             
+                button_Cadastrar_Novo_Usuario.Visible = true;
+                buttonAddCond.Visible = true;
+                buttonEditar.Visible = true;
+                buttonExcluir.Visible = true;
+                buttonBackup.Visible = true;
             }
             else
             {
-                button_Cadastrar_Novo_Usuario.Visible = true;
+                button_Cadastrar_Novo_Usuario.Visible = false;
+                buttonAddCond.Visible = false;
+                buttonEditar.Visible = false;
+                buttonExcluir.Visible = false;
+                buttonBackup.Visible = false;
             }
 
-            //textBox_usuario_logado.Text = "Usuario : " + User_info.usuario_logado + " " + DateTime.Now.ToLongTimeString();
+            atualizardatagridTemp();           
+            
         }
 
         private void Button_Cadastrar_Novo_Usuario_VisibleChanged(object sender, EventArgs e)
@@ -148,9 +184,13 @@ namespace Projeto_Portaria
 
         private void Timer1_Tick(object sender, EventArgs e)
         {
-            if(Condominio.conectado == true)
+            if(Grid.attGrid == true)
             {
-                //atualizardatagrid();
+                atualizardatagridTemp();
+            }
+            if(Condominio.attGrid == true)
+            {
+                atualizardatagrid();
             }
             if(Condominio.condSelecionado == true)
             {
@@ -290,5 +330,61 @@ namespace Projeto_Portaria
                 MessageBox.Show("Não ha condominio selecionado!");
             }            
         }
+
+        private void dataGridTemp_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.Rows.Count > 0)
+            {
+                textBox_nome.Text = dataGridTemp.CurrentRow.Cells[0].Value.ToString();
+                textBox_entrada.Text = dataGridTemp.CurrentRow.Cells[2].Value.ToString();
+                textBox_saida.Text = DateTime.Now.ToString();
+                pictureBox1.ImageLocation = dataGridTemp.CurrentRow.Cells[5].Value.ToString();
+            }
+            else
+            {
+                
+            }
+            
+        }
+
+        private void button_Cadastro_Moradores_Click(object sender, EventArgs e)
+        {
+            if (textBox_nome.Text != "")
+            {
+                try
+                {
+                    string conexao = Projeto_Portaria.Properties.Settings.Default.Bd_portariaConnectionString;
+                    SqlConnection sqlConnection = new SqlConnection(conexao);
+                    sqlConnection.Open();
+
+                    string comando = "UPDATE relatorio SET saida = @saida WHERE entrada = @entrada ";
+                    SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);
+                    sqlCommand.Parameters.AddWithValue("@saida", Convert.ToDateTime(textBox_saida.Text));
+                    sqlCommand.Parameters.AddWithValue("@entrada", Convert.ToDateTime(textBox_entrada.Text));
+                    sqlCommand.ExecuteNonQuery();
+
+                    comando = "DELETE FROM temporarios WHERE nome = '" + textBox_nome.Text + "'";
+                    SqlCommand sqlCommand2 = new SqlCommand(comando, sqlConnection);
+                    sqlCommand2.ExecuteNonQuery();
+
+                    MessageBox.Show("Saida gerada com sucesso!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    sqlConnection.Close();
+
+                    atualizardatagridTemp();
+
+                    textBox_nome.Text = "";
+                    textBox_entrada.Text = "";
+                    textBox_saida.Text = "";
+                    pictureBox1.ImageLocation = "";
+                }
+                catch (Exception msg)
+                {
+                    MessageBox.Show(msg.Message);
+                }
+            }
+        }
+
+        
     }
 }

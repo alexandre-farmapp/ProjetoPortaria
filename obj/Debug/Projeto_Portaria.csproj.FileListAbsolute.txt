@@ -229,7 +229,6 @@ C:\Users\felipe rabelo\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\EPPlus
 C:\Users\felipe rabelo\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\Microsoft.IO.RecyclableMemoryStream.xml
 C:\Users\felipe rabelo\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\obj\Debug\Projeto_Portaria.FormBackup.resources
 C:\Users\felipe rabelo\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\obj\Debug\Projeto_Portaria.NovoCond.resources
-C:\Users\Felipe\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\obj\Debug\Projeto_Portaria.csprojAssemblyReference.cache
 C:\Users\Felipe\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\obj\Debug\Projeto_Portaria.FormAnotacoes.resources
 C:\Users\Felipe\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\obj\Debug\Projeto_Portaria.FormBackup.resources
 C:\Users\Felipe\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\obj\Debug\Projeto_Portaria.Form_Cadastro_Usuário.resources
@@ -258,3 +257,4 @@ C:\Users\Felipe\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\Microsoft.IO.
 C:\Users\Felipe\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\System.ComponentModel.Annotations.dll
 C:\Users\Felipe\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\EPPlus.xml
 C:\Users\Felipe\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\Microsoft.IO.RecyclableMemoryStream.xml
+C:\Users\Felipe\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\obj\Debug\Projeto_Portaria.csprojAssemblyReference.cache

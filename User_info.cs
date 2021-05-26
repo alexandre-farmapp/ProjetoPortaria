@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,7 +21,13 @@ namespace Projeto_Portaria
         public static Boolean conectado;
         public static string condominio;
         public static string comando;
-    
+        public static Boolean attGrid;
     }
+
+    class Grid
+    {
+        public static Boolean attGrid;
+    }
+
 
 }

@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -60,7 +61,9 @@ namespace Projeto_Portaria
 
                     MessageBox.Show("Conectado!!!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     buttonConectar.Text = "Conectado";
+                    Condominio.attGrid = true;
                     Condominio.conectado = true;
+                    Grid.attGrid = true;
                     buttonDesconectar.Visible = true;
                     sqlConnection.Close();
                     this.Close();
@@ -217,6 +220,8 @@ namespace Projeto_Portaria
 
         private void buttonSair_Click(object sender, EventArgs e)
         {
+            Grid.attGrid = true;
+            Condominio.attGrid = true;
             this.Close();
         }
 
@@ -224,7 +229,7 @@ namespace Projeto_Portaria
         {
             try
             {
-                string conexao = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = 'C:\Users\felipe rabelo\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\Bd_portaria.mdf'; Integrated Security = True";
+                string conexao = $@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = {Directory.GetCurrentDirectory()}\Bd_portaria.mdf; Integrated Security = True";
                 SqlConnection sqlConnection = new SqlConnection(conexao);
                 sqlConnection.Open();
 
@@ -242,6 +247,9 @@ namespace Projeto_Portaria
                     textBoxSenha.Text = "";
                     buttonDesconectar.Visible = false;
                     Condominio.conectado = false;
+                    Condominio.condSelecionado = false;
+                    Grid.attGrid = true;
+                    Condominio.attGrid = true;
                     sqlConnection.Close();
                     this.Close();
                 }

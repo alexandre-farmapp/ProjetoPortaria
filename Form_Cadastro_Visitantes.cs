@@ -44,8 +44,8 @@ namespace Projeto_Portaria
         
         private void Button_voltar_menu_Click(object sender, EventArgs e)
         {
-            this.Close();
-            
+            Grid.attGrid = true;
+            this.Close();            
         }
 
         private void formMenu()
@@ -57,6 +57,15 @@ namespace Projeto_Portaria
         {
             try
             {
+                if (textBox_cpf.Text == "")
+                {
+                    var numRandom = new Random();
+
+                    if (numRandom.Next().ToString().Length < 14)
+                    {
+                        textBox_cpf.Text = numRandom.Next().ToString();
+                    }
+                }
                 if (textBox_Nome.Text != "" && textBox_cpf.Text != "" && textBox_visitado.Text != "")
                 {
                     string conexao = Projeto_Portaria.Properties.Settings.Default.Bd_portariaConnectionString;
@@ -175,6 +184,7 @@ namespace Projeto_Portaria
             {
                MessageBox.Show(msg.Message);
             }
+            Grid.attGrid = true;
         }
 
         private void TextBox1_TextChanged(object sender, EventArgs e)
@@ -289,7 +299,8 @@ namespace Projeto_Portaria
 
                 SqlCommand cmd = sqlConnection.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "SELECT nome,rua,unidade,ramal,fixo,celular FROM moradores WHERE nome LIKE '" + "%" + textBox_nome_visitado.Text + "%" + "'";
+                cmd.CommandText = "SELECT nome,rua,unidade,ramal,fixo,celular FROM moradores WHERE " +
+                    "nome LIKE '" + "%" + textBox_nome_visitado.Text + "%" + "' AND condominio = '" + Condominio.condominio + "'";
                 cmd.ExecuteNonQuery();
                 DataTable dt = new DataTable();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -308,7 +319,7 @@ namespace Projeto_Portaria
 
                 SqlCommand cmd = sqlConnection.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "SELECT nome,rua,unidade,ramal,fixo,celular FROM moradores WHERE unidade = '" + textBox_unidade_visitado.Text + "'";
+                cmd.CommandText = "SELECT nome,rua,unidade,ramal,fixo,celular FROM moradores WHERE unidade = '" + textBox_unidade_visitado.Text + "' AND condominio = '" + Condominio.condominio + "'";
                 cmd.ExecuteNonQuery();
                 DataTable dt = new DataTable();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);

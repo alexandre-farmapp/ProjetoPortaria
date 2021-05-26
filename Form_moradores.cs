@@ -172,7 +172,6 @@ namespace Projeto_Portaria
 
         private void Button_salvar_Click(object sender, EventArgs e)
         {
-
             string conexao = Projeto_Portaria.Properties.Settings.Default.Bd_portariaConnectionString;
             SqlConnection sqlConnection = new SqlConnection(conexao);
             sqlConnection.Open();
@@ -218,9 +217,9 @@ namespace Projeto_Portaria
             buttonDeletar.Visible = false;
             buttonAddFoto.Visible = false;
             buttonCancelar.Visible = false;
+            buttonAdicionar.Visible = true;
 
             textBox_unidade_morador.Focus();
-
 
             sqlConnection.Close();
         }
@@ -384,6 +383,15 @@ namespace Projeto_Portaria
 
         private void buttonAdicionar_Click(object sender, EventArgs e)
         {
+            if(textBox_cpf.Text == "")
+            {
+                var numRandom = new Random();
+
+                if(numRandom.Next().ToString().Length < 14)
+                {
+                    textBox_cpf.Text = numRandom.Next().ToString();
+                }                
+            }
             if (textBox_Nome.Text != "" && textBox_cpf.Text != "" && textBox_unidade.Text != "")
             {
                 string conexao = Projeto_Portaria.Properties.Settings.Default.Bd_portariaConnectionString;

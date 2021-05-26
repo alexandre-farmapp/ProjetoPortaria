@@ -13,6 +13,8 @@ namespace Projeto_Portaria
 {
     public partial class NovoCond : Form
     {
+        string antigoNome;
+
         public NovoCond(string Cod, string nome, string tipo)
         {
             InitializeComponent();
@@ -57,9 +59,27 @@ namespace Projeto_Portaria
             sqlCommand.Parameters.AddWithValue("@cod", textBoxCod.Text);
             sqlCommand.ExecuteNonQuery();
 
+            if(Condominio.comando == "UPDATE")
+            {
+                comando = $"UPDATE moradores SET condominio = @novoNome WHERE condominio = @antigoNome";
+                SqlCommand sqlCommand2 = new SqlCommand(comando, sqlConnection);
+                sqlCommand2.Parameters.AddWithValue("@novoNome", textBoxNomeCond.Text);
+                sqlCommand2.Parameters.AddWithValue("@antigoNome", antigoNome);
+                sqlCommand2.ExecuteNonQuery();
+
+                comando = $"UPDATE relatorio SET condominio = @novoNome WHERE condominio = @antigoNome";
+                SqlCommand sqlCommand3 = new SqlCommand(comando, sqlConnection);
+                sqlCommand3.Parameters.AddWithValue("@novoNome", textBoxNomeCond.Text);
+                sqlCommand3.Parameters.AddWithValue("@antigoNome", antigoNome);
+                sqlCommand3.ExecuteNonQuery();
+            }
+
             sqlConnection.Close();
+
             Condominio.comando = "";
             Condominio.condSelecionado = false;
+            Condominio.attGrid = true;
+            Grid.attGrid = true;
             this.Close();
         }
 
@@ -68,14 +88,18 @@ namespace Projeto_Portaria
             if (Condominio.comando == "INSERT")
             {
                 this.Text = "Adicionar Condominio";
+                buttonAdd.Text = "Adicionar";
             }
             else if (Condominio.comando == "UPDATE")
             {
                 this.Text = "Alterar Condominio";
+                buttonAdd.Text = "Alterar";
+                antigoNome = textBoxNomeCond.Text;
             }
             else if (Condominio.comando == "DELETE")
             {
                 this.Text = "Deletar Condominio";
+                buttonAdd.Text = "Deletar";
             }
         }
     }

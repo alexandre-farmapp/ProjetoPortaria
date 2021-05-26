@@ -72,6 +72,7 @@
             this.textBox_nome.Name = "textBox_nome";
             this.textBox_nome.Size = new System.Drawing.Size(337, 26);
             this.textBox_nome.TabIndex = 10;
+            this.textBox_nome.TextChanged += new System.EventHandler(this.textBox_nome_TextChanged);
             // 
             // textBox_entrada
             // 
@@ -83,6 +84,7 @@
             this.textBox_entrada.ReadOnly = true;
             this.textBox_entrada.Size = new System.Drawing.Size(173, 26);
             this.textBox_entrada.TabIndex = 11;
+            this.textBox_entrada.TextChanged += new System.EventHandler(this.textBox_entrada_TextChanged);
             // 
             // textBox_saida
             // 
@@ -94,6 +96,7 @@
             this.textBox_saida.ReadOnly = true;
             this.textBox_saida.Size = new System.Drawing.Size(174, 26);
             this.textBox_saida.TabIndex = 13;
+            this.textBox_saida.TextChanged += new System.EventHandler(this.textBox_saida_TextChanged);
             // 
             // label1
             // 
@@ -268,6 +271,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // button_sair
             // 
@@ -319,6 +323,7 @@
             this.groupBox1.TabIndex = 23;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Estatus de Visitantes";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // Form_status
             // 
