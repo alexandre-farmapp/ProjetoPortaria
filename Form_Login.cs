@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 using System.Data.SqlClient;//gravar isso
+using System.IO;
 
 namespace Projeto_Portaria
 {
@@ -74,9 +75,34 @@ namespace Projeto_Portaria
         }
 
         private void Form_Login_Load(object sender, EventArgs e)
-        {
+        {            
+            try
+            {
+                string conexao = Projeto_Portaria.Properties.Settings.Default.Bd_portariaConnectionString;
+                SqlConnection sqlConnection = new SqlConnection(conexao);
+                sqlConnection.Open();
 
-        }               
+                if (sqlConnection.State != ConnectionState.Open)
+                {
+                    MessageBox.Show("Não foi possivel se conectar ao Banco de dados principal, use o botão conectar-se", "mensagem!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    buttonConectar.Visible = true;
+                }
+            }
+            catch (Exception msg)
+            {
+                MessageBox.Show(msg.Message);
+                buttonConectar.Visible = true;
+                MessageBox.Show(Projeto_Portaria.Properties.Settings.Default.Bd_portariaConnectionString);
+            }
+
+
+
+        }
+
+        private string ExtractFilePath(object exename)
+        {
+            throw new NotImplementedException();
+        }
 
         private void Button_Sair_Click(object sender, EventArgs e)
         {

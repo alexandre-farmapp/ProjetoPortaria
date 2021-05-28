@@ -51,11 +51,12 @@
             this.comboBoxTipo.FormattingEnabled = true;
             this.comboBoxTipo.Items.AddRange(new object[] {
             "Horizontal",
-            "Vertical"});
+            "Vertical",
+            "Empresa"});
             this.comboBoxTipo.Location = new System.Drawing.Point(18, 47);
             this.comboBoxTipo.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxTipo.Name = "comboBoxTipo";
-            this.comboBoxTipo.Size = new System.Drawing.Size(259, 24);
+            this.comboBoxTipo.Size = new System.Drawing.Size(240, 24);
             this.comboBoxTipo.TabIndex = 1;
             this.comboBoxTipo.Text = "Tipo";
             // 

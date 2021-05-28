@@ -82,9 +82,8 @@ namespace Projeto_Portaria
                 sqlConnection.Open();
 
                 //string comando = "UPDATE moradores SET ramal = '" + textBox_Ramal.Text + "' WHERE nome = '"+textBox_Nome.Text+"'";
-                string comando = "UPDATE pessoasuteis SET nome_sindico = @nome_sindico, telefone_sindico = @telefone_sindico, nome_supervisor = @nome_supervisor, ";
-                comando += "telefone_supervisor = @telefone_supervisor, nome_zelador = @nome_zelador, telefone_zelador = @telefone_zelador ";
-                comando += "WHERE id = '" + textBox_id.Text + "'";
+                string comando = "UPDATE pessoasuteis SET nome_sindico = @nome_sindico, telefone_sindico = @telefone_sindico, nome_supervisor = @nome_supervisor, " +
+                    "telefone_supervisor = @telefone_supervisor, nome_zelador = @nome_zelador, telefone_zelador = @telefone_zelador WHERE id = '" + textBox_id.Text + "'";
                 SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);
                 sqlCommand.Parameters.AddWithValue("@nome_sindico", textBox_nome_sindico.Text);
                 sqlCommand.Parameters.AddWithValue("@telefone_sindico", maskedTextBox_telefone_sindico.Text);

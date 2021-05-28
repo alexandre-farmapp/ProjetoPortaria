@@ -115,7 +115,7 @@ namespace Projeto_Portaria
                         sqlCommand.Parameters.AddWithValue("@nome", textBox_Nome.Text);
                         sqlCommand.Parameters.AddWithValue("@cpf", textBox_cpf.Text);
                         sqlCommand.Parameters.AddWithValue("@celular", maskedTextBox_celular.Text);
-                        sqlCommand.Parameters.AddWithValue("@entrada", textBox_entrada.Text.ToString());
+                        sqlCommand.Parameters.AddWithValue("@entrada", Convert.ToDateTime(textBox_entrada.Text));
                         sqlCommand.Parameters.AddWithValue("@visitado", textBox_visitado.Text);
                         sqlCommand.Parameters.AddWithValue("@carro", textBox_Modelo.Text);
                         sqlCommand.Parameters.AddWithValue("@placa", maskedTextBox_placa.Text);
@@ -162,7 +162,7 @@ namespace Projeto_Portaria
                         sqlCommand.Parameters.AddWithValue("@nome", textBox_Nome.Text);
                         sqlCommand.Parameters.AddWithValue("@cpf", textBox_cpf.Text);
                         sqlCommand.Parameters.AddWithValue("@celular", maskedTextBox_celular.Text);
-                        sqlCommand.Parameters.AddWithValue("@entrada", textBox_entrada.Text.ToString());
+                        sqlCommand.Parameters.AddWithValue("@entrada", Convert.ToDateTime(textBox_entrada.Text));
                         sqlCommand.Parameters.AddWithValue("@visitado", textBox_visitado.Text);
                         sqlCommand.Parameters.AddWithValue("@carro", textBox_Modelo.Text);
                         sqlCommand.Parameters.AddWithValue("@placa", maskedTextBox_placa.Text);

@@ -25,11 +25,8 @@ namespace Projeto_Portaria.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute(@"<?xml version=""1.0"" encoding=""utf-16""?>
-<SerializableConnectionString xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns:xsd=""http://www.w3.org/2001/XMLSchema"">
-  <ConnectionString>$@""Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = {Directory.GetCurrentDirectory()}\Bd_portaria.mdf; Integrated Security = True""</ConnectionString>
-  <ProviderName />
-</SerializableConnectionString>")]
+        [global::System.Configuration.DefaultSettingValueAttribute("@\"Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = C:\\Program Files\\Vagal" +
+            "ume solucoes\\DooR\\Bd_portaria.mdf; Integrated Security = True\"")]
         public string Bd_portariaConnectionString {
             get {
                 return ((string)(this["Bd_portariaConnectionString"]));

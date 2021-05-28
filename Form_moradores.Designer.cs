@@ -206,7 +206,7 @@
             // 
             this.textBox_cpf.BackColor = System.Drawing.SystemColors.ControlLight;
             this.textBox_cpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_cpf.Location = new System.Drawing.Point(41, 52);
+            this.textBox_cpf.Location = new System.Drawing.Point(43, 52);
             this.textBox_cpf.MaxLength = 14;
             this.textBox_cpf.Name = "textBox_cpf";
             this.textBox_cpf.Size = new System.Drawing.Size(145, 26);
@@ -270,7 +270,7 @@
             // label_Nome
             // 
             this.label_Nome.AutoSize = true;
-            this.label_Nome.Location = new System.Drawing.Point(-3, 25);
+            this.label_Nome.Location = new System.Drawing.Point(-2, 23);
             this.label_Nome.Name = "label_Nome";
             this.label_Nome.Size = new System.Drawing.Size(48, 13);
             this.label_Nome.TabIndex = 0;
@@ -279,11 +279,11 @@
             // label_CPF
             // 
             this.label_CPF.AutoSize = true;
-            this.label_CPF.Location = new System.Drawing.Point(5, 56);
+            this.label_CPF.Location = new System.Drawing.Point(-4, 56);
             this.label_CPF.Name = "label_CPF";
-            this.label_CPF.Size = new System.Drawing.Size(39, 13);
+            this.label_CPF.Size = new System.Drawing.Size(54, 13);
             this.label_CPF.TabIndex = 1;
-            this.label_CPF.Text = "CPF:*";
+            this.label_CPF.Text = "CPF/RG";
             // 
             // label_Apartamento
             // 
@@ -297,7 +297,7 @@
             // label_Bloco
             // 
             this.label_Bloco.AutoSize = true;
-            this.label_Bloco.Location = new System.Drawing.Point(185, 56);
+            this.label_Bloco.Location = new System.Drawing.Point(186, 59);
             this.label_Bloco.Name = "label_Bloco";
             this.label_Bloco.Size = new System.Drawing.Size(73, 13);
             this.label_Bloco.TabIndex = 2;

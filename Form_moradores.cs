@@ -13,9 +13,25 @@ namespace Projeto_Portaria
 {
     public partial class Form_moradores : Form
     {
-        public Form_moradores()
+        public Form_moradores(string tipo)
         {
             InitializeComponent();
+            switch(tipo)
+            {
+                case "Horizontal":
+                    label_Bloco.Text = "Rua";
+                    label_Apartamento.Text = "Casa";
+                    break;
+                case "Vertical":
+                    label_Bloco.Text = "Bloco";
+                    label_Apartamento.Text = "Apart";
+                    break;
+                case "Empresa":
+                    label_Bloco.Text = "Setor";
+                    label_Apartamento.Text = "Sala";
+                    groupBox2.Text = "Funcionarios";
+                    break;
+            }
         }
 
         private void Form_moradores_Load(object sender, EventArgs e)

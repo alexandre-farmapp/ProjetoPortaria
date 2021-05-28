@@ -54,7 +54,9 @@ namespace Projeto_Portaria
 
                 if (dataGridView1.Rows.Count > 0)
                 {
-                    Condominio.condSelecionado = true;
+                    //Condominio.condSelecionado = true;
+                    dataGridView1.Rows[Condominio.linhaSelecionada].Selected = true;
+
                 }
                 sqlConnection.Close();
 
@@ -71,10 +73,10 @@ namespace Projeto_Portaria
         {
             string conexao = Projeto_Portaria.Properties.Settings.Default.Bd_portariaConnectionString;
             SqlConnection sqlConnection = new SqlConnection(conexao);
-            sqlConnection.Open();
+            sqlConnection.Open();                    
 
-            string comando = "SELECT temp.nome, celular, temp.entrada, carro, placa, temp.foto, temp.visitado, condominio FROM " +
-                "temporarios temp inner join relatorio rel on temp.entrada = rel.entrada";
+            string comando = "SELECT temp.nome, temp.celular, temp.entrada, temp.carro, temp.placa, temp.foto, temp.visitado, rel.condominio FROM " +
+                "temporarios temp inner join relatorio rel on CAST(temp.entrada as datetime) = rel.entrada";
             SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);
             sqlCommand.ExecuteNonQuery();
 
@@ -84,11 +86,16 @@ namespace Projeto_Portaria
             dataGridTemp.DataSource = dataTable;
             dataGridTemp.AutoResizeColumns();
 
+            if (dataGridTemp.Rows.Count > 0)
+            {
+                dataGridTemp.Rows[Grid.linhaSelecionada].Selected = true;
+            }
+
             sqlConnection.Close();
 
             //dataGridTemp.Columns[0].Visible = false;
             dataGridTemp.Columns[5].Visible = false;
-            Grid.attGrid = false;
+            Grid.attGrid = false;            
         }
 
         private void formVisitantes()
@@ -156,8 +163,9 @@ namespace Projeto_Portaria
                 buttonBackup.Visible = false;
             }
 
-            atualizardatagridTemp();           
-            
+            atualizardatagridTemp();
+            atualizardatagrid();
+            Condominio.condominio = "";
         }
 
         private void Button_Cadastrar_Novo_Usuario_VisibleChanged(object sender, EventArgs e)
@@ -184,39 +192,67 @@ namespace Projeto_Portaria
 
         private void Timer1_Tick(object sender, EventArgs e)
         {
-            if(Grid.attGrid == true)
+            if (dataGridView1.Rows.Count > 0 || dataGridTemp.Rows.Count > 0)
             {
                 atualizardatagridTemp();
-            }
-            if(Condominio.attGrid == true)
-            {
                 atualizardatagrid();
-            }
-            if(Condominio.condSelecionado == true)
-            {
-                textBox_usuario_logado.Text = " " + DateTime.Now.ToLongDateString() + "  " + DateTime.Now.ToLongTimeString() + " | Usuario : " + User_info.usuario_logado
-                + " | Condominio : " + dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                
 
-                Condominio.condominio = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            }
-            else
-            {
                 textBox_usuario_logado.Text = " " + DateTime.Now.ToLongDateString() + "  " + DateTime.Now.ToLongTimeString() + " | Usuario : " + User_info.usuario_logado
-                + " | Condominio : ";
-
-                Condominio.condominio = "";
+                    + " | Condominio : " + Condominio.condominio;                
             }
-            
+
+            /*
+             * if (Grid.attGrid == true)
+                {
+                    atualizardatagridTemp();
+                }
+                if (Condominio.attGrid == true)
+                {
+                    atualizardatagrid();
+                }
+                if (Condominio.condSelecionado == true)
+                {
+                    textBox_usuario_logado.Text = " " + DateTime.Now.ToLongDateString() + "  " + DateTime.Now.ToLongTimeString() + " | Usuario : " + User_info.usuario_logado
+                    + " | Condominio : " + dataGridView1.CurrentRow.Cells[1].Value.ToString();
+
+                    Condominio.condominio = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                }
+                else
+                {
+                    textBox_usuario_logado.Text = " " + DateTime.Now.ToLongDateString() + "  " + DateTime.Now.ToLongTimeString() + " | Usuario : " + User_info.usuario_logado
+                    + " | Condominio : ";
+
+                    Condominio.condominio = "";
+                }*/
+                        
         }
 
         private void Button3_Click(object sender, EventArgs e)
         {
+
+            if (dataGridView1.Rows.Count > 0 && Condominio.condominio != "")
+            {
+                Condominio.comando = "UPDATE";
+                Form_moradores form_Moradores = new Form_moradores(Condominio.condTipo);
+                form_Moradores.ShowDialog();
+
+                fx = new Thread(form_moradores);
+                fx.SetApartmentState(ApartmentState.STA);
+                fx.Start();
+            }
+            else
+            {
+                MessageBox.Show("Não ha condominio selecionado!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            /*
             Form_moradores form_Moradores = new Form_moradores();
             form_Moradores.ShowDialog();
 
             fx = new Thread(form_moradores);
             fx.SetApartmentState(ApartmentState.STA);
             fx.Start();
+            */
         }
 
         private void form_moradores()
@@ -289,6 +325,34 @@ namespace Projeto_Portaria
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             Condominio.condSelecionado = true;
+            if (Condominio.condSelecionado == true)
+            {
+                textBox_usuario_logado.Text = " " + DateTime.Now.ToLongDateString() + "  " + DateTime.Now.ToLongTimeString() + " | Usuario : " + User_info.usuario_logado
+                + " | Condominio : " + dataGridView1.CurrentRow.Cells[1].Value.ToString();
+
+                Condominio.condominio = dataGridView1.CurrentRow.Cells[1].Value.ToString();                
+                Condominio.condTipo = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                Condominio.codigo = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                Condominio.linhaSelecionada = dataGridView1.CurrentRow.Index;
+
+                dataGridView1.Rows[Condominio.linhaSelecionada].Selected = true;
+
+                if(Condominio.condTipo == "Empresa")
+                {
+                    button_moradores.Text = "Funcionarios";
+                }
+                else
+                {
+                    button_moradores.Text = "Moradores";
+                }
+            }
+            else
+            {
+                textBox_usuario_logado.Text = " " + DateTime.Now.ToLongDateString() + "  " + DateTime.Now.ToLongTimeString() + " | Usuario : " + User_info.usuario_logado
+                + " | Condominio : ";
+
+                Condominio.condominio = "";
+            }            
         }
 
         private void buttonAddCond_Click(object sender, EventArgs e)
@@ -305,10 +369,10 @@ namespace Projeto_Portaria
 
         private void buttonEditar_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.Rows.Count > 0)
+            if (dataGridView1.Rows.Count > 0 && Condominio.condominio != "")
             {
                 Condominio.comando = "UPDATE";
-                NovoCond novoCond = new NovoCond(dataGridView1.CurrentRow.Cells[0].Value.ToString(), dataGridView1.CurrentRow.Cells[1].Value.ToString(), dataGridView1.CurrentRow.Cells[2].Value.ToString());
+                NovoCond novoCond = new NovoCond(Condominio.codigo, Condominio.condominio, Condominio.condTipo);
                 novoCond.ShowDialog();
             }
             else
@@ -319,10 +383,10 @@ namespace Projeto_Portaria
 
         private void buttonExcluir_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.Rows.Count > 0)
+            if (dataGridView1.Rows.Count > 0 && Condominio.condominio != "")
             {
                 Condominio.comando = "DELETE";
-                NovoCond novoCond = new NovoCond(dataGridView1.CurrentRow.Cells[0].Value.ToString(), dataGridView1.CurrentRow.Cells[1].Value.ToString(), dataGridView1.CurrentRow.Cells[2].Value.ToString());
+                NovoCond novoCond = new NovoCond(Condominio.codigo, Condominio.condominio, Condominio.condTipo);
                 novoCond.ShowDialog();
             }
             else
@@ -333,18 +397,15 @@ namespace Projeto_Portaria
 
         private void dataGridTemp_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dataGridView1.Rows.Count > 0)
+            if (dataGridTemp.Rows.Count > 0)
             {
                 textBox_nome.Text = dataGridTemp.CurrentRow.Cells[0].Value.ToString();
                 textBox_entrada.Text = dataGridTemp.CurrentRow.Cells[2].Value.ToString();
                 textBox_saida.Text = DateTime.Now.ToString();
                 pictureBox1.ImageLocation = dataGridTemp.CurrentRow.Cells[5].Value.ToString();
+
+                Grid.linhaSelecionada = dataGridTemp.CurrentRow.Index;
             }
-            else
-            {
-                
-            }
-            
         }
 
         private void button_Cadastro_Moradores_Click(object sender, EventArgs e)
@@ -385,6 +446,5 @@ namespace Projeto_Portaria
             }
         }
 
-        
     }
 }

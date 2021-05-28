@@ -16,17 +16,26 @@ namespace Projeto_Portaria
 
     class Condominio
     {
+        //recebe o codigo do condominio selecionado
+        public static string codigo;
+        //recebe se tem um condominio selecionado
         public static Boolean condSelecionado;
         public static string condTipo;
         public static Boolean conectado;
+        //recebe o nome do condominio selecionado
         public static string condominio;
+        //recebe a query sql que sera usada 
         public static string comando;
+        //atualiza o grid de condominios
         public static Boolean attGrid;
+        //obtem a linha selecionada
+        public static int linhaSelecionada;
     }
 
     class Grid
     {
         public static Boolean attGrid;
+        public static int linhaSelecionada;
     }
 
 
