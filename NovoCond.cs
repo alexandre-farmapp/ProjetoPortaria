@@ -51,6 +51,7 @@ namespace Projeto_Portaria
             else if(Condominio.comando == "DELETE")
             {
                 comando = "DELETE FROM Condominios WHERE Cod = @cod";
+                Condominio.condominio = "";
             }
             
             SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);

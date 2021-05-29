@@ -11,11 +11,14 @@ using System.Threading;
 using System.Data.SqlClient;
 using System.IO;
 
-namespace Projeto_Portaria
-{
+namespace Projeto_Portaria{
+
+    
     public partial class form_Menu : Form
     {
         Thread fx;
+        int linhaCondSelect = 0;
+        int linhaVisiSelect = 0;
         public form_Menu()
         {
             InitializeComponent();
@@ -24,12 +27,19 @@ namespace Projeto_Portaria
         
         private void Button_Cadastro_Visitantes_Click(object sender, EventArgs e)
         {
-            Cadastro_de_Visitantes cadastro_De_Visitantes = new Cadastro_de_Visitantes();
-            cadastro_De_Visitantes.ShowDialog();
+            if (dataGridView1.Rows.Count > 0 && Condominio.condominio != "")
+            {
+                Cadastro_de_Visitantes cadastro_De_Visitantes = new Cadastro_de_Visitantes();
+                cadastro_De_Visitantes.ShowDialog();
 
-            fx = new Thread(formVisitantes);
-            fx.SetApartmentState(ApartmentState.STA);
-            fx.Start();
+                fx = new Thread(formVisitantes);
+                fx.SetApartmentState(ApartmentState.STA);
+                fx.Start();
+            }
+            else
+            {
+                MessageBox.Show("Não ha condominio selecionado!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void atualizardatagrid()
@@ -52,12 +62,16 @@ namespace Projeto_Portaria
                 dataGridView1.Columns[2].Visible = false;
 
 
-                if (dataGridView1.Rows.Count > 0)
+                if (dataGridView1.Rows.Count > 0 && linhaCondSelect < dataGridView1.Rows.Count)
                 {
-                    //Condominio.condSelecionado = true;
-                    dataGridView1.Rows[Condominio.linhaSelecionada].Selected = true;
+                    if (linhaCondSelect == -1)
+                    {
+                        linhaCondSelect = 0;
+                    }
+                    dataGridView1.Rows[linhaCondSelect].Selected = true;
 
                 }
+
                 sqlConnection.Close();
 
             }
@@ -85,10 +99,16 @@ namespace Projeto_Portaria
             sqlDataAdapter.Fill(dataTable);
             dataGridTemp.DataSource = dataTable;
             dataGridTemp.AutoResizeColumns();
+            
 
-            if (dataGridTemp.Rows.Count > 0)
+            if (dataGridTemp.Rows.Count > 0 && linhaVisiSelect < dataGridTemp.Rows.Count)
             {
-                dataGridTemp.Rows[Grid.linhaSelecionada].Selected = true;
+                if (linhaVisiSelect == -1)
+                {
+                    linhaVisiSelect = 0;
+                }
+                dataGridTemp.Rows[linhaVisiSelect].Selected = true;
+                
             }
 
             sqlConnection.Close();
@@ -192,7 +212,7 @@ namespace Projeto_Portaria
 
         private void Timer1_Tick(object sender, EventArgs e)
         {
-            if (dataGridView1.Rows.Count > 0 || dataGridTemp.Rows.Count > 0)
+            if (dataGridView1.Rows.Count >= 0 && dataGridTemp.Rows.Count >= 0)
             {
                 atualizardatagridTemp();
                 atualizardatagrid();
@@ -230,10 +250,8 @@ namespace Projeto_Portaria
 
         private void Button3_Click(object sender, EventArgs e)
         {
-
             if (dataGridView1.Rows.Count > 0 && Condominio.condominio != "")
             {
-                Condominio.comando = "UPDATE";
                 Form_moradores form_Moradores = new Form_moradores(Condominio.condTipo);
                 form_Moradores.ShowDialog();
 
@@ -333,9 +351,11 @@ namespace Projeto_Portaria
                 Condominio.condominio = dataGridView1.CurrentRow.Cells[1].Value.ToString();                
                 Condominio.condTipo = dataGridView1.CurrentRow.Cells[2].Value.ToString();
                 Condominio.codigo = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-                Condominio.linhaSelecionada = dataGridView1.CurrentRow.Index;
+                //Condominio.linhaSelecionada = dataGridView1.CurrentRow.Index;
+                linhaCondSelect = dataGridView1.CurrentRow.Index;
 
-                dataGridView1.Rows[Condominio.linhaSelecionada].Selected = true;
+                dataGridView1.Rows[linhaCondSelect].Selected = true;                            
+                
 
                 if(Condominio.condTipo == "Empresa")
                 {
@@ -404,7 +424,7 @@ namespace Projeto_Portaria
                 textBox_saida.Text = DateTime.Now.ToString();
                 pictureBox1.ImageLocation = dataGridTemp.CurrentRow.Cells[5].Value.ToString();
 
-                Grid.linhaSelecionada = dataGridTemp.CurrentRow.Index;
+                linhaVisiSelect = dataGridTemp.CurrentRow.Index;
             }
         }
 
@@ -432,12 +452,15 @@ namespace Projeto_Portaria
 
                     sqlConnection.Close();
 
+                    linhaVisiSelect -= 1;
                     atualizardatagridTemp();
 
                     textBox_nome.Text = "";
                     textBox_entrada.Text = "";
                     textBox_saida.Text = "";
                     pictureBox1.ImageLocation = "";
+
+                    
                 }
                 catch (Exception msg)
                 {

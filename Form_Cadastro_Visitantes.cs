@@ -185,6 +185,7 @@ namespace Projeto_Portaria
                MessageBox.Show(msg.Message);
             }
             Grid.attGrid = true;
+            
         }
 
         private void TextBox1_TextChanged(object sender, EventArgs e)
