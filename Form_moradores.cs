@@ -60,6 +60,7 @@ namespace Projeto_Portaria
             buttonAlterar.Visible = false;
             buttonDeletar.Visible = false;
             buttonAdicionar.Visible = true;
+            buttonEntrada.Visible = false;
 
         }
 
@@ -154,6 +155,7 @@ namespace Projeto_Portaria
             buttonAddFoto.Visible = true;
             buttonCancelar.Visible = true;
             buttonAdicionar.Visible = false;
+            buttonEntrada.Visible = true;
 
         }
         public void atualizardatagrid()
@@ -234,6 +236,7 @@ namespace Projeto_Portaria
             buttonAddFoto.Visible = false;
             buttonCancelar.Visible = false;
             buttonAdicionar.Visible = true;
+            buttonEntrada.Visible = false;
 
             textBox_unidade_morador.Focus();
 
@@ -302,6 +305,7 @@ namespace Projeto_Portaria
                 buttonDeletar.Visible = false;
                 buttonAddFoto.Visible = false;
                 buttonCancelar.Visible = false;
+                buttonEntrada.Visible = false;
             }
             catch (Exception msg)
             {
@@ -479,6 +483,53 @@ namespace Projeto_Portaria
                 textBox_cpf.Focus();
             }
 
+        }
+
+        private void buttonEntrada_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string conexao = Projeto_Portaria.Properties.Settings.Default.Bd_portariaConnectionString;
+                SqlConnection sqlConnection = new SqlConnection(conexao);
+                sqlConnection.Open();
+
+                string comando = "INSERT INTO relatorio(Nome,CPF,Unidade,blocoRua,telefone_celular,observacoes,foto,entrada,condominio) " +
+                                "values(@Nome,@CPF,@unidade,@blocoRua,@telefone_celular,@observacoes,@foto,@entrada,@condominio)";
+                SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);
+                sqlCommand.Parameters.AddWithValue("@Nome", textBox_Nome.Text);
+                sqlCommand.Parameters.AddWithValue("@CPF", textBox_cpf.Text);
+                sqlCommand.Parameters.AddWithValue("@telefone_celular", maskedTextBox_celular.Text);
+                sqlCommand.Parameters.AddWithValue("@unidade", textBox_unidade.Text);
+                sqlCommand.Parameters.AddWithValue("@blocoRua", textBox_Rua.Text);
+                //sqlCommand.Parameters.AddWithValue("@visitado", textBox_Nome.Text);
+                sqlCommand.Parameters.AddWithValue("@observacoes", textBox_observacoes.Text);
+                sqlCommand.Parameters.AddWithValue("@entrada", Convert.ToDateTime(DateTime.Now.ToString()));
+                //sqlCommand.Parameters.AddWithValue("@saida", DateTime.Now);
+                sqlCommand.Parameters.AddWithValue("@foto", pictureBox_Foto_Morador.ImageLocation);
+                sqlCommand.Parameters.AddWithValue("@condominio", Condominio.condominio);
+                sqlCommand.ExecuteNonQuery();
+
+                comando = "INSERT INTO temporarios(nome,cpf,celular,entrada,carro,placa,foto, ruaBloco) " +
+                    "values(@nome,@cpf,@celular,@entrada,@carro,@placa,@foto, @ruaBloco)";
+                SqlCommand sqlCommand2 = new SqlCommand(comando, sqlConnection);
+                sqlCommand2.Parameters.AddWithValue("@nome", textBox_Nome.Text);
+                sqlCommand2.Parameters.AddWithValue("@cpf", textBox_cpf.Text);
+                sqlCommand2.Parameters.AddWithValue("@celular", maskedTextBox_celular.Text);
+                sqlCommand2.Parameters.AddWithValue("@entrada", Convert.ToDateTime(DateTime.Now.ToString()));
+                //sqlCommand2.Parameters.AddWithValue("@visitado", textBox_visitado.Text);
+                sqlCommand2.Parameters.AddWithValue("@carro", textBox_Modelo.Text);
+                sqlCommand2.Parameters.AddWithValue("@placa", maskedTextBox_placa.Text);
+                sqlCommand2.Parameters.AddWithValue("@foto", pictureBox_Foto_Morador.ImageLocation);
+                sqlCommand2.Parameters.AddWithValue("@ruaBloco", textBox_Rua.Text);
+                sqlCommand2.ExecuteNonQuery();
+
+                buttonEntrada.Visible = false;
+            }
+            catch (Exception msg)
+            {
+                MessageBox.Show("Erro: " + msg.Message);
+            }
+            
         }
     }
     }

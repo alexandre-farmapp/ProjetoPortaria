@@ -193,6 +193,16 @@ namespace Projeto_Portaria.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap entrada {
+            get {
+                object obj = ResourceManager.GetObject("entrada", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap excel_new {
             get {
                 object obj = ResourceManager.GetObject("excel new", resourceCulture);
