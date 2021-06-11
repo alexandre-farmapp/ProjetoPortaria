@@ -92,11 +92,8 @@ namespace Projeto_Portaria
             {
                 MessageBox.Show(msg.Message);
                 buttonConectar.Visible = true;
-                MessageBox.Show(Projeto_Portaria.Properties.Settings.Default.Bd_portariaConnectionString);
+                //MessageBox.Show(Projeto_Portaria.Properties.Settings.Default.Bd_portariaConnectionString);
             }
-
-
-
         }
 
         private string ExtractFilePath(object exename)

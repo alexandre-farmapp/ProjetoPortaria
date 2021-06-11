@@ -322,7 +322,7 @@ namespace Projeto_Portaria
         {
             openFileDialog1.FileName = "";
             openFileDialog1.Title = "Selecione uma foto";
-            openFileDialog1.Filter = "JPEG|*.JPG|PNG|*.png";
+            openFileDialog1.Filter = "JPEG|*.JPEG|PNG|*.png|bmp|*.bmp";
 
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
@@ -493,15 +493,15 @@ namespace Projeto_Portaria
                 SqlConnection sqlConnection = new SqlConnection(conexao);
                 sqlConnection.Open();
 
-                string comando = "INSERT INTO relatorio(Nome,CPF,Unidade,blocoRua,telefone_celular,observacoes,foto,entrada,condominio) " +
-                                "values(@Nome,@CPF,@unidade,@blocoRua,@telefone_celular,@observacoes,@foto,@entrada,@condominio)";
+                string comando = "INSERT INTO relatorio(Nome,CPF,visitado,Unidade,blocoRua,telefone_celular,observacoes,foto,entrada,condominio) " +
+                                "values(@Nome,@CPF,@visitado,@unidade,@blocoRua,@telefone_celular,@observacoes,@foto,@entrada,@condominio)";
                 SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);
                 sqlCommand.Parameters.AddWithValue("@Nome", textBox_Nome.Text);
                 sqlCommand.Parameters.AddWithValue("@CPF", textBox_cpf.Text);
                 sqlCommand.Parameters.AddWithValue("@telefone_celular", maskedTextBox_celular.Text);
                 sqlCommand.Parameters.AddWithValue("@unidade", textBox_unidade.Text);
                 sqlCommand.Parameters.AddWithValue("@blocoRua", textBox_Rua.Text);
-                //sqlCommand.Parameters.AddWithValue("@visitado", textBox_Nome.Text);
+                sqlCommand.Parameters.AddWithValue("@visitado", "Entrada Avulsa");
                 sqlCommand.Parameters.AddWithValue("@observacoes", textBox_observacoes.Text);
                 sqlCommand.Parameters.AddWithValue("@entrada", Convert.ToDateTime(DateTime.Now.ToString()));
                 //sqlCommand.Parameters.AddWithValue("@saida", DateTime.Now);
@@ -509,14 +509,14 @@ namespace Projeto_Portaria
                 sqlCommand.Parameters.AddWithValue("@condominio", Condominio.condominio);
                 sqlCommand.ExecuteNonQuery();
 
-                comando = "INSERT INTO temporarios(nome,cpf,celular,entrada,carro,placa,foto, ruaBloco) " +
-                    "values(@nome,@cpf,@celular,@entrada,@carro,@placa,@foto, @ruaBloco)";
+                comando = "INSERT INTO temporarios(nome,cpf,celular,entrada,visitado,carro,placa,foto, ruaBloco) " +
+                    "values(@nome,@cpf,@celular,@entrada,@visitado,@carro,@placa,@foto, @ruaBloco)";
                 SqlCommand sqlCommand2 = new SqlCommand(comando, sqlConnection);
                 sqlCommand2.Parameters.AddWithValue("@nome", textBox_Nome.Text);
                 sqlCommand2.Parameters.AddWithValue("@cpf", textBox_cpf.Text);
                 sqlCommand2.Parameters.AddWithValue("@celular", maskedTextBox_celular.Text);
                 sqlCommand2.Parameters.AddWithValue("@entrada", Convert.ToDateTime(DateTime.Now.ToString()));
-                //sqlCommand2.Parameters.AddWithValue("@visitado", textBox_visitado.Text);
+                sqlCommand2.Parameters.AddWithValue("@visitado", "Entrada avulsa");
                 sqlCommand2.Parameters.AddWithValue("@carro", textBox_Modelo.Text);
                 sqlCommand2.Parameters.AddWithValue("@placa", maskedTextBox_placa.Text);
                 sqlCommand2.Parameters.AddWithValue("@foto", pictureBox_Foto_Morador.ImageLocation);

@@ -254,7 +254,7 @@ namespace Projeto_Portaria
         {
             openFileDialog1.FileName = "";
             openFileDialog1.Title = "Selecione uma foto";
-            openFileDialog1.Filter = "JPEG|*.JPG|PNG|*.png";
+            openFileDialog1.Filter = "JPEG|*.JPEG|PNG|*.png|bmp|*.bmp";
             
             if(openFileDialog1.ShowDialog()==DialogResult.OK)
             {
