@@ -771,7 +771,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "form_Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "DooR-Controle de Acesso version 1.2.10";
+            this.Text = "DooR-Controle de Acesso v1.2.11";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form_Menu_Load);
             this.panelMenu.ResumeLayout(false);

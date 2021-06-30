@@ -87,10 +87,11 @@ namespace Projeto_Portaria{
         {
             string conexao = Projeto_Portaria.Properties.Settings.Default.Bd_portariaConnectionString;
             SqlConnection sqlConnection = new SqlConnection(conexao);
-            sqlConnection.Open();                    
+            sqlConnection.Open();
 
-            string comando = "SELECT temp.nome, temp.celular, temp.entrada, temp.carro, temp.placa, temp.foto, temp.visitado, rel.condominio FROM " +
-                "temporarios temp inner join relatorio rel on CAST(temp.entrada as datetime) = rel.entrada";
+            string comando = "SELECT temp.nome, temp.celular, CAST(temp.entrada as datetime), temp.carro, temp.placa, temp.foto, temp.visitado FROM temporarios temp";
+            //string comando = "SELECT temp.nome, temp.celular, temp.entrada, temp.carro, temp.placa, temp.foto, temp.visitado, rel.condominio FROM " +
+            //   "temporarios temp inner join relatorio rel on CAST(temp.entrada as datetime) = rel.entrada";
             SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);
             sqlCommand.ExecuteNonQuery();
 
@@ -115,7 +116,7 @@ namespace Projeto_Portaria{
 
             //dataGridTemp.Columns[0].Visible = false;
             dataGridTemp.Columns[5].Visible = false;
-            Grid.attGrid = false;            
+            Grid.attGrid = false;
         }
 
         private void formVisitantes()
@@ -216,7 +217,6 @@ namespace Projeto_Portaria{
             {
                 atualizardatagridTemp();
                 atualizardatagrid();
-                
 
                 textBox_usuario_logado.Text = " " + DateTime.Now.ToLongDateString() + "  " + DateTime.Now.ToLongTimeString() + " | Usuario : " + User_info.usuario_logado
                     + " | Condominio : " + Condominio.condominio;                
