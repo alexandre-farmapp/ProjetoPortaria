@@ -89,9 +89,9 @@ namespace Projeto_Portaria{
             SqlConnection sqlConnection = new SqlConnection(conexao);
             sqlConnection.Open();
 
-            string comando = "SELECT temp.nome, temp.celular, CAST(temp.entrada as datetime), temp.carro, temp.placa, temp.foto, temp.visitado FROM temporarios temp";
-            //string comando = "SELECT temp.nome, temp.celular, temp.entrada, temp.carro, temp.placa, temp.foto, temp.visitado, rel.condominio FROM " +
-            //   "temporarios temp inner join relatorio rel on CAST(temp.entrada as datetime) = rel.entrada";
+            //string comando = "SELECT temp.nome, temp.celular, CAST(temp.entrada as datetime), temp.carro, temp.placa, temp.foto, temp.visitado FROM temporarios temp";
+            string comando = "SELECT temp.nome, temp.celular, temp.entrada, temp.carro, temp.placa, temp.foto, temp.visitado, rel.condominio FROM " +
+               "temporarios temp inner join relatorio rel on CAST(temp.entrada as datetime) = rel.entrada";
             SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);
             sqlCommand.ExecuteNonQuery();
 
@@ -315,12 +315,20 @@ namespace Projeto_Portaria{
 
         private void button_relatorio_Click(object sender, EventArgs e)
         {
-            relatorio relatorio = new relatorio();
-            relatorio.ShowDialog();
+            if (dataGridView1.Rows.Count > 0 && Condominio.condominio != "")
+            {
+                relatorio relatorio = new relatorio();
+                relatorio.ShowDialog();
 
-            fx = new Thread(form_relatorio);
-            fx.SetApartmentState(ApartmentState.STA);
-            fx.Start();
+                fx = new Thread(form_relatorio);
+                fx.SetApartmentState(ApartmentState.STA);
+                fx.Start();
+            }
+            else
+            {
+                MessageBox.Show("Não ha condominio selecionado!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            
         }
 
         private void form_relatorio()

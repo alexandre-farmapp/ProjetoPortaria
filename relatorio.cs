@@ -185,7 +185,7 @@ namespace Projeto_Portaria
                 //StreamWriter para gravar um arquivo
                 StreamWriter objetoarquivo = new StreamWriter("Relatorio " + DateTime.Now.ToString("dd-mm-yy") + ".xls", false);//false gera um novo arq toda vez,true grava todos no mesmo arq
                 //objetoarquivo.WriteLine("\t\t\tRelatorio " + DateTime.Now.ToString());
-                objetoarquivo.WriteLine("Nome\tUnidadeVisitada\tHora entrada\tHora saida");
+                objetoarquivo.WriteLine("Nome\tUnidade\tHora entrada\tHora saida");
 
                 while (sqlDataReader.Read())
                 {
@@ -265,7 +265,7 @@ namespace Projeto_Portaria
 
                 e.Graphics.DrawString("Relatorio", new Font("Arial", 36, FontStyle.Bold), Brushes.Black, new PointF(250, 40));
                 e.Graphics.DrawString("Nome", new Font("Arial", 14, FontStyle.Bold), Brushes.Black, new PointF(50, 130));
-                e.Graphics.DrawString("Unidade Visitada", new Font("Arial", 14, FontStyle.Bold), Brushes.Black, new PointF(250, 130));
+                e.Graphics.DrawString("Unidade", new Font("Arial", 14, FontStyle.Bold), Brushes.Black, new PointF(250, 130));
                 //e.Graphics.DrawString("", new Font("Arial", 14, FontStyle.Bold), Brushes.Black, new PointF(270, 130));
                 e.Graphics.DrawString("Hora entrada", new Font("Arial", 14, FontStyle.Bold), Brushes.Black, new PointF(400, 130));
                 e.Graphics.DrawString("Hora saida", new Font("Arial", 14, FontStyle.Bold), Brushes.Black, new PointF(600, 130));
