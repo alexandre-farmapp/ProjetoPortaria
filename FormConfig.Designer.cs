@@ -29,21 +29,25 @@ namespace Projeto_Portaria
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormConfig));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.buttonEntrada = new System.Windows.Forms.Button();
-            this.buttonAdicionar = new System.Windows.Forms.Button();
-            this.buttonDeletar = new System.Windows.Forms.Button();
-            this.buttonAddFoto = new System.Windows.Forms.Button();
-            this.pictureBox_Foto_Morador = new System.Windows.Forms.PictureBox();
+            this.txtMoradores = new System.Windows.Forms.TextBox();
+            this.txtUniPesq = new System.Windows.Forms.TextBox();
+            this.txtNomePesq = new System.Windows.Forms.TextBox();
+            this.textBox_unidade_morador = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox_Dados_Pessoais = new System.Windows.Forms.GroupBox();
+            this.txtUnidade = new System.Windows.Forms.TextBox();
+            this.txtRamal = new System.Windows.Forms.TextBox();
+            this.txtRuaBloco = new System.Windows.Forms.TextBox();
+            this.txtdocumento = new System.Windows.Forms.TextBox();
+            this.txtNomeMorador = new System.Windows.Forms.TextBox();
             this.textBox_cpf = new System.Windows.Forms.TextBox();
             this.textBox_id = new System.Windows.Forms.TextBox();
             this.textBox_Ramal = new System.Windows.Forms.TextBox();
@@ -51,48 +55,80 @@ namespace Projeto_Portaria
             this.textBox_Rua = new System.Windows.Forms.TextBox();
             this.textBox_Nome = new System.Windows.Forms.TextBox();
             this.groupBox_Contato = new System.Windows.Forms.GroupBox();
+            this.txtCelular = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtFixo = new System.Windows.Forms.TextBox();
             this.textBox_Email = new System.Windows.Forms.TextBox();
             this.maskedTextBox_celular = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBox_fixo = new System.Windows.Forms.MaskedTextBox();
-            this.button_voltar_menu = new System.Windows.Forms.Button();
             this.textBox_nome_morador = new System.Windows.Forms.TextBox();
-            this.buttonCancelar = new System.Windows.Forms.Button();
-            this.buttonAlterar = new System.Windows.Forms.Button();
             this.groupBox_Dados_Veiculo = new System.Windows.Forms.GroupBox();
+            this.txtDadosVeiculo = new System.Windows.Forms.TextBox();
+            this.txtPlaca = new System.Windows.Forms.TextBox();
+            this.txtCor = new System.Windows.Forms.TextBox();
+            this.txtModelo = new System.Windows.Forms.TextBox();
             this.maskedTextBox_placa = new System.Windows.Forms.MaskedTextBox();
             this.textBox_Cor = new System.Windows.Forms.TextBox();
             this.textBox_Modelo = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox_observacoes = new System.Windows.Forms.TextBox();
-            this.textBox_unidade_morador = new System.Windows.Forms.TextBox();
-            this.button_pesquisar = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.txtNomeMorador = new System.Windows.Forms.TextBox();
-            this.txtdocumento = new System.Windows.Forms.TextBox();
-            this.txtRuaBloco = new System.Windows.Forms.TextBox();
-            this.txtRamal = new System.Windows.Forms.TextBox();
-            this.txtUnidade = new System.Windows.Forms.TextBox();
-            this.txtFixo = new System.Windows.Forms.TextBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtCelular = new System.Windows.Forms.TextBox();
-            this.txtModelo = new System.Windows.Forms.TextBox();
-            this.txtCor = new System.Windows.Forms.TextBox();
-            this.txtPlaca = new System.Windows.Forms.TextBox();
-            this.txtDadosVeiculo = new System.Windows.Forms.TextBox();
             this.txtObs = new System.Windows.Forms.TextBox();
-            this.txtNomePesq = new System.Windows.Forms.TextBox();
-            this.txtUniPesq = new System.Windows.Forms.TextBox();
-            this.txtMoradores = new System.Windows.Forms.TextBox();
+            this.textBox_observacoes = new System.Windows.Forms.TextBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label_Nome = new System.Windows.Forms.Label();
+            this.label_CPF = new System.Windows.Forms.Label();
+            this.label_Apartamento = new System.Windows.Forms.Label();
+            this.label_Bloco = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.buttonProcurar = new System.Windows.Forms.Button();
+            this.buttonSalvar = new System.Windows.Forms.Button();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.btnSair = new System.Windows.Forms.Button();
+            this.button_pesquisar = new System.Windows.Forms.Button();
+            this.buttonEntrada = new System.Windows.Forms.Button();
+            this.buttonAdicionar = new System.Windows.Forms.Button();
+            this.buttonDeletar = new System.Windows.Forms.Button();
+            this.buttonAddFoto = new System.Windows.Forms.Button();
+            this.pictureBox_Foto_Morador = new System.Windows.Forms.PictureBox();
+            this.button_voltar_menu = new System.Windows.Forms.Button();
+            this.buttonCancelar = new System.Windows.Forms.Button();
+            this.buttonAlterar = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Foto_Morador)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox_Dados_Pessoais.SuspendLayout();
             this.groupBox_Contato.SuspendLayout();
             this.groupBox_Dados_Veiculo.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            this.groupBox7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Foto_Morador)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -100,7 +136,7 @@ namespace Projeto_Portaria
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(6, 19);
+            this.tabControl1.Location = new System.Drawing.Point(6, 37);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(736, 594);
@@ -116,28 +152,6 @@ namespace Projeto_Portaria
             this.tabPage1.Size = new System.Drawing.Size(728, 568);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Tela Moradores";
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(728, 568);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.tabControl1);
-            this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(751, 622);
-            this.groupBox1.TabIndex = 23;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Configurações";
             // 
             // groupBox2
             // 
@@ -168,6 +182,827 @@ namespace Projeto_Portaria
             this.groupBox2.TabIndex = 36;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Moradores";
+            // 
+            // txtMoradores
+            // 
+            this.txtMoradores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            this.txtMoradores.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMoradores.ForeColor = System.Drawing.Color.White;
+            this.txtMoradores.Location = new System.Drawing.Point(6, 0);
+            this.txtMoradores.Name = "txtMoradores";
+            this.txtMoradores.Size = new System.Drawing.Size(71, 20);
+            this.txtMoradores.TabIndex = 100;
+            this.txtMoradores.Text = "Moradores";
+            // 
+            // txtUniPesq
+            // 
+            this.txtUniPesq.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            this.txtUniPesq.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUniPesq.ForeColor = System.Drawing.Color.White;
+            this.txtUniPesq.Location = new System.Drawing.Point(16, 22);
+            this.txtUniPesq.Name = "txtUniPesq";
+            this.txtUniPesq.Size = new System.Drawing.Size(49, 20);
+            this.txtUniPesq.TabIndex = 99;
+            this.txtUniPesq.Text = "unidade";
+            // 
+            // txtNomePesq
+            // 
+            this.txtNomePesq.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            this.txtNomePesq.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNomePesq.ForeColor = System.Drawing.Color.White;
+            this.txtNomePesq.Location = new System.Drawing.Point(131, 22);
+            this.txtNomePesq.Name = "txtNomePesq";
+            this.txtNomePesq.Size = new System.Drawing.Size(40, 20);
+            this.txtNomePesq.TabIndex = 98;
+            this.txtNomePesq.Text = "Nome:";
+            // 
+            // textBox_unidade_morador
+            // 
+            this.textBox_unidade_morador.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.textBox_unidade_morador.Enabled = false;
+            this.textBox_unidade_morador.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_unidade_morador.Location = new System.Drawing.Point(71, 17);
+            this.textBox_unidade_morador.Name = "textBox_unidade_morador";
+            this.textBox_unidade_morador.Size = new System.Drawing.Size(54, 26);
+            this.textBox_unidade_morador.TabIndex = 39;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.Gray;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView1.Enabled = false;
+            this.dataGridView1.GridColor = System.Drawing.Color.Gray;
+            this.dataGridView1.Location = new System.Drawing.Point(17, 47);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView1.RowHeadersVisible = false;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Gray;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(621, 171);
+            this.dataGridView1.TabIndex = 43;
+            // 
+            // groupBox_Dados_Pessoais
+            // 
+            this.groupBox_Dados_Pessoais.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox_Dados_Pessoais.Controls.Add(this.txtUnidade);
+            this.groupBox_Dados_Pessoais.Controls.Add(this.txtRamal);
+            this.groupBox_Dados_Pessoais.Controls.Add(this.txtRuaBloco);
+            this.groupBox_Dados_Pessoais.Controls.Add(this.txtdocumento);
+            this.groupBox_Dados_Pessoais.Controls.Add(this.txtNomeMorador);
+            this.groupBox_Dados_Pessoais.Controls.Add(this.textBox_cpf);
+            this.groupBox_Dados_Pessoais.Controls.Add(this.textBox_id);
+            this.groupBox_Dados_Pessoais.Controls.Add(this.textBox_Ramal);
+            this.groupBox_Dados_Pessoais.Controls.Add(this.textBox_unidade);
+            this.groupBox_Dados_Pessoais.Controls.Add(this.textBox_Rua);
+            this.groupBox_Dados_Pessoais.Controls.Add(this.textBox_Nome);
+            this.groupBox_Dados_Pessoais.ForeColor = System.Drawing.Color.White;
+            this.groupBox_Dados_Pessoais.Location = new System.Drawing.Point(209, 224);
+            this.groupBox_Dados_Pessoais.Name = "groupBox_Dados_Pessoais";
+            this.groupBox_Dados_Pessoais.Size = new System.Drawing.Size(429, 128);
+            this.groupBox_Dados_Pessoais.TabIndex = 19;
+            this.groupBox_Dados_Pessoais.TabStop = false;
+            this.groupBox_Dados_Pessoais.Text = "Dados Pessoais";
+            // 
+            // txtUnidade
+            // 
+            this.txtUnidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            this.txtUnidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUnidade.ForeColor = System.Drawing.Color.White;
+            this.txtUnidade.Location = new System.Drawing.Point(6, 94);
+            this.txtUnidade.Name = "txtUnidade";
+            this.txtUnidade.Size = new System.Drawing.Size(48, 20);
+            this.txtUnidade.TabIndex = 92;
+            this.txtUnidade.Text = "Uni/Ap";
+            // 
+            // txtRamal
+            // 
+            this.txtRamal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            this.txtRamal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRamal.ForeColor = System.Drawing.Color.White;
+            this.txtRamal.Location = new System.Drawing.Point(118, 94);
+            this.txtRamal.Name = "txtRamal";
+            this.txtRamal.Size = new System.Drawing.Size(57, 20);
+            this.txtRamal.TabIndex = 91;
+            this.txtRamal.Text = "Ramal";
+            // 
+            // txtRuaBloco
+            // 
+            this.txtRuaBloco.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            this.txtRuaBloco.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRuaBloco.ForeColor = System.Drawing.Color.White;
+            this.txtRuaBloco.Location = new System.Drawing.Point(196, 55);
+            this.txtRuaBloco.Name = "txtRuaBloco";
+            this.txtRuaBloco.Size = new System.Drawing.Size(70, 20);
+            this.txtRuaBloco.TabIndex = 90;
+            this.txtRuaBloco.Text = "Rua/Bloco";
+            // 
+            // txtdocumento
+            // 
+            this.txtdocumento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            this.txtdocumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtdocumento.ForeColor = System.Drawing.Color.White;
+            this.txtdocumento.Location = new System.Drawing.Point(4, 57);
+            this.txtdocumento.Name = "txtdocumento";
+            this.txtdocumento.Size = new System.Drawing.Size(46, 20);
+            this.txtdocumento.TabIndex = 89;
+            this.txtdocumento.Text = "Rg/Cpf";
+            // 
+            // txtNomeMorador
+            // 
+            this.txtNomeMorador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            this.txtNomeMorador.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNomeMorador.ForeColor = System.Drawing.Color.White;
+            this.txtNomeMorador.Location = new System.Drawing.Point(6, 22);
+            this.txtNomeMorador.Name = "txtNomeMorador";
+            this.txtNomeMorador.Size = new System.Drawing.Size(46, 20);
+            this.txtNomeMorador.TabIndex = 44;
+            this.txtNomeMorador.Text = "Nome:";
+            // 
+            // textBox_cpf
+            // 
+            this.textBox_cpf.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.textBox_cpf.Enabled = false;
+            this.textBox_cpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_cpf.Location = new System.Drawing.Point(52, 52);
+            this.textBox_cpf.MaxLength = 14;
+            this.textBox_cpf.Name = "textBox_cpf";
+            this.textBox_cpf.Size = new System.Drawing.Size(136, 26);
+            this.textBox_cpf.TabIndex = 8;
+            // 
+            // textBox_id
+            // 
+            this.textBox_id.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.textBox_id.Enabled = false;
+            this.textBox_id.Location = new System.Drawing.Point(402, 102);
+            this.textBox_id.Name = "textBox_id";
+            this.textBox_id.Size = new System.Drawing.Size(23, 20);
+            this.textBox_id.TabIndex = 88;
+            this.textBox_id.Visible = false;
+            // 
+            // textBox_Ramal
+            // 
+            this.textBox_Ramal.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.textBox_Ramal.Enabled = false;
+            this.textBox_Ramal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_Ramal.Location = new System.Drawing.Point(175, 91);
+            this.textBox_Ramal.Name = "textBox_Ramal";
+            this.textBox_Ramal.Size = new System.Drawing.Size(76, 26);
+            this.textBox_Ramal.TabIndex = 11;
+            // 
+            // textBox_unidade
+            // 
+            this.textBox_unidade.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.textBox_unidade.Enabled = false;
+            this.textBox_unidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_unidade.Location = new System.Drawing.Point(53, 90);
+            this.textBox_unidade.Name = "textBox_unidade";
+            this.textBox_unidade.Size = new System.Drawing.Size(60, 26);
+            this.textBox_unidade.TabIndex = 10;
+            // 
+            // textBox_Rua
+            // 
+            this.textBox_Rua.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.textBox_Rua.Enabled = false;
+            this.textBox_Rua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_Rua.Location = new System.Drawing.Point(270, 52);
+            this.textBox_Rua.Name = "textBox_Rua";
+            this.textBox_Rua.Size = new System.Drawing.Size(151, 26);
+            this.textBox_Rua.TabIndex = 9;
+            // 
+            // textBox_Nome
+            // 
+            this.textBox_Nome.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.textBox_Nome.Enabled = false;
+            this.textBox_Nome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_Nome.Location = new System.Drawing.Point(52, 17);
+            this.textBox_Nome.Name = "textBox_Nome";
+            this.textBox_Nome.Size = new System.Drawing.Size(369, 26);
+            this.textBox_Nome.TabIndex = 7;
+            // 
+            // groupBox_Contato
+            // 
+            this.groupBox_Contato.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox_Contato.Controls.Add(this.txtCelular);
+            this.groupBox_Contato.Controls.Add(this.txtEmail);
+            this.groupBox_Contato.Controls.Add(this.txtFixo);
+            this.groupBox_Contato.Controls.Add(this.textBox_Email);
+            this.groupBox_Contato.Controls.Add(this.maskedTextBox_celular);
+            this.groupBox_Contato.Controls.Add(this.maskedTextBox_fixo);
+            this.groupBox_Contato.ForeColor = System.Drawing.Color.White;
+            this.groupBox_Contato.Location = new System.Drawing.Point(208, 354);
+            this.groupBox_Contato.Name = "groupBox_Contato";
+            this.groupBox_Contato.Size = new System.Drawing.Size(430, 92);
+            this.groupBox_Contato.TabIndex = 20;
+            this.groupBox_Contato.TabStop = false;
+            this.groupBox_Contato.Text = "Contato";
+            // 
+            // txtCelular
+            // 
+            this.txtCelular.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            this.txtCelular.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCelular.ForeColor = System.Drawing.Color.White;
+            this.txtCelular.Location = new System.Drawing.Point(219, 23);
+            this.txtCelular.Name = "txtCelular";
+            this.txtCelular.Size = new System.Drawing.Size(48, 20);
+            this.txtCelular.TabIndex = 96;
+            this.txtCelular.Text = "Celular:";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.ForeColor = System.Drawing.Color.White;
+            this.txtEmail.Location = new System.Drawing.Point(7, 58);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(48, 20);
+            this.txtEmail.TabIndex = 95;
+            this.txtEmail.Text = "E-mail:";
+            // 
+            // txtFixo
+            // 
+            this.txtFixo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            this.txtFixo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFixo.ForeColor = System.Drawing.Color.White;
+            this.txtFixo.Location = new System.Drawing.Point(5, 23);
+            this.txtFixo.Name = "txtFixo";
+            this.txtFixo.Size = new System.Drawing.Size(48, 20);
+            this.txtFixo.TabIndex = 94;
+            this.txtFixo.Text = "Fixo:";
+            // 
+            // textBox_Email
+            // 
+            this.textBox_Email.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.textBox_Email.Enabled = false;
+            this.textBox_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_Email.Location = new System.Drawing.Point(57, 52);
+            this.textBox_Email.Name = "textBox_Email";
+            this.textBox_Email.Size = new System.Drawing.Size(311, 26);
+            this.textBox_Email.TabIndex = 14;
+            // 
+            // maskedTextBox_celular
+            // 
+            this.maskedTextBox_celular.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.maskedTextBox_celular.Enabled = false;
+            this.maskedTextBox_celular.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maskedTextBox_celular.Location = new System.Drawing.Point(271, 18);
+            this.maskedTextBox_celular.Mask = "(00)00000-0000";
+            this.maskedTextBox_celular.Name = "maskedTextBox_celular";
+            this.maskedTextBox_celular.Size = new System.Drawing.Size(150, 26);
+            this.maskedTextBox_celular.TabIndex = 13;
+            // 
+            // maskedTextBox_fixo
+            // 
+            this.maskedTextBox_fixo.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.maskedTextBox_fixo.Enabled = false;
+            this.maskedTextBox_fixo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maskedTextBox_fixo.Location = new System.Drawing.Point(57, 18);
+            this.maskedTextBox_fixo.Mask = "(00)0000-0000";
+            this.maskedTextBox_fixo.Name = "maskedTextBox_fixo";
+            this.maskedTextBox_fixo.Size = new System.Drawing.Size(138, 26);
+            this.maskedTextBox_fixo.TabIndex = 12;
+            // 
+            // textBox_nome_morador
+            // 
+            this.textBox_nome_morador.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.textBox_nome_morador.Enabled = false;
+            this.textBox_nome_morador.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_nome_morador.Location = new System.Drawing.Point(169, 19);
+            this.textBox_nome_morador.Name = "textBox_nome_morador";
+            this.textBox_nome_morador.Size = new System.Drawing.Size(189, 26);
+            this.textBox_nome_morador.TabIndex = 1;
+            // 
+            // groupBox_Dados_Veiculo
+            // 
+            this.groupBox_Dados_Veiculo.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox_Dados_Veiculo.Controls.Add(this.txtDadosVeiculo);
+            this.groupBox_Dados_Veiculo.Controls.Add(this.txtPlaca);
+            this.groupBox_Dados_Veiculo.Controls.Add(this.txtCor);
+            this.groupBox_Dados_Veiculo.Controls.Add(this.txtModelo);
+            this.groupBox_Dados_Veiculo.Controls.Add(this.maskedTextBox_placa);
+            this.groupBox_Dados_Veiculo.Controls.Add(this.textBox_Cor);
+            this.groupBox_Dados_Veiculo.Controls.Add(this.textBox_Modelo);
+            this.groupBox_Dados_Veiculo.ForeColor = System.Drawing.Color.White;
+            this.groupBox_Dados_Veiculo.Location = new System.Drawing.Point(345, 452);
+            this.groupBox_Dados_Veiculo.Name = "groupBox_Dados_Veiculo";
+            this.groupBox_Dados_Veiculo.Size = new System.Drawing.Size(294, 92);
+            this.groupBox_Dados_Veiculo.TabIndex = 21;
+            this.groupBox_Dados_Veiculo.TabStop = false;
+            this.groupBox_Dados_Veiculo.Text = "Dados do Veiculo";
+            // 
+            // txtDadosVeiculo
+            // 
+            this.txtDadosVeiculo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            this.txtDadosVeiculo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDadosVeiculo.ForeColor = System.Drawing.Color.White;
+            this.txtDadosVeiculo.Location = new System.Drawing.Point(6, -2);
+            this.txtDadosVeiculo.Name = "txtDadosVeiculo";
+            this.txtDadosVeiculo.Size = new System.Drawing.Size(109, 20);
+            this.txtDadosVeiculo.TabIndex = 98;
+            this.txtDadosVeiculo.Text = "Dados do Veiculo";
+            // 
+            // txtPlaca
+            // 
+            this.txtPlaca.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            this.txtPlaca.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPlaca.ForeColor = System.Drawing.Color.White;
+            this.txtPlaca.Location = new System.Drawing.Point(156, 19);
+            this.txtPlaca.Name = "txtPlaca";
+            this.txtPlaca.Size = new System.Drawing.Size(40, 20);
+            this.txtPlaca.TabIndex = 98;
+            this.txtPlaca.Text = "Placa";
+            // 
+            // txtCor
+            // 
+            this.txtCor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            this.txtCor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCor.ForeColor = System.Drawing.Color.White;
+            this.txtCor.Location = new System.Drawing.Point(6, 57);
+            this.txtCor.Name = "txtCor";
+            this.txtCor.Size = new System.Drawing.Size(40, 20);
+            this.txtCor.TabIndex = 97;
+            this.txtCor.Text = "Cor:";
+            // 
+            // txtModelo
+            // 
+            this.txtModelo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            this.txtModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtModelo.ForeColor = System.Drawing.Color.White;
+            this.txtModelo.Location = new System.Drawing.Point(0, 24);
+            this.txtModelo.Name = "txtModelo";
+            this.txtModelo.Size = new System.Drawing.Size(48, 20);
+            this.txtModelo.TabIndex = 97;
+            this.txtModelo.Text = "Modelo:";
+            // 
+            // maskedTextBox_placa
+            // 
+            this.maskedTextBox_placa.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.maskedTextBox_placa.Enabled = false;
+            this.maskedTextBox_placa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maskedTextBox_placa.Location = new System.Drawing.Point(196, 17);
+            this.maskedTextBox_placa.Name = "maskedTextBox_placa";
+            this.maskedTextBox_placa.Size = new System.Drawing.Size(89, 26);
+            this.maskedTextBox_placa.TabIndex = 17;
+            // 
+            // textBox_Cor
+            // 
+            this.textBox_Cor.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.textBox_Cor.Enabled = false;
+            this.textBox_Cor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_Cor.Location = new System.Drawing.Point(46, 52);
+            this.textBox_Cor.Name = "textBox_Cor";
+            this.textBox_Cor.Size = new System.Drawing.Size(150, 26);
+            this.textBox_Cor.TabIndex = 18;
+            // 
+            // textBox_Modelo
+            // 
+            this.textBox_Modelo.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.textBox_Modelo.Enabled = false;
+            this.textBox_Modelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_Modelo.Location = new System.Drawing.Point(47, 18);
+            this.textBox_Modelo.Name = "textBox_Modelo";
+            this.textBox_Modelo.Size = new System.Drawing.Size(112, 26);
+            this.textBox_Modelo.TabIndex = 16;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox3.Controls.Add(this.txtObs);
+            this.groupBox3.Controls.Add(this.textBox_observacoes);
+            this.groupBox3.ForeColor = System.Drawing.Color.White;
+            this.groupBox3.Location = new System.Drawing.Point(16, 452);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(313, 92);
+            this.groupBox3.TabIndex = 22;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Observações";
+            // 
+            // txtObs
+            // 
+            this.txtObs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            this.txtObs.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtObs.ForeColor = System.Drawing.Color.White;
+            this.txtObs.Location = new System.Drawing.Point(6, 0);
+            this.txtObs.Name = "txtObs";
+            this.txtObs.Size = new System.Drawing.Size(83, 20);
+            this.txtObs.TabIndex = 98;
+            this.txtObs.Text = "Observações";
+            // 
+            // textBox_observacoes
+            // 
+            this.textBox_observacoes.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.textBox_observacoes.Enabled = false;
+            this.textBox_observacoes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_observacoes.Location = new System.Drawing.Point(10, 18);
+            this.textBox_observacoes.Multiline = true;
+            this.textBox_observacoes.Name = "textBox_observacoes";
+            this.textBox_observacoes.Size = new System.Drawing.Size(293, 61);
+            this.textBox_observacoes.TabIndex = 15;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            this.tabPage2.Controls.Add(this.groupBox7);
+            this.tabPage2.Controls.Add(this.groupBox6);
+            this.tabPage2.Controls.Add(this.groupBox5);
+            this.tabPage2.Controls.Add(this.groupBox4);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(728, 568);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Cameras";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.btnSair);
+            this.groupBox1.Controls.Add(this.tabControl1);
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
+            this.groupBox1.Location = new System.Drawing.Point(12, 7);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(751, 641);
+            this.groupBox1.TabIndex = 23;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Configurações";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Intelbras RTSP"});
+            this.comboBox1.Location = new System.Drawing.Point(59, 28);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(285, 28);
+            this.comboBox1.TabIndex = 17;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox4.Controls.Add(this.buttonProcurar);
+            this.groupBox4.Controls.Add(this.buttonSalvar);
+            this.groupBox4.Controls.Add(this.label1);
+            this.groupBox4.Controls.Add(this.textBox1);
+            this.groupBox4.Controls.Add(this.comboBox1);
+            this.groupBox4.Controls.Add(this.textBox4);
+            this.groupBox4.Controls.Add(this.textBox5);
+            this.groupBox4.Controls.Add(this.textBox6);
+            this.groupBox4.Controls.Add(this.label_Nome);
+            this.groupBox4.Controls.Add(this.label_CPF);
+            this.groupBox4.Controls.Add(this.label_Apartamento);
+            this.groupBox4.Controls.Add(this.label_Bloco);
+            this.groupBox4.ForeColor = System.Drawing.Color.White;
+            this.groupBox4.Location = new System.Drawing.Point(6, 6);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(359, 284);
+            this.groupBox4.TabIndex = 20;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "DVR";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(59, 95);
+            this.textBox1.MaxLength = 14;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(181, 26);
+            this.textBox1.TabIndex = 8;
+            // 
+            // textBox4
+            // 
+            this.textBox4.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.Location = new System.Drawing.Point(59, 161);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(285, 26);
+            this.textBox4.TabIndex = 10;
+            // 
+            // textBox5
+            // 
+            this.textBox5.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox5.Location = new System.Drawing.Point(59, 129);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(285, 26);
+            this.textBox5.TabIndex = 9;
+            // 
+            // textBox6
+            // 
+            this.textBox6.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox6.Location = new System.Drawing.Point(59, 63);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(285, 26);
+            this.textBox6.TabIndex = 7;
+            // 
+            // label_Nome
+            // 
+            this.label_Nome.AutoSize = true;
+            this.label_Nome.Location = new System.Drawing.Point(4, 71);
+            this.label_Nome.Name = "label_Nome";
+            this.label_Nome.Size = new System.Drawing.Size(55, 13);
+            this.label_Nome.TabIndex = 0;
+            this.label_Nome.Text = "IP/Host:";
+            // 
+            // label_CPF
+            // 
+            this.label_CPF.AutoSize = true;
+            this.label_CPF.Location = new System.Drawing.Point(15, 103);
+            this.label_CPF.Name = "label_CPF";
+            this.label_CPF.Size = new System.Drawing.Size(41, 13);
+            this.label_CPF.TabIndex = 1;
+            this.label_CPF.Text = "Porta:";
+            // 
+            // label_Apartamento
+            // 
+            this.label_Apartamento.AutoSize = true;
+            this.label_Apartamento.Location = new System.Drawing.Point(9, 168);
+            this.label_Apartamento.Name = "label_Apartamento";
+            this.label_Apartamento.Size = new System.Drawing.Size(47, 13);
+            this.label_Apartamento.TabIndex = 3;
+            this.label_Apartamento.Text = "Senha:";
+            // 
+            // label_Bloco
+            // 
+            this.label_Bloco.AutoSize = true;
+            this.label_Bloco.Location = new System.Drawing.Point(6, 137);
+            this.label_Bloco.Name = "label_Bloco";
+            this.label_Bloco.Size = new System.Drawing.Size(54, 13);
+            this.label_Bloco.TabIndex = 2;
+            this.label_Bloco.Text = "Usuario:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(15, 36);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(36, 13);
+            this.label1.TabIndex = 89;
+            this.label1.Text = "Tipo:";
+            // 
+            // buttonProcurar
+            // 
+            this.buttonProcurar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonProcurar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.buttonProcurar.Location = new System.Drawing.Point(81, 230);
+            this.buttonProcurar.Name = "buttonProcurar";
+            this.buttonProcurar.Size = new System.Drawing.Size(95, 37);
+            this.buttonProcurar.TabIndex = 91;
+            this.buttonProcurar.Text = "Salvar";
+            this.buttonProcurar.UseVisualStyleBackColor = true;
+            // 
+            // buttonSalvar
+            // 
+            this.buttonSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSalvar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.buttonSalvar.Location = new System.Drawing.Point(182, 230);
+            this.buttonSalvar.Name = "buttonSalvar";
+            this.buttonSalvar.Size = new System.Drawing.Size(95, 37);
+            this.buttonSalvar.TabIndex = 90;
+            this.buttonSalvar.Text = "Excluir";
+            this.buttonSalvar.UseVisualStyleBackColor = true;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox5.Controls.Add(this.button1);
+            this.groupBox5.Controls.Add(this.label2);
+            this.groupBox5.Controls.Add(this.textBox8);
+            this.groupBox5.ForeColor = System.Drawing.Color.White;
+            this.groupBox5.Location = new System.Drawing.Point(381, 6);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(304, 108);
+            this.groupBox5.TabIndex = 92;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Moradores";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(15, 36);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(43, 13);
+            this.label2.TabIndex = 89;
+            this.label2.Text = "Canal:";
+            // 
+            // textBox8
+            // 
+            this.textBox8.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox8.Location = new System.Drawing.Point(57, 28);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(220, 26);
+            this.textBox8.TabIndex = 7;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button1.Location = new System.Drawing.Point(182, 58);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(95, 37);
+            this.button1.TabIndex = 91;
+            this.button1.Text = "Salvar";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox6.Controls.Add(this.button2);
+            this.groupBox6.Controls.Add(this.label3);
+            this.groupBox6.Controls.Add(this.textBox2);
+            this.groupBox6.ForeColor = System.Drawing.Color.White;
+            this.groupBox6.Location = new System.Drawing.Point(381, 120);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(304, 108);
+            this.groupBox6.TabIndex = 93;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Visitantes";
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button2.Location = new System.Drawing.Point(182, 58);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(95, 37);
+            this.button2.TabIndex = 91;
+            this.button2.Text = "Salvar";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(15, 36);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(43, 13);
+            this.label3.TabIndex = 89;
+            this.label3.Text = "Canal:";
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(57, 28);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(220, 26);
+            this.textBox2.TabIndex = 7;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox7.Controls.Add(this.label6);
+            this.groupBox7.Controls.Add(this.comboBox3);
+            this.groupBox7.Controls.Add(this.label5);
+            this.groupBox7.Controls.Add(this.comboBox2);
+            this.groupBox7.Controls.Add(this.button3);
+            this.groupBox7.Controls.Add(this.label4);
+            this.groupBox7.Controls.Add(this.textBox3);
+            this.groupBox7.ForeColor = System.Drawing.Color.White;
+            this.groupBox7.Location = new System.Drawing.Point(381, 236);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(304, 180);
+            this.groupBox7.TabIndex = 94;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Grade";
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button3.Location = new System.Drawing.Point(182, 128);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(95, 37);
+            this.button3.TabIndex = 91;
+            this.button3.Text = "Salvar";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(26, 37);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(43, 13);
+            this.label4.TabIndex = 89;
+            this.label4.Text = "Canal:";
+            // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(75, 28);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(202, 26);
+            this.textBox3.TabIndex = 7;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "1",
+            "2"});
+            this.comboBox2.Location = new System.Drawing.Point(75, 60);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(202, 28);
+            this.comboBox2.TabIndex = 92;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(24, 68);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(45, 13);
+            this.label5.TabIndex = 93;
+            this.label5.Text = "Grade:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(13, 101);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(56, 13);
+            this.label6.TabIndex = 95;
+            this.label6.Text = "Posição:";
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4"});
+            this.comboBox3.Location = new System.Drawing.Point(75, 94);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(202, 28);
+            this.comboBox3.TabIndex = 94;
+            // 
+            // btnSair
+            // 
+            this.btnSair.BackColor = System.Drawing.Color.Transparent;
+            this.btnSair.BackgroundImage = global::Projeto_Portaria.Properties.Resources.sairX;
+            this.btnSair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSair.FlatAppearance.BorderSize = 0;
+            this.btnSair.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnSair.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSair.Location = new System.Drawing.Point(711, 9);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(35, 38);
+            this.btnSair.TabIndex = 101;
+            this.btnSair.UseVisualStyleBackColor = false;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            // 
+            // button_pesquisar
+            // 
+            this.button_pesquisar.BackColor = System.Drawing.Color.Transparent;
+            this.button_pesquisar.BackgroundImage = global::Projeto_Portaria.Properties.Resources.Icon__Pesquisar_;
+            this.button_pesquisar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button_pesquisar.Enabled = false;
+            this.button_pesquisar.FlatAppearance.BorderSize = 0;
+            this.button_pesquisar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_pesquisar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_pesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_pesquisar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_pesquisar.Location = new System.Drawing.Point(362, 9);
+            this.button_pesquisar.Name = "button_pesquisar";
+            this.button_pesquisar.Size = new System.Drawing.Size(22, 38);
+            this.button_pesquisar.TabIndex = 40;
+            this.button_pesquisar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button_pesquisar.UseVisualStyleBackColor = false;
             // 
             // buttonEntrada
             // 
@@ -251,138 +1086,6 @@ namespace Projeto_Portaria
             this.pictureBox_Foto_Morador.TabIndex = 24;
             this.pictureBox_Foto_Morador.TabStop = false;
             // 
-            // groupBox_Dados_Pessoais
-            // 
-            this.groupBox_Dados_Pessoais.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox_Dados_Pessoais.Controls.Add(this.txtUnidade);
-            this.groupBox_Dados_Pessoais.Controls.Add(this.txtRamal);
-            this.groupBox_Dados_Pessoais.Controls.Add(this.txtRuaBloco);
-            this.groupBox_Dados_Pessoais.Controls.Add(this.txtdocumento);
-            this.groupBox_Dados_Pessoais.Controls.Add(this.txtNomeMorador);
-            this.groupBox_Dados_Pessoais.Controls.Add(this.textBox_cpf);
-            this.groupBox_Dados_Pessoais.Controls.Add(this.textBox_id);
-            this.groupBox_Dados_Pessoais.Controls.Add(this.textBox_Ramal);
-            this.groupBox_Dados_Pessoais.Controls.Add(this.textBox_unidade);
-            this.groupBox_Dados_Pessoais.Controls.Add(this.textBox_Rua);
-            this.groupBox_Dados_Pessoais.Controls.Add(this.textBox_Nome);
-            this.groupBox_Dados_Pessoais.ForeColor = System.Drawing.Color.White;
-            this.groupBox_Dados_Pessoais.Location = new System.Drawing.Point(209, 224);
-            this.groupBox_Dados_Pessoais.Name = "groupBox_Dados_Pessoais";
-            this.groupBox_Dados_Pessoais.Size = new System.Drawing.Size(429, 128);
-            this.groupBox_Dados_Pessoais.TabIndex = 19;
-            this.groupBox_Dados_Pessoais.TabStop = false;
-            this.groupBox_Dados_Pessoais.Text = "Dados Pessoais";
-            // 
-            // textBox_cpf
-            // 
-            this.textBox_cpf.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.textBox_cpf.Enabled = false;
-            this.textBox_cpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_cpf.Location = new System.Drawing.Point(52, 52);
-            this.textBox_cpf.MaxLength = 14;
-            this.textBox_cpf.Name = "textBox_cpf";
-            this.textBox_cpf.Size = new System.Drawing.Size(136, 26);
-            this.textBox_cpf.TabIndex = 8;
-            // 
-            // textBox_id
-            // 
-            this.textBox_id.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.textBox_id.Enabled = false;
-            this.textBox_id.Location = new System.Drawing.Point(402, 102);
-            this.textBox_id.Name = "textBox_id";
-            this.textBox_id.Size = new System.Drawing.Size(23, 20);
-            this.textBox_id.TabIndex = 88;
-            this.textBox_id.Visible = false;
-            // 
-            // textBox_Ramal
-            // 
-            this.textBox_Ramal.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.textBox_Ramal.Enabled = false;
-            this.textBox_Ramal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_Ramal.Location = new System.Drawing.Point(175, 91);
-            this.textBox_Ramal.Name = "textBox_Ramal";
-            this.textBox_Ramal.Size = new System.Drawing.Size(76, 26);
-            this.textBox_Ramal.TabIndex = 11;
-            // 
-            // textBox_unidade
-            // 
-            this.textBox_unidade.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.textBox_unidade.Enabled = false;
-            this.textBox_unidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_unidade.Location = new System.Drawing.Point(53, 90);
-            this.textBox_unidade.Name = "textBox_unidade";
-            this.textBox_unidade.Size = new System.Drawing.Size(60, 26);
-            this.textBox_unidade.TabIndex = 10;
-            // 
-            // textBox_Rua
-            // 
-            this.textBox_Rua.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.textBox_Rua.Enabled = false;
-            this.textBox_Rua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_Rua.Location = new System.Drawing.Point(270, 52);
-            this.textBox_Rua.Name = "textBox_Rua";
-            this.textBox_Rua.Size = new System.Drawing.Size(151, 26);
-            this.textBox_Rua.TabIndex = 9;
-            // 
-            // textBox_Nome
-            // 
-            this.textBox_Nome.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.textBox_Nome.Enabled = false;
-            this.textBox_Nome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_Nome.Location = new System.Drawing.Point(52, 17);
-            this.textBox_Nome.Name = "textBox_Nome";
-            this.textBox_Nome.Size = new System.Drawing.Size(369, 26);
-            this.textBox_Nome.TabIndex = 7;
-            // 
-            // groupBox_Contato
-            // 
-            this.groupBox_Contato.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox_Contato.Controls.Add(this.txtCelular);
-            this.groupBox_Contato.Controls.Add(this.txtEmail);
-            this.groupBox_Contato.Controls.Add(this.txtFixo);
-            this.groupBox_Contato.Controls.Add(this.textBox_Email);
-            this.groupBox_Contato.Controls.Add(this.maskedTextBox_celular);
-            this.groupBox_Contato.Controls.Add(this.maskedTextBox_fixo);
-            this.groupBox_Contato.ForeColor = System.Drawing.Color.White;
-            this.groupBox_Contato.Location = new System.Drawing.Point(208, 354);
-            this.groupBox_Contato.Name = "groupBox_Contato";
-            this.groupBox_Contato.Size = new System.Drawing.Size(430, 92);
-            this.groupBox_Contato.TabIndex = 20;
-            this.groupBox_Contato.TabStop = false;
-            this.groupBox_Contato.Text = "Contato";
-            // 
-            // textBox_Email
-            // 
-            this.textBox_Email.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.textBox_Email.Enabled = false;
-            this.textBox_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_Email.Location = new System.Drawing.Point(57, 52);
-            this.textBox_Email.Name = "textBox_Email";
-            this.textBox_Email.Size = new System.Drawing.Size(311, 26);
-            this.textBox_Email.TabIndex = 14;
-            // 
-            // maskedTextBox_celular
-            // 
-            this.maskedTextBox_celular.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.maskedTextBox_celular.Enabled = false;
-            this.maskedTextBox_celular.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox_celular.Location = new System.Drawing.Point(271, 18);
-            this.maskedTextBox_celular.Mask = "(00)00000-0000";
-            this.maskedTextBox_celular.Name = "maskedTextBox_celular";
-            this.maskedTextBox_celular.Size = new System.Drawing.Size(150, 26);
-            this.maskedTextBox_celular.TabIndex = 13;
-            // 
-            // maskedTextBox_fixo
-            // 
-            this.maskedTextBox_fixo.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.maskedTextBox_fixo.Enabled = false;
-            this.maskedTextBox_fixo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox_fixo.Location = new System.Drawing.Point(57, 18);
-            this.maskedTextBox_fixo.Mask = "(00)0000-0000";
-            this.maskedTextBox_fixo.Name = "maskedTextBox_fixo";
-            this.maskedTextBox_fixo.Size = new System.Drawing.Size(138, 26);
-            this.maskedTextBox_fixo.TabIndex = 12;
-            // 
             // button_voltar_menu
             // 
             this.button_voltar_menu.BackColor = System.Drawing.Color.Transparent;
@@ -399,16 +1102,6 @@ namespace Projeto_Portaria
             this.button_voltar_menu.Size = new System.Drawing.Size(46, 38);
             this.button_voltar_menu.TabIndex = 6;
             this.button_voltar_menu.UseVisualStyleBackColor = false;
-            // 
-            // textBox_nome_morador
-            // 
-            this.textBox_nome_morador.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.textBox_nome_morador.Enabled = false;
-            this.textBox_nome_morador.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_nome_morador.Location = new System.Drawing.Point(169, 19);
-            this.textBox_nome_morador.Name = "textBox_nome_morador";
-            this.textBox_nome_morador.Size = new System.Drawing.Size(189, 26);
-            this.textBox_nome_morador.TabIndex = 1;
             // 
             // buttonCancelar
             // 
@@ -444,342 +1137,24 @@ namespace Projeto_Portaria
             this.buttonAlterar.TabIndex = 5;
             this.buttonAlterar.UseVisualStyleBackColor = false;
             // 
-            // groupBox_Dados_Veiculo
-            // 
-            this.groupBox_Dados_Veiculo.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox_Dados_Veiculo.Controls.Add(this.txtDadosVeiculo);
-            this.groupBox_Dados_Veiculo.Controls.Add(this.txtPlaca);
-            this.groupBox_Dados_Veiculo.Controls.Add(this.txtCor);
-            this.groupBox_Dados_Veiculo.Controls.Add(this.txtModelo);
-            this.groupBox_Dados_Veiculo.Controls.Add(this.maskedTextBox_placa);
-            this.groupBox_Dados_Veiculo.Controls.Add(this.textBox_Cor);
-            this.groupBox_Dados_Veiculo.Controls.Add(this.textBox_Modelo);
-            this.groupBox_Dados_Veiculo.ForeColor = System.Drawing.Color.White;
-            this.groupBox_Dados_Veiculo.Location = new System.Drawing.Point(345, 452);
-            this.groupBox_Dados_Veiculo.Name = "groupBox_Dados_Veiculo";
-            this.groupBox_Dados_Veiculo.Size = new System.Drawing.Size(294, 92);
-            this.groupBox_Dados_Veiculo.TabIndex = 21;
-            this.groupBox_Dados_Veiculo.TabStop = false;
-            this.groupBox_Dados_Veiculo.Text = "Dados do Veiculo";
-            // 
-            // maskedTextBox_placa
-            // 
-            this.maskedTextBox_placa.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.maskedTextBox_placa.Enabled = false;
-            this.maskedTextBox_placa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox_placa.Location = new System.Drawing.Point(196, 17);
-            this.maskedTextBox_placa.Name = "maskedTextBox_placa";
-            this.maskedTextBox_placa.Size = new System.Drawing.Size(89, 26);
-            this.maskedTextBox_placa.TabIndex = 17;
-            // 
-            // textBox_Cor
-            // 
-            this.textBox_Cor.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.textBox_Cor.Enabled = false;
-            this.textBox_Cor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_Cor.Location = new System.Drawing.Point(46, 52);
-            this.textBox_Cor.Name = "textBox_Cor";
-            this.textBox_Cor.Size = new System.Drawing.Size(150, 26);
-            this.textBox_Cor.TabIndex = 18;
-            // 
-            // textBox_Modelo
-            // 
-            this.textBox_Modelo.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.textBox_Modelo.Enabled = false;
-            this.textBox_Modelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_Modelo.Location = new System.Drawing.Point(47, 18);
-            this.textBox_Modelo.Name = "textBox_Modelo";
-            this.textBox_Modelo.Size = new System.Drawing.Size(112, 26);
-            this.textBox_Modelo.TabIndex = 16;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox3.Controls.Add(this.txtObs);
-            this.groupBox3.Controls.Add(this.textBox_observacoes);
-            this.groupBox3.ForeColor = System.Drawing.Color.White;
-            this.groupBox3.Location = new System.Drawing.Point(16, 452);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(313, 92);
-            this.groupBox3.TabIndex = 22;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Observações";
-            // 
-            // textBox_observacoes
-            // 
-            this.textBox_observacoes.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.textBox_observacoes.Enabled = false;
-            this.textBox_observacoes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_observacoes.Location = new System.Drawing.Point(10, 18);
-            this.textBox_observacoes.Multiline = true;
-            this.textBox_observacoes.Name = "textBox_observacoes";
-            this.textBox_observacoes.Size = new System.Drawing.Size(293, 61);
-            this.textBox_observacoes.TabIndex = 15;
-            // 
-            // textBox_unidade_morador
-            // 
-            this.textBox_unidade_morador.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.textBox_unidade_morador.Enabled = false;
-            this.textBox_unidade_morador.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_unidade_morador.Location = new System.Drawing.Point(71, 17);
-            this.textBox_unidade_morador.Name = "textBox_unidade_morador";
-            this.textBox_unidade_morador.Size = new System.Drawing.Size(54, 26);
-            this.textBox_unidade_morador.TabIndex = 39;
-            // 
-            // button_pesquisar
-            // 
-            this.button_pesquisar.BackColor = System.Drawing.Color.Transparent;
-            this.button_pesquisar.BackgroundImage = global::Projeto_Portaria.Properties.Resources.Icon__Pesquisar_;
-            this.button_pesquisar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button_pesquisar.Enabled = false;
-            this.button_pesquisar.FlatAppearance.BorderSize = 0;
-            this.button_pesquisar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button_pesquisar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button_pesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_pesquisar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_pesquisar.Location = new System.Drawing.Point(362, 9);
-            this.button_pesquisar.Name = "button_pesquisar";
-            this.button_pesquisar.Size = new System.Drawing.Size(22, 38);
-            this.button_pesquisar.TabIndex = 40;
-            this.button_pesquisar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button_pesquisar.UseVisualStyleBackColor = false;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.Gray;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle14;
-            this.dataGridView1.Enabled = false;
-            this.dataGridView1.GridColor = System.Drawing.Color.Gray;
-            this.dataGridView1.Location = new System.Drawing.Point(17, 47);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
-            this.dataGridView1.RowHeadersVisible = false;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.Gray;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle16;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(621, 171);
-            this.dataGridView1.TabIndex = 43;
-            // 
-            // txtNomeMorador
-            // 
-            this.txtNomeMorador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
-            this.txtNomeMorador.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNomeMorador.ForeColor = System.Drawing.Color.White;
-            this.txtNomeMorador.Location = new System.Drawing.Point(6, 22);
-            this.txtNomeMorador.Name = "txtNomeMorador";
-            this.txtNomeMorador.Size = new System.Drawing.Size(46, 20);
-            this.txtNomeMorador.TabIndex = 44;
-            this.txtNomeMorador.Text = "Nome:";
-            // 
-            // txtdocumento
-            // 
-            this.txtdocumento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
-            this.txtdocumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtdocumento.ForeColor = System.Drawing.Color.White;
-            this.txtdocumento.Location = new System.Drawing.Point(4, 57);
-            this.txtdocumento.Name = "txtdocumento";
-            this.txtdocumento.Size = new System.Drawing.Size(46, 20);
-            this.txtdocumento.TabIndex = 89;
-            this.txtdocumento.Text = "Rg/Cpf";
-            // 
-            // txtRuaBloco
-            // 
-            this.txtRuaBloco.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
-            this.txtRuaBloco.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRuaBloco.ForeColor = System.Drawing.Color.White;
-            this.txtRuaBloco.Location = new System.Drawing.Point(196, 55);
-            this.txtRuaBloco.Name = "txtRuaBloco";
-            this.txtRuaBloco.Size = new System.Drawing.Size(70, 20);
-            this.txtRuaBloco.TabIndex = 90;
-            this.txtRuaBloco.Text = "Rua/Bloco";
-            // 
-            // txtRamal
-            // 
-            this.txtRamal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
-            this.txtRamal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRamal.ForeColor = System.Drawing.Color.White;
-            this.txtRamal.Location = new System.Drawing.Point(118, 94);
-            this.txtRamal.Name = "txtRamal";
-            this.txtRamal.Size = new System.Drawing.Size(57, 20);
-            this.txtRamal.TabIndex = 91;
-            this.txtRamal.Text = "Ramal";
-            // 
-            // txtUnidade
-            // 
-            this.txtUnidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
-            this.txtUnidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUnidade.ForeColor = System.Drawing.Color.White;
-            this.txtUnidade.Location = new System.Drawing.Point(6, 94);
-            this.txtUnidade.Name = "txtUnidade";
-            this.txtUnidade.Size = new System.Drawing.Size(48, 20);
-            this.txtUnidade.TabIndex = 92;
-            this.txtUnidade.Text = "Uni/Ap";
-            // 
-            // txtFixo
-            // 
-            this.txtFixo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
-            this.txtFixo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFixo.ForeColor = System.Drawing.Color.White;
-            this.txtFixo.Location = new System.Drawing.Point(5, 23);
-            this.txtFixo.Name = "txtFixo";
-            this.txtFixo.Size = new System.Drawing.Size(48, 20);
-            this.txtFixo.TabIndex = 94;
-            this.txtFixo.Text = "Fixo:";
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
-            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.ForeColor = System.Drawing.Color.White;
-            this.txtEmail.Location = new System.Drawing.Point(7, 58);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(48, 20);
-            this.txtEmail.TabIndex = 95;
-            this.txtEmail.Text = "E-mail:";
-            // 
-            // txtCelular
-            // 
-            this.txtCelular.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
-            this.txtCelular.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCelular.ForeColor = System.Drawing.Color.White;
-            this.txtCelular.Location = new System.Drawing.Point(219, 23);
-            this.txtCelular.Name = "txtCelular";
-            this.txtCelular.Size = new System.Drawing.Size(48, 20);
-            this.txtCelular.TabIndex = 96;
-            this.txtCelular.Text = "Celular:";
-            // 
-            // txtModelo
-            // 
-            this.txtModelo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
-            this.txtModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtModelo.ForeColor = System.Drawing.Color.White;
-            this.txtModelo.Location = new System.Drawing.Point(0, 24);
-            this.txtModelo.Name = "txtModelo";
-            this.txtModelo.Size = new System.Drawing.Size(48, 20);
-            this.txtModelo.TabIndex = 97;
-            this.txtModelo.Text = "Modelo:";
-            // 
-            // txtCor
-            // 
-            this.txtCor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
-            this.txtCor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCor.ForeColor = System.Drawing.Color.White;
-            this.txtCor.Location = new System.Drawing.Point(6, 57);
-            this.txtCor.Name = "txtCor";
-            this.txtCor.Size = new System.Drawing.Size(40, 20);
-            this.txtCor.TabIndex = 97;
-            this.txtCor.Text = "Cor:";
-            // 
-            // txtPlaca
-            // 
-            this.txtPlaca.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
-            this.txtPlaca.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPlaca.ForeColor = System.Drawing.Color.White;
-            this.txtPlaca.Location = new System.Drawing.Point(156, 19);
-            this.txtPlaca.Name = "txtPlaca";
-            this.txtPlaca.Size = new System.Drawing.Size(40, 20);
-            this.txtPlaca.TabIndex = 98;
-            this.txtPlaca.Text = "Placa";
-            // 
-            // txtDadosVeiculo
-            // 
-            this.txtDadosVeiculo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
-            this.txtDadosVeiculo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDadosVeiculo.ForeColor = System.Drawing.Color.White;
-            this.txtDadosVeiculo.Location = new System.Drawing.Point(6, -2);
-            this.txtDadosVeiculo.Name = "txtDadosVeiculo";
-            this.txtDadosVeiculo.Size = new System.Drawing.Size(109, 20);
-            this.txtDadosVeiculo.TabIndex = 98;
-            this.txtDadosVeiculo.Text = "Dados do Veiculo";
-            // 
-            // txtObs
-            // 
-            this.txtObs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
-            this.txtObs.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtObs.ForeColor = System.Drawing.Color.White;
-            this.txtObs.Location = new System.Drawing.Point(6, 0);
-            this.txtObs.Name = "txtObs";
-            this.txtObs.Size = new System.Drawing.Size(83, 20);
-            this.txtObs.TabIndex = 98;
-            this.txtObs.Text = "Observações";
-            // 
-            // txtNomePesq
-            // 
-            this.txtNomePesq.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
-            this.txtNomePesq.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNomePesq.ForeColor = System.Drawing.Color.White;
-            this.txtNomePesq.Location = new System.Drawing.Point(131, 22);
-            this.txtNomePesq.Name = "txtNomePesq";
-            this.txtNomePesq.Size = new System.Drawing.Size(40, 20);
-            this.txtNomePesq.TabIndex = 98;
-            this.txtNomePesq.Text = "Nome:";
-            // 
-            // txtUniPesq
-            // 
-            this.txtUniPesq.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
-            this.txtUniPesq.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUniPesq.ForeColor = System.Drawing.Color.White;
-            this.txtUniPesq.Location = new System.Drawing.Point(16, 22);
-            this.txtUniPesq.Name = "txtUniPesq";
-            this.txtUniPesq.Size = new System.Drawing.Size(49, 20);
-            this.txtUniPesq.TabIndex = 99;
-            this.txtUniPesq.Text = "unidade";
-            // 
-            // txtMoradores
-            // 
-            this.txtMoradores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
-            this.txtMoradores.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMoradores.ForeColor = System.Drawing.Color.White;
-            this.txtMoradores.Location = new System.Drawing.Point(6, 0);
-            this.txtMoradores.Name = "txtMoradores";
-            this.txtMoradores.Size = new System.Drawing.Size(71, 20);
-            this.txtMoradores.TabIndex = 100;
-            this.txtMoradores.Text = "Moradores";
-            // 
             // FormConfig
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(774, 643);
+            this.ClientSize = new System.Drawing.Size(774, 658);
             this.Controls.Add(this.groupBox1);
             this.ForeColor = System.Drawing.Color.Black;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormConfig";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormConfig";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Foto_Morador)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox_Dados_Pessoais.ResumeLayout(false);
             this.groupBox_Dados_Pessoais.PerformLayout();
             this.groupBox_Contato.ResumeLayout(false);
@@ -788,7 +1163,17 @@ namespace Projeto_Portaria
             this.groupBox_Dados_Veiculo.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Foto_Morador)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -845,5 +1230,35 @@ namespace Projeto_Portaria
         private System.Windows.Forms.TextBox txtModelo;
         private System.Windows.Forms.TextBox txtObs;
         private System.Windows.Forms.TextBox txtMoradores;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label label_Nome;
+        private System.Windows.Forms.Label label_CPF;
+        private System.Windows.Forms.Label label_Apartamento;
+        private System.Windows.Forms.Label label_Bloco;
+        private System.Windows.Forms.Button buttonProcurar;
+        private System.Windows.Forms.Button buttonSalvar;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Button btnSair;
     }
 }

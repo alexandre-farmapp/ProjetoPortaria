@@ -167,21 +167,14 @@ namespace Projeto_Portaria{
 
         private void Form_Menu_Load(object sender, EventArgs e)
         {           
-            if(User_info.usuario_logado == "admin")
-            {
-                button_Cadastrar_Novo_Usuario.Visible = true;
-                buttonAddCond.Visible = true;
-                buttonEditar.Visible = true;
-                buttonExcluir.Visible = true;
-                buttonBackup.Visible = true;
-            }
-            else
+            if(User_info.usuario_logado != "admin")
             {
                 button_Cadastrar_Novo_Usuario.Visible = false;
                 buttonAddCond.Visible = false;
                 buttonEditar.Visible = false;
                 buttonExcluir.Visible = false;
                 buttonBackup.Visible = false;
+                btnConfig.Visible = false;
             }
 
             atualizardatagridTemp();

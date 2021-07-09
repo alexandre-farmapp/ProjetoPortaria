@@ -295,6 +295,8 @@
     <Content Include="Book.ico" />
     <Content Include="door-512.ico" />
     <Content Include="Logo-Cadeado1.ico" />
+    <None Include="Resources\sairX.ico" />
+    <None Include="Resources\config.ico" />
     <None Include="Resources\entrada.ico" />
     <None Include="Resources\edit.ico" />
     <None Include="Resources\update.ico" />

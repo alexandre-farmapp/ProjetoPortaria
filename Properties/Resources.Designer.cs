@@ -123,6 +123,16 @@ namespace Projeto_Portaria.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap config {
+            get {
+                object obj = ResourceManager.GetObject("config", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Custom_Icon_Design_Pretty_Office_6_Printer_blue {
             get {
                 object obj = ResourceManager.GetObject("Custom-Icon-Design-Pretty-Office-6-Printer-blue", resourceCulture);
@@ -676,6 +686,16 @@ namespace Projeto_Portaria.Properties {
         internal static System.Drawing.Bitmap pdf_icon_9 {
             get {
                 object obj = ResourceManager.GetObject("pdf-icon-9", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sairX {
+            get {
+                object obj = ResourceManager.GetObject("sairX", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
