@@ -57,6 +57,7 @@
             this.button_logoff = new System.Windows.Forms.Button();
             this.buttonExcluir = new System.Windows.Forms.Button();
             this.button_Cadastro_Moradores = new System.Windows.Forms.Button();
+            this.btnConfig = new System.Windows.Forms.Button();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -481,11 +482,37 @@
             this.button_Cadastro_Moradores.UseVisualStyleBackColor = false;
             this.button_Cadastro_Moradores.Click += new System.EventHandler(this.button_Cadastro_Moradores_Click);
             // 
+            // btnConfig
+            // 
+            this.btnConfig.BackColor = System.Drawing.Color.Gray;
+            this.btnConfig.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnConfig.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConfig.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnConfig.FlatAppearance.BorderSize = 0;
+            this.btnConfig.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btnConfig.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnConfig.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfig.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfig.ForeColor = System.Drawing.Color.White;
+            this.btnConfig.Image = global::Projeto_Portaria.Properties.Resources.database;
+            this.btnConfig.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConfig.Location = new System.Drawing.Point(10, 528);
+            this.btnConfig.Name = "btnConfig";
+            this.btnConfig.Size = new System.Drawing.Size(180, 40);
+            this.btnConfig.TabIndex = 31;
+            this.btnConfig.Text = "Config";
+            this.btnConfig.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.btnConfig, "Backup/Restaura/Conectar-se");
+            this.btnConfig.UseVisualStyleBackColor = false;
+            this.btnConfig.Click += new System.EventHandler(this.btnConfig_Click);
+            // 
             // panelMenu
             // 
             this.panelMenu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panelMenu.BackColor = System.Drawing.Color.Gray;
+            this.panelMenu.Controls.Add(this.btnConfig);
             this.panelMenu.Controls.Add(this.panel1);
             this.panelMenu.Controls.Add(this.buttonAnotacoes);
             this.panelMenu.Controls.Add(this.button3);
@@ -825,5 +852,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dataGridTemp;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnConfig;
     }
 }

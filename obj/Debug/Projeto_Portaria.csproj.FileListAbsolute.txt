@@ -258,3 +258,4 @@ C:\Users\Felipe\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\System.Compon
 C:\Users\Felipe\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\EPPlus.xml
 C:\Users\Felipe\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\Microsoft.IO.RecyclableMemoryStream.xml
 C:\Users\Felipe\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\obj\Debug\Projeto_Portaria.csproj.AssemblyReference.cache
+C:\Users\Felipe\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\obj\Debug\Projeto_Portaria.FormConfig.resources

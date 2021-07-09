@@ -477,5 +477,17 @@ namespace Projeto_Portaria{
             }
         }
 
+        private void btnConfig_Click(object sender, EventArgs e)
+        {
+            if (User_info.usuario_logado == "admin")
+            {
+                FormConfig formConfig = new FormConfig();
+                formConfig.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Contate o administrador para isso!", "Acesso Negado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }
