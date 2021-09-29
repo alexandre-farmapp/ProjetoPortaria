@@ -72,12 +72,13 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button_pesquisar = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.btnCam = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.comboBoxTipoPesq = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.comboBoxTipoPesq = new System.Windows.Forms.ComboBox();
             this.groupBox_Dados_Pessoais.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_pesquisa_morador)).BeginInit();
             this.groupBox_Dados_Veiculo.SuspendLayout();
@@ -566,8 +567,27 @@
             this.button_pesquisar.UseVisualStyleBackColor = false;
             this.button_pesquisar.Click += new System.EventHandler(this.Button2_Click);
             // 
+            // btnCam
+            // 
+            this.btnCam.BackColor = System.Drawing.Color.Transparent;
+            this.btnCam.BackgroundImage = global::Projeto_Portaria.Properties.Resources.Save_icon;
+            this.btnCam.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCam.FlatAppearance.BorderSize = 0;
+            this.btnCam.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnCam.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnCam.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCam.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCam.Location = new System.Drawing.Point(455, 503);
+            this.btnCam.Name = "btnCam";
+            this.btnCam.Size = new System.Drawing.Size(46, 39);
+            this.btnCam.TabIndex = 72;
+            this.toolTip1.SetToolTip(this.btnCam, "Registrar Visitantes");
+            this.btnCam.UseVisualStyleBackColor = false;
+            this.btnCam.Click += new System.EventHandler(this.btnCam_Click);
+            // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnCam);
             this.groupBox2.Controls.Add(this.comboBoxTipoPesq);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
@@ -578,10 +598,24 @@
             this.groupBox2.ForeColor = System.Drawing.Color.White;
             this.groupBox2.Location = new System.Drawing.Point(12, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(696, 548);
+            this.groupBox2.Size = new System.Drawing.Size(696, 599);
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Entrada de Visitantes";
+            // 
+            // comboBoxTipoPesq
+            // 
+            this.comboBoxTipoPesq.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxTipoPesq.FormattingEnabled = true;
+            this.comboBoxTipoPesq.Items.AddRange(new object[] {
+            "Nome",
+            "RG",
+            "CPF"});
+            this.comboBoxTipoPesq.Location = new System.Drawing.Point(418, 16);
+            this.comboBoxTipoPesq.Name = "comboBoxTipoPesq";
+            this.comboBoxTipoPesq.Size = new System.Drawing.Size(121, 28);
+            this.comboBoxTipoPesq.TabIndex = 71;
+            this.comboBoxTipoPesq.Text = "Nome";
             // 
             // label4
             // 
@@ -620,27 +654,13 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // comboBoxTipoPesq
-            // 
-            this.comboBoxTipoPesq.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxTipoPesq.FormattingEnabled = true;
-            this.comboBoxTipoPesq.Items.AddRange(new object[] {
-            "Nome",
-            "RG",
-            "CPF"});
-            this.comboBoxTipoPesq.Location = new System.Drawing.Point(418, 16);
-            this.comboBoxTipoPesq.Name = "comboBoxTipoPesq";
-            this.comboBoxTipoPesq.Size = new System.Drawing.Size(121, 28);
-            this.comboBoxTipoPesq.TabIndex = 71;
-            this.comboBoxTipoPesq.Text = "Nome";
-            // 
             // Cadastro_de_Visitantes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(720, 572);
+            this.ClientSize = new System.Drawing.Size(720, 623);
             this.Controls.Add(this.button_pesquisar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBox_nome_visitante);
@@ -724,5 +744,6 @@
         private System.Windows.Forms.Label labelBlocoRua;
         private System.Windows.Forms.TextBox textBoxBlocoRua;
         private System.Windows.Forms.ComboBox comboBoxTipoPesq;
+        private System.Windows.Forms.Button btnCam;
     }
 }

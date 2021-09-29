@@ -29,11 +29,11 @@
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x64</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>.\</OutputPath>
+    <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -101,6 +101,10 @@
     </Reference>
     <Reference Include="Microsoft.IO.RecyclableMemoryStream, Version=1.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.IO.RecyclableMemoryStream.1.4.1\lib\net46\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
+    </Reference>
+    <Reference Include="NetSDKCS, Version=1.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\General_NetSDK_3.050_PlaySDK_3.042\NetSDK 3.050\.NET\General_NetSDK_ChnEng_CSharp64_IS_V3.050.0000005.3.R.190304\Demos\RealPlayAndPTZDemo\NetSDKCS\bin\x64\Debug\NetSDKCS.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="System" />
@@ -211,6 +215,12 @@
       <DependentUpon>relatorio.cs</DependentUpon>
     </Compile>
     <Compile Include="User_info.cs" />
+    <Compile Include="View\Captura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Captura.Designer.cs">
+      <DependentUpon>Captura.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FormAnotacoes.resx">
       <DependentUpon>FormAnotacoes.cs</DependentUpon>
     </EmbeddedResource>
@@ -254,6 +264,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="relatorio.resx">
       <DependentUpon>relatorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Captura.resx">
+      <DependentUpon>Captura.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -366,6 +379,9 @@
     <None Include="Resources\cadastrar cliente.jpg" />
     <None Include="Resources\Smile.ico" />
     <None Include="Resources\imagem_portaria3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

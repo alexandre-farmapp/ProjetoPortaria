@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 using System.Data.SqlClient;
+using System.IO;
+using System.Runtime.InteropServices;
+using Projeto_Portaria.View;
 
 namespace Projeto_Portaria
 {
@@ -16,9 +19,16 @@ namespace Projeto_Portaria
     {
         Thread nx;
 
+        public string ip;
+        public string porta;
+        public string usuario;
+        public string senha;
+        public string filepath;
+
         public Cadastro_de_Visitantes()
         {
             InitializeComponent();
+            
         }
 
         private void GroupBox_Dados_Veiculo_Enter(object sender, EventArgs e)
@@ -32,9 +42,34 @@ namespace Projeto_Portaria
         }
 
         private void Cadastro_de_Visitantes_Load(object sender, EventArgs e)
-        {
+        {            
+
             textBox_entrada.Text = DateTime.Now.ToString();
             dataGridView1.Visible = false;
+
+            string conexao = Projeto_Portaria.Properties.Settings.Default.Bd_portariaConnectionString;
+            SqlConnection sqlConnection = new SqlConnection(conexao);
+            sqlConnection.Open();
+            string comando = "SELECT * FROM DVRs WHERE condominio = @condominio";
+            SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);
+            sqlCommand.Parameters.AddWithValue("@condominio", Condominio.condominio);
+            SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+
+            sqlDataReader.Read();
+            ip = sqlDataReader["ip"].ToString();
+            porta = sqlDataReader["porta"].ToString(); 
+            usuario = sqlDataReader["usuario"].ToString(); 
+            senha = sqlDataReader["senha"].ToString();
+
+            //while (sqlDataReader.Read())
+            //{
+            //    string ip = sqlDataReader["ip"].ToString();
+            //    string porta = sqlDataReader["porta"].ToString();
+            //    string usuario = sqlDataReader["usuario"].ToString();
+            //    string senha = sqlDataReader["senha"].ToString();
+            //}
+
+            sqlConnection.Close();
         }        
 
         private void PictureBox_Foto_Visitante_Click(object sender, EventArgs e)
@@ -362,5 +397,22 @@ namespace Projeto_Portaria
             dataGridView_pesquisa_morador.Visible = false;
             button_pesquisar_morador.Visible = false;
         }
+        
+        private void btnCam_Click(object sender, EventArgs e)
+        {
+            Captura captura = new Captura();
+            captura.ip = ip;
+            captura.porta = porta;
+            captura.usuario = usuario;
+            captura.senha = senha;
+            captura.ShowDialog();
+
+            filepath = captura.caminhofoto;
+
+            Image image = Image.FromFile(filepath);
+            pictureBox_Foto_Visitante.Image = image;
+
+        }        
+
     }
 }

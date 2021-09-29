@@ -75,7 +75,7 @@ namespace Projeto_Portaria
         }
 
         private void Form_Login_Load(object sender, EventArgs e)
-        {            
+        {
             try
             {
                 string conexao = Projeto_Portaria.Properties.Settings.Default.Bd_portariaConnectionString;

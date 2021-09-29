@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Threading;
 using System.Data.SqlClient;
 using System.IO;
+using NetSDKCS;
 
 namespace Projeto_Portaria{
 
@@ -32,9 +33,6 @@ namespace Projeto_Portaria{
                 Cadastro_de_Visitantes cadastro_De_Visitantes = new Cadastro_de_Visitantes();
                 cadastro_De_Visitantes.ShowDialog();
 
-                fx = new Thread(formVisitantes);
-                fx.SetApartmentState(ApartmentState.STA);
-                fx.Start();
             }
             else
             {
@@ -130,10 +128,10 @@ namespace Projeto_Portaria{
             {
                 Form_Cadastro_Usuário form_Cadastro_Usuário = new Form_Cadastro_Usuário();
                 form_Cadastro_Usuário.ShowDialog();
-
+                /*
                 fx = new Thread(formUsuário);
                 fx.SetApartmentState(ApartmentState.STA);
-                fx.Start();
+                fx.Start();*/
             }
             else
             {
@@ -247,10 +245,11 @@ namespace Projeto_Portaria{
             {
                 Form_moradores form_Moradores = new Form_moradores(Condominio.condTipo);
                 form_Moradores.ShowDialog();
-
+                /*
                 fx = new Thread(form_moradores);
                 fx.SetApartmentState(ApartmentState.STA);
-                fx.Start();
+                fx.Start();*/
+
             }
             else
             {
@@ -275,10 +274,10 @@ namespace Projeto_Portaria{
         {
             Form_pessoas_uteis form_Pessoas_Uteis = new Form_pessoas_uteis();
             form_Pessoas_Uteis.ShowDialog();
-
+            /*
             fx = new Thread(formpessoas);
             fx.SetApartmentState(ApartmentState.STA);
-            fx.Start();
+            fx.Start();*/
         }
 
         private void formpessoas()
@@ -312,10 +311,10 @@ namespace Projeto_Portaria{
             {
                 relatorio relatorio = new relatorio();
                 relatorio.ShowDialog();
-
+                /*
                 fx = new Thread(form_relatorio);
                 fx.SetApartmentState(ApartmentState.STA);
-                fx.Start();
+                fx.Start();*/
             }
             else
             {

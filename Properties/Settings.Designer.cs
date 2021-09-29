@@ -12,7 +12,7 @@ namespace Projeto_Portaria.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.8.1.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.10.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -25,14 +25,26 @@ namespace Projeto_Portaria.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = C:\\Program Files\\Vagalum" +
-            "e Sistemas\\DooR\\Bd_portaria.mdf; Integrated Security = True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=AppDomain.CurrentDomain.BaseD" +
+            "irectoryBd_portaria.mdf;Integrated Security=True")]
         public string Bd_portariaConnectionString {
             get {
                 return ((string)(this["Bd_portariaConnectionString"]));
             }
             set {
                 this["Bd_portariaConnectionString"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string CaminhoFotos {
+            get {
+                return ((string)(this["CaminhoFotos"]));
+            }
+            set {
+                this["CaminhoFotos"] = value;
             }
         }
     }

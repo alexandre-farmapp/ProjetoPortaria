@@ -82,21 +82,27 @@ namespace Projeto_Portaria
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txtObs = new System.Windows.Forms.TextBox();
             this.textBox_observacoes = new System.Windows.Forms.TextBox();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtCanalMorador = new System.Windows.Forms.TextBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtCanalVisitante = new System.Windows.Forms.TextBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
             this.cbxPosicao = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.cbxGrade = new System.Windows.Forms.ComboBox();
-            this.button3 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.txtCanalGrade = new System.Windows.Forms.TextBox();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtCanalVisitante = new System.Windows.Forms.TextBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtCanalMorador = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.groupBoxCriarBackup = new System.Windows.Forms.GroupBox();
+            this.btnProcurar = new System.Windows.Forms.Button();
+            this.BtnSalvar = new System.Windows.Forms.Button();
+            this.txtCaminhoFoto = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btnSalvarDVR = new System.Windows.Forms.Button();
             this.btnExcluirDVR = new System.Windows.Forms.Button();
@@ -112,12 +118,6 @@ namespace Projeto_Portaria
             this.label_Bloco = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnSair = new System.Windows.Forms.Button();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.groupBoxCriarBackup = new System.Windows.Forms.GroupBox();
-            this.btnProcurar = new System.Windows.Forms.Button();
-            this.BtnSalvar = new System.Windows.Forms.Button();
-            this.txtCaminhoFoto = new System.Windows.Forms.TextBox();
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -128,13 +128,13 @@ namespace Projeto_Portaria
             this.groupBox_Dados_Veiculo.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            this.groupBox7.SuspendLayout();
-            this.groupBox6.SuspendLayout();
+            this.groupBox8.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            this.groupBox7.SuspendLayout();
+            this.groupBoxCriarBackup.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.groupBoxCriarBackup.SuspendLayout();
-            this.groupBox8.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -785,6 +785,15 @@ namespace Projeto_Portaria
             this.textBox_observacoes.Size = new System.Drawing.Size(293, 61);
             this.textBox_observacoes.TabIndex = 15;
             // 
+            // tabPage3
+            // 
+            this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(728, 568);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "tab3";
+            // 
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
@@ -797,6 +806,83 @@ namespace Projeto_Portaria
             this.tabPage2.Size = new System.Drawing.Size(728, 568);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Cameras/Fotos";
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox8.Controls.Add(this.groupBox5);
+            this.groupBox8.Controls.Add(this.groupBox6);
+            this.groupBox8.Controls.Add(this.groupBox7);
+            this.groupBox8.Controls.Add(this.button3);
+            this.groupBox8.ForeColor = System.Drawing.Color.White;
+            this.groupBox8.Location = new System.Drawing.Point(376, 6);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(332, 403);
+            this.groupBox8.TabIndex = 93;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Configurações";
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox5.Controls.Add(this.label2);
+            this.groupBox5.Controls.Add(this.txtCanalMorador);
+            this.groupBox5.ForeColor = System.Drawing.Color.White;
+            this.groupBox5.Location = new System.Drawing.Point(9, 19);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(304, 80);
+            this.groupBox5.TabIndex = 92;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Moradores";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(15, 36);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(43, 13);
+            this.label2.TabIndex = 89;
+            this.label2.Text = "Canal:";
+            // 
+            // txtCanalMorador
+            // 
+            this.txtCanalMorador.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtCanalMorador.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCanalMorador.Location = new System.Drawing.Point(57, 28);
+            this.txtCanalMorador.Name = "txtCanalMorador";
+            this.txtCanalMorador.Size = new System.Drawing.Size(220, 26);
+            this.txtCanalMorador.TabIndex = 7;
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox6.Controls.Add(this.label3);
+            this.groupBox6.Controls.Add(this.txtCanalVisitante);
+            this.groupBox6.ForeColor = System.Drawing.Color.White;
+            this.groupBox6.Location = new System.Drawing.Point(11, 105);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(304, 82);
+            this.groupBox6.TabIndex = 93;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Visitantes";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(15, 36);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(43, 13);
+            this.label3.TabIndex = 89;
+            this.label3.Text = "Canal:";
+            // 
+            // txtCanalVisitante
+            // 
+            this.txtCanalVisitante.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtCanalVisitante.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCanalVisitante.Location = new System.Drawing.Point(57, 28);
+            this.txtCanalVisitante.Name = "txtCanalVisitante";
+            this.txtCanalVisitante.Size = new System.Drawing.Size(220, 26);
+            this.txtCanalVisitante.TabIndex = 7;
             // 
             // groupBox7
             // 
@@ -859,17 +945,6 @@ namespace Projeto_Portaria
             this.cbxGrade.Size = new System.Drawing.Size(202, 28);
             this.cbxGrade.TabIndex = 92;
             // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button3.Location = new System.Drawing.Point(120, 342);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(95, 37);
-            this.button3.TabIndex = 91;
-            this.button3.Text = "Salvar";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -888,67 +963,64 @@ namespace Projeto_Portaria
             this.txtCanalGrade.Size = new System.Drawing.Size(202, 26);
             this.txtCanalGrade.TabIndex = 7;
             // 
-            // groupBox6
+            // button3
             // 
-            this.groupBox6.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox6.Controls.Add(this.label3);
-            this.groupBox6.Controls.Add(this.txtCanalVisitante);
-            this.groupBox6.ForeColor = System.Drawing.Color.White;
-            this.groupBox6.Location = new System.Drawing.Point(11, 105);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(304, 82);
-            this.groupBox6.TabIndex = 93;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Visitantes";
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button3.Location = new System.Drawing.Point(120, 342);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(95, 37);
+            this.button3.TabIndex = 91;
+            this.button3.Text = "Salvar";
+            this.button3.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // groupBoxCriarBackup
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 36);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 13);
-            this.label3.TabIndex = 89;
-            this.label3.Text = "Canal:";
+            this.groupBoxCriarBackup.Controls.Add(this.btnProcurar);
+            this.groupBoxCriarBackup.Controls.Add(this.BtnSalvar);
+            this.groupBoxCriarBackup.Controls.Add(this.txtCaminhoFoto);
+            this.groupBoxCriarBackup.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxCriarBackup.ForeColor = System.Drawing.SystemColors.Control;
+            this.groupBoxCriarBackup.Location = new System.Drawing.Point(13, 415);
+            this.groupBoxCriarBackup.Name = "groupBoxCriarBackup";
+            this.groupBoxCriarBackup.Size = new System.Drawing.Size(695, 136);
+            this.groupBoxCriarBackup.TabIndex = 95;
+            this.groupBoxCriarBackup.TabStop = false;
+            this.groupBoxCriarBackup.Text = "Local das fotos";
             // 
-            // txtCanalVisitante
+            // btnProcurar
             // 
-            this.txtCanalVisitante.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.txtCanalVisitante.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCanalVisitante.Location = new System.Drawing.Point(57, 28);
-            this.txtCanalVisitante.Name = "txtCanalVisitante";
-            this.txtCanalVisitante.Size = new System.Drawing.Size(220, 26);
-            this.txtCanalVisitante.TabIndex = 7;
+            this.btnProcurar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProcurar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnProcurar.Location = new System.Drawing.Point(581, 40);
+            this.btnProcurar.Name = "btnProcurar";
+            this.btnProcurar.Size = new System.Drawing.Size(95, 37);
+            this.btnProcurar.TabIndex = 15;
+            this.btnProcurar.Text = "Procurar";
+            this.btnProcurar.UseVisualStyleBackColor = true;
             // 
-            // groupBox5
+            // BtnSalvar
             // 
-            this.groupBox5.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox5.Controls.Add(this.label2);
-            this.groupBox5.Controls.Add(this.txtCanalMorador);
-            this.groupBox5.ForeColor = System.Drawing.Color.White;
-            this.groupBox5.Location = new System.Drawing.Point(9, 19);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(304, 80);
-            this.groupBox5.TabIndex = 92;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Moradores";
+            this.BtnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSalvar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.BtnSalvar.Location = new System.Drawing.Point(581, 83);
+            this.BtnSalvar.Name = "BtnSalvar";
+            this.BtnSalvar.Size = new System.Drawing.Size(95, 37);
+            this.BtnSalvar.TabIndex = 3;
+            this.BtnSalvar.Text = "Salvar";
+            this.BtnSalvar.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // txtCaminhoFoto
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 36);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 13);
-            this.label2.TabIndex = 89;
-            this.label2.Text = "Canal:";
-            // 
-            // txtCanalMorador
-            // 
-            this.txtCanalMorador.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.txtCanalMorador.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCanalMorador.Location = new System.Drawing.Point(57, 28);
-            this.txtCanalMorador.Name = "txtCanalMorador";
-            this.txtCanalMorador.Size = new System.Drawing.Size(220, 26);
-            this.txtCanalMorador.TabIndex = 7;
+            this.txtCaminhoFoto.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.txtCaminhoFoto.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txtCaminhoFoto.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtCaminhoFoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCaminhoFoto.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtCaminhoFoto.Location = new System.Drawing.Point(23, 40);
+            this.txtCaminhoFoto.Name = "txtCaminhoFoto";
+            this.txtCaminhoFoto.Size = new System.Drawing.Size(552, 22);
+            this.txtCaminhoFoto.TabIndex = 12;
             // 
             // groupBox4
             // 
@@ -983,6 +1055,7 @@ namespace Projeto_Portaria
             this.btnSalvarDVR.TabIndex = 91;
             this.btnSalvarDVR.Text = "Salvar";
             this.btnSalvarDVR.UseVisualStyleBackColor = true;
+            this.btnSalvarDVR.Click += new System.EventHandler(this.btnSalvarDVR_Click);
             // 
             // btnExcluirDVR
             // 
@@ -1118,78 +1191,6 @@ namespace Projeto_Portaria
             this.btnSair.UseVisualStyleBackColor = false;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
-            // tabPage3
-            // 
-            this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(728, 568);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "tab3";
-            // 
-            // groupBoxCriarBackup
-            // 
-            this.groupBoxCriarBackup.Controls.Add(this.btnProcurar);
-            this.groupBoxCriarBackup.Controls.Add(this.BtnSalvar);
-            this.groupBoxCriarBackup.Controls.Add(this.txtCaminhoFoto);
-            this.groupBoxCriarBackup.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxCriarBackup.ForeColor = System.Drawing.SystemColors.Control;
-            this.groupBoxCriarBackup.Location = new System.Drawing.Point(13, 415);
-            this.groupBoxCriarBackup.Name = "groupBoxCriarBackup";
-            this.groupBoxCriarBackup.Size = new System.Drawing.Size(695, 136);
-            this.groupBoxCriarBackup.TabIndex = 95;
-            this.groupBoxCriarBackup.TabStop = false;
-            this.groupBoxCriarBackup.Text = "Local das fotos";
-            // 
-            // btnProcurar
-            // 
-            this.btnProcurar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProcurar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnProcurar.Location = new System.Drawing.Point(581, 40);
-            this.btnProcurar.Name = "btnProcurar";
-            this.btnProcurar.Size = new System.Drawing.Size(95, 37);
-            this.btnProcurar.TabIndex = 15;
-            this.btnProcurar.Text = "Procurar";
-            this.btnProcurar.UseVisualStyleBackColor = true;
-            // 
-            // BtnSalvar
-            // 
-            this.BtnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSalvar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.BtnSalvar.Location = new System.Drawing.Point(581, 83);
-            this.BtnSalvar.Name = "BtnSalvar";
-            this.BtnSalvar.Size = new System.Drawing.Size(95, 37);
-            this.BtnSalvar.TabIndex = 3;
-            this.BtnSalvar.Text = "Salvar";
-            this.BtnSalvar.UseVisualStyleBackColor = true;
-            // 
-            // txtCaminhoFoto
-            // 
-            this.txtCaminhoFoto.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.txtCaminhoFoto.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.txtCaminhoFoto.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.txtCaminhoFoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCaminhoFoto.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtCaminhoFoto.Location = new System.Drawing.Point(23, 40);
-            this.txtCaminhoFoto.Name = "txtCaminhoFoto";
-            this.txtCaminhoFoto.Size = new System.Drawing.Size(552, 22);
-            this.txtCaminhoFoto.TabIndex = 12;
-            // 
-            // groupBox8
-            // 
-            this.groupBox8.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox8.Controls.Add(this.groupBox5);
-            this.groupBox8.Controls.Add(this.groupBox6);
-            this.groupBox8.Controls.Add(this.groupBox7);
-            this.groupBox8.Controls.Add(this.button3);
-            this.groupBox8.ForeColor = System.Drawing.Color.White;
-            this.groupBox8.Location = new System.Drawing.Point(376, 6);
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(332, 403);
-            this.groupBox8.TabIndex = 93;
-            this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "Configurações";
-            // 
             // FormConfig
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1218,18 +1219,18 @@ namespace Projeto_Portaria
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.tabPage2.ResumeLayout(false);
-            this.groupBox7.ResumeLayout(false);
-            this.groupBox7.PerformLayout();
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
+            this.groupBox8.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
+            this.groupBoxCriarBackup.ResumeLayout(false);
+            this.groupBoxCriarBackup.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox1.ResumeLayout(false);
-            this.groupBoxCriarBackup.ResumeLayout(false);
-            this.groupBoxCriarBackup.PerformLayout();
-            this.groupBox8.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using OfficeOpenXml;
+using NetSDKCS;
 
 namespace Projeto_Portaria
 {   
