@@ -105,10 +105,10 @@ namespace Projeto_Portaria.View
                     return;
                 }
                 NETClient.SetRealDataCallBack(m_RealPlayID, m_RealDataCallBackEx2, IntPtr.Zero, EM_REALDATA_FLAG.DATA_WITH_FRAME_INFO | EM_REALDATA_FLAG.PCM_AUDIO_DATA | EM_REALDATA_FLAG.RAW_DATA | EM_REALDATA_FLAG.YUV_DATA);
-                start_realplay_button.Text = "StopReal(停止监视)";
+                start_realplay_button.Text = "StopReal";
                 channel_comboBox.Enabled = false;
                 streamtype_comboBox.Enabled = false;
-                save_button.Enabled = true;
+                //save_button.Enabled = true;
             }
             else
             {
@@ -120,15 +120,15 @@ namespace Projeto_Portaria.View
                     return;
                 }
                 m_RealPlayID = IntPtr.Zero;
-                start_realplay_button.Text = "StartReal(开始监视)";
+                start_realplay_button.Text = "StartReal";
                 realplay_pictureBox.Refresh();
                 channel_comboBox.Enabled = true;
                 streamtype_comboBox.Enabled = true;
-                save_button.Enabled = false;
+                //save_button.Enabled = false;
                 if (m_IsInSave)
                 {
                     m_IsInSave = false;
-                    save_button.Text = "StartSave(开始保存)";
+                    //save_button.Text = "StartSave(开始保存)";
                 }
             }
         }
@@ -144,7 +144,7 @@ namespace Projeto_Portaria.View
             streamtype_comboBox.Enabled = false;
             start_realplay_button.Enabled = false;
             capture_button.Enabled = false;
-            save_button.Enabled = false;
+            //save_button.Enabled = false;
             /*topleft_button.Enabled = false;
             topright_button.Enabled = false;
             top_button.Enabled = false;
@@ -160,9 +160,9 @@ namespace Projeto_Portaria.View
             apertureadd_button.Enabled = false;
             aperturedec_button.Enabled = false;*/
             m_RealPlayID = IntPtr.Zero;
-            start_realplay_button.Text = "StartReal(开始监视)";
+            start_realplay_button.Text = "StartReal";
             realplay_pictureBox.Refresh();
-            save_button.Text = "StartSave(开始保存)";
+            //save_button.Text = "StartSave(开始保存)";
             this.Text = "DooR Portaria ---";
         }
 
@@ -301,7 +301,8 @@ namespace Projeto_Portaria.View
 
         private void capture_button_Click(object sender, EventArgs e)
         {
-            string path = AppDomain.CurrentDomain.BaseDirectory + "fotos";
+            //string path = AppDomain.CurrentDomain.BaseDirectory + "fotos";
+            string path = caminhofoto;
 
             //if (Projeto_Portaria.Properties.Settings.Default.CaminhoFotos == "")
             //{
@@ -312,12 +313,12 @@ namespace Projeto_Portaria.View
             //        Projeto_Portaria.Properties.Settings.Default.CaminhoFotos = folderBrowserDialog1.SelectedPath;
             //    }
             //}
-            
+
 
             #region client capture 本地抓图
             if (IntPtr.Zero == m_RealPlayID)
             {
-                MessageBox.Show(this, "Please realplay first!");
+                MessageBox.Show(this, "Por Favor Inicie ao vivo primeiro!");
                 return;
             }
 
@@ -335,7 +336,7 @@ namespace Projeto_Portaria.View
                 MessageBox.Show(this, NETClient.GetLastError());
                 return;
             }
-            MessageBox.Show(this, "client capture success!");
+            MessageBox.Show(this, "foto capturada!");
             #endregion
 
             caminhofoto = filePath;

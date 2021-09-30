@@ -127,11 +127,11 @@
   <data name="Icon (Moradores)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon (Moradores).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="key-1_icon-icons1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\key-1_icon-icons.com_700911.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="sairX" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sairX.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="edit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\edit.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon__contato__oficial_Bq5_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon__contato__oficial_Bq5_icon.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Icon (Sair)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon (Sair).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -202,6 +202,9 @@
   <data name="excel new" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\excel new.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="alterar_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\alterar_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="explorer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\explorer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -226,9 +229,6 @@
   <data name="icon__sair__SYE_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon__sair__SYE_icon.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="door-512" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\door-512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="icon__contato__oficial_Bq5_icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon__contato__oficial_Bq5_icon1.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -238,14 +238,17 @@
   <data name="Custom-Icon-Design-Pretty-Office-6-Printer-blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Custom-Icon-Design-Pretty-Office-6-Printer-blue.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Barra Menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Barra Menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Icon (Contato)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon (Contato).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon__contato__oficial_Bq5_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon__contato__oficial_Bq5_icon.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Icon (Ocorrências)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon (Ocorrências).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="key-1_icon-icons1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\key-1_icon-icons.com_700911.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon__usu__rios__Qwf_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon__usu__rios__Qwf_icon.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -259,8 +262,8 @@
   <data name="icon__status__oficial_lf9_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon__status__oficial_lf9_icon.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="alterar_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\alterar_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="door-512" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\door-512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Icon (Usuários)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon (Usuários).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -325,10 +328,10 @@
   <data name="Icon (Status) Oficial" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon (Status) Oficial.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Barra Menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Barra Menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="edit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\edit.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="sairX" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sairX.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Camera-screenshot" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Camera-screenshot.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

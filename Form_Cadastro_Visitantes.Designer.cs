@@ -53,39 +53,37 @@
             this.textBox_unidade_visitado = new System.Windows.Forms.TextBox();
             this.textBox_Nome = new System.Windows.Forms.TextBox();
             this.label_Apartamento = new System.Windows.Forms.Label();
-            this.button_pesquisar_morador = new System.Windows.Forms.Button();
-            this.button_datagrid_visible = new System.Windows.Forms.Button();
             this.dataGridView_pesquisa_morador = new System.Windows.Forms.DataGridView();
             this.groupBox_Dados_Veiculo = new System.Windows.Forms.GroupBox();
             this.maskedTextBox_placa = new System.Windows.Forms.MaskedTextBox();
             this.textBox_Modelo = new System.Windows.Forms.TextBox();
             this.label_Modelo_Veiculo = new System.Windows.Forms.Label();
             this.label_PLaca_Veiculo = new System.Windows.Forms.Label();
-            this.button_Registrar = new System.Windows.Forms.Button();
-            this.pictureBox_Foto_Visitante = new System.Windows.Forms.PictureBox();
-            this.button_Adicionar_Foto = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBox_observacoes = new System.Windows.Forms.TextBox();
-            this.button_voltar_menu = new System.Windows.Forms.Button();
             this.textBox_nome_visitante = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button_pesquisar = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.btnCam = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.comboBoxTipoPesq = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.button_pesquisar = new System.Windows.Forms.Button();
+            this.button_voltar_menu = new System.Windows.Forms.Button();
+            this.button_pesquisar_morador = new System.Windows.Forms.Button();
+            this.button_datagrid_visible = new System.Windows.Forms.Button();
+            this.btnCam = new System.Windows.Forms.Button();
+            this.button_Adicionar_Foto = new System.Windows.Forms.Button();
+            this.button_Registrar = new System.Windows.Forms.Button();
+            this.pictureBox_Foto_Visitante = new System.Windows.Forms.PictureBox();
             this.groupBox_Dados_Pessoais.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_pesquisa_morador)).BeginInit();
             this.groupBox_Dados_Veiculo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Foto_Visitante)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Foto_Visitante)).BeginInit();
             this.SuspendLayout();
             // 
             // label_Nome
@@ -301,43 +299,6 @@
             this.label_Apartamento.TabIndex = 3;
             this.label_Apartamento.Text = "Visitado";
             // 
-            // button_pesquisar_morador
-            // 
-            this.button_pesquisar_morador.BackColor = System.Drawing.Color.Transparent;
-            this.button_pesquisar_morador.BackgroundImage = global::Projeto_Portaria.Properties.Resources.Icon__Pesquisar_;
-            this.button_pesquisar_morador.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button_pesquisar_morador.FlatAppearance.BorderSize = 0;
-            this.button_pesquisar_morador.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button_pesquisar_morador.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button_pesquisar_morador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_pesquisar_morador.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_pesquisar_morador.Location = new System.Drawing.Point(371, 16);
-            this.button_pesquisar_morador.Name = "button_pesquisar_morador";
-            this.button_pesquisar_morador.Size = new System.Drawing.Size(30, 30);
-            this.button_pesquisar_morador.TabIndex = 65;
-            this.button_pesquisar_morador.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button_pesquisar_morador.UseVisualStyleBackColor = false;
-            this.button_pesquisar_morador.Visible = false;
-            this.button_pesquisar_morador.Click += new System.EventHandler(this.Button_pesquisar_morador_Click);
-            // 
-            // button_datagrid_visible
-            // 
-            this.button_datagrid_visible.BackColor = System.Drawing.Color.Transparent;
-            this.button_datagrid_visible.BackgroundImage = global::Projeto_Portaria.Properties.Resources.Icon__Pesquisar_;
-            this.button_datagrid_visible.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button_datagrid_visible.FlatAppearance.BorderSize = 0;
-            this.button_datagrid_visible.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button_datagrid_visible.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button_datagrid_visible.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_datagrid_visible.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_datagrid_visible.Location = new System.Drawing.Point(304, 105);
-            this.button_datagrid_visible.Name = "button_datagrid_visible";
-            this.button_datagrid_visible.Size = new System.Drawing.Size(30, 30);
-            this.button_datagrid_visible.TabIndex = 15;
-            this.button_datagrid_visible.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button_datagrid_visible.UseVisualStyleBackColor = false;
-            this.button_datagrid_visible.Click += new System.EventHandler(this.Button_datagrid_visible_Click);
-            // 
             // dataGridView_pesquisa_morador
             // 
             this.dataGridView_pesquisa_morador.AllowUserToAddRows = false;
@@ -419,56 +380,6 @@
             this.label_PLaca_Veiculo.TabIndex = 1;
             this.label_PLaca_Veiculo.Text = "Placa:";
             // 
-            // button_Registrar
-            // 
-            this.button_Registrar.BackColor = System.Drawing.Color.Transparent;
-            this.button_Registrar.BackgroundImage = global::Projeto_Portaria.Properties.Resources.Save_icon;
-            this.button_Registrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button_Registrar.FlatAppearance.BorderSize = 0;
-            this.button_Registrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button_Registrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button_Registrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Registrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Registrar.Location = new System.Drawing.Point(584, 503);
-            this.button_Registrar.Name = "button_Registrar";
-            this.button_Registrar.Size = new System.Drawing.Size(49, 38);
-            this.button_Registrar.TabIndex = 12;
-            this.toolTip1.SetToolTip(this.button_Registrar, "Registrar Visitantes");
-            this.button_Registrar.UseVisualStyleBackColor = false;
-            this.button_Registrar.Click += new System.EventHandler(this.Button_Registrar_Click);
-            // 
-            // pictureBox_Foto_Visitante
-            // 
-            this.pictureBox_Foto_Visitante.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox_Foto_Visitante.BackgroundImage = global::Projeto_Portaria.Properties.Resources.Usuario;
-            this.pictureBox_Foto_Visitante.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox_Foto_Visitante.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox_Foto_Visitante.InitialImage = null;
-            this.pictureBox_Foto_Visitante.Location = new System.Drawing.Point(452, 198);
-            this.pictureBox_Foto_Visitante.Name = "pictureBox_Foto_Visitante";
-            this.pictureBox_Foto_Visitante.Size = new System.Drawing.Size(219, 231);
-            this.pictureBox_Foto_Visitante.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox_Foto_Visitante.TabIndex = 13;
-            this.pictureBox_Foto_Visitante.TabStop = false;
-            this.pictureBox_Foto_Visitante.Click += new System.EventHandler(this.PictureBox_Foto_Visitante_Click);
-            // 
-            // button_Adicionar_Foto
-            // 
-            this.button_Adicionar_Foto.BackColor = System.Drawing.Color.Transparent;
-            this.button_Adicionar_Foto.BackgroundImage = global::Projeto_Portaria.Properties.Resources.explorer;
-            this.button_Adicionar_Foto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button_Adicionar_Foto.FlatAppearance.BorderSize = 0;
-            this.button_Adicionar_Foto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button_Adicionar_Foto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button_Adicionar_Foto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Adicionar_Foto.ForeColor = System.Drawing.Color.White;
-            this.button_Adicionar_Foto.Location = new System.Drawing.Point(638, 406);
-            this.button_Adicionar_Foto.Name = "button_Adicionar_Foto";
-            this.button_Adicionar_Foto.Size = new System.Drawing.Size(33, 23);
-            this.button_Adicionar_Foto.TabIndex = 11;
-            this.button_Adicionar_Foto.UseVisualStyleBackColor = false;
-            this.button_Adicionar_Foto.Click += new System.EventHandler(this.Button_Adicionar_Foto_Click);
-            // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
@@ -490,24 +401,6 @@
             this.textBox_observacoes.Name = "textBox_observacoes";
             this.textBox_observacoes.Size = new System.Drawing.Size(392, 68);
             this.textBox_observacoes.TabIndex = 10;
-            // 
-            // button_voltar_menu
-            // 
-            this.button_voltar_menu.BackColor = System.Drawing.Color.Transparent;
-            this.button_voltar_menu.BackgroundImage = global::Projeto_Portaria.Properties.Resources.Icon__Voltar_;
-            this.button_voltar_menu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button_voltar_menu.FlatAppearance.BorderSize = 0;
-            this.button_voltar_menu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button_voltar_menu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button_voltar_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_voltar_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_voltar_menu.Location = new System.Drawing.Point(640, 515);
-            this.button_voltar_menu.Name = "button_voltar_menu";
-            this.button_voltar_menu.Size = new System.Drawing.Size(57, 38);
-            this.button_voltar_menu.TabIndex = 13;
-            this.toolTip1.SetToolTip(this.button_voltar_menu, "Voltar Menu Anterior");
-            this.button_voltar_menu.UseVisualStyleBackColor = false;
-            this.button_voltar_menu.Click += new System.EventHandler(this.Button_voltar_menu_Click);
             // 
             // textBox_nome_visitante
             // 
@@ -549,56 +442,18 @@
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
             // 
-            // button_pesquisar
-            // 
-            this.button_pesquisar.BackColor = System.Drawing.Color.Transparent;
-            this.button_pesquisar.BackgroundImage = global::Projeto_Portaria.Properties.Resources.Icon__Pesquisar_;
-            this.button_pesquisar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button_pesquisar.FlatAppearance.BorderSize = 0;
-            this.button_pesquisar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button_pesquisar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button_pesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_pesquisar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_pesquisar.Location = new System.Drawing.Point(385, 19);
-            this.button_pesquisar.Name = "button_pesquisar";
-            this.button_pesquisar.Size = new System.Drawing.Size(30, 30);
-            this.button_pesquisar.TabIndex = 1;
-            this.button_pesquisar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button_pesquisar.UseVisualStyleBackColor = false;
-            this.button_pesquisar.Click += new System.EventHandler(this.Button2_Click);
-            // 
-            // btnCam
-            // 
-            this.btnCam.BackColor = System.Drawing.Color.Transparent;
-            this.btnCam.BackgroundImage = global::Projeto_Portaria.Properties.Resources.Save_icon;
-            this.btnCam.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnCam.FlatAppearance.BorderSize = 0;
-            this.btnCam.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnCam.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnCam.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCam.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCam.Location = new System.Drawing.Point(455, 503);
-            this.btnCam.Name = "btnCam";
-            this.btnCam.Size = new System.Drawing.Size(46, 39);
-            this.btnCam.TabIndex = 72;
-            this.toolTip1.SetToolTip(this.btnCam, "Registrar Visitantes");
-            this.btnCam.UseVisualStyleBackColor = false;
-            this.btnCam.Click += new System.EventHandler(this.btnCam_Click);
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.btnCam);
             this.groupBox2.Controls.Add(this.comboBoxTipoPesq);
-            this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.button_Adicionar_Foto);
             this.groupBox2.Controls.Add(this.button_Registrar);
             this.groupBox2.Controls.Add(this.pictureBox_Foto_Visitante);
             this.groupBox2.ForeColor = System.Drawing.Color.White;
             this.groupBox2.Location = new System.Drawing.Point(12, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(696, 599);
+            this.groupBox2.Size = new System.Drawing.Size(696, 554);
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Entrada de Visitantes";
@@ -617,17 +472,6 @@
             this.comboBoxTipoPesq.TabIndex = 71;
             this.comboBoxTipoPesq.Text = "Nome";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(476, 446);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(203, 13);
-            this.label4.TabIndex = 70;
-            this.label4.Text = "depois a localize pelo botão acima";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -639,20 +483,151 @@
             this.label3.Text = "Unidade";
             this.label3.Visible = false;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(449, 432);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(244, 13);
-            this.label1.TabIndex = 68;
-            this.label1.Text = "OBS: tire a foto pelo software de cameras";
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // button_pesquisar
+            // 
+            this.button_pesquisar.BackColor = System.Drawing.Color.Transparent;
+            this.button_pesquisar.BackgroundImage = global::Projeto_Portaria.Properties.Resources.Icon__Pesquisar_;
+            this.button_pesquisar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button_pesquisar.FlatAppearance.BorderSize = 0;
+            this.button_pesquisar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_pesquisar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_pesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_pesquisar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_pesquisar.Location = new System.Drawing.Point(385, 19);
+            this.button_pesquisar.Name = "button_pesquisar";
+            this.button_pesquisar.Size = new System.Drawing.Size(30, 30);
+            this.button_pesquisar.TabIndex = 1;
+            this.button_pesquisar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button_pesquisar.UseVisualStyleBackColor = false;
+            this.button_pesquisar.Click += new System.EventHandler(this.Button2_Click);
+            // 
+            // button_voltar_menu
+            // 
+            this.button_voltar_menu.BackColor = System.Drawing.Color.Transparent;
+            this.button_voltar_menu.BackgroundImage = global::Projeto_Portaria.Properties.Resources.Icon__Voltar_;
+            this.button_voltar_menu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button_voltar_menu.FlatAppearance.BorderSize = 0;
+            this.button_voltar_menu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_voltar_menu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_voltar_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_voltar_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_voltar_menu.Location = new System.Drawing.Point(640, 515);
+            this.button_voltar_menu.Name = "button_voltar_menu";
+            this.button_voltar_menu.Size = new System.Drawing.Size(57, 38);
+            this.button_voltar_menu.TabIndex = 13;
+            this.toolTip1.SetToolTip(this.button_voltar_menu, "Voltar Menu Anterior");
+            this.button_voltar_menu.UseVisualStyleBackColor = false;
+            this.button_voltar_menu.Click += new System.EventHandler(this.Button_voltar_menu_Click);
+            // 
+            // button_pesquisar_morador
+            // 
+            this.button_pesquisar_morador.BackColor = System.Drawing.Color.Transparent;
+            this.button_pesquisar_morador.BackgroundImage = global::Projeto_Portaria.Properties.Resources.Icon__Pesquisar_;
+            this.button_pesquisar_morador.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button_pesquisar_morador.FlatAppearance.BorderSize = 0;
+            this.button_pesquisar_morador.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_pesquisar_morador.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_pesquisar_morador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_pesquisar_morador.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_pesquisar_morador.Location = new System.Drawing.Point(371, 16);
+            this.button_pesquisar_morador.Name = "button_pesquisar_morador";
+            this.button_pesquisar_morador.Size = new System.Drawing.Size(30, 30);
+            this.button_pesquisar_morador.TabIndex = 65;
+            this.button_pesquisar_morador.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button_pesquisar_morador.UseVisualStyleBackColor = false;
+            this.button_pesquisar_morador.Visible = false;
+            this.button_pesquisar_morador.Click += new System.EventHandler(this.Button_pesquisar_morador_Click);
+            // 
+            // button_datagrid_visible
+            // 
+            this.button_datagrid_visible.BackColor = System.Drawing.Color.Transparent;
+            this.button_datagrid_visible.BackgroundImage = global::Projeto_Portaria.Properties.Resources.Icon__Pesquisar_;
+            this.button_datagrid_visible.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button_datagrid_visible.FlatAppearance.BorderSize = 0;
+            this.button_datagrid_visible.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_datagrid_visible.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_datagrid_visible.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_datagrid_visible.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_datagrid_visible.Location = new System.Drawing.Point(304, 105);
+            this.button_datagrid_visible.Name = "button_datagrid_visible";
+            this.button_datagrid_visible.Size = new System.Drawing.Size(30, 30);
+            this.button_datagrid_visible.TabIndex = 15;
+            this.button_datagrid_visible.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button_datagrid_visible.UseVisualStyleBackColor = false;
+            this.button_datagrid_visible.Click += new System.EventHandler(this.Button_datagrid_visible_Click);
+            // 
+            // btnCam
+            // 
+            this.btnCam.BackColor = System.Drawing.Color.Transparent;
+            this.btnCam.BackgroundImage = global::Projeto_Portaria.Properties.Resources.Camera_screenshot;
+            this.btnCam.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCam.FlatAppearance.BorderSize = 0;
+            this.btnCam.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnCam.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnCam.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCam.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCam.Location = new System.Drawing.Point(575, 435);
+            this.btnCam.Name = "btnCam";
+            this.btnCam.Size = new System.Drawing.Size(46, 39);
+            this.btnCam.TabIndex = 72;
+            this.toolTip1.SetToolTip(this.btnCam, "Capturar");
+            this.btnCam.UseVisualStyleBackColor = false;
+            this.btnCam.Click += new System.EventHandler(this.btnCam_Click);
+            // 
+            // button_Adicionar_Foto
+            // 
+            this.button_Adicionar_Foto.BackColor = System.Drawing.Color.Transparent;
+            this.button_Adicionar_Foto.BackgroundImage = global::Projeto_Portaria.Properties.Resources.explorer;
+            this.button_Adicionar_Foto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button_Adicionar_Foto.FlatAppearance.BorderSize = 0;
+            this.button_Adicionar_Foto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_Adicionar_Foto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_Adicionar_Foto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Adicionar_Foto.ForeColor = System.Drawing.Color.White;
+            this.button_Adicionar_Foto.Location = new System.Drawing.Point(627, 435);
+            this.button_Adicionar_Foto.Name = "button_Adicionar_Foto";
+            this.button_Adicionar_Foto.Size = new System.Drawing.Size(42, 39);
+            this.button_Adicionar_Foto.TabIndex = 11;
+            this.toolTip1.SetToolTip(this.button_Adicionar_Foto, "Arquivos");
+            this.button_Adicionar_Foto.UseVisualStyleBackColor = false;
+            this.button_Adicionar_Foto.Click += new System.EventHandler(this.Button_Adicionar_Foto_Click);
+            // 
+            // button_Registrar
+            // 
+            this.button_Registrar.BackColor = System.Drawing.Color.Transparent;
+            this.button_Registrar.BackgroundImage = global::Projeto_Portaria.Properties.Resources.Save_icon;
+            this.button_Registrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button_Registrar.FlatAppearance.BorderSize = 0;
+            this.button_Registrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_Registrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button_Registrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Registrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Registrar.Location = new System.Drawing.Point(584, 503);
+            this.button_Registrar.Name = "button_Registrar";
+            this.button_Registrar.Size = new System.Drawing.Size(49, 38);
+            this.button_Registrar.TabIndex = 12;
+            this.toolTip1.SetToolTip(this.button_Registrar, "Registrar Visitantes");
+            this.button_Registrar.UseVisualStyleBackColor = false;
+            this.button_Registrar.Click += new System.EventHandler(this.Button_Registrar_Click);
+            // 
+            // pictureBox_Foto_Visitante
+            // 
+            this.pictureBox_Foto_Visitante.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox_Foto_Visitante.BackgroundImage = global::Projeto_Portaria.Properties.Resources.Usuario;
+            this.pictureBox_Foto_Visitante.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox_Foto_Visitante.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox_Foto_Visitante.InitialImage = null;
+            this.pictureBox_Foto_Visitante.Location = new System.Drawing.Point(452, 198);
+            this.pictureBox_Foto_Visitante.Name = "pictureBox_Foto_Visitante";
+            this.pictureBox_Foto_Visitante.Size = new System.Drawing.Size(219, 231);
+            this.pictureBox_Foto_Visitante.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox_Foto_Visitante.TabIndex = 13;
+            this.pictureBox_Foto_Visitante.TabStop = false;
+            this.pictureBox_Foto_Visitante.Click += new System.EventHandler(this.PictureBox_Foto_Visitante_Click);
             // 
             // Cadastro_de_Visitantes
             // 
@@ -660,7 +635,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(720, 623);
+            this.ClientSize = new System.Drawing.Size(720, 579);
             this.Controls.Add(this.button_pesquisar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBox_nome_visitante);
@@ -683,12 +658,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_pesquisa_morador)).EndInit();
             this.groupBox_Dados_Veiculo.ResumeLayout(false);
             this.groupBox_Dados_Veiculo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Foto_Visitante)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Foto_Visitante)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -738,9 +713,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.TextBox textBox_cpf;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelBlocoRua;
         private System.Windows.Forms.TextBox textBoxBlocoRua;
         private System.Windows.Forms.ComboBox comboBoxTipoPesq;

@@ -101,7 +101,6 @@ namespace Projeto_Portaria
             this.button3 = new System.Windows.Forms.Button();
             this.groupBoxCriarBackup = new System.Windows.Forms.GroupBox();
             this.btnProcurar = new System.Windows.Forms.Button();
-            this.BtnSalvar = new System.Windows.Forms.Button();
             this.txtCaminhoFoto = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btnSalvarDVR = new System.Windows.Forms.Button();
@@ -118,6 +117,7 @@ namespace Projeto_Portaria
             this.label_Bloco = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnSair = new System.Windows.Forms.Button();
+            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -977,13 +977,12 @@ namespace Projeto_Portaria
             // groupBoxCriarBackup
             // 
             this.groupBoxCriarBackup.Controls.Add(this.btnProcurar);
-            this.groupBoxCriarBackup.Controls.Add(this.BtnSalvar);
             this.groupBoxCriarBackup.Controls.Add(this.txtCaminhoFoto);
             this.groupBoxCriarBackup.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxCriarBackup.ForeColor = System.Drawing.SystemColors.Control;
             this.groupBoxCriarBackup.Location = new System.Drawing.Point(13, 415);
             this.groupBoxCriarBackup.Name = "groupBoxCriarBackup";
-            this.groupBoxCriarBackup.Size = new System.Drawing.Size(695, 136);
+            this.groupBoxCriarBackup.Size = new System.Drawing.Size(695, 93);
             this.groupBoxCriarBackup.TabIndex = 95;
             this.groupBoxCriarBackup.TabStop = false;
             this.groupBoxCriarBackup.Text = "Local das fotos";
@@ -998,17 +997,7 @@ namespace Projeto_Portaria
             this.btnProcurar.TabIndex = 15;
             this.btnProcurar.Text = "Procurar";
             this.btnProcurar.UseVisualStyleBackColor = true;
-            // 
-            // BtnSalvar
-            // 
-            this.BtnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSalvar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.BtnSalvar.Location = new System.Drawing.Point(581, 83);
-            this.BtnSalvar.Name = "BtnSalvar";
-            this.BtnSalvar.Size = new System.Drawing.Size(95, 37);
-            this.BtnSalvar.TabIndex = 3;
-            this.BtnSalvar.Text = "Salvar";
-            this.BtnSalvar.UseVisualStyleBackColor = true;
+            this.btnProcurar.Click += new System.EventHandler(this.btnProcurar_Click);
             // 
             // txtCaminhoFoto
             // 
@@ -1067,6 +1056,7 @@ namespace Projeto_Portaria
             this.btnExcluirDVR.TabIndex = 90;
             this.btnExcluirDVR.Text = "Excluir";
             this.btnExcluirDVR.UseVisualStyleBackColor = true;
+            this.btnExcluirDVR.Click += new System.EventHandler(this.btnExcluirDVR_Click);
             // 
             // label1
             // 
@@ -1104,6 +1094,7 @@ namespace Projeto_Portaria
             this.txtSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSenha.Location = new System.Drawing.Point(59, 161);
             this.txtSenha.Name = "txtSenha";
+            this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(285, 26);
             this.txtSenha.TabIndex = 10;
             // 
@@ -1318,8 +1309,8 @@ namespace Projeto_Portaria
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.GroupBox groupBoxCriarBackup;
         private System.Windows.Forms.Button btnProcurar;
-        private System.Windows.Forms.Button BtnSalvar;
         private System.Windows.Forms.TextBox txtCaminhoFoto;
         private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
     }
 }

@@ -473,8 +473,15 @@ namespace Projeto_Portaria{
         {
             if (User_info.usuario_logado == "admin")
             {
-                FormConfig formConfig = new FormConfig();
-                formConfig.ShowDialog();
+                if (dataGridView1.Rows.Count > 0 && Condominio.condominio != "")
+                {
+                    FormConfig formConfig = new FormConfig();
+                    formConfig.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Não ha condominio selecionado!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
             else
             {

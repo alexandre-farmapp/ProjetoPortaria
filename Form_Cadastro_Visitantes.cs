@@ -24,6 +24,7 @@ namespace Projeto_Portaria
         public string usuario;
         public string senha;
         public string filepath;
+        public string caminhoFoto;
 
         public Cadastro_de_Visitantes()
         {
@@ -54,12 +55,15 @@ namespace Projeto_Portaria
             SqlCommand sqlCommand = new SqlCommand(comando, sqlConnection);
             sqlCommand.Parameters.AddWithValue("@condominio", Condominio.condominio);
             SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
-
-            sqlDataReader.Read();
-            ip = sqlDataReader["ip"].ToString();
-            porta = sqlDataReader["porta"].ToString(); 
-            usuario = sqlDataReader["usuario"].ToString(); 
-            senha = sqlDataReader["senha"].ToString();
+            
+            if(sqlDataReader.Read() != false)
+            {
+                ip = sqlDataReader["ip"].ToString();
+                porta = sqlDataReader["porta"].ToString();
+                usuario = sqlDataReader["usuario"].ToString();
+                senha = sqlDataReader["senha"].ToString();
+                caminhoFoto = sqlDataReader["caminhoFoto"].ToString();
+            }
 
             //while (sqlDataReader.Read())
             //{
@@ -400,18 +404,27 @@ namespace Projeto_Portaria
         
         private void btnCam_Click(object sender, EventArgs e)
         {
-            Captura captura = new Captura();
-            captura.ip = ip;
-            captura.porta = porta;
-            captura.usuario = usuario;
-            captura.senha = senha;
-            captura.ShowDialog();
+            if(ip != null)
+            {
+                Captura captura = new Captura();
+                captura.ip = ip;
+                captura.porta = porta;
+                captura.usuario = usuario;
+                captura.senha = senha;
+                captura.caminhofoto = caminhoFoto;
+                captura.ShowDialog();
 
-            filepath = captura.caminhofoto;
+                filepath = captura.caminhofoto;
 
-            Image image = Image.FromFile(filepath);
-            pictureBox_Foto_Visitante.Image = image;
-
+                //Image image = Image.FromFile(filepath);
+                //pictureBox_Foto_Visitante.Image = image;
+                pictureBox_Foto_Visitante.ImageLocation = filepath;
+            }
+            else
+            {
+                MessageBox.Show("Devemos primeiro cadastrar um equipamento de cameras!");
+            }
+            
         }        
 
     }
