@@ -701,3 +701,221 @@ Begin Time:2021-09-29 21:59:53.664
 [2021-09-29 21:59:54.374][P:1064/T:6096][dhnetsdk.cpp:6997][Info][0] Leave CLIENT_SetSnapRevCallBack.
 [2021-09-29 21:59:54.374][P:1064/T:6096][dhnetsdk.cpp:582][Info][0] Enter CLIENT_LoginEx2. [IP=45.224.164.135, port=2080, SpeCap=0, lpDeviceInfo=000000249BBFC698.]
 [2021-09-29 21:59:55.001][P:1064/T:6096][dhnetsdk.cpp:618][Info][0] Leave CLIENT_LoginEx2. [error=0, login ID=-255100448.]
+Begin Time:2021-10-06 21:29:52.766
+[2021-10-06 21:29:52.766][P:12060/T:7988][Utils.cpp:4792][Info][0] mutil NIC client
+[2021-10-06 21:29:56.706][P:12060/T:7988][AVNetSDKMgr.cpp:655][Info][0] Test avnetsdk module handle: 00000288FF1D0000
+
+[2021-10-06 21:29:56.712][P:12060/T:7988][dhnetsdk.cpp:155][Info][0] Leave CLIENT_InitEx.
+[2021-10-06 21:29:56.713][P:12060/T:7988][dhnetsdk.cpp:186][Info][0] Enter CLIENT_SetAutoReconnect:[cbAutoConnect=00000288F8EB97BC, dwUser=0000000000000000].
+[2021-10-06 21:29:56.713][P:12060/T:7988][dhnetsdk.cpp:188][Info][0] Leave CLIENT_SetAutoReconnect.
+[2021-10-06 21:29:56.715][P:12060/T:7988][dhnetsdk.cpp:6994][Info][0] Enter CLIENT_SetSnapRevCallBack. [OnSnapRevMessage=00000288F8EBA48C, dwUser=0000000000000000.]
+[2021-10-06 21:29:56.715][P:12060/T:7988][dhnetsdk.cpp:6997][Info][0] Leave CLIENT_SetSnapRevCallBack.
+[2021-10-06 21:29:56.719][P:12060/T:7988][dhnetsdk.cpp:582][Info][0] Enter CLIENT_LoginEx2. [IP=45.224.164.135, port=2080, SpeCap=0, lpDeviceInfo=000000CD1C7FC4E8.]
+[2021-10-06 21:29:57.467][P:12060/T:7988][dhnetsdk.cpp:618][Info][0] Leave CLIENT_LoginEx2. [error=0, login ID=-76855376.]
+[2021-10-06 21:29:57.474][P:12060/T:7988][dhnetsdk.cpp:132][Info][0] Enter CLIENT_InitEx:[cbDisConnect=00000288F8EB9A3C, dwUser=0000000000000000, lpInitParam=0000000000000000].
+[2021-10-06 21:29:57.487][P:12060/T:7988][AVNetSDKMgr.cpp:655][Info][0] Test avnetsdk module handle: 0000028898000000
+
+[2021-10-06 21:29:57.489][P:12060/T:7988][dhnetsdk.cpp:155][Info][0] Leave CLIENT_InitEx.
+[2021-10-06 21:29:57.489][P:12060/T:7988][dhnetsdk.cpp:186][Info][0] Enter CLIENT_SetAutoReconnect:[cbAutoConnect=00000288F8EB9A8C, dwUser=0000000000000000].
+[2021-10-06 21:29:57.489][P:12060/T:7988][dhnetsdk.cpp:188][Info][0] Leave CLIENT_SetAutoReconnect.
+[2021-10-06 21:29:57.489][P:12060/T:7988][dhnetsdk.cpp:6994][Info][0] Enter CLIENT_SetSnapRevCallBack. [OnSnapRevMessage=00000288F8EB9BCC, dwUser=0000000000000000.]
+[2021-10-06 21:29:57.489][P:12060/T:7988][dhnetsdk.cpp:6997][Info][0] Leave CLIENT_SetSnapRevCallBack.
+[2021-10-06 21:29:57.491][P:12060/T:7988][dhnetsdk.cpp:582][Info][0] Enter CLIENT_LoginEx2. [IP=45.224.164.135, port=2080, SpeCap=0, lpDeviceInfo=000000CD1C7FC4E8.]
+[2021-10-06 21:29:58.243][P:12060/T:7988][dhnetsdk.cpp:618][Info][0] Leave CLIENT_LoginEx2. [error=0, login ID=-76513440.]
+[2021-10-06 21:30:03.632][P:12060/T:7988][dhnetsdk.cpp:1024][Info][0] Enter CLIENT_RealPlayEx. [lLoginID=-76513440. nChannelID=0. rType=0]
+[2021-10-06 21:30:04.004][P:12060/T:7988][DevConfigEx.cpp:9721][Info][0] IN SetupSession PORT=0 and PORT: 2080
+[2021-10-06 21:30:04.099][P:12060/T:7988][dhnetsdk.cpp:1085][Info][0] Leave CLIENT_RealPlayEx. [ret=-76778112]
+[2021-10-06 21:30:04.101][P:12060/T:7988][dhnetsdk.cpp:2274][Info][0] Enter CLIENT_SetRealDataCallBackEx2. [lRealHandle=-76778112. cbRealData=00000288F8EB9C6C, dwUser=0000000000000000. dwFlag=15.]
+[2021-10-06 21:30:04.101][P:12060/T:7988][dhnetsdk.cpp:2297][Info][0] Leave CLIENT_SetRealDataCallBackEx2.[ret=1.]
+[2021-10-06 21:30:08.577][P:12060/T:7988][dhnetsdk.cpp:1518][Info][0] Enter CLIENT_StopRealPlayEx. [lRealHandle=-76778112.]
+[2021-10-06 21:30:08.589][P:12060/T:7988][dhnetsdk.cpp:1532][Info][0] Leave CLIENT_StopRealPlayEx. [ret=1]
+[2021-10-06 21:30:10.831][P:12060/T:7988][dhnetsdk.cpp:1024][Info][0] Enter CLIENT_RealPlayEx. [lLoginID=-76513440. nChannelID=1. rType=0]
+[2021-10-06 21:30:11.753][P:12060/T:7988][DevConfigEx.cpp:9721][Info][0] IN SetupSession PORT=0 and PORT: 2080
+[2021-10-06 21:30:11.791][P:12060/T:7988][dhnetsdk.cpp:1085][Info][0] Leave CLIENT_RealPlayEx. [ret=-76778112]
+[2021-10-06 21:30:11.791][P:12060/T:7988][dhnetsdk.cpp:2274][Info][0] Enter CLIENT_SetRealDataCallBackEx2. [lRealHandle=-76778112. cbRealData=00000288F8EB9C6C, dwUser=0000000000000000. dwFlag=15.]
+[2021-10-06 21:30:11.791][P:12060/T:7988][dhnetsdk.cpp:2297][Info][0] Leave CLIENT_SetRealDataCallBackEx2.[ret=1.]
+[2021-10-06 21:30:14.031][P:12060/T:7988][dhnetsdk.cpp:1518][Info][0] Enter CLIENT_StopRealPlayEx. [lRealHandle=-76778112.]
+[2021-10-06 21:30:14.037][P:12060/T:7988][dhnetsdk.cpp:1532][Info][0] Leave CLIENT_StopRealPlayEx. [ret=1]
+[2021-10-06 21:30:17.457][P:12060/T:7988][dhnetsdk.cpp:1024][Info][0] Enter CLIENT_RealPlayEx. [lLoginID=-76513440. nChannelID=6. rType=0]
+[2021-10-06 21:30:17.473][P:12060/T:7988][DevConfigEx.cpp:9721][Info][0] IN SetupSession PORT=0 and PORT: 2080
+[2021-10-06 21:30:17.487][P:12060/T:7988][dhnetsdk.cpp:1085][Info][0] Leave CLIENT_RealPlayEx. [ret=-76778112]
+[2021-10-06 21:30:17.487][P:12060/T:7988][dhnetsdk.cpp:2274][Info][0] Enter CLIENT_SetRealDataCallBackEx2. [lRealHandle=-76778112. cbRealData=00000288F8EB9C6C, dwUser=0000000000000000. dwFlag=15.]
+[2021-10-06 21:30:17.487][P:12060/T:7988][dhnetsdk.cpp:2297][Info][0] Leave CLIENT_SetRealDataCallBackEx2.[ret=1.]
+Begin Time:2021-10-06 21:31:08.624
+[2021-10-06 21:31:08.624][P:23008/T:9952][Utils.cpp:4792][Info][0] mutil NIC client
+[2021-10-06 21:31:08.641][P:23008/T:9952][AVNetSDKMgr.cpp:655][Info][0] Test avnetsdk module handle: 000001CB9FD90000
+
+[2021-10-06 21:31:08.644][P:23008/T:9952][dhnetsdk.cpp:155][Info][0] Leave CLIENT_InitEx.
+[2021-10-06 21:31:08.646][P:23008/T:9952][dhnetsdk.cpp:186][Info][0] Enter CLIENT_SetAutoReconnect:[cbAutoConnect=000001CB9D077FBC, dwUser=0000000000000000].
+[2021-10-06 21:31:08.646][P:23008/T:9952][dhnetsdk.cpp:188][Info][0] Leave CLIENT_SetAutoReconnect.
+[2021-10-06 21:31:08.646][P:23008/T:9952][dhnetsdk.cpp:6994][Info][0] Enter CLIENT_SetSnapRevCallBack. [OnSnapRevMessage=000001CB9D07792C, dwUser=0000000000000000.]
+[2021-10-06 21:31:08.646][P:23008/T:9952][dhnetsdk.cpp:6997][Info][0] Leave CLIENT_SetSnapRevCallBack.
+[2021-10-06 21:31:08.648][P:23008/T:9952][dhnetsdk.cpp:582][Info][0] Enter CLIENT_LoginEx2. [IP=45.224.164.135, port=2080, SpeCap=0, lpDeviceInfo=0000006B32C7C6B8.]
+[2021-10-06 21:31:09.065][P:23008/T:9952][dhnetsdk.cpp:618][Info][0] Leave CLIENT_LoginEx2. [error=0, login ID=-1616834176.]
+[2021-10-06 21:31:09.073][P:23008/T:9952][dhnetsdk.cpp:132][Info][0] Enter CLIENT_InitEx:[cbDisConnect=000001CB9D07797C, dwUser=0000000000000000, lpInitParam=0000000000000000].
+[2021-10-06 21:31:09.085][P:23008/T:9952][AVNetSDKMgr.cpp:655][Info][0] Test avnetsdk module handle: 000001CB9FD90000
+
+[2021-10-06 21:31:09.087][P:23008/T:9952][dhnetsdk.cpp:155][Info][0] Leave CLIENT_InitEx.
+[2021-10-06 21:31:09.087][P:23008/T:9952][dhnetsdk.cpp:186][Info][0] Enter CLIENT_SetAutoReconnect:[cbAutoConnect=000001CB9D0783CC, dwUser=0000000000000000].
+[2021-10-06 21:31:09.087][P:23008/T:9952][dhnetsdk.cpp:188][Info][0] Leave CLIENT_SetAutoReconnect.
+[2021-10-06 21:31:09.087][P:23008/T:9952][dhnetsdk.cpp:6994][Info][0] Enter CLIENT_SetSnapRevCallBack. [OnSnapRevMessage=000001CB9D0776AC, dwUser=0000000000000000.]
+[2021-10-06 21:31:09.087][P:23008/T:9952][dhnetsdk.cpp:6997][Info][0] Leave CLIENT_SetSnapRevCallBack.
+[2021-10-06 21:31:09.088][P:23008/T:9952][dhnetsdk.cpp:582][Info][0] Enter CLIENT_LoginEx2. [IP=45.224.164.135, port=2080, SpeCap=0, lpDeviceInfo=0000006B32C7C6B8.]
+[2021-10-06 21:31:09.940][P:23008/T:9952][dhnetsdk.cpp:618][Info][0] Leave CLIENT_LoginEx2. [error=0, login ID=-1616492640.]
+[2021-10-06 21:31:11.537][P:23008/T:9952][dhnetsdk.cpp:1024][Info][0] Enter CLIENT_RealPlayEx. [lLoginID=-1616492640. nChannelID=0. rType=0]
+[2021-10-06 21:31:12.474][P:23008/T:9952][DevConfigEx.cpp:9721][Info][0] IN SetupSession PORT=0 and PORT: 2080
+[2021-10-06 21:31:12.550][P:23008/T:9952][dhnetsdk.cpp:1085][Info][0] Leave CLIENT_RealPlayEx. [ret=-1616468240]
+[2021-10-06 21:31:12.550][P:23008/T:9952][dhnetsdk.cpp:2274][Info][0] Enter CLIENT_SetRealDataCallBackEx2. [lRealHandle=-1616468240. cbRealData=000001CB9D0776FC, dwUser=0000000000000000. dwFlag=15.]
+[2021-10-06 21:31:12.550][P:23008/T:9952][dhnetsdk.cpp:2297][Info][0] Leave CLIENT_SetRealDataCallBackEx2.[ret=1.]
+[2021-10-06 21:31:15.145][P:23008/T:9952][dhnetsdk.cpp:2320][Info][0] Enter CLIENT_CapturePictureEx. [hPlayHandle=-1616468240. pchPicFileName=\6-10-2021-21-31.jpg, eFormat=1.]
+[2021-10-06 21:31:15.146][P:23008/T:9952][dhnetsdk.cpp:2341][Info][0] Leave CLIENT_CapturePictureEx.[ret=0.]
+[2021-10-06 21:31:15.150][P:23008/T:9952][dhnetsdk.cpp:6505][Info][0] Enter CLIENT_GetLastError.
+[2021-10-06 21:31:15.151][P:23008/T:9952][dhnetsdk.cpp:6508][Info][0] Leave CLIENT_GetLastError.[Error code=80000004.]
+[2021-10-06 21:31:19.316][P:23008/T:9952][dhnetsdk.cpp:1518][Info][0] Enter CLIENT_StopRealPlayEx. [lRealHandle=-1616468240.]
+[2021-10-06 21:31:19.336][P:23008/T:9952][dhnetsdk.cpp:1532][Info][0] Leave CLIENT_StopRealPlayEx. [ret=1]
+[2021-10-06 21:31:23.433][P:23008/T:9952][dhnetsdk.cpp:1024][Info][0] Enter CLIENT_RealPlayEx. [lLoginID=-1616492640. nChannelID=0. rType=0]
+[2021-10-06 21:31:23.463][P:23008/T:9952][DevConfigEx.cpp:9721][Info][0] IN SetupSession PORT=0 and PORT: 2080
+[2021-10-06 21:31:23.489][P:23008/T:9952][dhnetsdk.cpp:1085][Info][0] Leave CLIENT_RealPlayEx. [ret=-1616468240]
+[2021-10-06 21:31:23.489][P:23008/T:9952][dhnetsdk.cpp:2274][Info][0] Enter CLIENT_SetRealDataCallBackEx2. [lRealHandle=-1616468240. cbRealData=000001CB9D0776FC, dwUser=0000000000000000. dwFlag=15.]
+[2021-10-06 21:31:23.489][P:23008/T:9952][dhnetsdk.cpp:2297][Info][0] Leave CLIENT_SetRealDataCallBackEx2.[ret=1.]
+[2021-10-06 21:31:24.547][P:23008/T:9952][dhnetsdk.cpp:2320][Info][0] Enter CLIENT_CapturePictureEx. [hPlayHandle=-1616468240. pchPicFileName=\6-10-2021-21-31.jpg, eFormat=1.]
+[2021-10-06 21:31:24.548][P:23008/T:9952][dhnetsdk.cpp:2341][Info][0] Leave CLIENT_CapturePictureEx.[ret=0.]
+[2021-10-06 21:31:24.548][P:23008/T:9952][dhnetsdk.cpp:6505][Info][0] Enter CLIENT_GetLastError.
+[2021-10-06 21:31:24.548][P:23008/T:9952][dhnetsdk.cpp:6508][Info][0] Leave CLIENT_GetLastError.[Error code=80000004.]
+Begin Time:2021-10-06 21:31:57.140
+[2021-10-06 21:31:57.141][P:19628/T:472][Utils.cpp:4792][Info][0] mutil NIC client
+[2021-10-06 21:31:57.156][P:19628/T:472][AVNetSDKMgr.cpp:655][Info][0] Test avnetsdk module handle: 000001ABC3C60000
+
+[2021-10-06 21:31:57.159][P:19628/T:472][dhnetsdk.cpp:155][Info][0] Leave CLIENT_InitEx.
+[2021-10-06 21:31:57.160][P:19628/T:472][dhnetsdk.cpp:186][Info][0] Enter CLIENT_SetAutoReconnect:[cbAutoConnect=000001ABA6E2797C, dwUser=0000000000000000].
+[2021-10-06 21:31:57.160][P:19628/T:472][dhnetsdk.cpp:188][Info][0] Leave CLIENT_SetAutoReconnect.
+[2021-10-06 21:31:57.160][P:19628/T:472][dhnetsdk.cpp:6994][Info][0] Enter CLIENT_SetSnapRevCallBack. [OnSnapRevMessage=000001ABA6E27DDC, dwUser=0000000000000000.]
+[2021-10-06 21:31:57.160][P:19628/T:472][dhnetsdk.cpp:6997][Info][0] Leave CLIENT_SetSnapRevCallBack.
+[2021-10-06 21:31:57.162][P:19628/T:472][dhnetsdk.cpp:582][Info][0] Enter CLIENT_LoginEx2. [IP=45.224.164.135, port=2080, SpeCap=0, lpDeviceInfo=0000000B66A7C0F8.]
+[2021-10-06 21:31:57.767][P:19628/T:472][dhnetsdk.cpp:618][Info][0] Leave CLIENT_LoginEx2. [error=0, login ID=-1013629312.]
+[2021-10-06 21:31:57.777][P:19628/T:472][dhnetsdk.cpp:132][Info][0] Enter CLIENT_InitEx:[cbDisConnect=000001ABA6E279CC, dwUser=0000000000000000, lpInitParam=0000000000000000].
+[2021-10-06 21:31:57.792][P:19628/T:472][AVNetSDKMgr.cpp:655][Info][0] Test avnetsdk module handle: 000001ABC3C60000
+
+[2021-10-06 21:31:57.795][P:19628/T:472][dhnetsdk.cpp:155][Info][0] Leave CLIENT_InitEx.
+[2021-10-06 21:31:57.795][P:19628/T:472][dhnetsdk.cpp:186][Info][0] Enter CLIENT_SetAutoReconnect:[cbAutoConnect=000001ABA6E27E7C, dwUser=0000000000000000].
+[2021-10-06 21:31:57.795][P:19628/T:472][dhnetsdk.cpp:188][Info][0] Leave CLIENT_SetAutoReconnect.
+[2021-10-06 21:31:57.795][P:19628/T:472][dhnetsdk.cpp:6994][Info][0] Enter CLIENT_SetSnapRevCallBack. [OnSnapRevMessage=000001ABA6E27F1C, dwUser=0000000000000000.]
+[2021-10-06 21:31:57.795][P:19628/T:472][dhnetsdk.cpp:6997][Info][0] Leave CLIENT_SetSnapRevCallBack.
+[2021-10-06 21:31:57.796][P:19628/T:472][dhnetsdk.cpp:582][Info][0] Enter CLIENT_LoginEx2. [IP=45.224.164.135, port=2080, SpeCap=0, lpDeviceInfo=0000000B66A7C0F8.]
+[2021-10-06 21:31:58.447][P:19628/T:472][dhnetsdk.cpp:618][Info][0] Leave CLIENT_LoginEx2. [error=0, login ID=-1013287888.]
+[2021-10-06 21:32:00.694][P:19628/T:472][dhnetsdk.cpp:1024][Info][0] Enter CLIENT_RealPlayEx. [lLoginID=-1013287888. nChannelID=0. rType=0]
+[2021-10-06 21:32:00.965][P:19628/T:472][DevConfigEx.cpp:9721][Info][0] IN SetupSession PORT=0 and PORT: 2080
+[2021-10-06 21:32:01.057][P:19628/T:472][dhnetsdk.cpp:1085][Info][0] Leave CLIENT_RealPlayEx. [ret=-1013238896]
+[2021-10-06 21:32:01.057][P:19628/T:472][dhnetsdk.cpp:2274][Info][0] Enter CLIENT_SetRealDataCallBackEx2. [lRealHandle=-1013238896. cbRealData=000001ABA6E280AC, dwUser=0000000000000000. dwFlag=15.]
+[2021-10-06 21:32:01.057][P:19628/T:472][dhnetsdk.cpp:2297][Info][0] Leave CLIENT_SetRealDataCallBackEx2.[ret=1.]
+Begin Time:2021-10-06 21:37:16.508
+[2021-10-06 21:37:16.508][P:15952/T:10868][Utils.cpp:4792][Info][0] mutil NIC client
+[2021-10-06 21:37:16.533][P:15952/T:10868][AVNetSDKMgr.cpp:655][Info][0] Test avnetsdk module handle: 00000203B0E20000
+
+[2021-10-06 21:37:16.535][P:15952/T:10868][dhnetsdk.cpp:155][Info][0] Leave CLIENT_InitEx.
+[2021-10-06 21:37:16.536][P:15952/T:10868][dhnetsdk.cpp:186][Info][0] Enter CLIENT_SetAutoReconnect:[cbAutoConnect=00000203AA93CBFC, dwUser=0000000000000000].
+[2021-10-06 21:37:16.536][P:15952/T:10868][dhnetsdk.cpp:188][Info][0] Leave CLIENT_SetAutoReconnect.
+[2021-10-06 21:37:16.537][P:15952/T:10868][dhnetsdk.cpp:6994][Info][0] Enter CLIENT_SetSnapRevCallBack. [OnSnapRevMessage=00000203AA93C8DC, dwUser=0000000000000000.]
+[2021-10-06 21:37:16.537][P:15952/T:10868][dhnetsdk.cpp:6997][Info][0] Leave CLIENT_SetSnapRevCallBack.
+[2021-10-06 21:37:16.539][P:15952/T:10868][dhnetsdk.cpp:582][Info][0] Enter CLIENT_LoginEx2. [IP=45.224.164.135, port=2080, SpeCap=0, lpDeviceInfo=000000712D9FC6B8.]
+[2021-10-06 21:37:17.249][P:15952/T:10868][dhnetsdk.cpp:618][Info][0] Leave CLIENT_LoginEx2. [error=0, login ID=-1396161888.]
+[2021-10-06 21:37:17.259][P:15952/T:10868][dhnetsdk.cpp:132][Info][0] Enter CLIENT_InitEx:[cbDisConnect=00000203AA93DE3C, dwUser=0000000000000000, lpInitParam=0000000000000000].
+[2021-10-06 21:37:17.273][P:15952/T:10868][AVNetSDKMgr.cpp:655][Info][0] Test avnetsdk module handle: 00000203B0E20000
+
+[2021-10-06 21:37:17.275][P:15952/T:10868][dhnetsdk.cpp:155][Info][0] Leave CLIENT_InitEx.
+[2021-10-06 21:37:17.275][P:15952/T:10868][dhnetsdk.cpp:186][Info][0] Enter CLIENT_SetAutoReconnect:[cbAutoConnect=00000203AA93E06C, dwUser=0000000000000000].
+[2021-10-06 21:37:17.275][P:15952/T:10868][dhnetsdk.cpp:188][Info][0] Leave CLIENT_SetAutoReconnect.
+[2021-10-06 21:37:17.275][P:15952/T:10868][dhnetsdk.cpp:6994][Info][0] Enter CLIENT_SetSnapRevCallBack. [OnSnapRevMessage=00000203AA93E3DC, dwUser=0000000000000000.]
+[2021-10-06 21:37:17.275][P:15952/T:10868][dhnetsdk.cpp:6997][Info][0] Leave CLIENT_SetSnapRevCallBack.
+[2021-10-06 21:37:17.277][P:15952/T:10868][dhnetsdk.cpp:582][Info][0] Enter CLIENT_LoginEx2. [IP=45.224.164.135, port=2080, SpeCap=0, lpDeviceInfo=000000712D9FC6B8.]
+[2021-10-06 21:37:17.927][P:15952/T:10868][dhnetsdk.cpp:618][Info][0] Leave CLIENT_LoginEx2. [error=0, login ID=-1395819408.]
+[2021-10-06 21:37:21.203][P:15952/T:10868][dhnetsdk.cpp:1024][Info][0] Enter CLIENT_RealPlayEx. [lLoginID=-1395819408. nChannelID=0. rType=0]
+[2021-10-06 21:37:21.462][P:15952/T:10868][DevConfigEx.cpp:9721][Info][0] IN SetupSession PORT=0 and PORT: 2080
+[2021-10-06 21:37:21.543][P:15952/T:10868][dhnetsdk.cpp:1085][Info][0] Leave CLIENT_RealPlayEx. [ret=-1395788416]
+[2021-10-06 21:37:21.544][P:15952/T:10868][dhnetsdk.cpp:2274][Info][0] Enter CLIENT_SetRealDataCallBackEx2. [lRealHandle=-1395788416. cbRealData=00000203AA93DA2C, dwUser=0000000000000000. dwFlag=15.]
+[2021-10-06 21:37:21.544][P:15952/T:10868][dhnetsdk.cpp:2297][Info][0] Leave CLIENT_SetRealDataCallBackEx2.[ret=1.]
+[2021-10-06 21:37:22.686][P:15952/T:10868][dhnetsdk.cpp:2320][Info][0] Enter CLIENT_CapturePictureEx. [hPlayHandle=-1395788416. pchPicFileName=C:\Users\Felipe\Desktop\6-10-2021-21-37.jpg, eFormat=1.]
+[2021-10-06 21:37:22.725][P:15952/T:10868][dhnetsdk.cpp:2341][Info][0] Leave CLIENT_CapturePictureEx.[ret=1.]
+[2021-10-06 21:39:48.817][P:15952/T:10868][dhnetsdk.cpp:132][Info][0] Enter CLIENT_InitEx:[cbDisConnect=00000203B9EC010C, dwUser=0000000000000000, lpInitParam=0000000000000000].
+[2021-10-06 21:39:48.826][P:15952/T:10868][AVNetSDKMgr.cpp:655][Info][0] Test avnetsdk module handle: 00000203BB940000
+
+[2021-10-06 21:39:48.827][P:15952/T:10868][dhnetsdk.cpp:155][Info][0] Leave CLIENT_InitEx.
+[2021-10-06 21:39:48.827][P:15952/T:10868][dhnetsdk.cpp:186][Info][0] Enter CLIENT_SetAutoReconnect:[cbAutoConnect=00000203B9EC0D8C, dwUser=0000000000000000].
+[2021-10-06 21:39:48.827][P:15952/T:10868][dhnetsdk.cpp:188][Info][0] Leave CLIENT_SetAutoReconnect.
+[2021-10-06 21:39:48.827][P:15952/T:10868][dhnetsdk.cpp:6994][Info][0] Enter CLIENT_SetSnapRevCallBack. [OnSnapRevMessage=00000203B9EC0A6C, dwUser=0000000000000000.]
+[2021-10-06 21:39:48.827][P:15952/T:10868][dhnetsdk.cpp:6997][Info][0] Leave CLIENT_SetSnapRevCallBack.
+[2021-10-06 21:39:48.828][P:15952/T:10868][dhnetsdk.cpp:582][Info][0] Enter CLIENT_LoginEx2. [IP=45.224.164.135, port=2080, SpeCap=0, lpDeviceInfo=000000712D9FC6B8.]
+[2021-10-06 21:39:49.513][P:15952/T:10868][dhnetsdk.cpp:618][Info][0] Leave CLIENT_LoginEx2. [error=0, login ID=-1395673920.]
+[2021-10-06 21:39:49.521][P:15952/T:10868][dhnetsdk.cpp:132][Info][0] Enter CLIENT_InitEx:[cbDisConnect=00000203B9EC0A1C, dwUser=0000000000000000, lpInitParam=0000000000000000].
+[2021-10-06 21:39:49.530][P:15952/T:10868][AVNetSDKMgr.cpp:655][Info][0] Test avnetsdk module handle: 00000203BB940000
+
+[2021-10-06 21:39:49.532][P:15952/T:10868][dhnetsdk.cpp:155][Info][0] Leave CLIENT_InitEx.
+[2021-10-06 21:39:49.532][P:15952/T:10868][dhnetsdk.cpp:186][Info][0] Enter CLIENT_SetAutoReconnect:[cbAutoConnect=00000203B9EC100C, dwUser=0000000000000000].
+[2021-10-06 21:39:49.532][P:15952/T:10868][dhnetsdk.cpp:188][Info][0] Leave CLIENT_SetAutoReconnect.
+[2021-10-06 21:39:49.532][P:15952/T:10868][dhnetsdk.cpp:6994][Info][0] Enter CLIENT_SetSnapRevCallBack. [OnSnapRevMessage=00000203B9EC056C, dwUser=0000000000000000.]
+[2021-10-06 21:39:49.532][P:15952/T:10868][dhnetsdk.cpp:6997][Info][0] Leave CLIENT_SetSnapRevCallBack.
+[2021-10-06 21:39:49.532][P:15952/T:10868][dhnetsdk.cpp:582][Info][0] Enter CLIENT_LoginEx2. [IP=45.224.164.135, port=2080, SpeCap=0, lpDeviceInfo=000000712D9FC6B8.]
+[2021-10-06 21:39:50.184][P:15952/T:10868][dhnetsdk.cpp:618][Info][0] Leave CLIENT_LoginEx2. [error=0, login ID=-1395774384.]
+[2021-10-06 21:39:54.452][P:15952/T:10868][dhnetsdk.cpp:1024][Info][0] Enter CLIENT_RealPlayEx. [lLoginID=-1395774384. nChannelID=2. rType=0]
+[2021-10-06 21:39:54.722][P:15952/T:10868][DevConfigEx.cpp:9721][Info][0] IN SetupSession PORT=0 and PORT: 2080
+[2021-10-06 21:39:54.763][P:15952/T:10868][dhnetsdk.cpp:1085][Info][0] Leave CLIENT_RealPlayEx. [ret=-1395779184]
+[2021-10-06 21:39:54.763][P:15952/T:10868][dhnetsdk.cpp:2274][Info][0] Enter CLIENT_SetRealDataCallBackEx2. [lRealHandle=-1395779184. cbRealData=00000203B9EC0C4C, dwUser=0000000000000000. dwFlag=15.]
+[2021-10-06 21:39:54.764][P:15952/T:10868][dhnetsdk.cpp:2297][Info][0] Leave CLIENT_SetRealDataCallBackEx2.[ret=1.]
+[2021-10-06 21:40:00.030][P:15952/T:10868][dhnetsdk.cpp:1518][Info][0] Enter CLIENT_StopRealPlayEx. [lRealHandle=-1395779184.]
+[2021-10-06 21:40:00.044][P:15952/T:10868][dhnetsdk.cpp:1532][Info][0] Leave CLIENT_StopRealPlayEx. [ret=1]
+Begin Time:2021-10-11 11:05:24.821
+[2021-10-11 11:05:24.821][P:21344/T:23540][Utils.cpp:4792][Info][0] mutil NIC client
+[2021-10-11 11:05:24.902][P:21344/T:23540][AVNetSDKMgr.cpp:655][Info][0] Test avnetsdk module handle: 000001BB22A70000
+
+[2021-10-11 11:05:24.906][P:21344/T:23540][dhnetsdk.cpp:155][Info][0] Leave CLIENT_InitEx.
+[2021-10-11 11:05:24.907][P:21344/T:23540][dhnetsdk.cpp:186][Info][0] Enter CLIENT_SetAutoReconnect:[cbAutoConnect=000001BB1FBF841C, dwUser=0000000000000000].
+[2021-10-11 11:05:24.907][P:21344/T:23540][dhnetsdk.cpp:188][Info][0] Leave CLIENT_SetAutoReconnect.
+[2021-10-11 11:05:24.909][P:21344/T:23540][dhnetsdk.cpp:6994][Info][0] Enter CLIENT_SetSnapRevCallBack. [OnSnapRevMessage=000001BB1FBF7C4C, dwUser=0000000000000000.]
+[2021-10-11 11:05:24.909][P:21344/T:23540][dhnetsdk.cpp:6997][Info][0] Leave CLIENT_SetSnapRevCallBack.
+[2021-10-11 11:05:24.912][P:21344/T:23540][dhnetsdk.cpp:582][Info][0] Enter CLIENT_LoginEx2. [IP=45.224.164.135, port=2080, SpeCap=0, lpDeviceInfo=00000021F83FC3F8.]
+[2021-10-11 11:05:25.408][P:21344/T:23540][dhnetsdk.cpp:618][Info][0] Leave CLIENT_LoginEx2. [error=0, login ID=577179568.]
+[2021-10-11 11:05:25.416][P:21344/T:23540][dhnetsdk.cpp:132][Info][0] Enter CLIENT_InitEx:[cbDisConnect=000001BB1FBF850C, dwUser=0000000000000000, lpInitParam=0000000000000000].
+[2021-10-11 11:05:25.428][P:21344/T:23540][AVNetSDKMgr.cpp:655][Info][0] Test avnetsdk module handle: 000001BB22A70000
+
+[2021-10-11 11:05:25.431][P:21344/T:23540][dhnetsdk.cpp:155][Info][0] Leave CLIENT_InitEx.
+[2021-10-11 11:05:25.431][P:21344/T:23540][dhnetsdk.cpp:186][Info][0] Enter CLIENT_SetAutoReconnect:[cbAutoConnect=000001BB1FBF7A1C, dwUser=0000000000000000].
+[2021-10-11 11:05:25.431][P:21344/T:23540][dhnetsdk.cpp:188][Info][0] Leave CLIENT_SetAutoReconnect.
+[2021-10-11 11:05:25.431][P:21344/T:23540][dhnetsdk.cpp:6994][Info][0] Enter CLIENT_SetSnapRevCallBack. [OnSnapRevMessage=000001BB1FBF760C, dwUser=0000000000000000.]
+[2021-10-11 11:05:25.431][P:21344/T:23540][dhnetsdk.cpp:6997][Info][0] Leave CLIENT_SetSnapRevCallBack.
+[2021-10-11 11:05:25.431][P:21344/T:23540][dhnetsdk.cpp:582][Info][0] Enter CLIENT_LoginEx2. [IP=45.224.164.135, port=2080, SpeCap=0, lpDeviceInfo=00000021F83FC3F8.]
+[2021-10-11 11:05:25.852][P:21344/T:23540][dhnetsdk.cpp:618][Info][0] Leave CLIENT_LoginEx2. [error=0, login ID=577520992.]
+[2021-10-11 11:05:30.562][P:21344/T:23540][dhnetsdk.cpp:1024][Info][0] Enter CLIENT_RealPlayEx. [lLoginID=577520992. nChannelID=0. rType=0]
+[2021-10-11 11:05:30.818][P:21344/T:23540][DevConfigEx.cpp:9721][Info][0] IN SetupSession PORT=0 and PORT: 2080
+[2021-10-11 11:05:30.923][P:21344/T:23540][dhnetsdk.cpp:1085][Info][0] Leave CLIENT_RealPlayEx. [ret=577694960]
+[2021-10-11 11:05:30.925][P:21344/T:23540][dhnetsdk.cpp:2274][Info][0] Enter CLIENT_SetRealDataCallBackEx2. [lRealHandle=577694960. cbRealData=000001BB1FBF76FC, dwUser=0000000000000000. dwFlag=15.]
+[2021-10-11 11:05:30.925][P:21344/T:23540][dhnetsdk.cpp:2297][Info][0] Leave CLIENT_SetRealDataCallBackEx2.[ret=1.]
+[2021-10-11 11:05:42.275][P:21344/T:23540][dhnetsdk.cpp:2320][Info][0] Enter CLIENT_CapturePictureEx. [hPlayHandle=577694960. pchPicFileName=C:\Users\Felipe\Desktop\11-10-2021-11-5.jpg, eFormat=1.]
+[2021-10-11 11:05:42.323][P:21344/T:23540][dhnetsdk.cpp:2341][Info][0] Leave CLIENT_CapturePictureEx.[ret=1.]
+Begin Time:2021-10-11 11:22:29.625
+[2021-10-11 11:22:29.625][P:23408/T:23216][Utils.cpp:4792][Info][0] mutil NIC client
+[2021-10-11 11:22:29.639][P:23408/T:23216][AVNetSDKMgr.cpp:655][Info][0] Test avnetsdk module handle: 000002F9C3FB0000
+
+[2021-10-11 11:22:29.642][P:23408/T:23216][dhnetsdk.cpp:155][Info][0] Leave CLIENT_InitEx.
+[2021-10-11 11:22:29.643][P:23408/T:23216][dhnetsdk.cpp:186][Info][0] Enter CLIENT_SetAutoReconnect:[cbAutoConnect=000002F9A41D7A6C, dwUser=0000000000000000].
+[2021-10-11 11:22:29.643][P:23408/T:23216][dhnetsdk.cpp:188][Info][0] Leave CLIENT_SetAutoReconnect.
+[2021-10-11 11:22:29.643][P:23408/T:23216][dhnetsdk.cpp:6994][Info][0] Enter CLIENT_SetSnapRevCallBack. [OnSnapRevMessage=000002F9A41D797C, dwUser=0000000000000000.]
+[2021-10-11 11:22:29.643][P:23408/T:23216][dhnetsdk.cpp:6997][Info][0] Leave CLIENT_SetSnapRevCallBack.
+[2021-10-11 11:22:29.645][P:23408/T:23216][dhnetsdk.cpp:582][Info][0] Enter CLIENT_LoginEx2. [IP=45.224.164.135, port=2080, SpeCap=0, lpDeviceInfo=000000F9C89FC1F8.]
+[2021-10-11 11:22:30.116][P:23408/T:23216][dhnetsdk.cpp:618][Info][0] Leave CLIENT_LoginEx2. [error=0, login ID=-1010496128.]
+[2021-10-11 11:22:30.122][P:23408/T:23216][dhnetsdk.cpp:132][Info][0] Enter CLIENT_InitEx:[cbDisConnect=000002F9A41D76AC, dwUser=0000000000000000, lpInitParam=0000000000000000].
+[2021-10-11 11:22:30.135][P:23408/T:23216][AVNetSDKMgr.cpp:655][Info][0] Test avnetsdk module handle: 000002F9C3FB0000
+
+[2021-10-11 11:22:30.137][P:23408/T:23216][dhnetsdk.cpp:155][Info][0] Leave CLIENT_InitEx.
+[2021-10-11 11:22:30.137][P:23408/T:23216][dhnetsdk.cpp:186][Info][0] Enter CLIENT_SetAutoReconnect:[cbAutoConnect=000002F9A41D84BC, dwUser=0000000000000000].
+[2021-10-11 11:22:30.137][P:23408/T:23216][dhnetsdk.cpp:188][Info][0] Leave CLIENT_SetAutoReconnect.
+[2021-10-11 11:22:30.137][P:23408/T:23216][dhnetsdk.cpp:6994][Info][0] Enter CLIENT_SetSnapRevCallBack. [OnSnapRevMessage=000002F9A41D76FC, dwUser=0000000000000000.]
+[2021-10-11 11:22:30.137][P:23408/T:23216][dhnetsdk.cpp:6997][Info][0] Leave CLIENT_SetSnapRevCallBack.
+[2021-10-11 11:22:30.137][P:23408/T:23216][dhnetsdk.cpp:582][Info][0] Enter CLIENT_LoginEx2. [IP=45.224.164.135, port=2080, SpeCap=0, lpDeviceInfo=000000F9C89FC1F8.]
+[2021-10-11 11:22:30.910][P:23408/T:23216][dhnetsdk.cpp:618][Info][0] Leave CLIENT_LoginEx2. [error=0, login ID=-1010154192.]
+[2021-10-11 11:22:34.235][P:23408/T:23216][dhnetsdk.cpp:1024][Info][0] Enter CLIENT_RealPlayEx. [lLoginID=-1010154192. nChannelID=1. rType=0]
+[2021-10-11 11:22:34.533][P:23408/T:23216][DevConfigEx.cpp:9721][Info][0] IN SetupSession PORT=0 and PORT: 2080
+[2021-10-11 11:22:34.593][P:23408/T:23216][dhnetsdk.cpp:1085][Info][0] Leave CLIENT_RealPlayEx. [ret=-1009982208]
+[2021-10-11 11:22:34.594][P:23408/T:23216][dhnetsdk.cpp:2274][Info][0] Enter CLIENT_SetRealDataCallBackEx2. [lRealHandle=-1009982208. cbRealData=000002F9A41D7A1C, dwUser=0000000000000000. dwFlag=15.]
+[2021-10-11 11:22:34.594][P:23408/T:23216][dhnetsdk.cpp:2297][Info][0] Leave CLIENT_SetRealDataCallBackEx2.[ret=1.]
+[2021-10-11 11:22:36.266][P:23408/T:23216][dhnetsdk.cpp:2320][Info][0] Enter CLIENT_CapturePictureEx. [hPlayHandle=-1009982208. pchPicFileName=C:\Users\Felipe\Desktop\11-10-2021-11-22.jpg, eFormat=1.]
+[2021-10-11 11:22:36.315][P:23408/T:23216][dhnetsdk.cpp:2341][Info][0] Leave CLIENT_CapturePictureEx.[ret=1.]

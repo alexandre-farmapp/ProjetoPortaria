@@ -129,76 +129,76 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormAnotacoes.cs">
+    <Compile Include="View\FormAnotacoes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormAnotacoes.Designer.cs">
+    <Compile Include="View\FormAnotacoes.Designer.cs">
       <DependentUpon>FormAnotacoes.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormBackup.cs">
+    <Compile Include="View\FormBackup.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormBackup.Designer.cs">
+    <Compile Include="View\FormBackup.Designer.cs">
       <DependentUpon>FormBackup.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormConfig.cs">
+    <Compile Include="View\FormConfig.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormConfig.Designer.cs">
+    <Compile Include="View\FormConfig.Designer.cs">
       <DependentUpon>FormConfig.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_Cadastro_Visitantes.cs">
+    <Compile Include="View\Form_Cadastro_Visitantes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Cadastro_Visitantes.Designer.cs">
+    <Compile Include="View\Form_Cadastro_Visitantes.Designer.cs">
       <DependentUpon>Form_Cadastro_Visitantes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_Cadastro_Usuário.cs">
+    <Compile Include="View\Form_Cadastro_Usuário.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Cadastro_Usuário.Designer.cs">
+    <Compile Include="View\Form_Cadastro_Usuário.Designer.cs">
       <DependentUpon>Form_Cadastro_Usuário.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_Menu.cs">
+    <Compile Include="View\Form_Menu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Menu.Designer.cs">
+    <Compile Include="View\Form_Menu.Designer.cs">
       <DependentUpon>Form_Menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_Login.cs">
+    <Compile Include="View\Form_Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Login.Designer.cs">
+    <Compile Include="View\Form_Login.Designer.cs">
       <DependentUpon>Form_Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_moradores.cs">
+    <Compile Include="View\Form_moradores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_moradores.Designer.cs">
+    <Compile Include="View\Form_moradores.Designer.cs">
       <DependentUpon>Form_moradores.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_pessoas_uteis.cs">
+    <Compile Include="View\Form_pessoas_uteis.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_pessoas_uteis.Designer.cs">
+    <Compile Include="View\Form_pessoas_uteis.Designer.cs">
       <DependentUpon>Form_pessoas_uteis.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_relatorio_ocorrencias.cs">
+    <Compile Include="View\Form_relatorio_ocorrencias.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_relatorio_ocorrencias.Designer.cs">
+    <Compile Include="View\Form_relatorio_ocorrencias.Designer.cs">
       <DependentUpon>Form_relatorio_ocorrencias.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_status.cs">
+    <Compile Include="View\Form_status.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_status.Designer.cs">
+    <Compile Include="View\Form_status.Designer.cs">
       <DependentUpon>Form_status.cs</DependentUpon>
     </Compile>
-    <Compile Include="NovoCond.cs">
+    <Compile Include="View\NovoCond.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NovoCond.Designer.cs">
+    <Compile Include="View\NovoCond.Designer.cs">
       <DependentUpon>NovoCond.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -208,10 +208,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="relatorio.cs">
+    <Compile Include="View\relatorio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="relatorio.Designer.cs">
+    <Compile Include="View\relatorio.Designer.cs">
       <DependentUpon>relatorio.cs</DependentUpon>
     </Compile>
     <Compile Include="User_info.cs" />
@@ -221,40 +221,40 @@
     <Compile Include="View\Captura.Designer.cs">
       <DependentUpon>Captura.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="FormAnotacoes.resx">
+    <EmbeddedResource Include="View\FormAnotacoes.resx">
       <DependentUpon>FormAnotacoes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormBackup.resx">
+    <EmbeddedResource Include="View\FormBackup.resx">
       <DependentUpon>FormBackup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormConfig.resx">
+    <EmbeddedResource Include="View\FormConfig.resx">
       <DependentUpon>FormConfig.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_Cadastro_Usuário.resx">
+    <EmbeddedResource Include="View\Form_Cadastro_Usuário.resx">
       <DependentUpon>Form_Cadastro_Usuário.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_Cadastro_Visitantes.resx">
+    <EmbeddedResource Include="View\Form_Cadastro_Visitantes.resx">
       <DependentUpon>Form_Cadastro_Visitantes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_Menu.resx">
+    <EmbeddedResource Include="View\Form_Menu.resx">
       <DependentUpon>Form_Menu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_Login.resx">
+    <EmbeddedResource Include="View\Form_Login.resx">
       <DependentUpon>Form_Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_moradores.resx">
+    <EmbeddedResource Include="View\Form_moradores.resx">
       <DependentUpon>Form_moradores.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_pessoas_uteis.resx">
+    <EmbeddedResource Include="View\Form_pessoas_uteis.resx">
       <DependentUpon>Form_pessoas_uteis.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_relatorio_ocorrencias.resx">
+    <EmbeddedResource Include="View\Form_relatorio_ocorrencias.resx">
       <DependentUpon>Form_relatorio_ocorrencias.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_status.resx">
+    <EmbeddedResource Include="View\Form_status.resx">
       <DependentUpon>Form_status.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NovoCond.resx">
+    <EmbeddedResource Include="View\NovoCond.resx">
       <DependentUpon>NovoCond.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -262,7 +262,7 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="relatorio.resx">
+    <EmbeddedResource Include="View\relatorio.resx">
       <DependentUpon>relatorio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Captura.resx">
