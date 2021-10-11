@@ -364,5 +364,10 @@ namespace Projeto_Portaria
 
             sqlConnection.Close();
         }
+
+        private void relatorio_Load(object sender, EventArgs e)
+        {
+            dateTimePicker_inicio.Value = DateTime.Now.AddDays(-0.5);
+        }
     }
 }

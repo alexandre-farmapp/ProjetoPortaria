@@ -207,6 +207,7 @@
             this.buttonImprimir.TabIndex = 39;
             this.buttonImprimir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonImprimir.UseVisualStyleBackColor = false;
+            this.buttonImprimir.Visible = false;
             this.buttonImprimir.Click += new System.EventHandler(this.buttonImprimir_Click);
             // 
             // button_excel
@@ -314,6 +315,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "relatorio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.relatorio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
