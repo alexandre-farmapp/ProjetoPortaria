@@ -25,26 +25,14 @@ namespace Projeto_Portaria.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=AppDomain.CurrentDomain.BaseD" +
-            "irectoryBd_portaria.mdf;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Felipe\\Documents\\Pro" +
+            "jetos\\ProjetoPortaria\\ProjetoPortaria\\Bd_portaria.mdf;Integrated Security=True")]
         public string Bd_portariaConnectionString {
             get {
                 return ((string)(this["Bd_portariaConnectionString"]));
             }
             set {
                 this["Bd_portariaConnectionString"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string CaminhoFotos {
-            get {
-                return ((string)(this["CaminhoFotos"]));
-            }
-            set {
-                this["CaminhoFotos"] = value;
             }
         }
     }

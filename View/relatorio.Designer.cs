@@ -201,13 +201,12 @@
             this.buttonImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonImprimir.ForeColor = System.Drawing.SystemColors.Control;
             this.buttonImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonImprimir.Location = new System.Drawing.Point(6, 18);
+            this.buttonImprimir.Location = new System.Drawing.Point(59, 16);
             this.buttonImprimir.Name = "buttonImprimir";
             this.buttonImprimir.Size = new System.Drawing.Size(42, 37);
             this.buttonImprimir.TabIndex = 39;
             this.buttonImprimir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonImprimir.UseVisualStyleBackColor = false;
-            this.buttonImprimir.Visible = false;
             this.buttonImprimir.Click += new System.EventHandler(this.buttonImprimir_Click);
             // 
             // button_excel
@@ -221,7 +220,7 @@
             this.button_excel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_excel.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button_excel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_excel.Location = new System.Drawing.Point(54, 16);
+            this.button_excel.Location = new System.Drawing.Point(6, 14);
             this.button_excel.Name = "button_excel";
             this.button_excel.Size = new System.Drawing.Size(41, 39);
             this.button_excel.TabIndex = 7;
