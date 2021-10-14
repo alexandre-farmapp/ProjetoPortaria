@@ -267,10 +267,8 @@ C:\Users\Felipe\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\bin\Debug\Bd_
 C:\Users\Felipe\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\bin\Debug\Projeto_Portaria.exe.config
 C:\Users\Felipe\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\bin\Debug\Projeto_Portaria.exe
 C:\Users\Felipe\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\bin\Debug\Projeto_Portaria.pdb
-C:\Users\Felipe\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\bin\Debug\EPPlus.dll
 C:\Users\Felipe\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
 C:\Users\Felipe\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\bin\Debug\NetSDKCS.dll
 C:\Users\Felipe\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\bin\Debug\System.ComponentModel.Annotations.dll
-C:\Users\Felipe\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\bin\Debug\EPPlus.xml
 C:\Users\Felipe\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
 C:\Users\Felipe\Documents\Projetos\ProjetoPortaria\ProjetoPortaria\bin\Debug\NetSDKCS.pdb
