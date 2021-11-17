@@ -46,7 +46,7 @@ namespace Projeto_Portaria
         {            
 
             textBox_entrada.Text = DateTime.Now.ToString();
-            dataGridView1.Visible = false;
+            dataGridView5.Visible = false;
 
             string conexao = Projeto_Portaria.Properties.Settings.Default.Bd_portariaConnectionString;
             SqlConnection sqlConnection = new SqlConnection(conexao);
@@ -128,7 +128,7 @@ namespace Projeto_Portaria
                         sqlCommand.Parameters.AddWithValue("@modelo", textBox_Modelo.Text);
                         sqlCommand.Parameters.AddWithValue("@placa", maskedTextBox_placa.Text);
                         sqlCommand.Parameters.AddWithValue("@observacoes", textBox_observacoes.Text);
-                        sqlCommand.Parameters.AddWithValue("@foto", openFileDialog1.FileName);
+                        sqlCommand.Parameters.AddWithValue("@foto", pictureBox_Foto_Visitante.ImageLocation);
                         sqlCommand.Parameters.AddWithValue("@ruaBloco", textBoxBlocoRua.Text);
                         sqlCommand.ExecuteNonQuery();
 
@@ -144,7 +144,7 @@ namespace Projeto_Portaria
                         sqlCommand.Parameters.AddWithValue("@observacoes", textBox_observacoes.Text);
                         sqlCommand.Parameters.AddWithValue("@entrada", Convert.ToDateTime(textBox_entrada.Text));
                         //sqlCommand.Parameters.AddWithValue("@saida", DateTime.Now);
-                        sqlCommand.Parameters.AddWithValue("@foto", openFileDialog1.FileName);
+                        sqlCommand.Parameters.AddWithValue("@foto", pictureBox_Foto_Visitante.ImageLocation);
                         sqlCommand.Parameters.AddWithValue("@condominio", Condominio.condominio);
                         sqlCommand.ExecuteNonQuery();
 
@@ -158,7 +158,7 @@ namespace Projeto_Portaria
                         sqlCommand.Parameters.AddWithValue("@visitado", textBox_visitado.Text);
                         sqlCommand.Parameters.AddWithValue("@carro", textBox_Modelo.Text);
                         sqlCommand.Parameters.AddWithValue("@placa", maskedTextBox_placa.Text);
-                        sqlCommand.Parameters.AddWithValue("@foto", openFileDialog1.FileName);
+                        sqlCommand.Parameters.AddWithValue("@foto", pictureBox_Foto_Visitante.ImageLocation);
                         sqlCommand.Parameters.AddWithValue("@ruaBloco", textBoxBlocoRua.Text);
                         sqlCommand.ExecuteNonQuery();
                     }
@@ -236,7 +236,7 @@ namespace Projeto_Portaria
         {
             if(textBox_nome_visitante.Text != "")
             {
-                dataGridView1.Visible = true;
+                dataGridView5.Visible = true;
 
                 string conexao = Projeto_Portaria.Properties.Settings.Default.Bd_portariaConnectionString;
                 SqlConnection sqlConnection = new SqlConnection(conexao);
@@ -260,9 +260,9 @@ namespace Projeto_Portaria
                 DataTable dt = new DataTable();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 da.Fill(dt);
-                dataGridView1.DataSource = dt;
-                dataGridView1.Columns[8].Visible = false;
-                dataGridView1.AutoResizeColumns();
+                dataGridView5.DataSource = dt;
+                dataGridView5.Columns[8].Visible = false;
+                dataGridView5.AutoResizeColumns();
 
                 sqlConnection.Close();
             }
@@ -272,21 +272,6 @@ namespace Projeto_Portaria
                 textBox_nome_visitante.Focus();
             }
             
-        }
-
-        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            textBox_Nome.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            textBox_cpf.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            textBox_visitado.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-            textBoxBlocoRua.Text = dataGridView1.CurrentRow.Cells[9].Value.ToString();
-            textBox_unidade.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-            maskedTextBox_celular.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
-            textBox_Modelo.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
-            maskedTextBox_placa.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
-            textBox_observacoes.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
-            pictureBox_Foto_Visitante.ImageLocation = dataGridView1.CurrentRow.Cells[8].Value.ToString();
-
         }
 
         private void Button_Adicionar_Foto_Click(object sender, EventArgs e)
@@ -419,13 +404,27 @@ namespace Projeto_Portaria
                 //Image image = Image.FromFile(filepath);
                 //pictureBox_Foto_Visitante.Image = image;
                 pictureBox_Foto_Visitante.ImageLocation = filepath;
+                
             }
             else
             {
                 MessageBox.Show("Devemos primeiro cadastrar um equipamento de cameras!");
             }
             
-        }        
+        }
 
+        private void dataGridView5_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            textBox_Nome.Text = dataGridView5.CurrentRow.Cells[0].Value.ToString();
+            textBox_cpf.Text = dataGridView5.CurrentRow.Cells[1].Value.ToString();
+            textBox_visitado.Text = dataGridView5.CurrentRow.Cells[2].Value.ToString();
+            textBoxBlocoRua.Text = dataGridView5.CurrentRow.Cells[9].Value.ToString();
+            textBox_unidade.Text = dataGridView5.CurrentRow.Cells[3].Value.ToString();
+            maskedTextBox_celular.Text = dataGridView5.CurrentRow.Cells[4].Value.ToString();
+            textBox_Modelo.Text = dataGridView5.CurrentRow.Cells[6].Value.ToString();
+            maskedTextBox_placa.Text = dataGridView5.CurrentRow.Cells[7].Value.ToString();
+            textBox_observacoes.Text = dataGridView5.CurrentRow.Cells[5].Value.ToString();
+            pictureBox_Foto_Visitante.ImageLocation = dataGridView5.CurrentRow.Cells[8].Value.ToString();
+        }
     }
 }

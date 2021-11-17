@@ -33,6 +33,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cadastro_de_Visitantes));
             this.label_Nome = new System.Windows.Forms.Label();
             this.label_CPF = new System.Windows.Forms.Label();
@@ -65,13 +68,13 @@
             this.textBox_observacoes = new System.Windows.Forms.TextBox();
             this.textBox_nome_visitante = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.button_voltar_menu = new System.Windows.Forms.Button();
             this.btnCam = new System.Windows.Forms.Button();
             this.button_Adicionar_Foto = new System.Windows.Forms.Button();
             this.button_Registrar = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dataGridView5 = new System.Windows.Forms.DataGridView();
             this.comboBoxTipoPesq = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox_Foto_Visitante = new System.Windows.Forms.PictureBox();
@@ -81,8 +84,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_pesquisa_morador)).BeginInit();
             this.groupBox_Dados_Veiculo.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Foto_Visitante)).BeginInit();
             this.SuspendLayout();
             // 
@@ -459,26 +462,6 @@
             this.label2.TabIndex = 12;
             this.label2.Text = "Nome:";
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.ColumnHeadersVisible = false;
-            this.dataGridView1.Location = new System.Drawing.Point(36, 59);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(647, 142);
-            this.dataGridView1.TabIndex = 2;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
-            // 
             // button_voltar_menu
             // 
             this.button_voltar_menu.BackColor = System.Drawing.Color.Transparent;
@@ -489,9 +472,9 @@
             this.button_voltar_menu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.button_voltar_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_voltar_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_voltar_menu.Location = new System.Drawing.Point(640, 515);
+            this.button_voltar_menu.Location = new System.Drawing.Point(618, 503);
             this.button_voltar_menu.Name = "button_voltar_menu";
-            this.button_voltar_menu.Size = new System.Drawing.Size(57, 38);
+            this.button_voltar_menu.Size = new System.Drawing.Size(50, 38);
             this.button_voltar_menu.TabIndex = 13;
             this.toolTip1.SetToolTip(this.button_voltar_menu, "Voltar Menu Anterior");
             this.button_voltar_menu.UseVisualStyleBackColor = false;
@@ -543,7 +526,7 @@
             this.button_Registrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.button_Registrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Registrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Registrar.Location = new System.Drawing.Point(584, 503);
+            this.button_Registrar.Location = new System.Drawing.Point(575, 503);
             this.button_Registrar.Name = "button_Registrar";
             this.button_Registrar.Size = new System.Drawing.Size(49, 38);
             this.button_Registrar.TabIndex = 12;
@@ -553,7 +536,9 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.dataGridView5);
             this.groupBox2.Controls.Add(this.btnCam);
+            this.groupBox2.Controls.Add(this.button_voltar_menu);
             this.groupBox2.Controls.Add(this.comboBoxTipoPesq);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.button_Adicionar_Foto);
@@ -562,20 +547,66 @@
             this.groupBox2.ForeColor = System.Drawing.Color.White;
             this.groupBox2.Location = new System.Drawing.Point(12, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(696, 554);
+            this.groupBox2.Size = new System.Drawing.Size(691, 555);
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Entrada de Visitantes";
             // 
+            // dataGridView5
+            // 
+            this.dataGridView5.AllowUserToAddRows = false;
+            this.dataGridView5.AllowUserToDeleteRows = false;
+            this.dataGridView5.BackgroundColor = System.Drawing.Color.Gray;
+            this.dataGridView5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView5.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView5.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView5.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridView5.GridColor = System.Drawing.Color.Gray;
+            this.dataGridView5.Location = new System.Drawing.Point(24, 46);
+            this.dataGridView5.Name = "dataGridView5";
+            this.dataGridView5.ReadOnly = true;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView5.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridView5.RowHeadersVisible = false;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Gray;
+            this.dataGridView5.RowsDefaultCellStyle = dataGridViewCellStyle7;
+            this.dataGridView5.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView5.Size = new System.Drawing.Size(647, 146);
+            this.dataGridView5.TabIndex = 36;
+            this.dataGridView5.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView5_CellContentClick);
+            // 
             // comboBoxTipoPesq
             // 
+            this.comboBoxTipoPesq.BackColor = System.Drawing.SystemColors.ControlLight;
             this.comboBoxTipoPesq.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxTipoPesq.ForeColor = System.Drawing.SystemColors.WindowText;
             this.comboBoxTipoPesq.FormattingEnabled = true;
             this.comboBoxTipoPesq.Items.AddRange(new object[] {
             "Nome",
             "RG",
             "CPF"});
-            this.comboBoxTipoPesq.Location = new System.Drawing.Point(418, 16);
+            this.comboBoxTipoPesq.Location = new System.Drawing.Point(418, 13);
             this.comboBoxTipoPesq.Name = "comboBoxTipoPesq";
             this.comboBoxTipoPesq.Size = new System.Drawing.Size(121, 28);
             this.comboBoxTipoPesq.TabIndex = 71;
@@ -602,7 +633,7 @@
             this.pictureBox_Foto_Visitante.Location = new System.Drawing.Point(452, 198);
             this.pictureBox_Foto_Visitante.Name = "pictureBox_Foto_Visitante";
             this.pictureBox_Foto_Visitante.Size = new System.Drawing.Size(219, 240);
-            this.pictureBox_Foto_Visitante.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox_Foto_Visitante.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox_Foto_Visitante.TabIndex = 13;
             this.pictureBox_Foto_Visitante.TabStop = false;
             this.pictureBox_Foto_Visitante.Click += new System.EventHandler(this.PictureBox_Foto_Visitante_Click);
@@ -621,9 +652,9 @@
             this.button_pesquisar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.button_pesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_pesquisar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_pesquisar.Location = new System.Drawing.Point(385, 19);
+            this.button_pesquisar.Location = new System.Drawing.Point(385, 26);
             this.button_pesquisar.Name = "button_pesquisar";
-            this.button_pesquisar.Size = new System.Drawing.Size(30, 30);
+            this.button_pesquisar.Size = new System.Drawing.Size(30, 24);
             this.button_pesquisar.TabIndex = 1;
             this.button_pesquisar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button_pesquisar.UseVisualStyleBackColor = false;
@@ -635,11 +666,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(720, 579);
+            this.ClientSize = new System.Drawing.Size(718, 578);
             this.Controls.Add(this.button_pesquisar);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBox_nome_visitante);
-            this.Controls.Add(this.button_voltar_menu);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox_Dados_Veiculo);
@@ -660,9 +689,9 @@
             this.groupBox_Dados_Veiculo.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Foto_Visitante)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -693,7 +722,6 @@
         private System.Windows.Forms.Label label_entrada;
         private System.Windows.Forms.TextBox textBox_nome_visitante;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button_pesquisar;/*
         private System.Windows.Forms.BindingSource moradoresBindingSource;
         private System.Windows.Forms.BindingSource bdportariaDataSetlistamorador1BindingSource;
@@ -718,5 +746,6 @@
         private System.Windows.Forms.TextBox textBoxBlocoRua;
         private System.Windows.Forms.ComboBox comboBoxTipoPesq;
         private System.Windows.Forms.Button btnCam;
+        private System.Windows.Forms.DataGridView dataGridView5;
     }
 }

@@ -52,7 +52,7 @@ namespace Projeto_Portaria
             {
                 txtCaminhoFoto.Text = folderBrowser.SelectedPath;
 
-                if(txtIp.Text != "")
+                if (txtIp.Text != "")
                 {
                     string conexao = Projeto_Portaria.Properties.Settings.Default.Bd_portariaConnectionString;
                     SqlConnection sqlConnection = new SqlConnection(conexao);

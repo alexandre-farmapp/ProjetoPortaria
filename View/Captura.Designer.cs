@@ -47,8 +47,11 @@ namespace Projeto_Portaria.View
             this.label6 = new System.Windows.Forms.Label();
             this.realplay_pictureBox = new System.Windows.Forms.PictureBox();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.realplay_pictureBox)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -60,7 +63,8 @@ namespace Projeto_Portaria.View
             this.groupBox2.Controls.Add(this.capture_button);
             this.groupBox2.Controls.Add(this.start_realplay_button);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(386, 59);
+            this.groupBox2.ForeColor = System.Drawing.SystemColors.Control;
+            this.groupBox2.Location = new System.Drawing.Point(389, 66);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(200, 227);
             this.groupBox2.TabIndex = 40;
@@ -106,6 +110,7 @@ namespace Projeto_Portaria.View
             // 
             // capture_button
             // 
+            this.capture_button.ForeColor = System.Drawing.SystemColors.ControlText;
             this.capture_button.Location = new System.Drawing.Point(20, 160);
             this.capture_button.Name = "capture_button";
             this.capture_button.Size = new System.Drawing.Size(159, 46);
@@ -116,6 +121,7 @@ namespace Projeto_Portaria.View
             // 
             // start_realplay_button
             // 
+            this.start_realplay_button.ForeColor = System.Drawing.SystemColors.ControlText;
             this.start_realplay_button.Location = new System.Drawing.Point(20, 108);
             this.start_realplay_button.Name = "start_realplay_button";
             this.start_realplay_button.Size = new System.Drawing.Size(159, 46);
@@ -211,18 +217,48 @@ namespace Projeto_Portaria.View
             // realplay_pictureBox
             // 
             this.realplay_pictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.realplay_pictureBox.Location = new System.Drawing.Point(3, 12);
+            this.realplay_pictureBox.Location = new System.Drawing.Point(6, 19);
             this.realplay_pictureBox.Name = "realplay_pictureBox";
             this.realplay_pictureBox.Size = new System.Drawing.Size(377, 324);
             this.realplay_pictureBox.TabIndex = 31;
             this.realplay_pictureBox.TabStop = false;
             // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.Transparent;
+            this.btnExit.BackgroundImage = global::Projeto_Portaria.Properties.Resources.Icon__Voltar_;
+            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.Location = new System.Drawing.Point(536, 305);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(57, 38);
+            this.btnExit.TabIndex = 41;
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btnExit);
+            this.groupBox1.Controls.Add(this.realplay_pictureBox);
+            this.groupBox1.Controls.Add(this.groupBox2);
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.Control;
+            this.groupBox1.Location = new System.Drawing.Point(12, 3);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(604, 357);
+            this.groupBox1.TabIndex = 42;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Captura";
+            // 
             // Captura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(602, 347);
-            this.Controls.Add(this.groupBox2);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ClientSize = new System.Drawing.Size(629, 372);
             this.Controls.Add(this.port_textBox);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.login_button);
@@ -232,8 +268,8 @@ namespace Projeto_Portaria.View
             this.Controls.Add(this.label7);
             this.Controls.Add(this.ip_textBox);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.realplay_pictureBox);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimizeBox = false;
             this.Name = "Captura";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -242,6 +278,7 @@ namespace Projeto_Portaria.View
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.realplay_pictureBox)).EndInit();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -267,5 +304,7 @@ namespace Projeto_Portaria.View
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox realplay_pictureBox;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
